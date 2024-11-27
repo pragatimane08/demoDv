@@ -1,0 +1,720 @@
+/* Custom button styles */
+.custom-btn {
+  background-color: #d0a94e;
+  /* Button background color */
+  border: 1px solid #d0a94e;
+  /* Button border color */
+  color: #ffffff;
+  /* Button text color */
+  text-decoration: none;
+  /* Remove underline from links */
+  display: inline-block;
+  /* Ensure proper button display */
+  padding: 0.5rem 1rem;
+  /* Adjust padding if needed */
+  border-radius: 50px;
+  /* Rounded corners */
+}
+
+
+/* Hover and focus states for the button */
+.custom-btn:hover,
+.custom-btn:focus {
+  background-color: rgb(188, 155, 62);
+  /* Darker shade for hover/focus */
+  border-color: rgb(188, 155, 62);
+  /* Border color on hover/focus */
+  color: #ffffff;
+  /* Maintain text color on hover/focus */
+}
+
+.text-custom {
+  color: #B37F2B;
+}
+
+.block-20 {
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 275px;
+  position: relative;
+  display: block;
+}
+
+
+.blog-entry {
+  width: 100%;
+  border: 4px solid #FCF2C3;
+}
+
+.blog-entry {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Transition for both transform and box-shadow over 0.3 seconds */
+}
+
+.blog-entry:hover {
+  transform: translateY(-10px);
+  /* Move card up */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add shadow on hover */
+}
+
+/**/
+@media (min-width: 768px) {
+  .blog-entry {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .blog-entry {
+    margin-bottom: 30px;
+  }
+}
+
+.blog-entry .text {
+  position: relative;
+  border-top: 0;
+  border-radius: 2px;
+}
+
+.blog-entry .text .heading {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.blog-entry .text .heading a {
+  color: #000000;
+}
+
+.blog-entry .text .heading a:hover,
+.blog-entry .text .heading a:focus,
+.blog-entry .text .heading a:active {
+  color: #d0a94e;
+}
+
+.blog-entry .text .meta-chat {
+  color: #b3b3b3;
+}
+
+.blog-entry .text .read {
+  color: #000000;
+  font-size: 14px;
+}
+
+.blog-entry .meta-date {
+  display: inline-block;
+  background: #d0a94e;
+}
+
+.blog-entry .meta-date span {
+  display: block;
+  color: #fff;
+}
+
+.blog-entry .meta-date .day {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.blog-entry .meta-date .mos,
+.blog-entry .meta-date .yr {
+  font-size: 13px;
+}
+
+.blog-entry .meta>div {
+  display: block;
+  margin-right: 5px;
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+
+.blog-entry .meta>div a {
+  color: #b3b3b3;
+  font-size: 13px;
+}
+
+.blog-entry .meta>div a:hover {
+  color: #cccccc;
+}
+
+.custom-outline-btn {
+  color: #000;
+  /* Black text color */
+  border: 2px solid #d0a94e;
+  /* Outline color */
+  background-color: transparent;
+  /* Transparent background */
+  padding: 5px 10px;
+  /* Reduced padding for a smaller button size */
+  font-size: 14px;
+  /* Smaller font size */
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
+}
+
+.custom-outline-btn:hover {
+  color: white;
+  /* Text color changes to white on hover */
+  background-color: #d0a94e;
+  /* Background color changes on hover */
+}
+
+.admin-link {
+  margin-left: auto;
+  /* Right align the Admin link */
+  text-decoration: none;
+  /* Remove underline */
+  color: #000;
+  /* Black color for Admin link */
+}
+
+.admin-link:hover {
+  text-decoration: underline;
+  /* Optional: underline on hover */
+}
+
+
+
+/* Container for the entire team section */
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* Allows wrapping on smaller screens */
+  gap: 20px;
+  /* Adds space between cards */
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Styles for each card */
+.team-card {
+  display: flex;
+  flex-direction: row;
+  /* Change direction to horizontal */
+  align-items: center;
+  width: 500px;
+  /* Adjust width as needed */
+  padding: 15px;
+  background-color: #fff;
+  border: 2px solid #d4af37;
+  /* Golden border */
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+/* Card hover effect */
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+/* Profile image styling */
+.team-card img {
+  width: 120px;
+  /* Adjust size as needed */
+  height: 120px;
+  /* Adjust size as needed */
+  border-radius: 50%;
+  margin-right: 20px;
+  /* Adds space between image and text */
+}
+
+/* Text content inside the card */
+.team-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Team member name */
+.team-card-content h3 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #333;
+}
+
+/* Team member role */
+.team-card-content p {
+  font-size: 1em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.team-items {
+  margin: -.75rem;
+}
+
+.team-item {
+  padding: .75rem;
+}
+
+.team-item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: #FFFFFF;
+  transition: .5s;
+  z-index: -1;
+}
+
+.team-item:hover::after {
+  height: 100%;
+  background: #d0a94e;
+}
+
+.team-item .team-social {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .75);
+  overflow: hidden;
+  opacity: 0;
+  transition: .5s;
+}
+
+.team-item:hover .team-social {
+  height: 100%;
+  opacity: 1;
+}
+
+/* Pop-up card base styles */
+.popup-card {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 50px;
+}
+
+/* Pop-up content styles */
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button styles */
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Popup Card Container */
+.popup-card {
+  display: none;
+  /* Hidden by default, will be shown on click */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Ensure it's on top of other content */
+  bottom: 20px;
+}
+
+
+/* Popup Content */
+.popup-content {
+  background: #ffffff;
+  border: 2px solid #bf9021;
+  /* Golden border */
+  border-radius: 15px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  /* Adjust the max-width as needed */
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  /* Shadow for popup */
+  overflow-y: auto;
+  /* Scroll if content is too long */
+  max-height: 80vh;
+  /* Prevent the popup from exceeding the viewport height */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  color: #bf9021;
+  /* Golden color */
+  cursor: pointer;
+}
+
+/* Profile Image */
+.profile-pic-popup {
+  width: 120px;
+  /* Fixed width */
+  height: 120px;
+  /* Fixed height */
+  border-radius: 50%;
+  /* Circular image */
+  object-fit: cover;
+  margin: 0 auto 15px;
+  /* Center the image and add margin */
+  display: block;
+}
+
+/* Heading */
+.popup-content h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Popup Content Paragraphs */
+.popup-content p {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+  text-align: left;
+}
+
+/* Social Icons */
+.popup-social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.popup-social-icons a {
+  color: #bf9021;
+  /* Golden color */
+  margin: 0 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.popup-social-icons a:hover {
+  color: #333;
+  /* Darker color on hover */
+}
+
+/* Additional Styling for Scrollbar */
+.popup-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+  background-color: #bf9021;
+  /* Golden color for scrollbar */
+  border-radius: 10px;
+}
+
+
+
+/* Ethics Section with Image */
+.ethics-section {
+  background-color: #ffffff;
+  /* Card background color */
+  border: 1px solid #e0e0e0;
+  /* Border around the card */
+  border-radius: 10px;
+  /* Rounded corners for the card */
+  padding: 20px;
+  /* Space inside the card */
+  max-width: 1200px;
+  /* Maximum width of the card */
+  margin: 20px auto;
+  /* Center the card horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Shadow for a 3D effect */
+  overflow: hidden;
+  /* Prevent overflow if content is too large */
+}
+
+.about-studio-content {
+  display: flex;
+  /* Align image and text side by side */
+  align-items: center;
+  /* Vertically center the content */
+  gap: 20px;
+  /* Space between the image and the text */
+}
+
+.about-studio-content img {
+  max-width: 450px;
+  /* Limit the image width */
+  border-radius: 10px;
+  /* Rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Shadow for the image */
+}
+
+.about-studio-text {
+  flex: 1;
+  /* Allow text to take up remaining space */
+}
+
+.about-studio-text h5 {
+  margin-top: 0;
+  /* Remove default top margin */
+  color: #bf9021;
+  /* Text color for the heading */
+  font-size: 1.5em;
+  /* Font size for the heading */
+  margin-left: 300px;
+  margin-bottom: 10px;
+}
+
+.about-studio-text p {
+  color: #555;
+  /* Text color for the paragraph */
+  font-size: 0.9em;
+  /* Font size for the paragraph */
+  margin-bottom: 10px;
+  /* Space below the paragraph */
+}
+
+.about-studio-text ul {
+  list-style-type: disc;
+  /* Bullet points for the list */
+  margin-left: 20px;
+  /* Indentation for the list */
+  color: #333;
+  /* Text color for the list items */
+}
+
+.about-studio-text ul li {
+  margin-bottom: 10px;
+  /* Space between list items */
+}
+
+/* Ethics Section with Image */
+.ethics-section {
+  background-color: #ffffff;
+  /* Card background color */
+  border: 1px solid #e0e0e0;
+  /* Border around the card */
+  border-radius: 10px;
+  /* Rounded corners for the card */
+  padding: 20px;
+  /* Space inside the card */
+  max-width: 1200px;
+  /* Maximum width of the card */
+  margin: 20px auto;
+  /* Center the card horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Shadow for a 3D effect */
+  overflow: hidden;
+  /* Prevent overflow if content is too large */
+}
+
+.about-studio-content {
+  display: flex;
+  /* Align image and text side by side */
+  align-items: center;
+  /* Vertically center the content */
+  gap: 20px;
+  /* Space between the image and the text */
+  flex-wrap: wrap;
+  /* Wrap content on smaller screens */
+}
+
+.about-studio-content img {
+  max-width: 100%;
+  /* Make image responsive */
+  width: 100%;
+  max-width: 450px;
+  /* Limit the image width */
+  border-radius: 10px;
+  /* Rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Shadow for the image */
+}
+
+.about-studio-text {
+  flex: 1;
+  /* Allow text to take up remaining space */
+}
+
+.about-studio-text h5 {
+  margin-top: 0;
+  /* Remove default top margin */
+  color: #bf9021;
+  /* Text color for the heading */
+  font-size: 1.5em;
+  /* Font size for the heading */
+  margin-left: 300px;
+  margin-bottom: 10px;
+}
+
+.about-studio-text p {
+  color: #555;
+  /* Text color for the paragraph */
+  font-size: 0.9em;
+  /* Font size for the paragraph */
+  margin-bottom: 10px;
+  /* Space below the paragraph */
+}
+
+.about-studio-text ul {
+  list-style-type: disc;
+  /* Bullet points for the list */
+  margin-left: 20px;
+  /* Indentation for the list */
+  color: #333;
+  /* Text color for the list items */
+}
+
+.about-studio-text ul li {
+  margin-bottom: 10px;
+  /* Space between list items */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .about-studio-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-studio-text h5 {
+    margin-left: 0;
+    font-size: 1.2em;
+    /* Smaller font size on smaller screens */
+  }
+
+  .about-studio-text p {
+    font-size: 0.85em;
+  }
+}
+
+/* Section Features */
+.sec-features {
+  background-color: #d0a94e;
+  background: linear-gradient(140deg, #d0a94e 0%, #d0a94e 100%);
+  overflow: hidden;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Allows wrapping for smaller screens */
+}
+
+.sec-features .feature {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+  text-align: center;
+  /* Center content in each feature */
+}
+
+.sec-features .feature [class^="bi-"] {
+  flex: 0 0 60px;
+  font-size: 50px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.sec-features .feature [class^="bi-"]:before {
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.sec-features .feature [class^="bi-"]:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: -10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(108, 117, 125, 0.1);
+}
+
+.sec-features .feature h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.sec-features .feature p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sec-features .feature p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive features */
+@media (max-width: 768px) {
+  .sec-features {
+    height: auto;
+    padding: 20px;
+  }
+
+  .sec-features .feature {
+    margin-bottom: 20px;
+    min-width: 100%;
+  }
+
+  .sec-features .feature [class^="bi-"] {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .sec-features .feature h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec-features .feature h3 {
+    font-size: 14px;
+  }
+
+  .sec-features .feature p {
+    font-size: 12px;
+  }
+
+  .about-studio-text h5 {
+    font-size: 1.1em;
+  }
+
+  .about-studio-text p {
+    font-size: 0.8em;
+  }
+}

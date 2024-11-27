@@ -1,0 +1,723 @@
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+section {
+    height: 100vh; /* Optional: Set each section to full viewport height */
+    padding: 20px; /* Optional: Add padding to sections */
+}
+
+/* Add background colors for visibility (optional) */
+#section1 {
+    background: #f4f4f4;
+}
+
+#section2 {
+    background: #e2e2e2;
+}
+
+#section3 {
+    background: #d0d0d0;
+}
+
+.container {
+    text-align: center;
+    gap: 20px;
+}
+
+.heading {
+    display: inline-block;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.preview {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+    margin-top: 20px;
+   /* margin-bottom: -600px; /*for the reduce size of container */
+}
+
+/*understanding the steps*/
+.preview .div {
+    background-color: #f8f8f8;
+    width: 900px;
+    height: 500px;
+    position: relative;
+    margin-top: 30px;
+    gap: 500px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    
+}
+
+.preview .frame {
+    display: flex;
+    justify-content: space-between;
+    /* Adjust if you want more spacing */
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding-right: 20px; 
+    margin-left: -10px;
+    margin-top: -30px;
+    margin-bottom: -30px;
+}
+
+.preview .div-2 {
+    position:relative;
+    content: center;
+    width: 288px;
+    height: 380px;
+    margin: 2 auto; /* Center the element horizontally */
+    display: flex;
+    justify-content: center; /* Center content inside the div-2 if needed */
+     padding: 13.6%;  
+  
+}
+
+.preview .group {
+    position: absolute;
+    width: 258px;
+    height: 240px;
+    top: 0;
+    left: 1px;
+    gap: 20px;
+}
+
+.preview .overlap-group {
+    position: relative;
+    height: 240px;
+    gap: 20px;
+}
+
+.preview .ellipse {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    top: 0;
+    left: 9px;
+    gap: 20px;
+}
+
+.preview .ellipse-2 {
+    position: absolute;
+    width: 208px;
+    height: 208px;
+    top: 16px;
+    left: 25px;
+    background-color: #e4a321;
+    border-radius: 104px;
+    gap: 20px;
+}
+
+.preview .ellipse-3 {
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    top: 44px;
+    left: 53px;
+    background-color: #ffffff;
+    border-radius: 76px;
+    box-shadow: 0px 10px 6px #cf9014;
+}
+
+.preview .img {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 109px;
+    left: 237px;
+}
+
+.preview .ellipse-4 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 109px;
+    left: 0;
+}
+
+.preview .frame-2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 93px;
+    left: 106px;
+
+}
+
+.preview .text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Urbanist-Bold", Helvetica;
+    font-weight: 700;
+    color: #2e2e2e;
+    font-size: 44px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.preview .step {
+    position: relative;
+    width: fit-content;
+    font-family: "Urbanist-Medium", Helvetica;
+    font-weight: 500;
+    color: #2e2e2e;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.preview .frame-3 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    position: absolute;
+    top: 270px;
+    left: 0;
+}
+
+.preview .text-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Urbanist-Bold", Helvetica;
+    font-weight: 700;
+    color: #e4a321;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.preview .p {
+    position: relative;
+    width: 260px;
+    font-family: "Urbanist-Medium", Helvetica;
+    font-weight: 500;
+    color: #8d8d8d;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+.preview .ellipse-5 {
+    background: linear-gradient(180deg, rgb(246, 145, 79) 0%, rgb(249, 117, 73) 100%);
+    position: absolute;
+    width: 208px;
+    height: 208px;
+    top: 16px;
+    left: 25px;
+    border-radius: 104px;
+}
+
+.preview .ellipse-6 {
+    box-shadow: 0px 10px 6px #ef4e19;
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    top: 44px;
+    left: 53px;
+    background-color: #ffffff;
+    border-radius: 76px;
+}
+
+.preview .ellipse-7 {
+    background: linear-gradient(180deg, rgb(107, 205, 238) 0%, rgb(28, 192, 203) 100%);
+    position: absolute;
+    width: 208px;
+    height: 208px;
+    top: 16px;
+    left: 25px;
+    border-radius: 104px;
+}
+
+.preview .ellipse-8 {
+    box-shadow: 0px 10px 6px #16848c;
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    top: 44px;
+    left: 53px;
+    background-color: #ffffff;
+    border-radius: 76px;
+}
+
+.preview .ellipse-9 {
+    background: linear-gradient(180deg, rgb(236, 98, 113) 0%, rgb(241, 63, 71) 100%);
+    position: absolute;
+    width: 208px;
+    height: 208px;
+    top: 16px;
+    left: 25px;
+    border-radius: 104px;
+}
+
+.preview .ellipse-10 {
+    box-shadow: 0px 10px 6px #bc131c40;
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    top: 44px;
+    left: 53px;
+    background-color: #ffffff;
+    border-radius: 76px;
+}
+
+.preview .frame-4 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    position: absolute;
+    top: 193px;
+    left: 479px;
+}
+
+.preview .text-wrapper-3 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Urbanist-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.preview .text-wrapper-4 {
+    position: relative;
+    width: 641px;
+    font-family: "Urbanist-Medium", Helvetica;
+    font-weight: 500;
+    color: #8d8d8d;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+.preview .frame-5 {
+    display: inline-flex;
+    align-items: flex-start;
+    position: absolute;
+    top: 852px;
+    left: 0;
+}
+
+.preview .rectangle {
+    background-color: #e4a321;
+    position: relative;
+    width: 400px;
+    height: 6px;
+}
+
+.preview .rectangle-2 {
+    background: linear-gradient(180deg, rgb(246, 145, 79) 0%, rgb(249, 117, 73) 100%);
+    position: relative;
+    width: 400px;
+    height: 6px;
+}
+
+.preview .rectangle-3 {
+    background: linear-gradient(180deg, rgb(107, 205, 238) 0%, rgb(28, 192, 203) 100%);
+    position: relative;
+    width: 400px;
+    height: 6px;
+}
+
+.preview .rectangle-4 {
+    background: linear-gradient(180deg, rgb(236, 98, 113) 0%, rgb(241, 63, 71) 100%);
+    position: relative;
+    width: 400px;
+    height: 6px;
+}
+
+.preview .text-wrapper-5 {
+    position: absolute;
+    top: 43px;
+    left: 231px;
+    font-family: "Bebas Neue-Regular", Helvetica;
+    font-weight: 400;
+    color: #fec00f;
+    font-size: 56px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.preview .frame-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 17px 24px;
+    position: absolute;
+    top: 33px;
+    left: 1252px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #d2d2d2;
+}
+
+.preview .frame-6 {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.preview .australia {
+    position: relative;
+    width: 24.3px;
+    height: 16px;
+}
+
+.preview .group-2 {
+    position: relative;
+    width: 39px;
+    height: 12px;
+    margin-right: -2px;
+}
+
+.preview .text-wrapper-6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Cabin-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.preview .arrow-down-sign-to {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 25px;
+    object-fit: cover;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Adjust this value as needed */
+}
+
+.header-title {
+    font-size: 24px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    color: #333;
+    /* Adjust color as needed */
+    margin: 0;
+}
+.understanding-equity {
+    height: 100px; /* Reduce this value as needed */
+    padding: 20px; /* Reduce the padding to make the section smaller */
+    margin: 0 auto;
+    overflow: hidden; /* This can help if the content overflows */
+}
+@media (max-width: 768px) {
+    .understanding-equity {
+        height: 300px; /* Smaller height for mobile */
+    }
+}
+
+/*types of equity*/
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 2px solid #d4af37; /* Golden border */
+    border-radius: 8px;
+    width: 23%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Card shadow */
+    padding: 15px; /* Padding inside the card */
+    margin: 10px 0; /* Spacing between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Add hover effect */
+.card:hover {
+    transform: translateY(-5px); /* Lifts the card up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+}
+
+/* Card title */
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Card content */
+.card-content {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 45%; /* Adjust the card width for smaller screens */
+        margin: 10px auto; /* Ensure centered layout */
+    }
+
+    .card-container {
+        justify-content: center;
+    }
+}
+
+/* Specific styling for the header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Styling for .understanding-equity section */
+.understanding-equity {
+    height: 100px; /* Adjust the height as needed */
+    padding: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Mobile adjustments for the .understanding-equity section */
+@media (max-width: 768px) {
+    .understanding-equity {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}
+
+/*benefits*/
+.benefits-container {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    margin-left: 120px;
+  }
+  
+  .circle-container {
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Adjusted to center within the benefit container */
+    transform: translate(-50%, -50%);
+  }
+  
+  .outer-circle {
+    width: 320px; /* Adjusted size */
+    height: 320px;
+    border-radius: 50%;
+    background-color: #f5c2a0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .inner-circle {
+    width: 220px; /* Adjusted size */
+    height: 220px;
+    border-radius: 50%;
+    background-color: #e69572;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inner-circle span {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Benefit Items */
+  .benefit-item {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .benefit-item span {
+    margin-left: 10px;
+    color: black;
+    font-weight: bold;
+  }
+
+  .number {
+    background-color: black;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Specific Item Styling */
+  .item-1 {
+    background-color: #9dbff9;
+    top: 3px;
+    left: 550px;
+    width: 160px;
+  }
+
+  .item-2 {
+    background-color: #a2e5a1;
+    top: 90px;
+    left: 590px;
+    width: 190px;
+  }
+
+  .item-3 {
+    background-color: #d39dee;
+    top: 170px;
+    left: 590px;
+    width: 160px;
+  }
+
+  .item-4 {
+    background-color: #f3a4dd;
+    top: 260px;
+    left: 560px;
+    width: 190px;
+  }
+
+  /* Arrow Styling for Benefits */
+.benefit-item::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px; /* Adjusted width to reduce the line length */
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    margin-right: 0px;
+  }
+  
+
+/* Arc Shape */
+.arc {
+    position: absolute;
+    width: 340px; /* Increased width to extend arc coverage */
+    height: 180px; /* Increased height for smoother, larger arc */
+    border: 3px solid black; /* Arc border color */
+    border-radius: 420px 420px 0 0; /* Smooth arc shape */
+    border-bottom: none;
+    
+    left: 210px; /* Adjust left for a better fit */
+    top: 110px; /* Increased top value to provide more bottom gap */
+    
+    transform: rotate(90deg); /* Arc remains rotated */
+    z-index: 1; /* Behind the benefit items */
+  }
+/*risk start*/
+.risk-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.risk-container .image-container {
+    flex: 1;
+}
+
+/* Adjusted CSS for larger image size in risk section */
+.risk-container .left-image {
+    width: 120%;
+    max-width: 1000px; /* Increased size of the image */
+    height: auto;
+}
+
+
+.risk-container .content-container {
+    flex: 2;
+    padding-left: 30px; /* Add space between image and content */
+}
+
+.risk-container h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    margin-left: -40px;
+}
+
+/* Updated CSS for list with numbers */
+.risk-container ul {
+    list-style-type: decimal; /* Numeric list type */
+    padding-left: 20px; /* Adjust left padding for proper alignment */
+}
+
+.risk-container ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left; /* Align list items to the left */
+    margin-left: 140px;
+    margin-top: 10px;
+}
+
+
+.risk-container ul li strong {
+    font-weight: bold;
+}
+
+.risk-container ul li .description {
+    margin-top: 5px; /* Adds some space between the list item and the description */
+    font-size: 16px;
+    color: #555; /* Adjust the text color */
+    text-align: left;
+}
+
