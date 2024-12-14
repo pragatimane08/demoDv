@@ -48,7 +48,8 @@
 </head>
 
 <body>
- 
+ <!-- navbar -->
+    @include('partials.navbar')
 
     
     @yield('content')
