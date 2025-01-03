@@ -50,26 +50,30 @@
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
-        <div class="container py-3">
-            <div class="d-flex align-items-center">
-                <a href="index.html">
-                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px;">
+    
 
+    <!-- Topbar Start -->
+    <div class="Topbar-container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
+        <div class="Topbar-container py-3">
+            <div class="Topbar-d-flex align-items-center">
+                <!-- Logo Section -->
+                <a href="index.html" class="d-flex align-items-center">
+                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px; margin-left: 50px;">
                 </a>
-                <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@example.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</small>
-                    <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <!-- Right Section -->
+                <div class="Topbar-right d-flex align-items-center ms-3" style="flex-wrap: nowrap;">
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-envelope me-2"></i>customerservice@dhanavruksha.in
+                    </small>
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-phone-alt me-2"></i>+91 7305888454
+                    </small>
+                    <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
+                        <i class="fa fa-calendar-alt me-2"></i>Schedule Meeting
+                    </a>
+                    <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
+                        <i class="fa fa-briefcase me-2"></i>Open Demat Account
+                    </a>
                 </div>
             </div>
         </div>
@@ -77,8 +81,8 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top">
+       <!-- Navbar Start -->
+   <div class="container-fluid bg-white sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
                 <a href="index.html" class="navbar-brand d-lg-none">
@@ -143,9 +147,8 @@
                         </div>
                         <a href="{{route('kyc')}}" class="nav-item nav-link">KYC</a>
                         <a href="{{ route('contact-us') }}" class="nav-item nav-link">Contact</a>
-
                     </div>
-                    <div class="ms-auto d-none d-lg-block">
+                        <div class="ms-auto d-none d-lg-block">
                         <a href="{{ route('login-page') }}" class="btn custom-btn rounded-pill py-2 px-3">Client Login</a>
                     </div>
                 </div>
@@ -153,9 +156,96 @@
         </div>
     </div>
     <!-- Navbar End -->
+     
+<!-- Sidebar start -->
+<div class="float-slider-page">
+    <div class="floating-buttons">
+        <a href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" class="button facebook">
+            <span class="tooltip facebook">Facebook</span>
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/dhanavruksha-financial-services-private-ltd/" target="_blank" class="button linkedin">
+            <span class="tooltip">LinkedIn</span>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/dhanavruksha_" target="_blank" class="button instagram">
+            <span class="tooltip instagram">Instagram</span>
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/dhanavruksha" target="_blank" class="button twitter">
+            <span class="tooltip twitter">Twitter</span>
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+    </div>
+
+    <div class="contact-buttons">
+        <a href="https://wa.me/917305888454" target="_blank" class="contact-button whatsapp">
+            <span class="tooltip whatsapp">WhatsApp</span>
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917305888454" class="contact-button phone">
+            <span class="tooltip phone">Phone</span>
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <div class="contact-button hide" onclick="toggleContactButtons()">
+            <span class="tooltip">Hide</span>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+</div>
+<!-- /Sidebar end -->
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleContactButtons() {
+            const whatsappButton = document.querySelector('.contact-button.whatsapp');
+            const phoneButton = document.querySelector('.contact-button.phone');
+            const hideButtonIcon = document.querySelector('.contact-button.hide i');
+
+            whatsappButton.classList.toggle('hidden');
+            phoneButton.classList.toggle('hidden');
+
+            // Change icon
+            if (whatsappButton.classList.contains('hidden')) {
+                hideButtonIcon.classList.replace('fa-bars', 'fa-eye');
+            } else {
+                hideButtonIcon.classList.replace('fa-eye', 'fa-bars');
+            }
+        }
+    </script>
+    <!-- /Sidebar end -->
 <!-- Tax Sections Start -->
+<!--heading - start -->
+<div class="tp-outer-container">
+  <div class="tp-rounded-container">
+    <div class="tp-left-content">
+      <h1 class="tp-unique-tax-heading">
+        Our <br />
+        <span class="tp-unique-highlight">unique approach</span> <br />
+        to wealth management
+      </h1>
+    </div>
+    <div class="tp-right-content">
+      <a href="{{ route('schedulemeeting') }}"  class="tp-unique-cta-button">📅 Schedule an expert call</a>
+    </div>
+  </div>
+</div>
+
+<!--heading - end -->
+
+
+<!-- Navbar Start -->
+<nav class="tax-cal-navbar">
+  <ul class="tabs">
+    <li><button class="tab-button button active" onclick="showContent('tax-saving')">Tax Saving</button></li>
+    <li><button class="tab-button button" onclick="showContent('tax-calculator')">Tax Calculator</button></li>
+    <li><button class="tab-button button" onclick="showContent('tax-slab')">Tax Slab</button></li>
+  </ul>
+</nav>
+<!-- Navbar End -->
+
 <!-- Tax Sections Start -->
 <div id="tax-saving" class="tax-section" style="display: none;">
   <div class="tax-saving-section-wrapper">
@@ -187,7 +277,6 @@
 </div>
 <!-- Tax Sections End -->
 
-<!-- Tax-calculator start -->
 <!-- tax-calculator start -->
 <div id="tax-calculator" class="tax-section" style="display: none;">
 
@@ -285,7 +374,6 @@
     </div>
   </div>
 
-</div>
 <script>
   // Function to toggle between New and Old Tax Scheme forms
 function toggleTaxForms() {
@@ -306,37 +394,52 @@ function toggleTaxForms() {
   }
 }
 
-// Initialize the toggle function on page load (to handle the default checked value)
+// Show the "Tax Slab" when its tab is clicked
+function showContent(contentId) {
+  // Hide all sections
+  const allSections = document.querySelectorAll('.tax-section');
+  allSections.forEach(section => section.style.display = 'none');
+
+  // Show the selected section
+  const activeSection = document.getElementById(contentId);
+  if (activeSection) {
+    activeSection.style.display = 'block';
+  }
+
+  // Remove 'active' class from all buttons
+  const allButtons = document.querySelectorAll('.tab-button');
+  allButtons.forEach(button => button.classList.remove('active'));
+
+  // Add 'active' class to the clicked button
+  const activeButton = document.querySelector(`button[onclick="showContent('${contentId}')"]`);
+  if (activeButton) {
+    activeButton.classList.add('active');
+  }
+}
+
+// Display "Tax Saving" by default
 window.onload = function() {
-  toggleTaxForms();
+  showContent('tax-saving');
 };
 </script>
+</div>
 <!-- tax-calculator end -->
 
 
-<div id="tax-slab-pdf" class="tax-slab-section" style="display: none;">
-  <div class="pdf-container">
-    <h2>Tax Slab</h2>
-    <embed src="pdf/Aditya Birla Sun Life -BAL BHAVISHYA YOJNA FORM-ARN-249064 (2).pdf" type="application/pdf" width="100%" height="600px">
+<!-- Tax Slab Section Start -->
+<div class="tax-section" id="tax-slab" style="display: none;">
+  <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-872a35f" data-id="872a35f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+    <div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-74baf70 elementor-widget elementor-widget-text-editor" data-id="74baf70" data-element_type="widget" data-widget_type="text-editor.default">
+        <div class="elementor-widget-container">
+          <iframe src="https://www.investwell.in/updation/parameter/par_taxslab.jsp?tbg=eeeeee&#038;hbg=cccccc&#038;hbg2=aaaaaa&#038;fs=11&#038;bt=222222&#038;ht=111111&#038;ht2=000000&#038;fsl=a1a1a0" width="100%" height="6900" frameborder="0" scrolling="auto"></iframe>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<!-- Tax Slab Section End -->
 
-<!-- Button to toggle visibility -->
-<button onclick="toggleTaxSlabPdf()">Toggle Tax Slab PDF</button>
-
-<script>
-  function toggleTaxSlabPdf() {
-  // Get the Tax Slab PDF section
-  const taxSlabSection = document.getElementById("tax-slab-pdf");
-
-  // Toggle the visibility of the Tax Slab PDF section
-  if (taxSlabSection.style.display === "none") {
-    taxSlabSection.style.display = "block";  // Show the section
-  } else {
-    taxSlabSection.style.display = "none";   // Hide the section
-  }
-}
-</script>
 <!-- Tax Sections End -->
 
 <script>
@@ -434,6 +537,94 @@ window.onload = function() {
         </div>
     </div>
     <!-- Copyright End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+ function showContent(sectionId) {
+  const sections = document.querySelectorAll('.tax-section');
+  sections.forEach(section => {
+    section.classList.remove('show');
+    section.style.display = 'none';
+  });
+
+  const selectedSection = document.getElementById(sectionId);
+  if (selectedSection) {
+    selectedSection.style.display = 'block';
+    setTimeout(() => selectedSection.classList.add('show'), 0);
+  }
+
+  const buttons = document.querySelectorAll('.tab-button');
+  buttons.forEach(button => button.classList.remove('active'));
+
+  const activeButton = document.querySelector(`button[onclick="showContent('${sectionId}')"]`);
+  if (activeButton) {
+    activeButton.classList.add('active');
+  }
+}
+
+function calculateTax() {
+  const grossIncome = parseFloat(document.getElementById("grossIncome").value) || 0;
+  const scheme = document.querySelector('input[name="scheme"]:checked').value;
+
+  // Standard Deduction
+  const standardDeduction = 50000;
+  const netTaxableIncome = grossIncome - standardDeduction;
+
+  document.getElementById("netTaxableIncome").value = netTaxableIncome;
+
+  // Tax Calculation Logic
+  let tax = 0;
+  let taxMessage = "Tax is <strong>NIL</strong>";
+  let taxDetails = "As the net taxable income is under Rs. 7,00,000/-, tax rebate u/s 87A is applicable.";
+
+  if (netTaxableIncome > 700000) {
+    if (scheme === "new") {
+      tax = calculateNewSchemeTax(netTaxableIncome);
+    } else {
+      tax = calculateOldSchemeTax(netTaxableIncome);
+    }
+
+    taxMessage = `Tax is <strong>Rs. ${tax.toFixed(2)}</strong>`;
+    taxDetails = "Tax calculated based on the selected scheme.";
+  }
+
+  document.getElementById("taxMessage").innerHTML = taxMessage;
+  document.getElementById("taxDetails").innerText = taxDetails;
+}
+
+function calculateNewSchemeTax(income) {
+  // Add logic for new tax regime slabs
+  if (income <= 700000) return 0;
+  if (income <= 900000) return (income - 700000) * 0.1;
+  if (income <= 1200000) return 20000 + (income - 900000) * 0.15;
+  if (income <= 1500000) return 65000 + (income - 1200000) * 0.2;
+  return 125000 + (income - 1500000) * 0.3;
+}
+
+function calculateOldSchemeTax(income) {
+  // Add logic for old tax regime slabs
+  if (income <= 250000) return 0;
+  if (income <= 500000) return (income - 250000) * 0.05;
+  if (income <= 1000000) return 12500 + (income - 500000) * 0.2;
+  return 112500 + (income - 1000000) * 0.3;
+}
+
+</script>
+  
+    
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>

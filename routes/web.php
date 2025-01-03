@@ -47,11 +47,18 @@ Route::view('/financial-calculator', 'financial-calculator')->name('financial-ca
 Route::view('/downloads', 'downloads')->name('downloads');
 
 Route::view('/blogs', 'blogs')->name('blogs');
+//blogsingle.blade.php
+//blogsingle.blade.php
+Route::view('/blogsingle', 'blogsingle')->name('blogsingle');
+
 Route::view('/learning', 'learning')->name('learning');
 Route::view('/kyc', 'kyc')->name('kyc');
 
 
 Route::view('/contact-us', 'contact-us')->name('contact-us');
+// resources/views/schedulemeeting.blade.php
+Route::view('/schedulemeeting','schedulemeeting')->name('schedulemeeting');
+Route::view('/opendemata','opendemata')->name('opendemata');
 
 Route::view('/login-page', 'login-page')->name('login-page');
 Route::view('/pms-aif', 'pms-aif')->name('pms-aif');
@@ -99,3 +106,12 @@ Route::get('/emi', function () {
 })->name('emi');
 
 
+use App\Http\Controllers\MeetingController;
+
+Route::get('/schedule-meeting', [MeetingController::class, 'showForm'])->name('schedule.meeting.form');
+Route::post('/schedule-meeting', [MeetingController::class, 'handleForm'])->name('schedule.meeting');
+
+
+Route::get('/iframe-content', function () {
+    return view('iframe-content'); // Return a Blade view
+});

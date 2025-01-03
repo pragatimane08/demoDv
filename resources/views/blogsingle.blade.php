@@ -14,6 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
         rel="stylesheet">
@@ -36,6 +37,7 @@
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- <link href="css/ionicons.min.css" rel="stylesheet"> -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
 </head>
@@ -48,8 +50,6 @@
     </div>
     <!-- Spinner End -->
 
-
-    
 
     <!-- Topbar Start -->
     <div class="Topbar-container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
@@ -155,7 +155,8 @@
         </div>
     </div>
     <!-- Navbar End -->
-     <!-- Sidebar start -->
+     
+    <!-- Sidebar start -->
 <div class="float-slider-page">
     <div class="floating-buttons">
         <a href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" class="button facebook">
@@ -193,9 +194,7 @@
 </div>
 <!-- /Sidebar end -->
 
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
     <script>
         function toggleContactButtons() {
             const whatsappButton = document.querySelector('.contact-button.whatsapp');
@@ -215,174 +214,133 @@
     </script>
     <!-- /Sidebar end -->
 
+
+
+
   <!-- Page Header Start -->
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
-        <h1 class="display-2 text-white mb-4 animated slideInDown">Seminars</h1>
+        <h1 class="display-2 text-white mb-4 animated slideInDown">Blog</h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb justify-content-center mb-0">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Seminars</a></li>
+                <li class="breadcrumb-item"><a href="#">Blog-single page</a></li>
             </ol>
         </nav>
     </div>
 </div>
 <!-- Page Header End -->
 
-   
 
-    <!-- New Image and Information Section -->
-    <section class="info-section">
-        <div class="info-image">
-            <img src="img/y45.jpeg" alt="Investment Seminars">
+
+<!-- Single Blog Section -->
+<div class="single-blog-main-container">
+        <!-- Left Column -->
+        <div class="single-blog-left-column">
+            <img src="img/aboutus-3.jpg" alt="Blog Post Image">
+            <div class="single-blog-blog-meta">
+                <span>💡 Creativity</span>
+                <span>🗨 5 Comments</span>
+                <span>📅 28th January</span>
+            </div>
+            <h2 class="single-blog-blog-title">Improve design with typography?</h2>
+            <p class="single-blog-blog-excerpt">Non illo quas blanditiis repellendus laboriosam minima animi.
+                Consectetur
+                accusantium pariatur repudiandae!</p>
+            <p class="single-blog-blog-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Possimus natus, consectetur? Illum libero vel
+                nihil nisi quae, voluptatem, sapiente necessitatibus distinctio voluptates, iusto qui. Laboriosam autem,
+                nam voluptate in beatae.
+            </p>
         </div>
-        <div class="info-content">
-            <h1> Investment Seminars for Youth</h1>
-            <p>We, at Dhanavruksha, are highly committed to educating the youth on effective Wealth Management, encouraging them to adequately invest and insure from their very early stage to avoid financial shocks to themselves and the dependent family.</p>
-            <p>As youth have the most powerful tool—“TIME” on their hands, starting investments early and allocating a decent portion of their investments to equity-oriented instruments can accumulate huge wealth for them over the long term. If the youth who decide the future of the country make the right investment decisions, it will directly impact the economy and growth of the country, to which we would like to make our contribution. With this intent, we conduct educational seminars for the youth at corporates and colleges to sow the seeds for managing their wealth effectively from their very early age. We welcome invitations from corporates and colleges, and we would be happy to conduct such seminars for them.</p>
-        </div>
-    </section>
 
-    <!-- Navigation Tabs -->
-    <nav class="nav1">
-        <ul class="tabs">
-            <li><button class="tab-button button active" onclick="showContent('current-btn')">Current</button></li>
-            <li><button class="tab-button button" onclick="showContent('upcoming')">Upcoming</button></li>
-            <li><button class="tab-button button" onclick="showContent('closed')">Closed</button></li>
-        </ul>
-    </nav>
-    
+        <!-- Right Column -->
+        <div class="single-blog-right-column">
+            <h3>Additional Information</h3>
+            <p>Stay updated with the latest trends in design and development.</p>
+            <p>Learn how to improve your typography, color choices, and more.</p>
+            <a href="#">Read More &rarr;</a>
 
-    
-    <!-- Main Content Section -->
-    <section id="content">
-        <!-- Current Seminars -->
-        <div id="current-btn" class="details-section">
-            <div class="content-header">
-                <h2>Current Seminars</h2>
-            </div>
-            <div class="tab-content">
-                <h3>Day 1: March 13th, 2024</h3>
-                <p>The workshop commenced with an introduction to the importance of financial education, highlighting its relevance in today’s dynamic economic landscape. CA. Deepak Vekaria elaborated on fundamental concepts such as the time value of money and the profound impact of compounding. Participants gained insights into the intricacies of the stock market, exploring its various types and functionalities.</p>
-                <p><strong>Venue:</strong> Pillai Business School, G-504</p>
-                <p><strong>Date:</strong> 13th and 14th March, 2024</p>
-                <p><strong>Time:</strong> 09:00 a.m. to 1:00 p.m.</p>
-                <p><strong>Organizers:</strong> ADITYA BIRLA CAPITAL FOUNDATION</p>
-                <p><strong>Instructor:</strong> CA. Deepak Vekaria</p>
-                <p><strong>Faculty Coordinator:</strong> Dr. Pushpendu Rakshit</p>
-                <p><strong>Mentor:</strong> Dr. R. Chandran and Dr. K. P. Gopal</p>
+            <!-- Profile Card -->
+            <div class="single-blog-profile-card">
+                <img src="img/team-2.jpg" alt="Arther Conal">
+                <h4>Arther Conal</h4>
+                <p class="single-blog-designation">Digital Marketer</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, dolore.</p>
+                <div class="single-blog-social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                </div>
             </div>
         </div>
-        </section>
+    </div>
 
-        <!-- Upcoming Seminars -->
-        <section id="upcoming" class="details-section">
-            <h2>Upcoming Seminars</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="img\upcoming.jpg" alt="Upcoming Seminar">
-                    <h3>Saving vs. Investing</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <div class="card">
-                    <img src="img\upcoming1.jpg" alt="Upcoming Seminar">
-                    <h3>Financial Literacy</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <div class="card">
-                    <img src="img\upcoming2.png" alt="Upcoming Seminar">
-                    <h3>The Impact of Student Loans</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <div class="card">
-                    <img src="img\upcoming3.png" alt="Upcoming Seminar">
-                    <h3>Building Credit Early</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <!-- Add more cards as needed -->
-            </div>
-        </section>
-    
-        <section id="closed" class="details-section">
-            <h2>Closed Seminars</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="img\y45.jpeg" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                <div class="card">
-                    <img src="img\y2.jpg" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                <div class="card">
-                    <img src="img\y1.png" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                <div class="card">
-                    <img src="img\closed1.jpeg" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                
-                <!-- Add more cards as needed -->
-            
-            </div>
-        </section>
-    </section>
+    <!-- Post Navigation-start -->
+    <!-- Post Navigation -->
+    <div class="single-blog-post-navigation">
+        <div class="single-blog-previous-post">
+            <span class="single-blog-post-label">- Previous Post</span>
+            <p class="single-blog-post-title">Donec consectetuer ligula vulputate sem tristique.</p>
+        </div>
+        <div class="single-blog-divider"></div>
+        <div class="single-blog-next-post">
+            <span class="single-blog-post-label">- Next Post</span>
+            <p class="single-blog-post-title">Ut aliquam sollicitudin leo.</p>
+        </div>
+    </div>
 
-        <!-- Registration Form Modal -->
-        <div id="registrationModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Register for Seminar</h2>
-                <form id="registrationForm">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-                    <label for="phone">Phone:</label><br>
-                    <input type="tel" id="phone" name="phone" required><br><br>
-                    <button type="submit">Submit</button>
+    <!-- Post Navigation-start -->
+
+    <!-- blog-comment-start -->
+    <!-- Blog Comment Section -->
+    <div class="single-blog-comment-area">
+        <h3>Comments</h3>
+        <div class="single-blog-comment">
+            <span class="single-blog-comment-author">Alice:</span>
+            <p class="single-blog-comment-text">Great article! Really inspiring.</p>
+            <span class="single-blog-reply">Reply</span>
+        </div>
+        <div class="single-blog-comment-tree">
+            <div class="single-blog-comment">
+                <span class="single-blog-comment-author">John:</span>
+                <p class="single-blog-comment-text">Thank you, Alice!</p>
+            </div>
+        </div>
+        <div class="single-blog-comment-form">
+            <input type="text" placeholder="Your Name">
+            <textarea placeholder="Write a comment"></textarea>
+            <button type="submit">Post Comment</button>
+        </div>
+    </div>
+
+    <!-- blog-comment-end -->
+
+    <!-- Blog Comment Form - Start -->
+    <div class="single-blogcomment-form">
+        <div class="form-container">
+            <!-- Form Content -->
+            <div class="form-content">
+                <h3>Write a Comment</h3>
+                <form action="#">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Comment" rows="4" required></textarea>
+                    <button type="submit">Submit Comment</button>
                 </form>
             </div>
+            <!-- Form Image -->
+            <div class="form-image">
+                <img src="img/blog-form-img1.jpg" alt="Comment Illustration">
+            </div>
         </div>
-        
-    
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+    </div>
+    <!-- Blog Comment Form - End -->
+     
+<!-- footer Start --> 
+<div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -446,6 +404,9 @@
         </div>
     </div>
     <!-- Copyright End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -469,8 +430,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/scripts.js"></script>
-
 </body>
 
 </html>

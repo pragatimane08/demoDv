@@ -7,7 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -40,7 +41,21 @@
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- <link href="css/ionicons.min.css" rel="stylesheet"> -->
+    <script>
+        new WOW().init();
 
+        //loader
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('content');
+
+            // Fade out the loader after a brief delay
+            setTimeout(function () {
+                loader.classList.add('loader-hidden');
+                content.style.display = 'block';  // Show the main content
+            }, 1500);  // Adjust delay time as necessary
+        });
+    </script>
     <script>
         new WOW().init();
     </script>
@@ -54,28 +69,39 @@
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
+<!-- Loader Start -->
+<div id="loader">
+        <h3 class="animate__animated animate__fadeIn">
+            <span class="welcome-text">Welcome to</span>
+            <span class="dhanvruksha-text">Dhanvruksha</span>
+        </h3>
+    </div>
+    <!-- Loader End -->
+
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
-        <div class="container py-3">
-            <div class="d-flex align-items-center">
-                <a href="index.html">
-                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px;">
-
+    <div class="Topbar-container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
+        <div class="Topbar-container py-3">
+            <div class="Topbar-d-flex align-items-center">
+                <!-- Logo Section -->
+                <a href="index.html" class="d-flex align-items-center">
+                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px; margin-left: 50px;">
                 </a>
-                <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@example.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</small>
-                    <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <!-- Right Section -->
+                <div class="Topbar-right d-flex align-items-center ms-3" style="flex-wrap: nowrap;">
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-envelope me-2"></i>customerservice@dhanavruksha.in
+                    </small>
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-phone-alt me-2"></i>+91 7305888454
+                    </small>
+                    <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
+                        <i class="fa fa-calendar-alt me-2"></i>Schedule Meeting
+                    </a>
+                    <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
+                        <i class="fa fa-briefcase me-2"></i>Open Demat Account
+                    </a>
                 </div>
             </div>
         </div>
@@ -149,9 +175,8 @@
                         </div>
                         <a href="{{route('kyc')}}" class="nav-item nav-link">KYC</a>
                         <a href="{{ route('contact-us') }}" class="nav-item nav-link">Contact</a>
-
                     </div>
-                    <div class="ms-auto d-none d-lg-block">
+                        <div class="ms-auto d-none d-lg-block">
                         <a href="{{ route('login-page') }}" class="btn custom-btn rounded-pill py-2 px-3">Client Login</a>
                     </div>
                 </div>
@@ -159,6 +184,64 @@
         </div>
     </div>
     <!-- Navbar End -->
+     
+    <!-- Sidebar start -->
+<div class="float-slider-page">
+    <div class="floating-buttons">
+        <a href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" class="button facebook">
+            <span class="tooltip facebook">Facebook</span>
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/dhanavruksha-financial-services-private-ltd/" target="_blank" class="button linkedin">
+            <span class="tooltip">LinkedIn</span>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/dhanavruksha_" target="_blank" class="button instagram">
+            <span class="tooltip instagram">Instagram</span>
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/dhanavruksha" target="_blank" class="button twitter">
+            <span class="tooltip twitter">Twitter</span>
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+    </div>
+
+    <div class="contact-buttons">
+        <a href="https://wa.me/917305888454" target="_blank" class="contact-button whatsapp">
+            <span class="tooltip whatsapp">WhatsApp</span>
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917305888454" class="contact-button phone">
+            <span class="tooltip phone">Phone</span>
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <div class="contact-button hide" onclick="toggleContactButtons()">
+            <span class="tooltip">Hide</span>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+</div>
+<!-- /Sidebar end -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleContactButtons() {
+            const whatsappButton = document.querySelector('.contact-button.whatsapp');
+            const phoneButton = document.querySelector('.contact-button.phone');
+            const hideButtonIcon = document.querySelector('.contact-button.hide i');
+
+            whatsappButton.classList.toggle('hidden');
+            phoneButton.classList.toggle('hidden');
+
+            // Change icon
+            if (whatsappButton.classList.contains('hidden')) {
+                hideButtonIcon.classList.replace('fa-bars', 'fa-eye');
+            } else {
+                hideButtonIcon.classList.replace('fa-eye', 'fa-bars');
+            }
+        }
+    </script>
+    <!-- /Sidebar end -->
 
 
 
@@ -620,6 +703,63 @@
     </div>
     <!-- Testimonial End -->
 
+    <!-- How It Works Section -->
+<section class="dv-how-it-works">
+    <h2 class="how-it-works-title">How It Works</h2>
+    <div class="how-it-works-steps">
+        <!-- Step 1 -->
+        <div class="how-it-works-step">
+            <div class="how-it-works-icon">
+                <span class="how-it-works-step-number">01</span>
+                <img src="img/hiw-img-1.png" alt="Register Icon" class="how-it-works-step-icon">
+            </div>
+            <h3 class="how-it-works-step-title">Register</h3>
+            <p class="how-it-works-step-description">
+                Register with us to kick start your financial journey.
+            </p>
+        </div>
+        <!-- Step 2 -->
+        <div class="how-it-works-step">
+            <div class="how-it-works-icon">
+                <span class="how-it-works-step-number">02</span>
+                <img src="img/hiw-img-2.png" alt="Invest Icon" class="how-it-works-step-icon">
+            </div>
+            <h3 class="how-it-works-step-title">Choose and Invest</h3>
+            <p class="how-it-works-step-description">
+                Choose the best funds according to your risk profile and start investing hasslefree.
+            </p>
+        </div>
+        <!-- Step 3 -->
+        <div class="how-it-works-step">
+            <div class="how-it-works-icon">
+                <span class="how-it-works-step-number">03</span>
+                <img src="img/hiw-img-3.png" alt="Grow Icon" class="how-it-works-step-icon">
+            </div>
+            <h3 class="how-it-works-step-title">Watch It Grow</h3>
+            <p class="how-it-works-step-description">
+                Sit back and watch your money work for you. Track all your family’s portfolio from just one account.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Our Partner Start -->
+<div class="home-our-partners-section">
+  <div class="home-our-partners-container">
+    <div class="home-our-partners-text">
+      <h3>Our Clients</h3>
+      <p>We're fortunate to have incredible clients</p>
+    </div>
+    <iframe 
+      src="https://resources.investwellonline.com/websiteitem/amc-logos-new/amc.html" 
+      class="home-our-partners-iframe" 
+      title="AMC Logos" 
+      frameborder="0">
+    </iframe>
+  </div>
+</div>
+<!-- Our Partner End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -689,8 +829,8 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a> -->
 
 
     <!-- JavaScript Libraries -->

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Dhanavruksha</title>
@@ -33,15 +32,12 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- <link href="css/ionicons.min.css" rel="stylesheet"> -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
-</head>
-
 <body>
     <!-- Spinner Start -->
     <div id="spinner"
@@ -51,26 +47,30 @@
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
-        <div class="container py-3">
-            <div class="d-flex align-items-center">
-                <a href="index.html">
-                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px;">
+    
 
+    <!-- Topbar Start -->
+    <div class="Topbar-container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
+        <div class="Topbar-container py-3">
+            <div class="Topbar-d-flex align-items-center">
+                <!-- Logo Section -->
+                <a href="index.html" class="d-flex align-items-center">
+                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px; margin-left: 50px;">
                 </a>
-                <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@example.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</small>
-                    <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <!-- Right Section -->
+                <div class="Topbar-right d-flex align-items-center ms-3" style="flex-wrap: nowrap;">
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-envelope me-2"></i>customerservice@dhanavruksha.in
+                    </small>
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-phone-alt me-2"></i>+91 7305888454
+                    </small>
+                    <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
+                        <i class="fa fa-calendar-alt me-2"></i>Schedule Meeting
+                    </a>
+                    <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
+                        <i class="fa fa-briefcase me-2"></i>Open Demat Account
+                    </a>
                 </div>
             </div>
         </div>
@@ -144,9 +144,8 @@
                         </div>
                         <a href="{{route('kyc')}}" class="nav-item nav-link">KYC</a>
                         <a href="{{ route('contact-us') }}" class="nav-item nav-link">Contact</a>
-
                     </div>
-                    <div class="ms-auto d-none d-lg-block">
+                        <div class="ms-auto d-none d-lg-block">
                         <a href="{{ route('login-page') }}" class="btn custom-btn rounded-pill py-2 px-3">Client Login</a>
                     </div>
                 </div>
@@ -154,17 +153,62 @@
         </div>
     </div>
     <!-- Navbar End -->
+     
+    <!-- Sidebar start -->
+<div class="float-slider-page">
+    <div class="floating-buttons">
+        <a href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" class="button facebook">
+            <span class="tooltip facebook">Facebook</span>
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/dhanavruksha-financial-services-private-ltd/" target="_blank" class="button linkedin">
+            <span class="tooltip">LinkedIn</span>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/dhanavruksha_" target="_blank" class="button instagram">
+            <span class="tooltip instagram">Instagram</span>
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/dhanavruksha" target="_blank" class="button twitter">
+            <span class="tooltip twitter">Twitter</span>
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+    </div>
 
+    <div class="contact-buttons">
+        <a href="https://wa.me/917305888454" target="_blank" class="contact-button whatsapp">
+            <span class="tooltip whatsapp">WhatsApp</span>
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917305888454" class="contact-button phone">
+            <span class="tooltip phone">Phone</span>
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <div class="contact-button hide" onclick="toggleContactButtons()">
+            <span class="tooltip">Hide<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleContactButtons() {
+            const whatsappButton = document.querySelector('.contact-button.whatsapp');
+            const phoneButton = document.querySelector('.contact-button.phone');
+            const hideButtonIcon = document.querySelector('.contact-button.hide i');
 
+            whatsappButton.classList.toggle('hidden');
+            phoneButton.classList.toggle('hidden');
 
-  
-
-
+            // Change icon
+            if (whatsappButton.classList.contains('hidden')) {
+                hideButtonIcon.classList.replace('fa-bars', 'fa-eye');
+            } else {
+                hideButtonIcon.classList.replace('fa-eye', 'fa-bars');
+            }
+        }
+    </script>
+    <!-- /Sidebar end -->
 
   <!-- Page Header Start -->
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
-        <h1 class="display-2 text-white mb-4 animated slideInDown">Retirement Planning</h1>
+        <h1 class="display-2 text-white mb-4 animated slideInDown">Services</h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb justify-content-center mb-0">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -173,24 +217,183 @@
         </nav>
     </div>
 </div>
-<!-- Page Header End -->
+<!-- header end -->
+<div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid rounded w-75 align-self-end" src="img/retirement2.jpg" alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="img/retirement3.jpg" alt=""
+                            style="margin-top: -25%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    
+                    <h1 class="mb-4">What is Retirement Planning?</h1>
+                    <div class="info-card">
+                    <p>Retirement saving is a much sought and discussed subject in our time. It is said that retirement assesment is never too late though ideal if you start it at very young age. Retirement is the ultimate reality that happens to a working professional and it should be the most enjoyable phase of an individual. Effective retirement assesment gives individual a benefit to retain their financial independence even after their work life. Thus, retirement assesment is as important as your education and marriage. We must understand that future largely depends on the choices that we make today. An individual will be able to maintain high standards of living with the help of effective retirement assesment.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card">
+  <div class="content">
+    <p class="heading">Retirement Savings Features</p>
+    <p class="para">
+    We must overcome one obstacle which is that no clue is available with us for how long we are going to live. There are certain things for an effective retirement like you must decide how much money you require to live a comfortable life after retirement and ascertain how much you require investing to achieve this goal.</p>
+    <p class="para">
+    You should invest in a right investment cum retirement plan to build determined corpus.
+Most of the retirement plans offered in the market either provides you fixed monthly income or a lump sum after you retire from your professional life.
 
-<section class="info-section">
-<div class="info-image">
-            <img src="img/retirementimg.jpg" alt="child future saving">
-        </div>
-        <div class="info-content">
-            <h1> Retirement Savings</h1>
-            <p>Retirement saving is a much sought and discussed subject in our time. It is said that retirement assesment is never too late though ideal if you start it at very young age. Retirement is the ultimate reality that happens to a working professional and it should be the most enjoyable phase of an individual. Effective retirement assesment gives individual a benefit to retain their financial independence even after their work life. Thus, retirement assesment is as important as your education and marriage. We must understand that future largely depends on the choices that we make today. An individual will be able to maintain high standards of living with the help of effective retirement assesment.</p>
-        </div>
-           
-    </section>
-    <div class="header-ret">
-    <h1>Benefits of Retirement Saving</h1>
-    <p>Retirement plans help us to make large corpuses that can be utilized to achieve any financial goal after we stop working. An individual can start investing with a very low sum at a very early age. Retirement assessment starts at a point when you know your life goals and then accompany these goals with a sound financial plan to meet these objectives upon retirement.</p>
+
+    </p>
+    <button class="btn">Retirement Features</button>
   </div>
+    </div>
+    <!-- About End -->
+    
+       
+  
+<style>
 
-  <div class="infographic-container">
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 620px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  background-color: #fff;
+  margin-left: 50%;
+  margin-top: -23%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  color: #333;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.content .heading {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.content .para {
+  line-height: -1.4;
+  font-size: 16px;
+  margin-top: -5%;
+}
+
+.content .btn {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  opacity: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  box-shadow: none;
+}
+
+.card:hover .content {
+  color: #fff;
+}
+
+.card:hover .btn {
+  color: #333;
+  background: #fff;
+}
+
+.content .btn:active {
+  box-shadow: none;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 0;
+    padding: 24px;
+  }
+
+  .content .heading {
+    font-size: 22px;
+  }
+
+  .content .para {
+    font-size: 14px;
+    margin-top: 0;
+  }
+
+  .content .btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    padding: 16px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .content .heading {
+    font-size: 21px;
+  }
+
+  .content .para {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .content .btn {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+</style>
+<!-- retirement code start -->
+ <h1>Retirement Planning</h1>
+<div class="retirement-container">
+    <div class="retirement-content">
+    <h3>Key Benefits of Retirement Planning</h3>
+        <p>Retirement plans helps us to make large corpuses that can be utilized to achieve any financial goal after we stop working.An individual can start investing with a very low sum at a very early age. Retirement assesment starts at a point when you know your life goals and then to accompany these goals with a sound financial plan that helps you to meet these objectives upon retirement.</p>
+        <div class="infographic-container">
     <!-- Start Early -->
     <div class="infographic-item">
       <div class="circle-ret">
@@ -198,9 +401,8 @@
       </div>
       <div class="title-ret info-below">Start Early</div>
       <div class="description-ret info-below">An early start gives more time for your money to grow.</div>
-      <div class="connector-ret"></div>
+      
     </div>
-
     <!-- Save More -->
     <div class="infographic-item">
       <div class="title-ret info-above">Save More</div>
@@ -208,7 +410,7 @@
       <div class="circle-ret">
         <img src="img/compound-interest.png" alt="Save Icon">
       </div>
-      <div class="connector-ret"></div>
+      
     </div>
 
     <!-- Factor in Inflation -->
@@ -218,7 +420,7 @@
       </div>
       <div class="title-ret info-below">Factor in Inflation</div>
       <div class="description-ret info-below">Ensure you don't end up having an inadequate corpus.</div>
-      <div class="connector-ret"></div>
+      
     </div>
 
     <!-- Gauge Risk Appetite -->
@@ -226,69 +428,66 @@
       <div class="title-ret info-above">Gauge Your Risk Appetite</div>
       <div class="description-ret info-above">Choose financial instruments to accumulate the desired wealth.</div>
       <div class="circle-ret">
-        <img src="" alt="Risk Icon">
+        <img src="img/danger.png" alt="Risk Icon">
       </div>
     </div>
   </div>
+
+        <div class="retirement-sidebar">
     
-<h1 class="ret-h">Smart Retirement Planning</h1>
-<p class="intro-text">
-    Accumulation of wealth through SIPs of Mutual Funds & recurring investment in equities, 
-    Retirement Solutions of Life Insurance Companies, Bonds, Fixed Deposits, and NPS are essential components for various stages of Retirement Planning.
-</p>
+        <h3>Key Insights</h3>
+        <p>Accumulation of wealth through SIPs of Mutual Funds & recurring investment in equities, Retirement Solutions of Life Insurance Companies, Bonds, Fixed Deposits and NPS are essential components for various stages of Retirement Planning.</p>
+    </div>
+    </div>
 
-<main class="circle-container">
-  <h2 class="ret-h">Piggy Bank Investments</h2>
-  <div class="circle-row">
-    <div class="circle-bank">
-      <div class="circle-content">
-        <img src="img/sip.jpg" alt="SIPs">
-        <h2>SIPs</h2>
-        <p>Systematic Investment Plans for steady growth.</p>
-      </div>
-    </div>
-    <div class="circle-bank">
-      <div class="circle-content">
-        <img src="img/icon/equity.png" alt="Equities">
-        <h2>Equities</h2>
-        <p>Invest in equities for high returns.</p>
-      </div>
-    </div>
-    <div class="circle-bank">
-      <div class="circle-content">
-        <img src="img/insurance.png" alt="Life Insurance">
-        <h2>Life Insurance</h2>
-        <p>Retirement solutions for financial stability.</p>
-      </div>
-    </div>
-  </div>
-  <div class="circle-row">
-    <div class="circle-bank">
-      <div class="circle-content">
-        <img src="img/bond1.png" alt="Bonds">
-        <h2>Bonds</h2>
-        <p>Secure your wealth with stable returns.</p>
-      </div>
-    </div>
-    <div class="circle-bank">
-      <div class="circle-content">
-        <img src="img/investment.png" alt="Fixed Deposits">
-        <h2>Fixed Deposits</h2>
-        <p>Guaranteed returns with safety.</p>
-      </div>
-    </div>
-    <div class="circle-bank">
-      <div class="circle-content">
-        <img src="img/nps.png" alt="NPS">
-        <h2>NPS</h2>
-        <p>Structured benefits for a peaceful retirement.</p>
-      </div>
-    </div>
-  </div>
-</main>
+    
+</div>
+</div>
+<section class="interactive-section">
+        <div>
+            <h3>Estimate Your Retirement Savings</h3>
+            <p>Use our interactive tool to estimate how much you need to save for a comfortable retirement. It's quick, easy, and personalized to your goals!</p>
+        </div>
+        <div>
+            <button class="cta-button" onclick="openCalculator()">Try the Calculator</button>
+        </div>
+    </section>
 
-</section>
-<!-- footer Start --> 
+    <iframe id="calculator-iframe" src=""></iframe>
+
+    <script>
+        function openCalculator() {
+            var iframe = document.getElementById('calculator-iframe');
+            iframe.src = "https://www.investwell.in/updation/parameter/Calculator/par_retirement_calculatorN.jsp?obgl=eeeeee&amp;fs=14&amp;ol=222222&amp;obgr=dddddddd&amp;or=111111&amp;share=N";
+            iframe.style.display = "block"; // Show the iframe when button is clicked
+        }
+    </script>
+
+ <!-- retiremnt code end -->
+
+
+<style>
+    #calculator-iframe {
+    display: none; /* Initially hidden */
+    width: 100%; /* Make the iframe take up full width */
+    max-width: 1200px; /* Maximum width of the iframe */
+    height: 1000px;
+    border: 1px solid #ddd; /* Light border around the iframe */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    margin-top: 20px; /* Add space above the iframe */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in transition */
+     margin-left: 10%;
+
+
+
+
+
+
+
+                                                              }
+</style>
+  <!-- footer Start --> 
 <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -380,5 +579,4 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>

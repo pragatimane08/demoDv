@@ -50,25 +50,27 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
-        <div class="container py-3">
-            <div class="d-flex align-items-center">
-                <a href="index.html">
-                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px;">
-
+    <div class="Topbar-container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
+        <div class="Topbar-container py-3">
+            <div class="Topbar-d-flex align-items-center">
+                <!-- Logo Section -->
+                <a href="index.html" class="d-flex align-items-center">
+                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px; margin-left: 50px;">
                 </a>
-                <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@example.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</small>
-                    <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <!-- Right Section -->
+                <div class="Topbar-right d-flex align-items-center ms-3" style="flex-wrap: nowrap;">
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-envelope me-2"></i>customerservice@dhanavruksha.in
+                    </small>
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-phone-alt me-2"></i>+91 7305888454
+                    </small>
+                    <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
+                        <i class="fa fa-calendar-alt me-2"></i>Schedule Meeting
+                    </a>
+                    <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
+                        <i class="fa fa-briefcase me-2"></i>Open Demat Account
+                    </a>
                 </div>
             </div>
         </div>
@@ -76,8 +78,8 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top">
+       <!-- Navbar Start -->
+   <div class="container-fluid bg-white sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
                 <a href="index.html" class="navbar-brand d-lg-none">
@@ -121,6 +123,7 @@
                             <a href="{{ route('tax-planning') }}" class="dropdown-item">Tax Planning</a>
                             <a href="{{ route('portfolio-restucturing') }}" class="dropdown-item">Portfolio Restructuring</a>
                             <a href="{{ route('child-future-saving') }}" class="dropdown-item"> Child Future Saving</a>    
+                            <a href="{{ route('retirmentplanning') }}" class="dropdown-item">Retirement Planning</a>
                             <a href="{{ route('seminars') }}" class="dropdown-item">Investment Seminar For Youth</a>
 
 
@@ -141,9 +144,8 @@
                         </div>
                         <a href="{{route('kyc')}}" class="nav-item nav-link">KYC</a>
                         <a href="{{ route('contact-us') }}" class="nav-item nav-link">Contact</a>
-
                     </div>
-                    <div class="ms-auto d-none d-lg-block">
+                        <div class="ms-auto d-none d-lg-block">
                         <a href="{{ route('login-page') }}" class="btn custom-btn rounded-pill py-2 px-3">Client Login</a>
                     </div>
                 </div>
@@ -151,6 +153,71 @@
         </div>
     </div>
     <!-- Navbar End -->
+     
+    <!-- Sidebar start -->
+<div class="float-slider-page">
+    <div class="floating-buttons">
+        <a href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" class="button facebook">
+            <span class="tooltip facebook">Facebook</span>
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/dhanavruksha-financial-services-private-ltd/" target="_blank" class="button linkedin">
+            <span class="tooltip">LinkedIn</span>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/dhanavruksha_" target="_blank" class="button instagram">
+            <span class="tooltip instagram">Instagram</span>
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/dhanavruksha" target="_blank" class="button twitter">
+            <span class="tooltip twitter">Twitter</span>
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+    </div>
+
+    <div class="contact-buttons">
+        <a href="https://wa.me/917305888454" target="_blank" class="contact-button whatsapp">
+            <span class="tooltip whatsapp">WhatsApp</span>
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917305888454" class="contact-button phone">
+            <span class="tooltip phone">Phone</span>
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <div class="contact-button hide" onclick="toggleContactButtons()">
+            <span class="tooltip">Hide</span>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+</div>
+<!-- /Sidebar end -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleContactButtons() {
+            const whatsappButton = document.querySelector('.contact-button.whatsapp');
+            const phoneButton = document.querySelector('.contact-button.phone');
+            const hideButtonIcon = document.querySelector('.contact-button.hide i');
+
+            whatsappButton.classList.toggle('hidden');
+            phoneButton.classList.toggle('hidden');
+
+            // Change icon
+            if (whatsappButton.classList.contains('hidden')) {
+                hideButtonIcon.classList.replace('fa-bars', 'fa-eye');
+            } else {
+                hideButtonIcon.classList.replace('fa-eye', 'fa-bars');
+            }
+        }
+    </script>
+    <!-- /Sidebar end -->
+
+
+
+  
+
+>
 
 
     <!-- Page Header Start -->
@@ -181,123 +248,39 @@
     </div>
     <!-- bond-info-end -->
 
-    <!-- what is bond-start -->
-    <div class="bond-section-wrapper">
-        <section class="bond-section">
-            <h2 class="section-title">What Is A Bond?</h2>
-            <div class="bond-container">
-                <div class="bond-card">
-                    <div class="line"></div>
-                    <p class="bond-text">
-                        Bonds are financial instruments included in the debt asset class and are issued by governments
-                        or private organisations to raise funds from the general public. Governments and private
-                        organisations raise funds to ensure adequate capital for undertaking various activities.
-                    </p>
-                </div>
-                <div class="bond-card">
-                    <div class="line"></div>
-                    <p class="bond-text">
-                        The bond agreement between the issuer and the investor comes with the details of interest rate,
-                        terms of payment (debt servicing), maturity etc., and are listed with a face value (principal)
-                        that is repaid at the time of maturity.
-                    </p>
-                </div>
-                <div class="bond-card">
-                    <div class="line"></div>
-                    <p class="bond-text">
-                        The interest rate of bonds is called the coupon rate, and the interest payouts are predefined as
-                        per the agreement. Bonds are traded in the secondary markets and can be bought and sold similar
-                        to other investment instruments.
-                    </p>
-                </div>
+     <!-- Rbi-bond-start -->
+     <div class="Rbi-bond-container">
+        <div class="Rbi-bond-left-section">
+            <h2>7.15% RBI Bonds</h2>
+            <p>
+                Bonds issued by the Reserve Bank Of India (RBI). The rate of interest offered is 7.15%, payable half-yearly with cumulative and non-cumulative options available. The tenure is six years.
+            </p>
+        </div>
+        <div class="Rbi-bond-right-section">
+            <div class="box advantage">
+                <h3>Advantages</h3>
+                <p>Safety, guaranteed return</p>
             </div>
-        </section>
-    </div>
-    <!-- what is bond-end -->
-
-
-    <!-- why invest in bond start -->
-    <div class="bond-benefits-section">
-        <div class="bond-benefits-container">
-            <div class="left-content">
-                <h2>Why Invest In Bonds?</h2>
-                <p>Bond funds provide a safer and steady source of income at regular intervals. Bond investments are
-                    influenced by various market factors such as the prevailing interest rates, bond yield, maturity, or
-                    the issuer's credibility.</p>
-            </div>
-            <div class="right-content">
-                <div class="accordion-item">
-                    <div class="accordion-title">
-                        <i class="icon">🎯</i>
-                        Better Returns at Low Risk
-                        <span class="arrow"></span>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-title">
-                        <i class="icon">💼</i>
-                        Portfolio Diversification
-                        <span class="arrow"></span>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-title">
-                        <i class="icon">💰</i>
-                        Steady Income
-                        <span class="arrow"></span>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-title">
-                        <i class="icon">🏅</i>
-                        Tax Advantage
-                        <span class="arrow"></span>
-                    </div>
-                </div>
+            <div class="box disadvantage">
+                <h3>Disadvantages</h3>
+                <p>Interest is taxable</p>
             </div>
         </div>
     </div>
-    <!-- why invest in bond end -->
+    <!--Rbi-bond-end -->
 
-
-    <!-- types of bond-start -->
-    <section class="custom-types-of-bonds">
-        <h2 class="custom-section-title">Types Of Bonds</h2>
-        <div class="custom-bonds-container">
-            <div class="custom-bond-item">
-                <div class="custom-bond-header">
-                    <img src="img/bond1.png" alt="Government Bond Icon" class="custom-bond-icon">
-                    <h3>Government Bonds</h3>
-                </div>
-                <p>The GOI issues bonds to meet its capital and financial requirements for a longer term.</p>
-            </div>
-            <div class="custom-bond-item">
-                <div class="custom-bond-header">
-                    <img src="img/bond2.png" alt="Zero Coupon Bond Icon" class="custom-bond-icon">
-                    <h3>Zero Coupon Bonds</h3>
-                </div>
-                <p>Zero-coupon bonds do not pay interest, but they are sold at a discount and mature at face value.</p>
-            </div>
-            <div class="custom-bond-item">
-                <div class="custom-bond-header">
-                    <img src="img/bond3.png" alt="Sovereign Gold Bond Icon" class="custom-bond-icon">
-                    <h3>Sovereign Gold Bonds</h3>
-                </div>
-                <p>Sovereign Gold Bonds are denominated in multiples of grams of gold and are available to investors.
-                </p>
-            </div>
-            <div class="custom-bond-item">
-                <div class="custom-bond-header">
-                    <img src="img/bond4.png" alt="Corporate Bond Icon" class="custom-bond-icon">
-                    <h3>Corporate Bonds</h3>
-                </div>
-                <p>Large corporations issue bonds at fixed returns, providing a good rate of interest.</p>
-            </div>
-        </div>
-    </section>
-    <!-- types of bond-end -->
-
-    <!-- Why You Will Bond with Us Section -->
+<!--Government-bond-section-start-->
+<div class="Government-bond-section">
+    <div class="Government-bond-content">
+      <h4>Government securities</h4>
+      <p>Retail investors have not tapped this investment avenue as much as others. It is good for investors looking for reasonable returns with no risk of default as the securities the Government offers these securities. These securities can be held in a demat format. The market is limited so liquidity can be a problem. Investors need to have a thorough knowledge of this investment format to invest in them. Well, then if you are the one who prefer the comforts of safety to the greed of high returns all the above debt instruments are yours to invest in.</p>
+      <button class="read-more-btn">Read More →</button>
+    </div>
+    <div class="image-content">
+      <img src="/img/bond-gov-img1.webp" alt="Team Collaboration">
+    </div>
+  </div>
+<!--Government-bond-section-end-->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">

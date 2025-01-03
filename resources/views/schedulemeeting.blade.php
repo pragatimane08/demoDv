@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Dhanavruksha</title>
@@ -14,6 +13,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
         rel="stylesheet">
@@ -32,14 +32,12 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- <link href="css/ionicons.min.css" rel="stylesheet"> -->
-
-
-</head>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <body>
     <!-- Spinner Start -->
     <div id="spinner"
@@ -155,7 +153,8 @@
         </div>
     </div>
     <!-- Navbar End -->
-     <!-- Sidebar start -->
+     
+    <!-- Sidebar start -->
 <div class="float-slider-page">
     <div class="floating-buttons">
         <a href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" class="button facebook">
@@ -218,171 +217,97 @@
   <!-- Page Header Start -->
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
-        <h1 class="display-2 text-white mb-4 animated slideInDown">Seminars</h1>
+        <h1 class="display-2 text-white mb-4 animated slideInDown">Schedule Meeting</h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb justify-content-center mb-0">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Seminars</a></li>
+                <li class="breadcrumb-item"><a href="#">Schedule Meeting</a></li>
             </ol>
         </nav>
     </div>
 </div>
-<!-- Page Header End -->
+
+<!-- schudle-meeting start --> 
+<!-- Schedule Meeting Section -->
+<div class="schedule-meeting-container">
+    <!-- Left Panel with Image -->
+    <div class="schedule-image">
+        <img src="{{ asset('img/schedule-meeting.webp') }}" alt="Schedule a Meeting">
+    </div>
+
+    <!-- Right Panel (Form) -->
+    <div class="schedule-form">
+        <h2>Schedule a Meeting</h2>
+        <p>Let's connect and discuss your requirements!</p>
+
+        <!-- Form -->
+        <form method="POST" action="{{ route('schedule.meeting') }}">
+            @csrf
+            <input type="text" name="name" placeholder="Your Name" value="{{ old('name') }}" required>
+            @error('name')
+                <div class="error-message">{{ $message }}</div>
+            @enderror
+
+            <input type="email" name="email" placeholder="Your Email" value="{{ old('email') }}" required>
+            @error('email')
+                <div class="error-message">{{ $message }}</div>
+            @enderror
+
+            <input type="tel" name="phone" placeholder="Your Phone" value="{{ old('phone') }}" required>
+            @error('phone')
+                <div class="error-message">{{ $message }}</div>
+            @enderror
+
+            <input type="date" name="date" value="{{ old('date') }}" required>
+            @error('date')
+                <div class="error-message">{{ $message }}</div>
+            @enderror
+
+            <input type="time" name="time" value="{{ old('time') }}" required>
+            @error('time')
+                <div class="error-message">{{ $message }}</div>
+            @enderror
+
+            <button type="submit">Schedule Now</button>
+        </form>
+    </div>
+</div>
+
+<!-- JavaScript for Popup Message -->
+<script>
+    @if ($errors->any())
+        @if ($errors->has('name'))
+            alert("{{ $errors->first('name') }}");
+        @endif
+        @if ($errors->has('email'))
+            alert("{{ $errors->first('email') }}");
+        @endif
+        @if ($errors->has('phone'))
+            alert("{{ $errors->first('phone') }}");
+        @endif
+        @if ($errors->has('date'))
+            alert("{{ $errors->first('date') }}");
+        @endif
+        @if ($errors->has('time'))
+            alert("{{ $errors->first('time') }}");
+        @endif
+    @endif
+
+    @if (session('success'))
+        alert("{{ session('success') }}");
+    @elseif (session('error'))
+        alert("{{ session('error') }}");
+    @endif
+</script>
 
    
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-    <!-- New Image and Information Section -->
-    <section class="info-section">
-        <div class="info-image">
-            <img src="img/y45.jpeg" alt="Investment Seminars">
-        </div>
-        <div class="info-content">
-            <h1> Investment Seminars for Youth</h1>
-            <p>We, at Dhanavruksha, are highly committed to educating the youth on effective Wealth Management, encouraging them to adequately invest and insure from their very early stage to avoid financial shocks to themselves and the dependent family.</p>
-            <p>As youth have the most powerful tool—“TIME” on their hands, starting investments early and allocating a decent portion of their investments to equity-oriented instruments can accumulate huge wealth for them over the long term. If the youth who decide the future of the country make the right investment decisions, it will directly impact the economy and growth of the country, to which we would like to make our contribution. With this intent, we conduct educational seminars for the youth at corporates and colleges to sow the seeds for managing their wealth effectively from their very early age. We welcome invitations from corporates and colleges, and we would be happy to conduct such seminars for them.</p>
-        </div>
-    </section>
+    <!-- schudle-meeting end --> 
 
-    <!-- Navigation Tabs -->
-    <nav class="nav1">
-        <ul class="tabs">
-            <li><button class="tab-button button active" onclick="showContent('current-btn')">Current</button></li>
-            <li><button class="tab-button button" onclick="showContent('upcoming')">Upcoming</button></li>
-            <li><button class="tab-button button" onclick="showContent('closed')">Closed</button></li>
-        </ul>
-    </nav>
-    
-
-    
-    <!-- Main Content Section -->
-    <section id="content">
-        <!-- Current Seminars -->
-        <div id="current-btn" class="details-section">
-            <div class="content-header">
-                <h2>Current Seminars</h2>
-            </div>
-            <div class="tab-content">
-                <h3>Day 1: March 13th, 2024</h3>
-                <p>The workshop commenced with an introduction to the importance of financial education, highlighting its relevance in today’s dynamic economic landscape. CA. Deepak Vekaria elaborated on fundamental concepts such as the time value of money and the profound impact of compounding. Participants gained insights into the intricacies of the stock market, exploring its various types and functionalities.</p>
-                <p><strong>Venue:</strong> Pillai Business School, G-504</p>
-                <p><strong>Date:</strong> 13th and 14th March, 2024</p>
-                <p><strong>Time:</strong> 09:00 a.m. to 1:00 p.m.</p>
-                <p><strong>Organizers:</strong> ADITYA BIRLA CAPITAL FOUNDATION</p>
-                <p><strong>Instructor:</strong> CA. Deepak Vekaria</p>
-                <p><strong>Faculty Coordinator:</strong> Dr. Pushpendu Rakshit</p>
-                <p><strong>Mentor:</strong> Dr. R. Chandran and Dr. K. P. Gopal</p>
-            </div>
-        </div>
-        </section>
-
-        <!-- Upcoming Seminars -->
-        <section id="upcoming" class="details-section">
-            <h2>Upcoming Seminars</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="img\upcoming.jpg" alt="Upcoming Seminar">
-                    <h3>Saving vs. Investing</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <div class="card">
-                    <img src="img\upcoming1.jpg" alt="Upcoming Seminar">
-                    <h3>Financial Literacy</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <div class="card">
-                    <img src="img\upcoming2.png" alt="Upcoming Seminar">
-                    <h3>The Impact of Student Loans</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <div class="card">
-                    <img src="img\upcoming3.png" alt="Upcoming Seminar">
-                    <h3>Building Credit Early</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <!-- Add more cards as needed -->
-            </div>
-        </section>
-    
-        <section id="closed" class="details-section">
-            <h2>Closed Seminars</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="img\y45.jpeg" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                <div class="card">
-                    <img src="img\y2.jpg" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                <div class="card">
-                    <img src="img\y1.png" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                <div class="card">
-                    <img src="img\closed1.jpeg" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                
-                <!-- Add more cards as needed -->
-            
-            </div>
-        </section>
-    </section>
-
-        <!-- Registration Form Modal -->
-        <div id="registrationModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Register for Seminar</h2>
-                <form id="registrationForm">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-                    <label for="phone">Phone:</label><br>
-                    <input type="tel" id="phone" name="phone" required><br><br>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
-        
-    
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+  <!-- footer Start --> 
+<div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -446,6 +371,9 @@
         </div>
     </div>
     <!-- Copyright End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -469,8 +397,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/scripts.js"></script>
-
 </body>
-
 </html>

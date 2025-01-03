@@ -48,26 +48,30 @@
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
-        <div class="container py-3">
-            <div class="d-flex align-items-center">
-                <a href="index.html">
-                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px;">
+    
 
+    <!-- Topbar Start -->
+    <div class="Topbar-container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
+        <div class="Topbar-container py-3">
+            <div class="Topbar-d-flex align-items-center">
+                <!-- Logo Section -->
+                <a href="index.html" class="d-flex align-items-center">
+                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px; margin-left: 50px;">
                 </a>
-                <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@example.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</small>
-                    <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <!-- Right Section -->
+                <div class="Topbar-right d-flex align-items-center ms-3" style="flex-wrap: nowrap;">
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-envelope me-2"></i>customerservice@dhanavruksha.in
+                    </small>
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-phone-alt me-2"></i>+91 7305888454
+                    </small>
+                    <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
+                        <i class="fa fa-calendar-alt me-2"></i>Schedule Meeting
+                    </a>
+                    <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
+                        <i class="fa fa-briefcase me-2"></i>Open Demat Account
+                    </a>
                 </div>
             </div>
         </div>
@@ -75,8 +79,8 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top">
+       <!-- Navbar Start -->
+   <div class="container-fluid bg-white sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
                 <a href="index.html" class="navbar-brand d-lg-none">
@@ -141,9 +145,8 @@
                         </div>
                         <a href="{{route('kyc')}}" class="nav-item nav-link">KYC</a>
                         <a href="{{ route('contact-us') }}" class="nav-item nav-link">Contact</a>
-
                     </div>
-                    <div class="ms-auto d-none d-lg-block">
+                        <div class="ms-auto d-none d-lg-block">
                         <a href="{{ route('login-page') }}" class="btn custom-btn rounded-pill py-2 px-3">Client Login</a>
                     </div>
                 </div>
@@ -151,8 +154,67 @@
         </div>
     </div>
     <!-- Navbar End -->
+     
+    <!-- Sidebar start -->
+<div class="float-slider-page">
+    <div class="floating-buttons">
+        <a href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" class="button facebook">
+            <span class="tooltip facebook">Facebook</span>
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/dhanavruksha-financial-services-private-ltd/" target="_blank" class="button linkedin">
+            <span class="tooltip">LinkedIn</span>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/dhanavruksha_" target="_blank" class="button instagram">
+            <span class="tooltip instagram">Instagram</span>
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/dhanavruksha" target="_blank" class="button twitter">
+            <span class="tooltip twitter">Twitter</span>
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+    </div>
 
- 
+    <div class="contact-buttons">
+        <a href="https://wa.me/917305888454" target="_blank" class="contact-button whatsapp">
+            <span class="tooltip whatsapp">WhatsApp</span>
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917305888454" class="contact-button phone">
+            <span class="tooltip phone">Phone</span>
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <div class="contact-button hide" onclick="toggleContactButtons()">
+            <span class="tooltip">Hide</span>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+</div>
+<!-- /Sidebar end -->
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleContactButtons() {
+            const whatsappButton = document.querySelector('.contact-button.whatsapp');
+            const phoneButton = document.querySelector('.contact-button.phone');
+            const hideButtonIcon = document.querySelector('.contact-button.hide i');
+
+            whatsappButton.classList.toggle('hidden');
+            phoneButton.classList.toggle('hidden');
+
+            // Change icon
+            if (whatsappButton.classList.contains('hidden')) {
+                hideButtonIcon.classList.replace('fa-bars', 'fa-eye');
+            } else {
+                hideButtonIcon.classList.replace('fa-eye', 'fa-bars');
+            }
+        }
+    </script>
+    <!-- /Sidebar end -->
+     
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
@@ -172,122 +234,102 @@
         <h1 class="wealth-heading">Successful Wealth Management</h1>
         <p class="wealth-content">
             <span>
-                Successful Wealth Management is an ever-changing ideal. It demands an in-depth consultative process that
+            <strong>Successful Wealth Management</strong> is an ever-changing ideal. It demands an in-depth consultative process that
                 delivers customized solutions across the broad array of financial needs as well as asset classes.
-                It ensures financial security for the future by aligning investment strategies with individual goals and
+                It ensures <strong>financial security</strong> for the future by aligning investment strategies with individual goals and
                 priorities.
                 Don’t let short-term hiccups and the ups and downs of business cycles come between you and your wealth
                 creation.
-                Wealth Management is an ongoing process and our commitment to your wealth creation.
+                Wealth Management is an <strong>ongoing process</strong> and our commitment to your wealth creation.
             </span>
         </p>
     </div>
     <!-- Wealth Management Section End -->
 
+    <!-- steps Section start -->
+     <!-- Parallax Section -->
+     <div class="parallax"></div>
+    
+    <!-- Wealth Management Heading Above the Cards -->
+    <div class="wealth-mgn">
+        <h1>A Few Steps with Us Can Take You There </h1>
+        <p>Wealth Management is an ongoing process and our commitment to your wealth creation.</p>
+    </div>
 
-    <!-- How It Works Section Start -->
-    <div class="how-it-works-section" id="howItWorks">
-        <h2 class="how-it-works-heading">How It Works</h2>
-        <p class="how-it-works-intro">Our streamlined process ensures your wealth management journey is seamless and
-            effective.</p>
-
-        <div class="steps-container">
+    <!-- Steps Section -->
+    <div class="steps-container">
+        <div class="step-row">
             <!-- Step 1 -->
-            <div class="step">
-                <div class="step-icon">1</div>
-                <h3 class="step-title">Consultation</h3>
-                <p class="step-description">Meet with our experts to discuss your financial goals and assess your
-                    current position.</p>
+            <div class="step-card">
+                <div class="step-left">
+                    <div class="step-number">1</div>
+                    <div class="partition"></div>
+                    <p class="step-name">Client Profiling & Segmentation</p>
+                </div>
             </div>
-
             <!-- Step 2 -->
-            <div class="step">
-                <div class="step-icon">2</div>
-                <h3 class="step-title">Strategize</h3>
-                <p class="step-description">We craft a customized wealth management plan tailored to your unique needs.
-                </p>
+            <div class="step-card">
+                <div class="step-left">
+                    <div class="step-number">2</div>
+                    <div class="partition"></div>
+                    <p class="step-name">Asset Allocation</p>
+                </div>
             </div>
-
             <!-- Step 3 -->
-            <div class="step">
-                <div class="step-icon">3</div>
-                <h3 class="step-title">Implementation</h3>
-                <p class="step-description">Execute the plan with precision, optimizing your portfolio and investments.
-                </p>
+            <div class="step-card">
+                <div class="step-left">
+                    <div class="step-number">3</div>
+                    <div class="partition"></div>
+                    <p class="step-name">Review of existing portfolio</p>
+                </div>
             </div>
-
             <!-- Step 4 -->
-            <div class="step">
-                <div class="step-icon">4</div>
-                <h3 class="step-title">Review & Adjust</h3>
-                <p class="step-description">Regularly monitor progress and adapt strategies to ensure alignment with
-                    your goals.</p>
+            <div class="step-card">
+                <div class="step-left">
+                    <div class="step-number">4</div>
+                    <div class="partition"></div>
+                    <p class="step-name">Implementing/Optimising Asset Allocation</p>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- How It Works Section End -->
-
-    <!-- steps Section start -->
-    <div class="steps-section">
-        <h1 class="steps-heading">A Few Steps with Us Can Take You There:</h1>
-        <ul class="steps-list">
-            <li class="step-item">
-                <span class="step-number">1</span> Client Profiling & Segmentation
-            </li>
-            <li class="step-item">
-                <span class="step-number">2</span> Asset Allocation
-            </li>
-            <li class="step-item">
-                <span class="step-number">3</span> Review of Existing Portfolio
-            </li>
-            <li class="step-item">
-                <span class="step-number">4</span> Implementing/Optimising Asset Allocation
-            </li>
-            <li class="step-item">
-                <span class="step-number">5</span> Investment Proposal
-            </li>
-            <li class="step-item">
-                <span class="step-number">6</span> Execution
-            </li>
-            <li class="step-item">
-                <span class="step-number">7</span> Monitoring & Updation
-            </li>
-            <li class="step-item">
-                <span class="step-number">8</span> Periodic Portfolio Restructuring
-            </li>
-        </ul>
+    
+        <div class="step-row">
+            <!-- Step 5 -->
+            <div class="step-card">
+                <div class="step-left">
+                    <div class="step-number">5</div>
+                    <div class="partition"></div>
+                    <p class="step-name">Investment Proposal</p>
+                </div>
+            </div>
+            <!-- Step 6 -->
+            <div class="step-card">
+                <div class="step-left">
+                    <div class="step-number">6</div>
+                    <div class="partition"></div>
+                    <p class="step-name">Execution</p>
+                </div>
+            </div>
+            <!-- Step 7 -->
+            <div class="step-card">
+                <div class="step-left">
+                    <div class="step-number">7</div>
+                    <div class="partition"></div>
+                    <p class="step-name">Monitoring & Updation</p>
+                </div>
+            </div>
+            <!-- Step 8 -->
+            <div class="step-card">
+                <div class="step-left">
+                    <div class="step-number">8</div>
+                    <div class="partition"></div>
+                    <p class="step-name">Periodic Portfolio Restructuring</p>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- steps Section End -->
-
-    <div class="wealth-management-benefits">
-        <h2 class="wealth-management-benefits-heading">Benefits of Wealth Management</h2>
-        <div class="wealth-management-benefits-container">
-            <div class="wealth-management-benefit-card">
-                <div class="wealth-management-benefit-icon"><i class="fas fa-chart-line"></i></div>
-                <h3 class="wealth-management-benefit-title">Maximized Investment Growth</h3>
-                <p class="wealth-management-benefit-description">We optimize your portfolio to grow your wealth over
-                    time with strategic investment choices.</p>
-            </div>
-            <div class="wealth-management-benefit-card">
-                <div class="wealth-management-benefit-icon"><i class="fas fa-cogs"></i></div>
-                <h3 class="wealth-management-benefit-title">Custom Tailored Strategies</h3>
-                <p class="wealth-management-benefit-description">Every investment plan is customized according to your
-                    financial goals and risk tolerance.</p>
-            </div>
-            <div class="wealth-management-benefit-card">
-                <div class="wealth-management-benefit-icon"><i class="fas fa-hand-holding-usd"></i></div>
-                <h3 class="wealth-management-benefit-title">Expert Financial Guidance</h3>
-                <p class="wealth-management-benefit-description">Benefit from expert advice and insights to make
-                    informed financial decisions.</p>
-            </div>
-            <div class="wealth-management-benefit-card">
-                <div class="wealth-management-benefit-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3 class="wealth-management-benefit-title">Risk Management</h3>
-                <p class="wealth-management-benefit-description">We help manage risks and protect your wealth from
-                    market volatility and unforeseen events.</p>
-            </div>
-        </div>
-    </div>
+     
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">

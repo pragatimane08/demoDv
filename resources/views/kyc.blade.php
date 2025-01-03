@@ -51,26 +51,29 @@
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
-        <div class="container py-3">
-            <div class="d-flex align-items-center">
-                <a href="index.html">
-                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px;">
 
+    <!-- Topbar Start -->
+    <div class="Topbar-container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
+        <div class="Topbar-container py-3">
+            <div class="Topbar-d-flex align-items-center">
+                <!-- Logo Section -->
+                <a href="index.html" class="d-flex align-items-center">
+                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px; margin-left: 50px;">
                 </a>
-                <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@example.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</small>
-                    <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <!-- Right Section -->
+                <div class="Topbar-right d-flex align-items-center ms-3" style="flex-wrap: nowrap;">
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-envelope me-2"></i>customerservice@dhanavruksha.in
+                    </small>
+                    <small class="d-flex align-items-center me-3">
+                        <i class="fa fa-phone-alt me-2"></i>+91 7305888454
+                    </small>
+                    <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
+                        <i class="fa fa-calendar-alt me-2"></i>Schedule Meeting
+                    </a>
+                    <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
+                        <i class="fa fa-briefcase me-2"></i>Open Demat Account
+                    </a>
                 </div>
             </div>
         </div>
@@ -78,7 +81,7 @@
     <!-- Topbar End -->
 
 
-     <!-- Navbar Start -->
+       <!-- Navbar Start -->
    <div class="container-fluid bg-white sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
@@ -123,6 +126,7 @@
                             <a href="{{ route('tax-planning') }}" class="dropdown-item">Tax Planning</a>
                             <a href="{{ route('portfolio-restucturing') }}" class="dropdown-item">Portfolio Restructuring</a>
                             <a href="{{ route('child-future-saving') }}" class="dropdown-item"> Child Future Saving</a>    
+                            <a href="{{ route('retirmentplanning') }}" class="dropdown-item">Retirement Planning</a>
                             <a href="{{ route('seminars') }}" class="dropdown-item">Investment Seminar For Youth</a>
 
 
@@ -143,9 +147,8 @@
                         </div>
                         <a href="{{route('kyc')}}" class="nav-item nav-link">KYC</a>
                         <a href="{{ route('contact-us') }}" class="nav-item nav-link">Contact</a>
-
                     </div>
-                    <div class="ms-auto d-none d-lg-block">
+                        <div class="ms-auto d-none d-lg-block">
                         <a href="{{ route('login-page') }}" class="btn custom-btn rounded-pill py-2 px-3">Client Login</a>
                     </div>
                 </div>
@@ -153,6 +156,64 @@
         </div>
     </div>
     <!-- Navbar End -->
+     
+    <!-- Sidebar start -->
+<div class="float-slider-page">
+    <div class="floating-buttons">
+        <a href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" class="button facebook">
+            <span class="tooltip facebook">Facebook</span>
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/dhanavruksha-financial-services-private-ltd/" target="_blank" class="button linkedin">
+            <span class="tooltip">LinkedIn</span>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/dhanavruksha_" target="_blank" class="button instagram">
+            <span class="tooltip instagram">Instagram</span>
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/dhanavruksha" target="_blank" class="button twitter">
+            <span class="tooltip twitter">Twitter</span>
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+    </div>
+
+    <div class="contact-buttons">
+        <a href="https://wa.me/917305888454" target="_blank" class="contact-button whatsapp">
+            <span class="tooltip whatsapp">WhatsApp</span>
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917305888454" class="contact-button phone">
+            <span class="tooltip phone">Phone</span>
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <div class="contact-button hide" onclick="toggleContactButtons()">
+            <span class="tooltip">Hide</span>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+</div>
+<!-- /Sidebar end -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleContactButtons() {
+            const whatsappButton = document.querySelector('.contact-button.whatsapp');
+            const phoneButton = document.querySelector('.contact-button.phone');
+            const hideButtonIcon = document.querySelector('.contact-button.hide i');
+
+            whatsappButton.classList.toggle('hidden');
+            phoneButton.classList.toggle('hidden');
+
+            // Change icon
+            if (whatsappButton.classList.contains('hidden')) {
+                hideButtonIcon.classList.replace('fa-bars', 'fa-eye');
+            } else {
+                hideButtonIcon.classList.replace('fa-eye', 'fa-bars');
+            }
+        }
+    </script>
+    <!-- /Sidebar end -->
 
 
   <!-- Page Header Start -->
@@ -170,94 +231,111 @@
 <!-- Page Header End -->
 
 <!-- kyc start -->
- 
+ <!-- KYC Compliance Portal -->
+<div id="download-kyc-page" class="section" style="display: block;">
 
+<!-- Hero Section -->
+<h1 class="download-kyc-page-hero-title">KYC Compliance Portal</h1>
+<p class="kyc-hero-description">Complete your KYC formalities to comply with SEBI regulations and invest securely in mutual funds.</p>
 
-    <!-- KYC START -->
-<div class="container-kyc">
-    <!-- Hero Section -->
-    <div class="hero-kyc">
-        <h1 class="hero-kyc-title">KYC Compliance Portal</h1>
-        <p class="hero-kyc-description">Complete your KYC formalities to comply with SEBI regulations and invest securely in mutual funds.</p>
-    </div>
-    <!-- Cards Section -->
-    <div class="section-kyc">
+<!-- Buttons to switch between sections -->
+<div class="kyc-buttons">
+    <button class="kyc-btn" onclick="showSection('checkkyc')">Check KYC Status</button>
+    <button class="kyc-btn" onclick="showSection('validatekyc')">Validate KYC</button>
+    <button class="kyc-btn" onclick="showSection('downloadform')">Download Forms</button>
+</div>
+
+<!-- Cards Section -->
+<div class="kyc-cards-section">
+
     <!-- Check KYC Status -->
-    <div class="kyc-card" id="checkkyc">
-        <div class="kyc-card-icon">✅</div>
+    <div class="kyc-card" id="checkkyc" style="display: block;">
         <h3 class="kyc-card-title">Check KYC Status</h3>
         <p class="kyc-card-description">Verify your KYC details across multiple platforms.</p>
         <a class="kyc-card-link" href="https://www.cvlkra.com" target="_blank">
-            <img src="img/cvl_logo.jpg" alt="CVL KRA Icon" width="80" height="25"> CVL KRA
-        </a><br>
-        <a class="kyc-card-link" href="https://kra.ndml.in/kra-web/jsps/pos/KYCClientInquiry_NEW.jsp" target="_blank">
-            <img src="img/nsdl-logo.jpg" alt="NSDL KRA Icon" width="80" height="25"> NSDL KRA
-        </a><br>
-        <a class="kyc-card-link" href="https://www.camskra.com/" target="_blank">
-            <img src="img/cams-kra.jpg" alt="CAMS KRA Icon" width="80" height="25"> CAMS KRA
-        </a><br>
-        <a class="kyc-card-link" href="https://www.nsekra.com/" target="_blank">
-            <img src="img/nse.jpg" alt="NSE KRA Icon" width="80" height="25"> NSE KRA
-        </a><br>
-        <a class="kyc-card-link" href="https://www.karvykra.com/index.aspx?ReturnUrl=%2f" target="_blank">
-            <img src="img/Karvy_Logo.jpg" alt="Karvy KRA Icon" width="80" height="25"> Karvy KRA
-        </a>
+                <img src="img/cvl_logo.jpg" alt="CVL KRA Icon" width="80" height="25"> CVL KRA
+            </a><br>
+            <a class="kyc-card-link" href="https://kra.ndml.in/kra-web/jsps/pos/KYCClientInquiry_NEW.jsp" target="_blank">
+                <img src="img/nsdl-logo.jpg" alt="NSDL KRA Icon" width="80" height="25"> NSDL KRA
+            </a><br>
+            <a class="kyc-card-link" href="https://www.camskra.com/" target="_blank">
+                <img src="img/cams-kra.jpg" alt="CAMS KRA Icon" width="80" height="25"> CAMS KRA
+            </a><br>
+            <a class="kyc-card-link" href="https://www.nsekra.com/" target="_blank">
+                <img src="img/nse.jpg" alt="NSE KRA Icon" width="80" height="25"> NSE KRA
+            </a><br>
+            <a class="kyc-card-link" href="https://www.karvykra.com/index.aspx?ReturnUrl=%2f" target="_blank">
+                <img src="img/Karvy_Logo.jpg" alt="Karvy KRA Icon" width="80" height="25"> Karvy KRA
+            </a>    
     </div>
 
     <!-- Validate KYC -->
-    <div class="kyc-card" id="validatekyc">
-        <div class="kyc-card-icon">🔍</div>
+    <div class="kyc-card" id="validatekyc" style="display: none;">
         <h3 class="kyc-card-title">Validate KYC</h3>
         <p class="kyc-card-description">Ensure your KYC details are up-to-date.</p>
         <a class="kyc-card-link" href="https://validate.cvlindia.com/CVLKRAVerification_V1/" target="_blank">
-            <img src="img/cvl_logo.jpg" alt="CVL KRA Icon" width="80" height="25"> CVL KRA
-        </a><br>
-        <a class="kyc-card-link" href="https://kra.ndml.in/kra/ckyc/#/initiate" target="_blank">
-            <img src="img/nsdl-logo.jpg" alt="NSDL KRA Icon" width="80" height="25"> NSDL KRA
-        </a><br>
-        <a class="kyc-card-link" href="https://www.camskra.com/PanDetailsUpdate.aspx" target="_blank">
-            <img src="img/cams-kra.jpg" alt="CAMS KRA Icon" width="80" height="25"> CAMS KRA
-        </a><br>
-        <a class="kyc-card-link" href="https://www.karvykra.com/KYC_Validation/Default.aspx" target="_blank">
-            <img src="img/Karvy_Logo.jpg" alt="Karvy KRA Icon" width="80" height="25"> Karvy KRA
-        </a>
+                <img src="img/cvl_logo.jpg" alt="CVL KRA Icon" width="80" height="25"> CVL KRA
+            </a><br>
+            <a class="kyc-card-link" href="https://kra.ndml.in/kra/ckyc/#/initiate" target="_blank">
+                <img src="img/nsdl-logo.jpg" alt="NSDL KRA Icon" width="80" height="25"> NSDL KRA
+            </a><br>
+            <a class="kyc-card-link" href="https://www.camskra.com/PanDetailsUpdate.aspx" target="_blank">
+                <img src="img/cams-kra.jpg" alt="CAMS KRA Icon" width="80" height="25"> CAMS KRA
+            </a><br>
+            <a class="kyc-card-link" href="https://www.karvykra.com/KYC_Validation/Default.aspx" target="_blank">
+                <img src="img/Karvy_Logo.jpg" alt="Karvy KRA Icon" width="80" height="25"> Karvy KRA
+            </a>    
     </div>
 
     <!-- Download Forms -->
-    <div class="kyc-card" id="downloadform">
-        <div class="kyc-card-icon">📂</div>
+    <div class="kyc-card" id="downloadform" style="display: none;">
         <h3 class="kyc-card-title">Download Forms</h3>
         <p class="kyc-card-description">Access and download important KYC forms.</p>
         <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/CAMSKRA_Non_Individual.pdf" target="_blank">
-            <img src="img/cams-kra.jpg" alt="CAMS KRA Icon" width="80" height="25"> KYC Non-Individual
-        </a><br>
-        <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/Individual_KYC.pdf" target="_blank">
-            <img src="img/cams-kra.jpg" alt="CAMS KRA Icon" width="80" height="25"> KYC Individual
-        </a><br>
-        <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/CAMS_FATCA_Non_Individual.pdf" target="_blank">
-            <img src="img/cams.jpg" alt="CVL KRA Icon" width="80" height="25"> FATCA Non-Individual
-        </a><br>
-        <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/CAMS_FATCA-Individuals.pdf" target="_blank">
-            <img src="img/cams.jpg" alt="CVL KRA Icon" width="80" height="25"> FATCA Individual
-        </a><br>
-        <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/CAMS_UBO_Declaration_Non_Indvidual.pdf" target="_blank">
-            <img src="img/cams.jpg" alt="CVL KRA Icon" width="80" height="25"> UBO Declaration
-        </a><br>
-        <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/KFINTECH_FATCA_CRS_Declaration_form_Individual.pdf" target="_blank">
-            <img src="img/kfintehch (1).jpg" alt="kfintehch Icon" width="80" height="25"> FATCA CRS Declaration Form Individual
-        </a><br>
-        <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/KFINTECH_FATCA_UBO_NON_INDIVIDUALS.pdf" target="_blank">
-            <img src="img/kfintehch (1).jpg" alt="kfintehch Icon" width="80" height="25"> FATCA UBO Non-Individual
-        </a><br>
+                <img src="img/cams-kra.jpg" alt="CAMS KRA Icon" width="80" height="25"> KYC Non-Individual
+            </a><br>
+            <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/Individual_KYC.pdf" target="_blank">
+                <img src="img/cams-kra.jpg" alt="CAMS KRA Icon" width="80" height="25"> KYC Individual
+            </a><br>
+            <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/CAMS_FATCA_Non_Individual.pdf" target="_blank">
+                <img src="img/cams.jpg" alt="CVL KRA Icon" width="80" height="25"> FATCA Non-Individual
+            </a><br>
+            <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/CAMS_FATCA-Individuals.pdf" target="_blank">
+                <img src="img/cams.jpg" alt="CVL KRA Icon" width="80" height="25"> FATCA Individual
+            </a><br>
+            <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/CAMS_UBO_Declaration_Non_Indvidual.pdf" target="_blank">
+                <img src="img/cams.jpg" alt="CVL KRA Icon" width="80" height="25"> UBO Declaration
+            </a><br>
+            <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/KFINTECH_FATCA_CRS_Declaration_form_Individual.pdf" target="_blank">
+                <img src="img/kfintehch (1).jpg" alt="kfintehch Icon" width="80" height="25"> FATCA CRS Declaration Form Individual
+            </a><br>
+            <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/KFINTECH_FATCA_UBO_NON_INDIVIDUALS.pdf" target="_blank">
+                <img src="img/kfintehch (1).jpg" alt="kfintehch Icon" width="80" height="25"> FATCA UBO Non-Individual
+            </a><br>    
     </div>
 </div>
+</div>
 
-<!-- KYC END -->
- <script>
-    
- </script>
- <!-- kyc end -->
+<!-- JavaScript to Toggle Sections -->
+<script>
+function showSection(sectionId) {
+    // Hide all KYC cards
+    var sections = document.querySelectorAll('.kyc-card');
+    sections.forEach(function(section) {
+        section.style.display = 'none';
+    });
 
+    // Show the selected section
+    var activeSection = document.getElementById(sectionId);
+    if (activeSection) {
+        activeSection.style.display = 'block';
+    }
+}
+</script>
+
+
+<!-- kyc end -->
+   
 <!-- footer Start --> 
 <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
