@@ -1,252 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app') <!-- If you have a layout -->
 
-<head>
-    <meta charset="utf-8">
-    <title>Dhanavruksha</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-  <!-- Font Awesome for Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <!-- Add this in your <head> section -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-
-    <link href="css/custom.css" rel="stylesheet">
-
-    <!-- <link href="css/ionicons.min.css" rel="stylesheet"> -->
-    <script>
-        new WOW().init();
-
-        //loader
-        window.addEventListener('load', function () {
-            const loader = document.getElementById('loader');
-            const content = document.getElementById('content');
-
-            // Fade out the loader after a brief delay
-            setTimeout(function () {
-                loader.classList.add('loader-hidden');
-                content.style.display = 'block';  // Show the main content
-            }, 1500);  // Adjust delay time as necessary
-        });
-    </script>
-    <script>
-        new WOW().init();
-    </script>
-
-</head>
-
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
-    </div>
-    <!-- Spinner End -->
-<!-- Loader Start -->
-<div id="loader">
-        <h3 class="animate__animated animate__fadeIn">
-            <span class="welcome-text">Welcome to</span>
-            <span class="dhanvruksha-text">Dhanvruksha</span>
-        </h3>
-    </div>
-    <!-- Loader End -->
-
-
-
-    <!-- Topbar Start -->
-    <div class="Topbar-container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
-        <div class="Topbar-container py-3">
-            <div class="Topbar-d-flex align-items-center">
-                <!-- Logo Section -->
-                <a href="index.html" class="d-flex align-items-center">
-                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px; margin-left: 50px;">
-                </a>
-                <!-- Right Section -->
-                <div class="Topbar-right d-flex align-items-center ms-3" style="flex-wrap: nowrap;">
-                    <small class="d-flex align-items-center me-3">
-                        <i class="fa fa-envelope me-2"></i>customerservice@dhanavruksha.in
-                    </small>
-                    <small class="d-flex align-items-center me-3">
-                        <i class="fa fa-phone-alt me-2"></i>+91 7305888454
-                    </small>
-                    <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
-                        <i class="fa fa-calendar-alt me-2"></i>Schedule Meeting
-                    </a>
-                    <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
-                        <i class="fa fa-briefcase me-2"></i>Open Demat Account
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-       <!-- Navbar Start -->
-   <div class="container-fluid bg-white sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
-                <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0"></h1>
-                </a>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
-
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="{{ route('company-profile') }}" class="dropdown-item">Company Profile</a>
-                                <a href="{{ route('team') }}" class="dropdown-item">Team</a>
-
-                            </div>
-                        </div>
-
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="{{ route('equity') }}" class="dropdown-item">Equity And Derivatives</a>
-                                <a href="{{ route('mutual-funds') }}" class="dropdown-item">Mutual Funds</a>
-                                <a href="{{ route('pms-aif') }}" class="dropdown-item">PMS-AIF</a>
-                                <a href="{{ route('fixed-deposits') }}" class="dropdown-item">Fixed Deposits</a>
-                                <a href="{{ route('bonds') }}" class="dropdown-item">Bonds</a>
-                                
-
-                            </div>
-                        </div>
-
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                            <a href="{{ route('wealth-management') }}" class="dropdown-item">Wealth Management</a>
-                            <a href="{{ route('financial-planning') }}" class="dropdown-item">Financial Planning</a>
-                            <a href="{{ route('tax-planning') }}" class="dropdown-item">Tax Planning</a>
-                            <a href="{{ route('portfolio-restucturing') }}" class="dropdown-item">Portfolio Restructuring</a>
-                            <a href="{{ route('child-future-saving') }}" class="dropdown-item"> Child Future Saving</a>    
-                            <a href="{{ route('retirmentplanning') }}" class="dropdown-item">Retirement Planning</a>
-                            <a href="{{ route('seminars') }}" class="dropdown-item">Investment Seminar For Youth</a>
-
-
-                            </div>
-                        </div>
-
-
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Investor Zone</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="{{ route('newsletter') }}" class="dropdown-item">Newsletter</a>
-                                <a href="{{ route('financial-calculator') }}" class="dropdown-item">Financial calculator</a>
-                                <a href="{{ route('downloads') }}" class="dropdown-item">Downloads</a>
-                                <a href="{{ route('blogs') }}" class="dropdown-item">Blogs</a>
-                                <a href="{{ route('learning') }}" class="dropdown-item">Learning</a>
-
-                            </div>
-                        </div>
-                        <a href="{{route('kyc')}}" class="nav-item nav-link">KYC</a>
-                        <a href="{{ route('contact-us') }}" class="nav-item nav-link">Contact</a>
-                    </div>
-                        <div class="ms-auto d-none d-lg-block">
-                        <a href="{{ route('login-page') }}" class="btn custom-btn rounded-pill py-2 px-3">Client Login</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Navbar End -->
-     
-    <!-- Sidebar start -->
-<div class="float-slider-page">
-    <div class="floating-buttons">
-        <a href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" class="button facebook">
-            <span class="tooltip facebook">Facebook</span>
-            <i class="fa-brands fa-facebook-f"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/dhanavruksha-financial-services-private-ltd/" target="_blank" class="button linkedin">
-            <span class="tooltip">LinkedIn</span>
-            <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="https://www.instagram.com/dhanavruksha_" target="_blank" class="button instagram">
-            <span class="tooltip instagram">Instagram</span>
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://twitter.com/dhanavruksha" target="_blank" class="button twitter">
-            <span class="tooltip twitter">Twitter</span>
-            <i class="fa-brands fa-twitter"></i>
-        </a>
-    </div>
-
-    <div class="contact-buttons">
-        <a href="https://wa.me/917305888454" target="_blank" class="contact-button whatsapp">
-            <span class="tooltip whatsapp">WhatsApp</span>
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="tel:+917305888454" class="contact-button phone">
-            <span class="tooltip phone">Phone</span>
-            <i class="fa-solid fa-phone"></i>
-        </a>
-        <div class="contact-button hide" onclick="toggleContactButtons()">
-            <span class="tooltip">Hide</span>
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </div>
-</div>
-<!-- /Sidebar end -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
-    <script>
-        function toggleContactButtons() {
-            const whatsappButton = document.querySelector('.contact-button.whatsapp');
-            const phoneButton = document.querySelector('.contact-button.phone');
-            const hideButtonIcon = document.querySelector('.contact-button.hide i');
-
-            whatsappButton.classList.toggle('hidden');
-            phoneButton.classList.toggle('hidden');
-
-            // Change icon
-            if (whatsappButton.classList.contains('hidden')) {
-                hideButtonIcon.classList.replace('fa-bars', 'fa-eye');
-            } else {
-                hideButtonIcon.classList.replace('fa-eye', 'fa-bars');
-            }
-        }
-    </script>
-    <!-- /Sidebar end -->
-
-
-
-  
-
+@section('content')
 
     <!-- Carousel Start -->
     <div class="container-fluid px-0 mb-5">
@@ -381,285 +135,413 @@
     <div class="service-container">
         <div class="golden-curve"></div>
         </div>
-    <!-- Service Start -->
-    <div class="container-xxl  py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium" style="color: #B37F2B;">Our Services</p>
-                <h1 class="display-5 mb-5">Financial Services that We Offer</h1>
+
+<!-- services  start-->
+ <!-- Service Start -->
+ <div class="home-services home-offer-container">
+    <div class="home-text-center mx-auto wow fadeInUp" data-wow-delay="0.1s">
+        <h1 class="display-5 mb-5">Our Services</h1>
+    </div>
+    <div class="home-services home-offer-row">
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <img src="img/icon/mutual fund.png" alt="Wealth Management Icon">
+                </div>
+                <h5>Wealth Management</h5>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square bg-light rounded-circle mx-auto mb-4"
-                                style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/mutual fund.png" alt="Icon">
-                            </div>
-                            <h5 class="mb-3">Mutual Funds</h5>
-                            <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet</p>
-                        </div>
-                        <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-custom fw-medium" href="">Read More<i
-                                    class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square bg-light rounded-circle mx-auto mb-4"
-                                style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/equity.png" alt="Icon">
-                            </div>
-                            <h5 class="mb-3">Equity</h5>
-                            <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet</p>
-                        </div>
-                        <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-custom fw-medium" href="">Read More<i
-                                    class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square bg-light rounded-circle mx-auto mb-4"
-                                style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/seminar.png" alt="Icon">
-                            </div>
-                            <h5 class="mb-3">Investment Seminars</h5>
-                            <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet</p>
-                        </div>
-                        <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-custom fw-medium" href="">Read More<i
-                                    class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square bg-light rounded-circle mx-auto mb-4"
-                                style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/deposit.png" alt="Icon">
-                            </div>
-                            <h5 class="mb-3">Fixed Deposit</h5>
-                            <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet</p>
-                        </div>
-                        <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-custom fw-medium" href="">Read More<i
-                                    class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square bg-light rounded-circle mx-auto mb-4"
-                                style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/stock.png" alt="Icon">
-                            </div>
-                            <h5 class="mb-3">PMS</h5>
-                            <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet</p>
-                        </div>
-                        <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-custom fw-medium" href="">Read More<i
-                                    class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item position-relative h-100">
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square bg-light rounded-circle mx-auto mb-4"
-                                style="width: 64px; height: 64px;">
-                                <img class="img-fluid" src="img/icon/retire.png" alt="Icon">
-                            </div>
-                            <h5 class="mb-3">Retirement Savings</h5>
-                            <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet</p>
-                        </div>
-                        <div class="service-btn rounded-0 rounded-bottom">
-                            <a class="text-custom fw-medium" href="">Read More<i
-                                    class="bi bi-chevron-double-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="home-service-btn">
+                <a href="{{ route('wealth-management') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
             </div>
         </div>
-    </div>
-    </div>
-    <!-- Service End -->
-
-    <!-- Team Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-custom">Our Team</p>
-                <h1 class="display-5 mb-5">Our Expert People Ready to Help You</h1>
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <img src="img/icon/equity.png" alt="Financial Planning Icon">
+                </div>
+                <h5>Financial Planning</h5>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-1.jpg" alt="">
-                        <h5>Alex Robin</h5>
-                        <span class="text-custom">Founder & CEO</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-2.jpg" alt="">
-                        <h5>Adam Crew</h5>
-                        <span class="text-custom">Co Founder</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-3.jpg" alt="">
-                        <h5>Boris Johnson</h5>
-                        <span class="text-custom">Executive Manager</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-4.jpg" alt="">
-                        <h5>Robert Jordan</h5>
-                        <span class="text-custom">Digital Marketer</span>
-                        <ul class="team-social">
-                            <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
-                            <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="home-service-btn">
+                <a href="{{ route('financial-planning') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
             </div>
         </div>
-    </div> -->
-    <!-- Team End -->
-
-   
-       
-        <div class="container">
-
-            <div class="row justify-content-center mb-5 pb-2">
-                <div class="col-md-8 text-center heading-section ftco-animate">
-                    <h2 class="mb-4"><span>Recent</span> Blog</h2>
-                    <p>Separated they live in. A small river named Duden flows by their place and supplies it with the
-                        necessary regelialia. It is a paradisematic country</p>
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <img src="img/icon/seminar.png" alt="Portfolio Restructuring Icon">
                 </div>
+                <h5>Insurance and Investment Portfolio Restructuring</h5>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <div class="blog-entry">
-                        <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                            style="background-image: url('img/image_1.jpg');">
-                            <div class="meta-date text-center p-2">
-                                <span class="day">26</span>
-                                <span class="mos">June</span>
-                                <span class="yr">2019</span>
-                            </div>
-                        </a>
-                        <div class="text bg-white p-4">
-                            <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <p class="mb-0"><a href="#" class="btn custom-outline-btn">Read More <span
-                                            class="ion-ios-arrow-round-forward"></span></a></p>
-                                <p class="ms-auto mb-0">
-                                    <a href="#" class="admin-link">Admin</a>
-                                    <!-- <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a> -->
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="home-service-btn">
+                <a href="{{ route('Insurance_pr') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <img src="img/icon/mutual fund.png" alt="Wealth Management Icon">
                 </div>
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <div class="blog-entry">
-                        <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                            style="background-image: url('img/image_2.jpg');">
-                            <div class="meta-date text-center p-2">
-                                <span class="day">26</span>
-                                <span class="mos">June</span>
-                                <span class="yr">2019</span>
-                            </div>
-                        </a>
-                        <div class="text bg-white p-4">
-                            <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <p class="mb-0">
-                                    <a href="#" class="btn custom-outline-btn">Read More <span
-                                            class="ion-ios-arrow-round-forward"></span></a>
-                                </p>
-                                <p class="ms-auto mb-0">
-                                    <a href="#" class="admin-link">Admin</a>
-                                    <!-- <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a> -->
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <div class="blog-entry">
-                        <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                            style="background-image: url('img/image_3.jpg');">
-                            <div class="meta-date text-center p-2">
-                                <span class="day">26</span>
-                                <span class="mos">June</span>
-                                <span class="yr">2019</span>
-                            </div>
-                        </a>
-                        <div class="text bg-white p-4">
-                            <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <p class="mb-0">
-                                    <a href="#" class="btn custom-outline-btn">Read More <span
-                                            class="ion-ios-arrow-round-forward"></span></a>
-                                </p>
-                                <p class="ms-auto mb-0">
-                                    <a href="#" class="admin-link">Admin</a>
-                                    <!-- <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a> -->
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h5>Free Review of External Portfolio</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('external-Portfolio') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
             </div>
         </div>
     </div>
 
+    <div class="home-services home-offer-row">
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <img src="img/icon/mutual fund.png" alt="Wealth Management Icon">
+                </div>
+                <h5>Equity Advisory</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('equity-advisory') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <img src="img/icon/equity.png" alt="Financial Planning Icon">
+                </div>
+                <h5>Tax Planning</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('tax-planning') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <img src="img/icon/seminar.png" alt="Portfolio Restructuring Icon">
+                </div>
+                <h5>Retirement Planning</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('retirmentplanning') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <img src="img/icon/mutual fund.png" alt="Wealth Management Icon">
+                </div>
+                <h5>Estate Planning</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('estate-planning') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
 
+ <!-- services end -->
+<!--Produces Offered Start-->
+<!-- Include Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+<div class="home-products-section-container">
+    <h2 class="products-heading">Products Offered</h2>
+
+    <!-- Mutual Funds -->
+    <div class="home-products-section-card">
+        <div class="home-products-section-image">
+            <i class="fa-solid fa-chart-line" style="color: #ff5733; font-size: 40px;"></i>
+        </div>
+        <h3>Mutual Funds</h3>
+        <p>Professional management of pooled funds invested in diversified portfolios.</p>
+        <!-- <div class="home-products-section-dots">
+            <span class="home-products-section-dot active"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+        </div> -->
+    </div>
+
+    <!-- Equities -->
+    <div class="home-products-section-card">
+        <div class="home-products-section-image">
+            <i class="fa-solid fa-sack-dollar" style="color: #3498db; font-size: 40px;"></i>
+        </div>
+        <h3>Equities</h3>
+        <p>Stock market investments in publicly traded companies.</p>
+        <!-- <div class="home-products-section-dots">
+            <span class="home-products-section-dot active"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+        </div> -->
+    </div>
+
+    <!-- Unlisted Stocks -->
+    <div class="home-products-section-card">
+        <div class="home-products-section-image">
+            <i class="fa-solid fa-building" style="color: #27ae60; font-size: 40px;"></i>
+        </div>
+        <h3>Unlisted Stocks</h3>
+        <p>Investment opportunities in private company shares.</p>
+        <!-- <div class="home-products-section-dots">
+            <span class="home-products-section-dot active"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+        </div> -->
+    </div>
+
+    <!-- PMS & AIFs -->
+    <div class="home-products-section-card">
+        <div class="home-products-section-image">
+            <i class="fa-solid fa-briefcase" style="color: #f39c12; font-size: 40px;"></i>
+        </div>
+        <h3>PMS & AIFs</h3>
+        <p>Professional portfolio management and alternative investment funds.</p>
+        <!-- <div class="home-products-section-dots">
+            <span class="home-products-section-dot active"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+        </div> -->
+    </div>
+</div>
+
+<div class="home-products-section-container">
+    <!-- Gift City Investments -->
+    <div class="home-products-section-card">
+        <div class="home-products-section-image">
+            <i class="fa-solid fa-globe" style="color: #8e44ad; font-size: 40px;"></i>
+        </div>
+        <h3>Gift City Investments</h3>
+        <p>International financial services and investment opportunities.</p>
+        <!-- <div class="home-products-section-dots">
+            <span class="home-products-section-dot active"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+        </div> -->
+    </div>
+
+    <!-- Bonds -->
+    <div class="home-products-section-card">
+        <div class="home-products-section-image">
+            <i class="fa-solid fa-file-contract" style="color: #2ecc71; font-size: 40px;"></i>
+        </div>
+        <h3>Bonds</h3>
+        <p>Fixed income securities with regular interest payments.</p>
+        <!-- <div class="home-products-section-dots">
+            <span class="home-products-section-dot active"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+        </div> -->
+    </div>
+
+    <!-- Corporate Deposits -->
+    <div class="home-products-section-card">
+        <div class="home-products-section-image">
+            <i class="fa-solid fa-piggy-bank" style="color: #e74c3c; font-size: 40px;"></i>
+        </div>
+        <h3>Corporate Deposits</h3>
+        <p>Fixed deposits in corporate entities with attractive returns.</p>
+        <!-- <div class="home-products-section-dots">
+            <span class="home-products-section-dot active"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+        </div> -->
+    </div>
+
+    <!-- Term Insurance -->
+    <div class="home-products-section-card">
+        <div class="home-products-section-image">
+            <i class="fa-solid fa-user-shield" style="color: #16a085; font-size: 40px;"></i>
+        </div>
+        <h3>Term Insurance</h3>
+        <p>Life coverage protection for financial security.</p>
+        <!-- <div class="home-products-section-dots">
+            <span class="home-products-section-dot active"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+        </div> -->
+    </div>
+</div>
+
+<div class="home-products-section-container">
+    <!-- Health Insurance -->
+    <div class="home-products-section-card">
+        <div class="home-products-section-image">
+            <i class="fa-solid fa-heartbeat" style="color: #d35400; font-size: 40px;"></i>
+        </div>
+        <h3>Health Insurance</h3>
+        <p>Comprehensive medical coverage for healthcare needs.</p>
+        <!-- <div class="home-products-section-dots">
+            <span class="home-products-section-dot active"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+        </div> -->
+    </div>
+
+    <!-- Venture Capital -->
+    <div class="home-products-section-card">
+        <div class="home-products-section-image">
+            <i class="fa-solid fa-rocket" style="color: #9b59b6; font-size: 40px;"></i>
+        </div>
+        <h3>Venture Capital</h3>
+        <p>Investment in early-stage and high-growth potential startups.</p>
+        <!-- <div class="home-products-section-dots">
+            <span class="home-products-section-dot active"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+        </div> -->
+    </div>
+
+    <!-- Business Loans -->
+    <div class="home-products-section-card">
+        <div class="home-products-section-image">
+            <i class="fa-solid fa-hand-holding-usd" style="color: #2980b9; font-size: 40px;"></i>
+        </div>
+        <h3>Business Loans</h3>
+        <p>Financial solutions for business growth and expansion.</p>
+        <!-- <div class="home-products-section-dots">
+            <span class="home-products-section-dot active"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+            <span class="home-products-section-dot"></span>
+        </div> -->
+    </div>
+</div>
+
+<!--Products offered end -->
+<!-- How It Works Section -->
+
+    <!-- How It Works - Start -->
+    <div class="home-dv-how-it-work">
+  <h2 class="home-section-title">How It Works</h2>
+  <div class="home-steps-container">
+    <!-- Step 1 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-img-1.png" alt="Step 1 Icon" class="home-step-icon">
+        <span class="home-step-number">1</span>
+      </div>
+      <h3 class="home-step-title">Register</h3>
+      <p class="home-step-description">Register with us to kickstart your financial journey.</p>
+    </div>
+    <!-- Step 2 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-2.png" alt="Step 2 Icon" class="home-step-icon">
+        <span class="home-step-number">2</span>
+      </div>
+      <h3 class="home-step-title">Elaborate Engagement on Your Financials & Investments</h3>
+      <p class="home-step-description">Understand your financial situation, investment goals, and aspirations to create a tailored strategy.</p>
+    </div>
+    <!-- Step 3 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-3.png" alt="Step 3 Icon" class="home-step-icon">
+        <span class="home-step-number">3</span>
+      </div>
+      <h3 class="home-step-title">Assessment of Your Risk Profile</h3>
+      <p class="home-step-description">Analyze your risk appetite to determine the best investment approach for you.</p>
+    </div>
+    <!-- Step 4 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-4.png" alt="Step 4 Icon" class="home-step-icon">
+        <span class="home-step-number">4</span>
+      </div>
+      <h3 class="home-step-title">Constructing/Reconstructing Your Portfolio</h3>
+      <p class="home-step-description">Build or optimize your investment portfolio to align with your financial objectives.</p>
+    </div>
+    <!-- Step 5 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-5.png" alt="Step 5 Icon" class="home-step-icon">
+        <span class="home-step-number">5</span>
+      </div>
+      <h3 class="home-step-title">Mapping Investments to Financial Goals</h3>
+      <p class="home-step-description">Ensure your investments are strategically mapped to achieve specific financial milestones.</p>
+    </div>
+    <!-- Step 6 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-6.png" alt="Step 6 Icon" class="home-step-icon">
+        <span class="home-step-number">6</span>
+      </div>
+      <h3 class="home-step-title">Regular Monitoring & Review of Portfolio</h3>
+      <p class="home-step-description">Continuously track and evaluate your investments for optimal performance.</p>
+    </div>
+    <!-- Step 7 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-7.png" alt="Step 7 Icon" class="home-step-icon">
+        <span class="home-step-number">7</span>
+      </div>
+      <h3 class="home-step-title">Timely Updates on Market Events & Their Impact on Investments</h3>
+      <p class="home-step-description">Stay informed about market trends and how they affect your portfolio, ensuring proactive financial decision-making.</p>
+    </div>
+  </div>
+</div>
+<!-- How It Works - End -->
+    <!-- How It works end section -->
+
+    
+
+<!-- Blog Start -->
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-8 text-center heading-section ftco-animate">
+                <h2 class="mb-4"><span>Recent</span> Blog</h2>
+                <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+            </div>
+        </div>
+
+        <div class="row">
+            @foreach ($blogs as $blog)
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="blog-entry">
+                        <a href="{{ $blog->link }}" class="block-20 d-flex align-items-end" style="background-image: url('{{ asset('storage/' . $blog->image) }}');">
+                            <div class="meta-date text-center p-2">
+                                <span class="day">{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</span>
+                                <span class="mos">{{ \Carbon\Carbon::parse($blog->created_at)->format('F') }}</span>
+                                <span class="yr">{{ \Carbon\Carbon::parse($blog->created_at)->format('Y') }}</span>
+                            </div>
+                        </a>
+                        <div class="text bg-white p-4">
+                            <h3 class="heading"><a href="{{ $blog->link }}">{{ $blog->title }}</a></h3>
+                            <p>{{ Str::limit($blog->description, 150) }}</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <p class="mb-0"><a href="{{ $blog->link }}" class="btn custom-outline-btn">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</div>
+
+    <!-- Blog End -->
 
     <!-- Testimonial Start -->
     <div class="container-xxl pt-5">
@@ -669,87 +551,154 @@
                 <p class="fs-5 fw-medium text-custom">Testimonial</p>
                 <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
             </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-1.jpg" alt="">
-                    <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
-                        sit, sed stet lorem sit clita duo justo</p>
-                    <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
-                </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-2.jpg" alt="">
-                    <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
-                        sit, sed stet lorem sit clita duo justo</p>
-                    <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
-                </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-3.jpg" alt="">
-                    <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
-                        sit, sed stet lorem sit clita duo justo</p>
-                    <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
-                </div>
-                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-4.jpg" alt="">
-                    <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
-                        sit, sed stet lorem sit clita duo justo</p>
-                    <h5>Client Name</h5>
-                    <span class="text-primary">Profession</span>
-                </div>
-            </div>
-        </div>
+         
+    <div class="testimonials-container">
+  <div class="nav-buttons">
+    <button id="prev">&#x2039;</button>
+    <button id="next"> &#x203A;</button>
+  </div>
+   <!-- Testimonial 1 -->
+   <div class="testimonial">
+    <img src="img/home-testi.png" alt="Testimonial Photo">
+    <div class="testimonial-content">
+      <h3>Santhosh Krishna</h3>
+      <h4>Dallas, Texas, USA<br>Management Consultant, Autodesk Inc.</h4>
+      <div class="stars">★★★★★</div>
+      <p>
+        I am pleased to provide a testimonial for Dhanavruksha, whose exemplary service and expertise in the financial sector have been invaluable to my financial success. Demonstrating an in-depth understanding of market dynamics, their strategic guidance has been instrumental in aligning my investment decisions with my long-term financial objectives. Their professionalism and dedication to client success are commendable, and under their advisement, my portfolio has achieved remarkable growth. I unreservedly recommend Dhanavruksha to any individual or organization seeking proficient and dependable financial consulting services.
+      </p>
     </div>
+  </div>
+
+  <!-- Testimonial 2 -->
+  <div class="testimonial hidden">
+    <img src="img/home-testi2.png" alt="Testimonial Photo">
+    <div class="testimonial-content">
+      <h3>Anand & Divya</h3>
+      <h4>USA</h4>
+      <div class="stars">★★★★★</div>
+      <p>
+        Choosing Dhanavruksha was one of the best decisions I've made for my financial future. Their personalized approach stood out immediately. They took the time to understand my unique financial situation, risk tolerance, and long-term objectives before crafting a tailored investment strategy for me. I wholeheartedly recommend Dhanavruksha Financial Services.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Testimonial 3 -->
+  <div class="testimonial hidden">
+    <img src="img/home-testi3.png" alt="Testimonial Photo">
+    <div class="testimonial-content">
+      <h3>Dr. Saravana Raja</h3>
+      <h4>Urologist, Tirunelveli, Tamil Nadu</h4>
+      <div class="stars">★★★★★</div>
+      <p>
+        I trust Dhanavruksha for my complete wealth management requirements. They have helped me to organize my finances effectively and to generate great returns. I strongly recommend DV for wealth creation.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Testimonial 4 -->
+  <div class="testimonial hidden">
+    <img src="img/home-testi4.png" alt="Testimonial Photo">
+    <div class="testimonial-content">
+      <h3>M. Venkataramana</h3>
+      <h4>EX-Indian Cricketer and Current Coach, Chennai</h4>
+      <div class="stars">★★★★★</div>
+      <p>
+        Being a part of Dhanavruksha has been an incredibly rewarding experience. Their expertise and strategic insights have significantly enhanced my investment journey. I highly recommend their services.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Testimonial 5 -->
+  <div class="testimonial hidden">
+    <img src="img/home-testi5.png" alt="Testimonial Photo">
+    <div class="testimonial-content">
+      <h3>Dr. Nambi Appadurai</h3>
+      <h4>Director, World Resources Institute (WRI India), Chennai</h4>
+      <div class="stars">★★★★★</div>
+      <p>
+        Dhanavruksha has been managing my wealth ever since its inception. They maintain their benchmark for integrity in the sphere of financial advisory and wealth management, and I am extremely happy to be associated with them.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Testimonial 6 -->
+  <div class="testimonial hidden">
+    <img src="img/home-testi6.png" alt="Testimonial Photo">
+    <div class="testimonial-content">
+      <h3>A. Sivakumar</h3>
+      <h4>Principal Engineer, Bangalore</h4>
+      <div class="stars">★★★★★</div>
+      <p>
+        Dhanavruksha has been extremely useful and reliable. Their communication is simple and professional. On the whole, I would recommend anybody to use their services and benefit.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Testimonial 7 -->
+  <div class="testimonial hidden">
+    <img src="img/home-testi7.png" alt="Testimonial Photo">
+    <div class="testimonial-content">
+      <h3>Rajagopalan Venkataraman</h3>
+      <h4>Ex - Chairman, Mastek Ltd, UK</h4>
+      <div class="stars">★★★★★</div>
+      <p>
+        My experience with Dhanavruksha over the last year gives me great confidence, and I intend to enhance my funds under their management substantially. My best wishes for Dhanavruksha's growth.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Testimonial 8 -->
+  <div class="testimonial hidden">
+    <img src="img/home-testi8.png" alt="Testimonial Photo">
+    <div class="testimonial-content">
+      <h3>Swathi Balasubramanian</h3>
+      <h4>Business Development Manager, Government of Western Australia</h4>
+      <div class="stars">★★★★★</div>
+      <p>
+        My experience with Dhanavruksha has made my life easy in planning my overall finances. I have witnessed a substantial improvement in the way my assets and income have been managed. Highly recommended!
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const testimonials = document.querySelectorAll('.testimonial');
+      let currentIndex = 0;
+
+      const updateTestimonials = () => {
+        testimonials.forEach((testimonial, index) => {
+          testimonial.classList.toggle('hidden', index !== currentIndex);
+        });
+      };
+
+      document.getElementById('prev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+        updateTestimonials();
+      });
+
+      document.getElementById('next').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        updateTestimonials();
+      });
+
+      updateTestimonials();
+    });
+  </script>
     <!-- Testimonial End -->
 
-    <!-- How It Works Section -->
-<section class="dv-how-it-works">
-    <h2 class="how-it-works-title">How It Works</h2>
-    <div class="how-it-works-steps">
-        <!-- Step 1 -->
-        <div class="how-it-works-step">
-            <div class="how-it-works-icon">
-                <span class="how-it-works-step-number">01</span>
-                <img src="img/hiw-img-1.png" alt="Register Icon" class="how-it-works-step-icon">
-            </div>
-            <h3 class="how-it-works-step-title">Register</h3>
-            <p class="how-it-works-step-description">
-                Register with us to kick start your financial journey.
-            </p>
-        </div>
-        <!-- Step 2 -->
-        <div class="how-it-works-step">
-            <div class="how-it-works-icon">
-                <span class="how-it-works-step-number">02</span>
-                <img src="img/hiw-img-2.png" alt="Invest Icon" class="how-it-works-step-icon">
-            </div>
-            <h3 class="how-it-works-step-title">Choose and Invest</h3>
-            <p class="how-it-works-step-description">
-                Choose the best funds according to your risk profile and start investing hasslefree.
-            </p>
-        </div>
-        <!-- Step 3 -->
-        <div class="how-it-works-step">
-            <div class="how-it-works-icon">
-                <span class="how-it-works-step-number">03</span>
-                <img src="img/hiw-img-3.png" alt="Grow Icon" class="how-it-works-step-icon">
-            </div>
-            <h3 class="how-it-works-step-title">Watch It Grow</h3>
-            <p class="how-it-works-step-description">
-                Sit back and watch your money work for you. Track all your family’s portfolio from just one account.
-            </p>
         </div>
     </div>
-</section>
 
 
     <!-- Our Partner Start -->
-<div class="home-our-partners-section">
+    <div class="home-our-partners-section">
   <div class="home-our-partners-container">
     <div class="home-our-partners-text">
-      <h3>Our Clients</h3>
-      <p>We're fortunate to have incredible clients</p>
+      <h3>Our Partners</h3>
+      <p>We're fortunate to have incredible Partners</p>
     </div>
     <iframe 
       src="https://resources.investwellonline.com/websiteitem/amc-logos-new/amc.html" 
@@ -760,117 +709,162 @@
   </div>
 </div>
 <!-- Our Partner End -->
+<style>
+  /*** Service ***/
+/* Global Styling for Services Section */
+.home-services.home-offer-container {
+  width: calc(100% - 100px); /* 50px left and right margins */
+  height: auto;
+  padding: 0 20px; /* Optional padding for inner spacing */
+  /* background-color: #f9f9f9; */
+  box-sizing: border-box;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Our Office</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Business Hours</h4>
-                    <p class="mb-1">Monday - Friday</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Saturday</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Sunday</p>
-                    <h6 class="text-light">Closed</h6>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+/* Center the heading in the middle of the page */
+.home-text-center {
+  text-align: center;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh; /* Set the minimum height to take up 60% of the viewport */
+}
 
+.home-text-center h1 {
+  font-size: 40px;
+  margin: 0;
+  color: #333333;
+}
 
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-medium text-light" href="#">Dhanavruksha</a>, All Right Reserved.
-                </div>
+/* Services Row Styling */
+.home-services.home-offer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
 
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
+/* Service Item Styling */
+.home-service-item {
+  flex: 1 1 calc(25% - 30px); /* Adjusted to account for margin and gap */
+  max-width: calc(25% - 30px); /* Ensuring the card doesn’t overflow */
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  height: 250px;
+}
 
+.home-service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-    <!-- Back to Top -->
-    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a> -->
+.home-service-text {
+  padding: 24px;
+}
 
+.home-btn-square {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('.auto-type', {
-            strings: [' Growth', ' Financial Freedom'],
-            typeSpeed: 150,
-            backSpeed: 150,
-            loop: true,
-        });
-    </script>
+.home-btn-square img {
+  width: 32px;
+  height: 32px;
+}
 
+.home-service-text h5 {
+  margin-bottom: 16px;
+  font-size: 19px;
+  color: #333333;
+  font-weight: bold;
+}
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script>
-        // JavaScript to move and scale the golden curve based on scroll
-        window.addEventListener('scroll', function () {
-            const serviceContainer = document.querySelector('.service-container');
-            const goldenCurve = document.querySelector('.golden-curve');
-    
-            const containerRect = serviceContainer.getBoundingClientRect(); // Get the container position
-    
-            // If the service container is in view, move the curve
-            if (containerRect.top < window.innerHeight && containerRect.bottom > 0) {
-                const scrollPosition = (window.innerHeight - containerRect.top) * 0.3; // Calculate scroll movement
-                const scaleSize = 1 + scrollPosition / 1000; // Scale the curve based on scroll
-    
-                goldenCurve.style.transform = `translateY(${scrollPosition}px) rotate(360deg) scale(${scaleSize})`;
-            }
-        });
-    </script>
-</body>
+.home-service-text p {
+  margin: 0;
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.5;
+}
 
-</html>
+.home-service-btn {
+  margin: 0;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-service-btn a {
+  display: inline-block;
+  background: #ffffff;
+  padding: 12px 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #B37F2B;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+.home-service-btn a:hover {
+  background: #f4f4f4;
+  color: #b37228;
+}
+
+.home-service-btn a i {
+  margin-left: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .home-service-item {
+      flex: 1 1 calc(33.33% - 30px);
+      max-width: calc(33.33% - 30px);
+  }
+}
+
+@media (max-width: 991px) {
+  .home-service-item {
+      flex: 1 1 calc(50% - 30px);
+      max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 767px) {
+  .home-service-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+  }
+
+  .home-text-center h1 {
+      font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-text-center h1 {
+      font-size: 28px;
+  }
+}
+</style>
+
+    @endsection

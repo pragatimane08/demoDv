@@ -44,12 +44,15 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/../bootstrap/app.php';
+$app = require_once __DIR__.'/../bootstrap/app.php'; // Load the main Laravel application
 
-$kernel = $app->make(Kernel::class);
+// Remove the second `$app` assignment.
+// If you need to include additional logic, use a different variable or include the file directly.
+
+$kernel = $app->make(Kernel::class); // Create the application kernel
 
 $response = $kernel->handle(
-    $request = Request::capture()
-)->send();
+    $request = Request::capture() // Capture the HTTP request
+)->send(); // Send the HTTP response
 
-$kernel->terminate($request, $response);
+$kernel->terminate($request, $response); // Terminate the kernel

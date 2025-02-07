@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\Auth\ChangePasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +22,89 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+
+
+
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
+
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+
+Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
+
+
+
+
+Route::middleware('auth')->group(function() {
+
+    Route::get('/admin/dashboard', [AdminController::class, 'index']);
+
+
+    // Show the change password form
+    Route::get('change-password', [ChangePasswordController::class, 'showChangePasswordForm'])->name('password.change');
+    
+    // Handle the password change form submission
+    Route::post('change-password', [ChangePasswordController::class, 'changePassword']);
+});
+
+
+
+
+
+
+
+
+
+Route::get('/admin', [AdminController::class, 'index']);
+
+// Route for showing the login form (GET request)
+Route::view('/adminlogin', 'Dashboard.pages.samples.adminlogin')->name('adminlogin.form');
+
+// Route for handling the form submission (POST request)
+Route::post('/admin/login', [AdminController::class, 'login'])->name('adminlogin.post');
+Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+
+// Routes for admin registration and login views
+Route::view('/adminlogin', 'Dashboard.pages.samples.adminlogin')->name('adminlogin');
+Route::view('/adminregister', 'Dashboard.pages.samples.adminregister')->name('adminregister');
+Route::view('/blogsmanagemet', 'Dashboard.pages.Blog-features.blogsmanagemet')->name('blogsmanagemet');
+
+// Route to handle admin logout
+Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+
+// Protect routes with the 'admin' guard
+// Route::middleware('auth:admin')->group(function () {
+//     Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('dashboard.index');
+//     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard.index'); 
+// });
+
+// Admin login form (In case you're directly using view routes, this should be handled in the form)
+Route::view('/adminlogin', 'Dashboard.pages.samples.adminlogin')->name('adminlogin');
+
+
+ 
+
+Route::get('/createblog', function () {
+    return view('Dashboard.pages.Blog-features.createblog');
+})->name('createblog');
+
+
+
+
+
+
+
+
+
+
+
+
+
+//customer routes
 Route::view('/', 'home')->name('home');
 
 Route::view('/company-profile', 'company-profile')->name('company-profile');
@@ -40,6 +128,11 @@ Route::view('/portfolio-restucturing', 'portfolio-restucturing')->name('portfoli
 Route::view('/child-future-saving', 'child-future-saving')->name('child-future-saving');
 Route::view('/retirmentplanning','retirmentplanning')->name('retirmentplanning');
 Route::view('/seminars', 'seminars')->name('seminars');
+Route::view('/external-Portfolio', 'external-Portfolio')->name('external-Portfolio');
+Route::view('/equity-advisory', 'equity-advisory')->name('equity-advisory');
+Route::view('/estate-planning', 'estate-planning')->name('estate-planning');
+Route::view('/Insurance_pr', 'Insurance_pr')->name('Insurance_pr');
+
 
 Route::view('/newsletter', 'newsletter')->name('newsletter');
 Route::view('/financial-calculator', 'financial-calculator')->name('financial-calculator');
@@ -105,6 +198,10 @@ Route::get('/emi', function () {
     return view('emi');
 })->name('emi');
 
+//footer links
+Route::view('/disclaimer', 'disclaimer')->name('disclaimer');
+Route::view('/disclosure', 'disclosure')->name('disclosure');
+Route::view('/privacy-policy', 'privacy-policy')->name('privacy-policy');
 
 use App\Http\Controllers\MeetingController;
 
@@ -114,4 +211,79 @@ Route::post('/schedule-meeting', [MeetingController::class, 'handleForm'])->name
 
 Route::get('/iframe-content', function () {
     return view('iframe-content'); // Return a Blade view
+});
+
+
+Route::get('/views/admin/register', [AdminController::class, 'showRegister'])->name('admin.register');
+    Route::post('/views/admin/register', [AdminController::class, 'register'])->name('admin.register.submit');
+    Route::get('/admin/login', [AdminController::class, 'showLogin'])->name('admin.login');
+    Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
+    Route::get('/admin/profile', [AdminController::class, 'showProfile'])->name('admin.profile');
+    Route::post('/admin/profile', [AdminController::class, 'updateProfile'])->name('admin.profile.update');
+    Route::get('/admin/user', [AdminController::class, 'showUserList'])->name('admin.user');
+    Route::post('/users', [AdminController::class, 'store'])->name('users.store');
+    Route::put('/users/{id}', [AdminController::class, 'update'])->name('users.update');
+    Route::delete('/users/{id}', [AdminController::class, 'destroy'])->name('users.destroy');
+    Route::get('/admin/register', [AdminController::class, 'showRegister'])->name('admin.register');
+    Route::post('/admin/register', [AdminController::class, 'register'])->name('admin.register.submit');
+    // Route::get('/admin/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
+    Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+ 
+
+
+
+
+    // latest blog route:16
+    
+
+    use App\Http\Controllers\BlogController;
+
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
+    Route::get('viewblog', [BlogController::class, 'index'])->name('viewblog');
+    Route::get('addblog', [BlogController::class, 'create'])->name('addblog');
+    Route::post('addblog', [BlogController::class, 'store'])->name('storeblog');
+    Route::get('editblog/{id}', [BlogController::class, 'edit'])->name('editblog');
+    Route::post('editblog/{id}', [BlogController::class, 'update'])->name('updateblog');
+    Route::delete('deleteblog/{id}', [BlogController::class, 'destroy'])->name('deleteblog');
+});
+// resources/views/admin/dashboard.blade.php
+Route::view('/admin/dashboard', 'admin.dashboard')->name('admin.dashboard');
+
+
+use App\Http\Controllers\NewsletterController;
+
+// Group the routes under the 'admin' prefix
+Route::prefix('admin')->group(function () {
+    // Route to view newsletters (this will map to the 'index' method in NewsletterController)
+    Route::get('viewnewsletter', [NewsletterController::class, 'index'])->name('admin.viewnewsletter');
+    
+    // Resource route for newsletters (creates CRUD routes except for 'index')
+    Route::resource('newsletters', NewsletterController::class)->except(['index']);
+});
+
+
+
+
+Route::get('/', [BlogController::class, 'showHomePage'])->name('home');
+
+Route::get('/newsletter', [NewsletterController::class, 'frontendIndex'])->name('newsletter');
+
+Route::get('/blogs', [BlogController::class, 'showBlogs'])->name('blogs');
+
+
+
+use Illuminate\Support\Facades\Mail;
+use App\Mail\DematFormMail;
+
+Route::post('/submit-demat-form', function (Illuminate\Http\Request $request) {
+    $data = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email',
+        'phone' => 'required|string|max:15',
+        'message' => 'required|string|max:1000',
+    ]);
+
+    Mail::to('admin@yourdomain.com')->send(new DematFormMail($data));
+
+    return back()->with('success', 'Your demat account request has been submitted successfully!');
 });

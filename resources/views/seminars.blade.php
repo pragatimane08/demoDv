@@ -1,220 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Dhanavruksha</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-
-    <link href="css/custom.css" rel="stylesheet">
-
-    <!-- <link href="css/ionicons.min.css" rel="stylesheet"> -->
-
-
-</head>
-
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
-    </div>
-    <!-- Spinner End -->
-
-
-    
-
-    <!-- Topbar Start -->
-    <div class="Topbar-container-fluid text-white d-none d-lg-flex" style="background-color: #06060b;">
-        <div class="Topbar-container py-3">
-            <div class="Topbar-d-flex align-items-center">
-                <!-- Logo Section -->
-                <a href="index.html" class="d-flex align-items-center">
-                    <img src="img/dhanavruksha-logo-new.png" alt="Logo" class="img-fluid" style="max-height: 60px; margin-left: 50px;">
-                </a>
-                <!-- Right Section -->
-                <div class="Topbar-right d-flex align-items-center ms-3" style="flex-wrap: nowrap;">
-                    <small class="d-flex align-items-center me-3">
-                        <i class="fa fa-envelope me-2"></i>customerservice@dhanavruksha.in
-                    </small>
-                    <small class="d-flex align-items-center me-3">
-                        <i class="fa fa-phone-alt me-2"></i>+91 7305888454
-                    </small>
-                    <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
-                        <i class="fa fa-calendar-alt me-2"></i>Schedule Meeting
-                    </a>
-                    <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
-                        <i class="fa fa-briefcase me-2"></i>Open Demat Account
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-       <!-- Navbar Start -->
-   <div class="container-fluid bg-white sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
-                <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0"></h1>
-                </a>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
-
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="{{ route('company-profile') }}" class="dropdown-item">Company Profile</a>
-                                <a href="{{ route('team') }}" class="dropdown-item">Team</a>
-
-                            </div>
-                        </div>
-
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="{{ route('equity') }}" class="dropdown-item">Equity And Derivatives</a>
-                                <a href="{{ route('mutual-funds') }}" class="dropdown-item">Mutual Funds</a>
-                                <a href="{{ route('pms-aif') }}" class="dropdown-item">PMS-AIF</a>
-                                <a href="{{ route('fixed-deposits') }}" class="dropdown-item">Fixed Deposits</a>
-                                <a href="{{ route('bonds') }}" class="dropdown-item">Bonds</a>
-                                
-
-                            </div>
-                        </div>
-
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                            <a href="{{ route('wealth-management') }}" class="dropdown-item">Wealth Management</a>
-                            <a href="{{ route('financial-planning') }}" class="dropdown-item">Financial Planning</a>
-                            <a href="{{ route('tax-planning') }}" class="dropdown-item">Tax Planning</a>
-                            <a href="{{ route('portfolio-restucturing') }}" class="dropdown-item">Portfolio Restructuring</a>
-                            <a href="{{ route('child-future-saving') }}" class="dropdown-item"> Child Future Saving</a>    
-                            <a href="{{ route('retirmentplanning') }}" class="dropdown-item">Retirement Planning</a>
-                            <a href="{{ route('seminars') }}" class="dropdown-item">Investment Seminar For Youth</a>
-
-
-                            </div>
-                        </div>
-
-
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Investor Zone</a>
-                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <a href="{{ route('newsletter') }}" class="dropdown-item">Newsletter</a>
-                                <a href="{{ route('financial-calculator') }}" class="dropdown-item">Financial calculator</a>
-                                <a href="{{ route('downloads') }}" class="dropdown-item">Downloads</a>
-                                <a href="{{ route('blogs') }}" class="dropdown-item">Blogs</a>
-                                <a href="{{ route('learning') }}" class="dropdown-item">Learning</a>
-
-                            </div>
-                        </div>
-                        <a href="{{route('kyc')}}" class="nav-item nav-link">KYC</a>
-                        <a href="{{ route('contact-us') }}" class="nav-item nav-link">Contact</a>
-                    </div>
-                        <div class="ms-auto d-none d-lg-block">
-                        <a href="{{ route('login-page') }}" class="btn custom-btn rounded-pill py-2 px-3">Client Login</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Navbar End -->
-     <!-- Sidebar start -->
-<div class="float-slider-page">
-    <div class="floating-buttons">
-        <a href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" class="button facebook">
-            <span class="tooltip facebook">Facebook</span>
-            <i class="fa-brands fa-facebook-f"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/dhanavruksha-financial-services-private-ltd/" target="_blank" class="button linkedin">
-            <span class="tooltip">LinkedIn</span>
-            <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="https://www.instagram.com/dhanavruksha_" target="_blank" class="button instagram">
-            <span class="tooltip instagram">Instagram</span>
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://twitter.com/dhanavruksha" target="_blank" class="button twitter">
-            <span class="tooltip twitter">Twitter</span>
-            <i class="fa-brands fa-twitter"></i>
-        </a>
-    </div>
-
-    <div class="contact-buttons">
-        <a href="https://wa.me/917305888454" target="_blank" class="contact-button whatsapp">
-            <span class="tooltip whatsapp">WhatsApp</span>
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="tel:+917305888454" class="contact-button phone">
-            <span class="tooltip phone">Phone</span>
-            <i class="fa-solid fa-phone"></i>
-        </a>
-        <div class="contact-button hide" onclick="toggleContactButtons()">
-            <span class="tooltip">Hide</span>
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </div>
-</div>
-<!-- /Sidebar end -->
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
-    <script>
-        function toggleContactButtons() {
-            const whatsappButton = document.querySelector('.contact-button.whatsapp');
-            const phoneButton = document.querySelector('.contact-button.phone');
-            const hideButtonIcon = document.querySelector('.contact-button.hide i');
-
-            whatsappButton.classList.toggle('hidden');
-            phoneButton.classList.toggle('hidden');
-
-            // Change icon
-            if (whatsappButton.classList.contains('hidden')) {
-                hideButtonIcon.classList.replace('fa-bars', 'fa-eye');
-            } else {
-                hideButtonIcon.classList.replace('fa-eye', 'fa-bars');
-            }
-        }
-    </script>
-    <!-- /Sidebar end -->
-
+@extends('layouts.app')
+@section('content')
   <!-- Page Header Start -->
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
@@ -246,9 +31,12 @@
     <!-- Navigation Tabs -->
     <nav class="nav1">
         <ul class="tabs">
-            <li><button class="tab-button button active" onclick="showContent('current-btn')">Current</button></li>
-            <li><button class="tab-button button" onclick="showContent('upcoming')">Upcoming</button></li>
-            <li><button class="tab-button button" onclick="showContent('closed')">Closed</button></li>
+            <li><button class="tab-button button active" onclick="showContent('current-btn')">Seminar 1</button></li>
+            <li><button class="tab-button button" onclick="showContent('seminar2')">Seminar 2</button></li>
+            <li><button class="tab-button button" onclick="showContent('seminar3')">Seminar 3</button></li>
+            <li><button class="tab-button button" onclick="showContent('seminar4')">Seminar 4</button></li>
+            <li><button class="tab-button button" onclick="showContent('seminar5')">Seminar 5</button></li>
+       
         </ul>
     </nav>
     
@@ -258,219 +46,542 @@
     <section id="content">
         <!-- Current Seminars -->
         <div id="current-btn" class="details-section">
-            <div class="content-header">
-                <h2>Current Seminars</h2>
-            </div>
-            <div class="tab-content">
-                <h3>Day 1: March 13th, 2024</h3>
-                <p>The workshop commenced with an introduction to the importance of financial education, highlighting its relevance in today’s dynamic economic landscape. CA. Deepak Vekaria elaborated on fundamental concepts such as the time value of money and the profound impact of compounding. Participants gained insights into the intricacies of the stock market, exploring its various types and functionalities.</p>
-                <p><strong>Venue:</strong> Pillai Business School, G-504</p>
-                <p><strong>Date:</strong> 13th and 14th March, 2024</p>
-                <p><strong>Time:</strong> 09:00 a.m. to 1:00 p.m.</p>
-                <p><strong>Organizers:</strong> ADITYA BIRLA CAPITAL FOUNDATION</p>
-                <p><strong>Instructor:</strong> CA. Deepak Vekaria</p>
-                <p><strong>Faculty Coordinator:</strong> Dr. Pushpendu Rakshit</p>
-                <p><strong>Mentor:</strong> Dr. R. Chandran and Dr. K. P. Gopal</p>
-            </div>
-        </div>
-        </section>
+        <div class="flyer">
+    <div class="flyer-header">
+        <span>G-Square</span>
+        <h1>Empowering Financial Knowledge</h1>
+        <p class="subtext">Wealth Management and Tax Planning for Informed Decisions</p>
+    </div>
+    <div class="flyer-content">
+        <!-- <div class="image">
+            <img src="img/gsquare1.jpg" alt="Seminar Presentation">
+        </div> -->
+        <div class="carousel">
+    <div class="carousel-images">
+        <img src="img/gsqaure2.jpg" alt="Image 1">
+        <img src="img/gsquare1.jpg" alt="Image 2">
+       
+    </div>
+    <div class="carousel-buttons">
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+    </div>
+    <div class="carousel-dots">
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+       
+    </div>
+</div>
 
-        <!-- Upcoming Seminars -->
-        <section id="upcoming" class="details-section">
-            <h2>Upcoming Seminars</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="img\upcoming.jpg" alt="Upcoming Seminar">
-                    <h3>Saving vs. Investing</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <div class="card">
-                    <img src="img\upcoming1.jpg" alt="Upcoming Seminar">
-                    <h3>Financial Literacy</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <div class="card">
-                    <img src="img\upcoming2.png" alt="Upcoming Seminar">
-                    <h3>The Impact of Student Loans</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <div class="card">
-                    <img src="img\upcoming3.png" alt="Upcoming Seminar">
-                    <h3>Building Credit Early</h3>
-                    <p>The difference between saving money and investing it. When should young people start investing.</p>
-                    <p><strong>Event Date:</strong> 01-09-2023</p>
-                    <p><strong>City:</strong> Chennai</p>
-                    <button onclick="openModal()">Participate</button>
-                </div>
-                <!-- Add more cards as needed -->
-            </div>
-        </section>
-    
-        <section id="closed" class="details-section">
-            <h2>Closed Seminars</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="img\y45.jpeg" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                <div class="card">
-                    <img src="img\y2.jpg" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                <div class="card">
-                    <img src="img\y1.png" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                <div class="card">
-                    <img src="img\closed1.jpeg" alt="Closed Seminar">
-                    <h3>Financial Planning for the Future</h3>
-                    <p>Topic: Investment Seminars</p>
-                    <p><strong>Event Date:</strong> 21-09-2023</p>
-                    <p><strong>City:</strong> Bangalore</p>
-                    <button disabled>Closed</button> <!-- Participation disabled for closed seminars -->
-                </div>
-                
-                <!-- Add more cards as needed -->
-            
-            </div>
-        </section>
-    </section>
 
-        <!-- Registration Form Modal -->
-        <div id="registrationModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Register for Seminar</h2>
-                <form id="registrationForm">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-                    <label for="phone">Phone:</label><br>
-                    <input type="tel" id="phone" name="phone" required><br><br>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+        <div class="details">
+            <h2>About the Seminar</h2>
+            <p>
+                We had the privilege of conducting a comprehensive Financial Literacy initiative for the esteemed team at G Square. The sessions focused on Wealth Management and Tax Planning, aiming to empower employees with the knowledge needed to make informed financial decisions. Over 150 employees participated across three in-person sessions and one virtual session.
+            </p>
         </div>
         
+    </div>
+    <div class="flyer-details">
+        <div class="date-time">
+            <h3>Eventura</h3>
+            <p>December 2023</p>
+        </div>
+        <div class="location">
+            <h3>Location</h3>
+            <p>Chennai</p>
+        </div>
+        <div class="attendees">
+            <h3>No. of Attendees</h3>
+            <p>Surpassing 150 participants</p>
+        </div>
+    </div>
+</div>
+</section>
     
+
+<!-- seminar2 start -->
+<section id="content">
+        <!-- Current Seminars -->
+        <div id="seminar2" class="details-section">
+        <div class="flyer">
+    <div class="flyer-header">
+        <span>Synergech Technologies</span>
+        <h1>Spreading Financial Awareness</h1>
+        <p class="subtext">The importance of starting disciplined investing at a young age.</p>
+    </div>
+    <div class="flyer-content">
+    <div class="carousel">
+    <div class="carousel-images">
+        <img src="img/seminar2_1.jpg" alt="Image 1">
+        <img src="img/seminar2_2.jpg" alt="Image 2">
+        <img src="img/seminar2_3.jpg" alt="Image 3">
+    </div>
+    <div class="carousel-buttons">
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+    </div>
+    <div class="carousel-dots">
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+        <div class="carousel-dot" data-index="2"></div>
+    </div>
+</div>
+
+
+    <div class="details">
+            <h2>About the Seminar</h2>
+           <p>In its mission of spreading financial awareness, DV conducted its next corporate session on 15th May for the employees of Synergech Technologies India Private Limited at Chennai. The attendees were mostly in their 20s and 30s which makes it even more special, as disciplined investing if started young can create immense impact in wealth creation. We believe our session has instilled awareness, discipline and hope in the minds of the attendees to make informed investments and more importantly avoid unhealthy investing habits and products that are hazardous to wealth creation.
+           </p>
+        </div>
+    </div>
+    <div class="flyer-details">
+        <div class="date-time">
+            <h3>Eventura</h3>
+            <p>May 2024</p>
+        </div>
+        <div class="location">
+            <h3>Location</h3>
+            <p>Chennai</p>
+        </div>
+        <div class="attendees">
+            <h3>No. of Attendees</h3>
+            <p>Surpassing 30 participants</p>
+        </div>
+    </div>
+</div>
+</section>
+ <!-- seminar2 end -->
+
+ <!-- seminar3 start -->
+ <section id="content">
+        <!-- Current Seminars -->
+        <div id="seminar3" class="details-section">
+        <div class="flyer">
+    <div class="flyer-header">
+        <span>IppoPay Technologies</span>
+        <h1> Financial wellness</h1>
+        <p class="subtext">Payment Infrastructure to small businesses.</p>
+    </div>
+    <div class="flyer-content">
+    <div class="carousel">
+    <div class="carousel-images">
+        <img src="img/seminar3_1.jpg" alt="Image 1">
+        <img src="img/seminar3_2.jpg" alt="Image 2">
+        <img src="img/seminar3_3.jpg" alt="Image 3">
+    </div>
+    <div class="carousel-buttons">
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+    </div>
+    <div class="carousel-dots">
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+        <div class="carousel-dot" data-index="2"></div>
+        
+        
+    </div>
+</div>
+
+
+    <div class="details">
+            <h2>About the Seminar</h2>
+           <p>Our quest to educate as many people on Financial wellness found the next opportunity at ippopay, a leading provider of Payment Infrastructure to small businesses. Ippopay, in the interest of the Financial wellness of their team chose us to conduct an educative session for their Chennai team of about 100 employees. We also conducted a separate virtual session for their Bangalore and Mumbai teams.</p>
+        </div>
+    </div>
+    <div class="flyer-details">
+        <div class="date-time">
+            <h3>Eventura</h3>
+            <p>June 2024</p>
+        </div>
+        <div class="location">
+            <h3>Location</h3>
+            <p>Chennai</p>
+        </div>
+        <div class="attendees">
+            <h3>No. of Attendees</h3>
+            <p>Surpassing 100 participants</p>
+        </div>
+    </div>
+</div>
+</section>
+ <!-- seminar3 end -->
+
+ <!-- seminar 4 start -->
+ <section id="content">
+        <!-- Current Seminars -->
+        <div id="seminar4" class="details-section">
+        <div class="flyer">
+    <div class="flyer-header">
+        <span>Sify Technologies</span>
+        <h1> Financial Literacy</h1>
+        <p class="subtext">Savings and wise investing into them to create great wealth to meet all their dreams.</p>
+    </div>
+    <div class="flyer-content">
+    <div class="carousel">
+    <div class="carousel-images">
+        <img src="img/seminar4_1.png" alt="Image 1">
+        <img src="img/seminar_4_2.jpg" alt="Image 2">
+        <img src="img/seminar_4_3.png" alt="Image 3">
+        <img src="img/seminar_4_4.png" alt="Image 4">
+    </div>
+    <div class="carousel-buttons">
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+    </div>
+    <div class="carousel-dots">
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+        <div class="carousel-dot" data-index="2"></div>
+    </div>
+</div>
+
+
+    <div class="details">
+            <h2>About the Seminar</h2>
+          <p>We landed at the next opportunity of providing Financial Literacy to about 300 freshers at Sify Technologies. It's extremely satisfying that we have sown the first seeds of savings and wise investing into them to create great wealth to meet all their dreams. Sifty Technologies had also invited us for another session to educate their new set of Management Trainees on Effective Wealth Management.</p>   
+        
+        </div>
+    </div>
+    <div class="flyer-details">
+        <div class="date-time">
+            <h3>Eventura</h3>
+            <p>July 2024</p>
+        </div>
+        <div class="location">
+            <h3>Location</h3>
+            <p>Chennai</p>
+        </div>
+        <div class="attendees">
+            <h3>No. of Attendees</h3>
+            <p>Surpassing 300 participants</p>
+        </div>
+    </div>
+</div>
+</section>
+  <!-- Seminar 4 end -->
+
+  <!-- seminar 5 start -->
+  <section id="content">
+        <!-- Current Seminars -->
+        <div id="seminar5" class="details-section">
+        <div class="flyer">
+    <div class="flyer-header">
+        <span>XIM University</span>
+        <h1> Wealth Management and Financial Planning Case Studies </h1>
+        <p class="subtext">Corporate and Entrepreneurial Careers in Wealth Management.
+        </p>
+    </div>
+    <div class="flyer-content">
+    <div class="carousel">
+    <div class="carousel-images">
+        <img src="img/seminar5_1.jpg" alt="Image 1">
+        <img src="img/seminar5_2.jpg" alt="Image 2">
+        <img src="img/seminar5_3.jpg" alt="Image 3">
+        <img src="img/seminar5_4.jpg" alt="Image 4">
+    </div>
+    <div class="carousel-buttons">
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+    </div>
+    <div class="carousel-dots">
+        <div class="carousel-dot active" data-index="0"></div>
+        <div class="carousel-dot" data-index="1"></div>
+        <div class="carousel-dot" data-index="2"></div>
+    </div>
+</div>
+
+
+    <div class="details">
+            <h2>About the Seminar</h2>
+          <p>We take great pleasure in sharing that we conducted 2 days of Immersion Course on Wealth Management for the 2nd year MBA-Finance batch of 60 students of XIM University, Harirajpur, Odisha. We found the students to have a huge quest for knowledge and they were highly interactive to seek clarity. Our youth's knowledge, clarity, and intelligence keep us amazed when we interact with students in such sessions. We designed and executed this Immersion Course with 360-degree optics. The 2 days were well distributed between comprehensive interactive Coaching on all Wealth Management aspects, a complete Financial Planning process, an excel session on Financial Planning calculations, a notional portfolio management contest, solving Wealth Management and Financial Planning Case Studies and a Group contest at the end to test the knowledge grab of the students from the course. The session concluded with providing guidance to choose Corporate and Entrepreneurial Careers in Wealth Management.</p>
+        </div>
+    </div>
+    <div class="flyer-details">
+        <div class="date-time">
+            <h3>Eventura</h3>
+            <p>October 2024
+
+</p>
+        </div>
+        <div class="location">
+            <h3>Location</h3>
+            <p>Harirajpur, Odisha</p>
+        </div>
+        <div class="attendees">
+            <h3>No. of Attendees</h3>
+            <p>Surpassing 60 participants</p>
+        </div>
+    </div>
+</div>
+</section>
+   <!-- semniar 5 end -->
+        
+ <script>
+    document.querySelectorAll('.carousel').forEach(carousel => {
+  const images = carousel.querySelector('.carousel-images');
+  const dots = carousel.querySelectorAll('.carousel-dot');
+  const prevButton = carousel.querySelector('.prev');
+  const nextButton = carousel.querySelector('.next');
+  let currentIndex = 0;
+
+  const updateCarousel = (index) => {
+    images.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  };
+
+  const moveToNextImage = () => {
+    currentIndex = (currentIndex < dots.length - 1) ? currentIndex + 1 : 0;
+    updateCarousel(currentIndex);
+  };
+
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : dots.length - 1;
+    updateCarousel(currentIndex);
+  });
+
+  nextButton.addEventListener('click', () => {
+    moveToNextImage();
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      currentIndex = parseInt(e.target.dataset.index);
+      updateCarousel(currentIndex);
+    });
+  });
+
+  // Automatically move to the next image every 3 seconds
+  const interval = setInterval(moveToNextImage, 3000);
+
+  // Optional: Pause automatic movement when user interacts
+  carousel.addEventListener('mouseenter', () => clearInterval(interval));
+  carousel.addEventListener('mouseleave', () => {
+    setInterval(moveToNextImage, 3000);
+  });
+});
+
+</script>
+
+<style>
+    .carousel {
+            
+            max-width: 500px;
+            max-height: 500px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-dot.active {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    .flyer {
+        width: 100%;
+        max-width: 1200px;
+        margin: 20px auto;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        border: 1px solid #ddd;
+    }
+
+    .flyer-header {
+        background: linear-gradient(135deg, rgb(9, 9, 9), rgb(0, 5, 14));
+        color: #fff;
+        text-align: center;
+        padding: 30px 20px;
+        position: relative;
+    }
+
+    .flyer-header h1 {
+        margin: 0;
+        font-size: 4vw;
+        font-weight: bold;
+        color: #cb9f42;
+    }
+
+    .flyer-header span {
+        font-size: 1.8vw;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #ddd;
+    }
+
+    .flyer-header .subtext {
+        font-size: 1.5vw;
+        margin-top: 15px;
+        color: #f9f9f9;
+    }
+
+    .flyer-content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px;
+        align-items: center;
+    }
+
+    .flyer-content .image {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .flyer-content .image img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .flyer-content .details {
+        flex: 2;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .flyer-content h2 {
+        margin: 0;
+        font-size: 2.5vw;
+        font-weight: bold;
+        color: #cb9f42;
+        margin-bottom: 15px;
+    }
+
+    .flyer-content p {
+        margin: 10px 0;
+        font-size: 1.2vw;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .flyer-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 25px;
+        background: #f9f9f9;
+        border-top: 1px solid #ddd;
+    }
+
+    .flyer-details div {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .flyer-details div h3 {
+        margin: 5px 0;
+        font-size: 1.8vw;
+        color: #cb9f42;
+    }
+
+    .flyer-details div p {
+        margin: 0;
+        font-size: 1.2vw;
+        color: #555;
+    }
+
+    @media (max-width: 768px) {
+        .flyer-header h1 {
+            font-size: 6vw;
+        }
+
+        .flyer-header span {
+            font-size: 3vw;
+        }
+
+        .flyer-header .subtext {
+            font-size: 2.5vw;
+        }
+
+        .flyer-content h2 {
+            font-size: 4vw;
+        }
+
+        .flyer-content p {
+            font-size: 2.5vw;
+        }
+
+        .flyer-content .image img {
+            max-width: 100%;
+        }
+
+        .flyer-details div h3 {
+            font-size: 3vw;
+        }
+
+        .flyer-details div p {
+            font-size: 2vw;
+        }
+    }
+</style>
+
 
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Our Office</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Business Hours</h4>
-                    <p class="mb-1">Monday - Friday</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Saturday</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Sunday</p>
-                    <h6 class="text-light">Closed</h6>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-medium text-light" href="#">Dhanavruksha</a>, All Right Reserved.
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('.auto-type', {
-          strings: [' Growth', ' Financial Freedom'],
-          typeSpeed: 150,
-          backSpeed:150,
-            loop:true,
-        });
-      </script>
-
-
+    
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/scripts.js"></script>
 
-</body>
-
-</html>
+@endsection
