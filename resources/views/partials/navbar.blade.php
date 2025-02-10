@@ -211,15 +211,16 @@
 
                     <!-- Investor Zone Dropdown -->
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('newsletter') || request()->routeIs('financial-calculator') || request()->routeIs('downloads') || request()->routeIs('blogs') || request()->routeIs('learning') ? 'active' : '' }}" data-bs-toggle="dropdown">Investor Zone</a>
+                        <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('financial-calculator') || request()->routeIs('downloads') || request()->routeIs('blogs') || request()->routeIs('learning') ? 'active' : '' }}" data-bs-toggle="dropdown">Investor Zone</a>
                         <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                            <a href="{{ route('newsletter') }}" class="dropdown-item {{ request()->routeIs('newsletter') ? 'active' : '' }}">Newsletter</a>
+                            <!-- <a href="{{ route('newsletter') }}" class="dropdown-item {{ request()->routeIs('newsletter') ? 'active' : '' }}">Newsletter</a> -->
                             <a href="{{ route('financial-calculator') }}" class="dropdown-item {{ request()->routeIs('financial-calculator') ? 'active' : '' }}">Financial calculator</a>
                             <a href="{{ route('downloads') }}" class="dropdown-item {{ request()->routeIs('downloads') ? 'active' : '' }}">Downloads</a>
                             <a href="{{ route('blogs') }}" class="dropdown-item {{ request()->routeIs('blogs') ? 'active' : '' }}">Blogs</a>
                             <a href="{{ route('learning') }}" class="dropdown-item {{ request()->routeIs('learning') ? 'active' : '' }}">Learning</a>
                         </div>
                     </div>
+                    <a href="{{ route('newsletter') }}" class="nav-item nav-link {{ request()->routeIs('newsletter') ? 'active' : '' }}">Newsletter</a>
 
                     <a href="{{ route('kyc') }}" class="nav-item nav-link {{ request()->routeIs('kyc') ? 'active' : '' }}">KYC</a>
                     <a href="{{ route('contact-us') }}" class="nav-item nav-link {{ request()->routeIs('contact-us') ? 'active' : '' }}">Contact</a>

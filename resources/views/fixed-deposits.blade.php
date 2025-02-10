@@ -23,7 +23,7 @@
         <p>
             Fixed Deposits are among the most reliable investment options. With assured returns and low risk, they help create wealth steadily. Company Fixed Deposits offer a fixed rate of return over a predefined period, ensuring peace of mind and financial stability.
         </p>
-        <a href="#" class="fd-cta">Learn More</a>
+        <a href="{{ route('schedulemeeting') }}" class="fd-cta">Schedule Meeting</a>
     </div>
     <div class="fd-intro-image">
         <img src="img/fixed_depo1.jpg" alt="Fixed Deposit Investments">
@@ -107,39 +107,50 @@ window.addEventListener('load', revealCardsOnScroll);
 
     <!-- Right Section -->
     <div class="fd-feature-right">
-      <div class="fd-feature-steps-container">
-        <div class="fd-feature-step">
-          <div class="fd-feature-icon">
-            <img src="img/fdb1.webp" alt="Maturity">
-          </div>
-          <h3>Maturity</h3>
+  <div class="fd-feature-steps-container">
+    <div class="fd-feature-step">
+      <a href="{{ route('newsletter') }}">
+        <div class="fd-feature-icon">
+          <img src="img/fdb1.webp" alt="Maturity">
         </div>
-        <div class="fd-feature-step">
-          <div class="fd-feature-icon">
-            <img src="img/fdb2.webp" alt="Yearly">
-          </div>
-          <h3>Yearly</h3>
-        </div>
-        <div class="fd-feature-step">
-          <div class="fd-feature-icon">
-            <img src="img/fdb3.webp" alt="Half-yearly">
-          </div>
-          <h3>Half-yearly</h3>
-        </div>
-        <div class="fd-feature-step">
-          <div class="fd-feature-icon">
-            <img src="img/fdb4.webp" alt="Quarterly">
-          </div>
-          <h3>Quarterly</h3>
-        </div>
-        <div class="fd-feature-step">
-          <div class="fd-feature-icon">
-            <img src="img/fdb5.webp" alt="Monthly">
-          </div>
-          <h3>Monthly</h3>
-        </div>
-      </div>
+        <h3>Maturity</h3>
+      </a>
     </div>
+    <div class="fd-feature-step">
+      <a href="{{ route('newsletter') }}">
+        <div class="fd-feature-icon">
+          <img src="img/fdb2.webp" alt="Yearly">
+        </div>
+        <h3>Yearly</h3>
+      </a>
+    </div>
+    <div class="fd-feature-step">
+      <a href="{{ route('newsletter') }}">
+        <div class="fd-feature-icon">
+          <img src="img/fdb3.webp" alt="Half-yearly">
+        </div>
+        <h3>Half-yearly</h3>
+      </a>
+    </div>
+    <div class="fd-feature-step">
+      <a href="{{ route('newsletter') }}">
+        <div class="fd-feature-icon">
+          <img src="img/fdb4.webp" alt="Quarterly">
+        </div>
+        <h3>Quarterly</h3>
+      </a>
+    </div>
+    <div class="fd-feature-step">
+      <a href="{{ route('newsletter') }}">
+        <div class="fd-feature-icon">
+          <img src="img/fdb5.webp" alt="Monthly">
+        </div>
+        <h3>Monthly</h3>
+      </a>
+    </div>
+  </div>
+</div>
+
   </div>
 </div>
 

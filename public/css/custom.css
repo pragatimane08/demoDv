@@ -1,21 +1,16 @@
 /* Custom button styles */
 .custom-btn {
   background-color: #d0a94e;
-  /* Button background color */
   border: 1px solid #d0a94e;
-  /* Button border color */
   color: #ffffff;
-  /* Button text color */
   text-decoration: none;
-  /* Remove underline from links */
-  display: inline-block;
-  /* Ensure proper button display */
+  display: inline-flex;
   padding: 0.5rem 1rem;
-  /* Adjust padding if needed */
   border-radius: 50px;
-  /* Rounded corners */
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
 }
-
 
 /* Hover and focus states for the button */
 .custom-btn:hover,
@@ -439,196 +434,18 @@
   border-radius: 10px;
 }
 
-
-
-/* Ethics Section with Image */
-.ethics-section {
-  background-color: #ffffff;
-  /* Card background color */
-  border: 1px solid #e0e0e0;
-  /* Border around the card */
-  border-radius: 10px;
-  /* Rounded corners for the card */
-  padding: 20px;
-  /* Space inside the card */
-  max-width: 1200px;
-  /* Maximum width of the card */
-  margin: 20px auto;
-  /* Center the card horizontally */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Shadow for a 3D effect */
-  overflow: hidden;
-  /* Prevent overflow if content is too large */
-}
-
-.about-studio-content {
-  display: flex;
-  /* Align image and text side by side */
-  align-items: center;
-  /* Vertically center the content */
-  gap: 20px;
-  /* Space between the image and the text */
-}
-
-.about-studio-content img {
-  max-width: 450px;
-  /* Limit the image width */
-  border-radius: 10px;
-  /* Rounded corners for the image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Shadow for the image */
-}
-
-.about-studio-text {
-  flex: 1;
-  /* Allow text to take up remaining space */
-}
-
-.about-studio-text h5 {
-  margin-top: 0;
-  /* Remove default top margin */
-  color: #bf9021;
-  /* Text color for the heading */
-  font-size: 1.5em;
-  /* Font size for the heading */
-  margin-left: 300px;
-  margin-bottom: 10px;
-}
-
-.about-studio-text p {
-  color: #555;
-  /* Text color for the paragraph */
-  font-size: 0.9em;
-  /* Font size for the paragraph */
-  margin-bottom: 10px;
-  /* Space below the paragraph */
-}
-
-.about-studio-text ul {
-  list-style-type: disc;
-  /* Bullet points for the list */
-  margin-left: 20px;
-  /* Indentation for the list */
-  color: #333;
-  /* Text color for the list items */
-}
-
-.about-studio-text ul li {
-  margin-bottom: 10px;
-  /* Space between list items */
-}
-
-/* Ethics Section with Image */
-.ethics-section {
-  background-color: #ffffff;
-  /* Card background color */
-  border: 1px solid #e0e0e0;
-  /* Border around the card */
-  border-radius: 10px;
-  /* Rounded corners for the card */
-  padding: 20px;
-  /* Space inside the card */
-  max-width: 1200px;
-  /* Maximum width of the card */
-  margin: 20px auto;
-  /* Center the card horizontally */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Shadow for a 3D effect */
-  overflow: hidden;
-  /* Prevent overflow if content is too large */
-}
-
-.about-studio-content {
-  display: flex;
-  /* Align image and text side by side */
-  align-items: center;
-  /* Vertically center the content */
-  gap: 20px;
-  /* Space between the image and the text */
-  flex-wrap: wrap;
-  /* Wrap content on smaller screens */
-}
-
-.about-studio-content img {
-  max-width: 100%;
-  /* Make image responsive */
-  width: 100%;
-  max-width: 450px;
-  /* Limit the image width */
-  border-radius: 10px;
-  /* Rounded corners for the image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Shadow for the image */
-}
-
-.about-studio-text {
-  flex: 1;
-  /* Allow text to take up remaining space */
-}
-
-.about-studio-text h5 {
-  margin-top: 0;
-  /* Remove default top margin */
-  color: #bf9021;
-  /* Text color for the heading */
-  font-size: 1.5em;
-  /* Font size for the heading */
-  margin-left: 300px;
-  margin-bottom: 10px;
-}
-
-.about-studio-text p {
-  color: #555;
-  /* Text color for the paragraph */
-  font-size: 0.9em;
-  /* Font size for the paragraph */
-  margin-bottom: 10px;
-  /* Space below the paragraph */
-}
-
-.about-studio-text ul {
-  list-style-type: disc;
-  /* Bullet points for the list */
-  margin-left: 20px;
-  /* Indentation for the list */
-  color: #333;
-  /* Text color for the list items */
-}
-
-.about-studio-text ul li {
-  margin-bottom: 10px;
-  /* Space between list items */
-}
-
-/* Adjust for smaller screens */
-@media (max-width: 768px) {
-  .about-studio-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .about-studio-text h5 {
-    margin-left: 0;
-    font-size: 1.2em;
-    /* Smaller font size on smaller screens */
-  }
-
-  .about-studio-text p {
-    font-size: 0.85em;
-  }
-}
-
-/* Section Features */
+/* Section Features-ethic */
 .sec-features {
   background-color: #d0a94e;
   background: linear-gradient(140deg, #d0a94e 0%, #d0a94e 100%);
   overflow: hidden;
-  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  /* Allows wrapping for smaller screens */
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .sec-features .feature {
@@ -638,7 +455,6 @@
   min-width: 200px;
   padding: 10px;
   text-align: center;
-  /* Center content in each feature */
 }
 
 .sec-features .feature [class^="bi-"] {
@@ -683,7 +499,8 @@
 @media (max-width: 768px) {
   .sec-features {
     height: auto;
-    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .sec-features .feature {

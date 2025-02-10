@@ -16,7 +16,6 @@
     <!-- Page Header End -->
 
 <!-- Header Start -->
-
 <div class="mutual-fund-full-height">
   <div class="mutual-fund-container">
     <div class="mutual-fund-left">
@@ -30,8 +29,6 @@
     </div>
   </div>
 </div>
-
-
   <!-- Header End -->
    
  <!-- How It Works Section -->
@@ -115,6 +112,16 @@
                         be invested on a monthly basis. Just contact us to know more.</p>
                 </div>
             </div>
+            <div class="advantage-item">
+    <div class="icon">
+        <img src="./img/mututal-4-resized (2).png" alt="Easy Online Access">
+    </div>
+    <div class="text">
+        <h3>Easy Online Access</h3>
+        <p>With just a few clicks, you can invest, track, and manage your mutual fund investments from anywhere, 
+            anytime, using our online platform.</p>
+    </div>
+</div>
         </div>
     </div>
     <!-- Advantages of Mutual Fund-end -->

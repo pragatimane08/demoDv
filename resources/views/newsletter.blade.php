@@ -14,7 +14,7 @@
     </div>
 </div>
 <!-- Page Header End -->
-
+<!-- Newsletter Start -->
 <div class="container-xxl pt-5">
     <div class="container">
         <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
@@ -24,15 +24,35 @@
 
         <!-- Carousel Start -->
         <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-            @foreach($newsletters as $newsletter)
+            @foreach($newsletters as $index => $newsletter)
+                @php
+                    // Define an array of static images and PDFs
+                    $staticImages = [
+                        'img/newsletter.jpeg',
+                        'img/newsletter.jpeg',
+                        'img/newsletter.jpeg',
+                        'img/newsletter.jpeg'
+                    ];
+                    
+                    $staticPdfs = [
+                        'img/Content Requirement Document DV.pdf',
+                        'img/Content Requirement Document DV.pdf',
+                        'img/Content Requirement Document DV.pdf',
+                        'img/Content Requirement Document DV.pdf'
+                    ];
+
+                    // Cycle through static files based on index
+                    $imagePath = $newsletter->image ? asset('storage/' . $newsletter->image) : asset($staticImages[$index % count($staticImages)]);
+                    $pdfPath = $newsletter->pdf ? asset('storage/' . $newsletter->pdf) : asset($staticPdfs[$index % count($staticPdfs)]);
+                @endphp
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="{{ asset('storage/' . $newsletter->image) }}" alt="{{ $newsletter->title }}">
+                        <img class="img-fluid" src="{{ $imagePath }}" alt="{{ $newsletter->title }}">
                         <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="{{ asset('storage/' . $newsletter->image) }}" data-lightbox="project">
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="{{ $imagePath }}" data-lightbox="project">
                                 <i class="fa fa-eye"></i>
                             </a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="{{ asset('storage/' . $newsletter->pdf) }}" target="_blank">
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="{{ $pdfPath }}" target="_blank">
                                 <i class="fa fa-download"></i>
                             </a>
                         </div>
@@ -47,7 +67,7 @@
         <!-- Carousel End -->
     </div>
 </div>
-
+<!-- newsletter end -->
 <script>
     $(document).ready(function(){
     $(".project-carousel").owlCarousel({

@@ -125,10 +125,7 @@ Most of the retirement plans offered in the market either provides you fixed mon
   color: #fff;
 }
 
-.card:hover .btn {
-  color: #333;
-  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
-  
+
 
 .content .btn:active {
   box-shadow: none;

@@ -29,31 +29,50 @@
         </div>
 
         <div class="row">
-            @foreach ($blogs as $blog)
-                <div class="col-md-6 col-lg-4 ftco-animate">
-                    <div class="blog-entry">
-                        <a href="{{ $blog->link }}" class="block-20 d-flex align-items-end" style="background-image: url('{{ asset('storage/' . $blog->image) }}');">
-                            <div class="meta-date text-center p-2">
-                                <span class="day">{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</span>
-                                <span class="mos">{{ \Carbon\Carbon::parse($blog->created_at)->format('F') }}</span>
-                                <span class="yr">{{ \Carbon\Carbon::parse($blog->created_at)->format('Y') }}</span>
-                            </div>
-                        </a>
-                        <div class="text bg-white p-4">
-                            <h3 class="heading"><a href="{{ $blog->link }}">{{ $blog->title }}</a></h3>
-                            <p>{{ Str::limit($blog->description, 150) }}</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <p class="mb-0"><a href="{{ $blog->link }}" class="btn custom-outline-btn">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-                               
-                            </div>
-                        </div>
+    @foreach ($blogs as $index => $blog)
+        @php
+            // Define an array of manual images
+            $images = [
+                'img/houseb1.jpg',
+                'img/bigifgblog2.png',
+                'img/fixdepoblo3.png',
+                'img/incomtablog4.jpg'
+            ];
+            
+            // Assign images in a cyclic manner based on the index
+            $manualImage = asset($images[$index % count($images)]);
+
+            // Use database image if available, otherwise fallback to manual image
+            $imagePath = $blog->image ? asset('storage/' . $blog->image) : $manualImage;
+        @endphp
+        <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="blog-entry">
+                <a href="{{ $blog->link }}" class="block-20 d-flex align-items-end"
+                   style="background-image: url('{{ $imagePath }}');">
+                    <div class="meta-date text-center p-2">
+                        <span class="day">{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</span>
+                        <span class="mos">{{ \Carbon\Carbon::parse($blog->created_at)->format('F') }}</span>
+                        <span class="yr">{{ \Carbon\Carbon::parse($blog->created_at)->format('Y') }}</span>
+                    </div>
+                </a>
+                <div class="text bg-white p-4">
+                    <h3 class="heading"><a href="{{ $blog->link }}">{{ $blog->title }}</a></h3>
+                    <p>{{ Str::limit($blog->description, 150) }}</p>
+                    <div class="d-flex align-items-center mt-4">
+                        <p class="mb-0">
+                            <a href="{{ $blog->link }}" class="btn custom-outline-btn">Read More 
+                                <span class="ion-ios-arrow-round-forward"></span>
+                            </a>
+                        </p>
                     </div>
                 </div>
-            @endforeach
+            </div>
         </div>
-    </div>
+    @endforeach
 </div>
 
+        </div>
+   </div>
     <!-- Blog End -->
     <!-- Blog Section End -->
 
