@@ -95,43 +95,115 @@
     </div>
 </div>
 <!-- Video Modal End -->
-
-<!-- golden-curve -->
+ <!-- service start -->
+  <!-- golden curve -->
 <div class="service-container">
         <div class="golden-curve"></div>
-        </div> 
-
-<!-- Services Start -->
-<div class="home-services home-offer-container">
-    <div class="home-text-center mx-auto wow fadeInUp" data-wow-delay="0.1s">
+        </div>
+    
+<!-- Service Start -->
+<div class="home-services offered-container">
+    <div class="home-text-center wow fadeInUp" data-wow-delay="0.1s">
         <h1 class="display-5 mb-5">Our Services</h1>
     </div>
-    <div class="home-services home-offer-row">
-        @foreach ([
-            ['img/icon/mutual fund.png', 'Wealth Management', 'wealth-management'],
-            ['img/icon/equity.png', 'Financial Planning', 'financial-planning'],
-            ['img/icon/seminar.png', 'Insurance and Investment Portfolio Restructuring', 'Insurance_pr'],
-            ['img/icon/mutual fund.png', 'Free Review of External Portfolio', 'external-Portfolio'],
-            ['img/icon/mutual fund.png', 'Equity Advisory', 'equity-advisory'],
-            ['img/icon/equity.png', 'Tax Planning', 'tax-planning'],
-            ['img/icon/seminar.png', 'Retirement Planning', 'retirmentplanning'],
-            ['img/icon/mutual fund.png', 'Estate Planning', 'estate-planning']
-        ] as $service)
+    <div class="home-services offered-row">
         <div class="home-service-item">
             <div class="home-service-text">
                 <div class="home-btn-square">
-                    <img src="{{ $service[0] }}" alt="{{ $service[1] }} Icon" loading="lazy">
+                    <i class="fas fa-piggy-bank" style="color: #d0a94e; font-size: 2rem; align-items: center;"></i>
                 </div>
-                <h5>{{ $service[1] }}</h5>
+                <h5>Wealth Management</h5>
             </div>
             <div class="home-service-btn">
-                <a href="{{ route($service[2]) }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+                <a href="{{ route('wealth-management') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
             </div>
         </div>
-        @endforeach
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <i class="fas fa-chart-line" style="color: #d0a94e; font-size: 2rem; align-items: center;"></i>
+                </div>
+                <h5>Financial Planning</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('financial-planning') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <i class="fas fa-hand-holding-usd" style="color: #d0a94e; font-size: 2rem; align-items: center;"></i>
+                </div>
+                <h5>Insurance & Investment Portfolio Restructuring</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('Insurance_pr') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <i class="fas fa-search-dollar" style="color: #d0a94e; font-size: 2rem; align-items: center;"></i>
+                </div>
+                <h5>Free Review of External Portfolio</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('external-Portfolio') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-services offered-row">
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <i class="fas fa-balance-scale" style="color: #d0a94e; font-size: 2rem; align-items: center;"></i>
+                </div>
+                <h5>Equity Advisory</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('equity-advisory') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <i class="fas fa-file-invoice-dollar" style="color: #d0a94e; font-size: 2rem; align-items: center;"></i>
+                </div>
+                <h5>Tax Planning</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('tax-planning') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <i class="fas fa-user-clock" style="color: #d0a94e; font-size: 2rem; align-items: center;"></i>
+                </div>
+                <h5>Retirement Planning</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('retirmentplanning') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
+        <div class="home-service-item">
+            <div class="home-service-text">
+                <div class="home-btn-square">
+                    <i class="fas fa-file-signature" style="color: #d0a94e; font-size: 2rem; align-items: center;"></i>
+                </div>
+                <h5>Estate Planning</h5>
+            </div>
+            <div class="home-service-btn">
+                <a href="{{ route('estate-planning') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
+            </div>
+        </div>
     </div>
 </div>
-<!-- Services End -->
+<!-- Service End -->
+<!-- Service End -->
+
+
 
 <!-- Products Offered Start -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -190,61 +262,105 @@
 <!-- Blog Start -->
 <!-- Blog Section Start -->
     
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-            <div class="col-md-8 text-center heading-section ftco-animate">
-                <h2 class="mb-4"><span>Recent</span> Blog</h2>
-                <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-            </div>
-        </div>
+<!-- Blog Section Start -->
+    
+<div class="container">
 
-        <div class="row">
-    @foreach ($blogs as $index => $blog)
-        @php
-            // Define an array of manual images
-            $images = [
-                'img/houseb1.jpg',
+<div class="row justify-content-center mb-5 pb-2">
+    <div class="col-md-8 text-center heading-section ftco-animate">
+        <h2 class="mb-4"><span>Recent</span> Blog</h2>
+        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the
+            necessary regelialia. It is a paradisematic country</p>
+    </div>
+</div>
+<!-- img/houseb1.jpg',
                 'img/bigifgblog2.png',
                 'img/fixdepoblo3.png',
-                'img/incomtablog4.jpg'
-            ];
-            
-            // Assign images in a cyclic manner based on the index
-            $manualImage = asset($images[$index % count($images)]);
+                'img/incomtablog4.jpg -->
+<div class="row">
+  
+    <div class="col-md-6 col-lg-4 ftco-animate">
+        <div class="blog-entry">
+            <a href="blog-single.html" class="block-20 d-flex align-items-end"
+                style="background-image: url('img/incomtablog4.jpg');">
+                <div class="meta-date text-center p-2">
+                    <span class="day">11</span>
+                    <span class="mos">feb</span>
+                    <span class="yr">2025</span>
+                </div>
+            </a>
+            <div class="text bg-white p-4">
+                <h3 class="heading"><a href="#">Income Tax Changes in Budget 2024: Dos and don’ts for individual taxpayers.</a></h3>
+                <div class="d-flex align-items-center mt-4">
+                    <p class="mb-0">
+                        <a href="https://www.livemint.com/budget/income-tax-changes-in-budget-2024-dos-and-don-ts-for-individual-taxpayers-gold-nps-real-estate-retirement-equities-11721819477187.html" class="btn custom-outline-btn">Read More <span
+                                class="ion-ios-arrow-round-forward"></span></a>
+                    </p>
 
-            // Use database image if available, otherwise fallback to manual image
-            $imagePath = $blog->image ? asset('storage/' . $blog->image) : $manualImage;
-        @endphp
-        <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-                <a href="{{ $blog->link }}" class="block-20 d-flex align-items-end"
-                   style="background-image: url('{{ $imagePath }}');">
-                    <div class="meta-date text-center p-2">
-                        <span class="day">{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</span>
-                        <span class="mos">{{ \Carbon\Carbon::parse($blog->created_at)->format('F') }}</span>
-                        <span class="yr">{{ \Carbon\Carbon::parse($blog->created_at)->format('Y') }}</span>
-                    </div>
-                </a>
-                <div class="text bg-white p-4">
-                    <h3 class="heading"><a href="{{ $blog->link }}">{{ $blog->title }}</a></h3>
-                    <p>{{ Str::limit($blog->description, 150) }}</p>
-                    <div class="d-flex align-items-center mt-4">
-                        <p class="mb-0">
-                            <a href="{{ $blog->link }}" class="btn custom-outline-btn">Read More 
-                                <span class="ion-ios-arrow-round-forward"></span>
-                            </a>
-                        </p>
-                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4 ftco-animate">
+        <div class="blog-entry">
+            <a href="blog-single.html" class="block-20 d-flex align-items-end"
+                style="background-image: url('img/bigifgblog2.png');">
+                <div class="meta-date text-center p-2">
+                    <span class="day">11</span>
+                    <span class="mos">feb</span>
+                    <span class="yr">2025</span>
+                </div>
+            </a>
+            <div class="text bg-white p-4">
+                <h3 class="heading"><a href="#">How big a gift are GIFT city funds to NRIs? MintGenie explores.</a></h3>
+                <div class="d-flex align-items-center mt-4">
+                    <p class="mb-0">
+                        <a href="https://www.livemint.com/mutual-fund/mutual-funds-how-big-a-gift-are-gift-city-funds-to-nris-mintgenie-explore-11722323164277.html" class="btn custom-outline-btn">Read More <span
+                                class="ion-ios-arrow-round-forward"></span></a>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- img/fixdepoblo3.png',
+                'img/incomtablog4.jpg -->
+    <div class="col-md-6 col-lg-4 ftco-animate">
+        <div class="blog-entry">
+            <a href="blog-single.html" class="block-20 d-flex align-items-end"
+                style="background-image: url('img/fixdepoblo3.png');">
+                <div class="meta-date text-center p-2">
+                    <span class="day">11</span>
+                    <span class="mos">Feb</span>
+                    <span class="yr">2025</span>
+                </div>
+            </a>
+            <div class="text bg-white p-4">
+                <h3 class="heading"><a href="#">Fixed Deposits: Safe investment or risky gamble? What you need to understand</a></h3>
+
+                <div class="d-flex align-items-center mt-4">
+                    <p class="mb-0">
+                        <a href="https://www.livemint.com/money/personal-finance/fixed-deposits-safe-investment-or-risky-gamble-what-you-need-to-understand-11735537809836.html" class="btn custom-outline-btn">Read More <span
+                                class="ion-ios-arrow-round-forward"></span>
+                        </a>
+                    </p>
+                    
                 </div>
             </div>
         </div>
-    @endforeach
-</div>
     </div>
-          </div>
+    
+</div>
+</div>
+</div>
 
     <!-- Blog End -->
+    <!-- Blog Section End -->
+
+    <!-- Blog End -->
+
 
 <!-- Optimized Testimonial Section Start -->
 <div class="container-xxl pt-5">
@@ -323,103 +439,151 @@
 
 <!-- CSS Optimization -->
 <style>
-  .home-services {
-    width: calc(100% - 100px);
-    padding: 0 20px;
-    margin: 0 auto;
-  }
+  /*** Service-home-start ***/
+/* Global Styling for Services Section */
+.home-services.offered-container {
+  width: calc(100% - 100px);
+  padding: 0 20px;
+  margin: 0 auto;
+  overflow: hidden; /* Prevents any overflow issues */
+}
 
-  .home-text-center {
-    text-align: center;
-    margin-bottom: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/* Center the heading */
+.home-text-center {
+  text-align: center;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .home-text-center h1 {
-    font-size: 40px;
-    color: white;
-  }
+.home-text-center h1 {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
 
-  .home-offer-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
+/* Services Row Styling - Display in Horizontal Row */
+.home-services.offered-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center items */
+  padding-bottom: 10px;
+}
 
+/* Service Item Styling */
+.home-service-item {
+  flex: 0 0 calc(25% - 20px); /* Show 4 items in a row */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  height: 250px; /* Ensure equal height for desktop */
+}
+
+.home-service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.home-service-text {
+  padding: 24px;
+}
+
+/* Service Button Styling */
+.home-btn-square {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.home-btn-square img {
+  width: 32px;
+  height: 32px;
+}
+
+.home-service-btn a {
+  display: inline-block;
+  background: #fff;
+  padding: 12px 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #B37F2B;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.home-service-btn a:hover {
+  background: #f4f4f4;
+  color: #b37228;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .home-service-item { flex: 0 0 calc(33.33% - 20px); } /* Show 3 items */
+}
+
+@media (max-width: 991px) {
+  .home-service-item { flex: 0 0 calc(50% - 20px); } /* Show 2 items */
+}
+
+@media (max-width: 767px) {
+  .home-services.offered-container {
+      width: 100%;
+      padding: 0 20px;
+  }
+  .home-text-center h1 { 
+      font-size: 1.8rem; 
+      color: #d0a94e;
+      text-align: center;
+  }
+  .home-services.offered-row {
+      flex-direction: column; /* Stack items one by one */
+      align-items: center; /* Center items */
+      gap: 20px;
+  }
   .home-service-item {
-    flex: 1 1 calc(25% - 30px);
-    max-width: calc(25% - 30px);
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow: hidden;
-    height: 250px;
+      flex: 1 1 auto; /* Equal height for all items */
+      width: 80%; /* Reduce width for better appearance */
+      max-width: 400px; /* Limit max size */
+      margin: 0 auto 30px; /* Center align and add bottom spacing */
+      height: auto; /* Adjust height dynamically */
   }
+}
 
-  .home-service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+@media (max-width: 576px) {
+  .home-text-center h1 { 
+      font-size: 1.6rem; 
+      color: #000;
+      text-align: center;
   }
+  .home-services.offered-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+  .home-service-item {
+      flex: 1 1 auto; /* Ensure equal height for all items */
+      width: 90%; /* Further reduce width for small screens */
+      max-width: 350px; /* Set max width */
+      margin: 0 auto 30px; /* Maintain spacing with bottom margin */
+      height: auto; /* Allow dynamic height */
+  }
+}
 
-  .home-service-text {
-    padding: 24px;
-  }
-
-  .home-btn-square {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f4f4f4;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  .home-btn-square img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .home-service-btn a {
-    display: inline-block;
-    background: #fff;
-    padding: 12px 16px;
-    border: 1px solid #f0f0f0;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    color: #B37F2B;
-    font-weight: 600;
-    transition: all 0.3s;
-  }
-
-  .home-service-btn a:hover {
-    background: #f4f4f4;
-    color: #b37228;
-  }
-
-  @media (max-width: 1200px) {
-    .home-service-item { flex: 1 1 calc(33.33% - 30px); }
-  }
-  @media (max-width: 991px) {
-    .home-service-item { flex: 1 1 calc(50% - 30px); }
-  }
-  @media (max-width: 767px) {
-    .home-service-item { flex: 1 1 100%; }
-    .home-text-center h1 { font-size: 32px; }
-  }
-  @media (max-width: 576px) {
-    .home-text-center h1 { font-size: 28px; }
-  }
 </style>
     @endsection

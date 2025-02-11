@@ -14,78 +14,85 @@
     </div>
 </div>
 <!-- Page Header End -->
-<!-- Newsletter Start -->
+
 <div class="container-xxl pt-5">
-    <div class="container">
-        <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="fs-5 fw-medium text-custom">Our Newsletter</p>
-            <h1 class="display-5 mb-5">Stay Updated With Our Newsletter</h1>
-        </div>
+        <div class="container">
+            <div class="text-center text-md-start pb-5 pb-md-0" style="max-width: 500px;">
+                <p class="fs-5 fw-medium text-custom">Our Newsletter</p>
+                <h1 class="display-5 mb-5">Stay Updated With Our Newsletter</h1>
+            </div>
 
-        <!-- Carousel Start -->
-        <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-            @foreach($newsletters as $index => $newsletter)
-                @php
-                    // Define an array of static images and PDFs
-                    $staticImages = [
-                        'img/newsletter.jpeg',
-                        'img/newsletter.jpeg',
-                        'img/newsletter.jpeg',
-                        'img/newsletter.jpeg'
-                    ];
-                    
-                    $staticPdfs = [
-                        'img/Content Requirement Document DV.pdf',
-                        'img/Content Requirement Document DV.pdf',
-                        'img/Content Requirement Document DV.pdf',
-                        'img/Content Requirement Document DV.pdf'
-                    ];
-
-                    // Cycle through static files based on index
-                    $imagePath = $newsletter->image ? asset('storage/' . $newsletter->image) : asset($staticImages[$index % count($staticImages)]);
-                    $pdfPath = $newsletter->pdf ? asset('storage/' . $newsletter->pdf) : asset($staticPdfs[$index % count($staticPdfs)]);
-                @endphp
+            <!-- Newsletter Carousel -->
+            <div class="owl-carousel project-carousel">
+                
+                <!-- Yearly Newsletter 2024 -->
                 <div class="project-item mb-5">
                     <div class="position-relative">
-                        <img class="img-fluid" src="{{ $imagePath }}" alt="{{ $newsletter->title }}">
+                        <img class="img-fluid" src="img/yearneswL2024.png" alt="Yearly Newsletter 2024">
                         <div class="project-overlay">
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="{{ $imagePath }}" data-lightbox="project">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="{{ $pdfPath }}" target="_blank">
-                                <i class="fa fa-download"></i>
-                            </a>
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/yearneswL2024.png" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="pdf/Yearly-Newsletter-2_compressed.pdf" download><i class="fa fa-download"></i></a>
                         </div>
                     </div>
                     <div class="p-4">
-                        <a class="d-block h5" href="#">{{ $newsletter->title }}</a>
-                        <span>{{ $newsletter->description }}</span>
+                        <a class="d-block h5" href="pdf/Yearly-Newsletter-2_compressed.pdf" download>Yearly Newsletter 2024</a>
+                        <span>Download our comprehensive yearly newsletter for 2024.</span>
                     </div>
                 </div>
-            @endforeach
-        </div>
-        <!-- Carousel End -->
-    </div>
-</div>
-<!-- newsletter end -->
-<script>
-    $(document).ready(function(){
-    $(".project-carousel").owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: true,
-        dots: false,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        responsive: {
-            0: { items: 1 },
-            576: { items: 2 },
-            992: { items: 3 }
-        }
-    });
-});
 
-</script>
+                <!-- Monthly Newsletter December 2024 -->
+                <div class="project-item mb-5">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/montlydec2024.png" alt="Monthly Newsletter December 2024">
+                        <div class="project-overlay">
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/montlydec2024.png" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="pdf/Monthly-Newsletter-Dec-24_compressed.pdf" download><i class="fa fa-download"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <a class="d-block h5" href="pdf/Monthly-Newsletter-Dec-24_compressed.pdf" download>Monthly Newsletter December 2024</a>
+                        <span>Check out our December 2024 monthly newsletter.</span>
+                    </div>
+                </div>
+
+                <!-- Monthly Newsletter November 2024 -->
+                <div class="project-item mb-5">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/monthnov2024.png" alt="Monthly Newsletter November 2024">
+                        <div class="project-overlay">
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/monthnov2024.png" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="pdf/Monthly-Report-November-24_compressed.pdf" download><i class="fa fa-download"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <a class="d-block h5" href="pdf/Monthly-Report-November-24_compressed.pdf" download>Monthly Newsletter November 2024</a>
+                        <span>Explore our November 2024 monthly newsletter.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".project-carousel").owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+                responsive: {
+                    0: { items: 1 },
+                    576: { items: 2 },
+                    992: { items: 3 }
+                }
+            });
+        });
+    </script>
+
 <style>
     /* news section start */
 .news-container {
