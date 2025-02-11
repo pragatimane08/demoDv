@@ -48,7 +48,7 @@
 .logo-container {
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 /* Styling for the DV logo */

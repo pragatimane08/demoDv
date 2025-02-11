@@ -896,67 +896,117 @@ document.getElementById("phone").addEventListener("input", function (e) {
 
 <!-- Styles for Popup Messages -->
 <style>
-    .error-message {
+  /* Error Message Styling */
+.error-message {
     color: #f44336; /* Red color for error messages */
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 1rem; /* Responsive font size */
+    margin-top: 0.5rem;
     font-weight: bold;
-    }
-    /* Reuse the styles from the Schedule Meeting popup */
+}
+
+/* Pop-up Message Container */
+.popup-message {
+    position: fixed;
+    top: 5vh; /* 5% from the top */
+    right: 2vw; /* 2% from the right */
+    max-width: 400px;
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
+}
+
+/* Success Message */
+.popup-message.success {
+    background-color: #4CAF50; /* Green */
+}
+
+/* Error Message */
+.popup-message.error {
+    background-color: #f44336; /* Red */
+}
+
+/* Pop-up Message Heading */
+.popup-message h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Pop-up Message Body */
+.popup-message p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Close Button */
+.popup-message .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Pop-up Display - Showing the pop-up */
+.popup-message.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
     .popup-message {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        max-width: 400px;
-        width: 100%;
-        padding: 15px;
-        background-color: #333;
-        color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        z-index: 9999;
-    }
-
-    .popup-message.success {
-        background-color: #4CAF50; /* Green */
-    }
-
-    .popup-message.error {
-        background-color: #f44336; /* Red */
+        width: 80%;
+        right: 10%;
+        top: 5vh;
     }
 
     .popup-message h3 {
-        margin: 0;
-        font-size: 18px;
-        font-weight: 600;
-        color: #fff;
+        font-size: 1rem;
     }
 
     .popup-message p {
-        margin: 5px 0;
-        font-size: 16px;
+        font-size: 0.9rem;
     }
 
     .popup-message .close-btn {
-        position: absolute;
-        top: 5px;
-        right: 10px;
-        font-size: 18px;
-        color: #fff;
-        background: transparent;
-        border: none;
-        cursor: pointer;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .popup-message {
+        width: 90%;
+        right: 5%;
+        top: 5vh;
+        padding: 0.8rem;
     }
 
-    .popup-message.show {
-        opacity: 1;
-        visibility: visible;
+    .popup-message h3 {
+        font-size: 0.9rem;
     }
+
+    .popup-message p {
+        font-size: 0.85rem;
+    }
+
+    .popup-message .close-btn {
+        font-size: 0.9rem;
+    }
+}
+
 </style>
-
     </div>
 </div>
 

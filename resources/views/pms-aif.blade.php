@@ -46,7 +46,7 @@
         <p class="bar-text">₹1.51 Cr</p> <!-- Text above the bar -->
         <div class="bar-value green-bar" style="--bar-height: 120px;"></div>
     </div>
-    <p class="bar-label">Dhanavruksha Equity Revival Strategy</p> <!-- Move this outside bar-value-wrapper -->
+    <p class="bar-label">Prosperity Equity Revival Strategy</p> <!-- Move this outside bar-value-wrapper -->
 </div>
 
                 </div>

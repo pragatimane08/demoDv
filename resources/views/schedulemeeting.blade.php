@@ -129,35 +129,40 @@ function showPopupMessage(message, type) {
 }
 </script>
 <style>
-/* Error Message Styling */
+    /* Error Message Styling */
 .error-message {
     color: #f44336; /* Red color for error message text */
-    font-size: 14px; /* Font size for the error message */
-    margin-top: 5px; /* Space between the input field and the error message */
-    font-weight: bold; /* Make the error message text bold */
-    display: block; /* Ensure the error message is displayed on a new line */
-    margin-left: 10px; /* Optional: Add some space to the left of the error message */
+    font-size: 1rem; /* Responsive font size */
+    margin-top: 0.5rem;
+    font-weight: bold;
+    display: block;
+    margin-left: 0.5rem; 
 }
 
 /* Input Field with Error Styling */
 input[type="text"].input-error {
-    border-color: #f44336; /* Red border to indicate error */
-    background-color: #ffe6e6; /* Light red background for invalid input */
+    border-color: #f44336;
+    background-color: #ffe6e6;
+    padding: 0.8rem;
+    font-size: 1rem;
+    width: 100%; /* Ensure input takes full width */
+    max-width: 400px;
 }
 
 /* Input Field Focus when Invalid */
 input[type="text"].input-error:focus {
     outline: none;
-    border-color: #f44336; /* Red border on focus */
+    border-color: #f44336;
 }
-    /* Pop-up Message Container */
+
+/* Pop-up Message Container */
 .popup-message {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 10vh; /* 10% from the top */
+    right: 2vw; /* 2% from the right */
     max-width: 400px;
-    width: 100%;
-    padding: 15px;
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 1rem;
     background-color: #333;
     color: #fff;
     border-radius: 8px;
@@ -169,32 +174,25 @@ input[type="text"].input-error:focus {
 }
 
 /* Success Message */
-.popup-message.success {
-    background-color: #4CAF50; /* Green */
-}
+.popup-message.success { background-color: #4CAF50; }
 
 /* Error Message */
-.popup-message.error {
-    background-color: #f44336; /* Red */
-}
+.popup-message.error { background-color: #f44336; }
 
 /* Information Message */
-.popup-message.info {
-    background-color: #2196F3; /* Blue */
-}
+.popup-message.info { background-color: #2196F3; }
 
 /* Pop-up Message Heading */
 .popup-message h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: 600;
-    color: #fff;
 }
 
 /* Pop-up Message Body */
 .popup-message p {
     margin: 5px 0;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /* Close Button */
@@ -202,7 +200,7 @@ input[type="text"].input-error:focus {
     position: absolute;
     top: 5px;
     right: 10px;
-    font-size: 18px;
+    font-size: 1.2rem;
     color: #fff;
     background: transparent;
     border: none;
@@ -215,8 +213,40 @@ input[type="text"].input-error:focus {
     visibility: visible;
 }
 
-</style>
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .popup-message {
+        width: 90%;
+        top: 5vh;
+        right: 5vw;
+        max-width: 90%;
+    }
 
+    input[type="text"].input-error {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .popup-message {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .popup-message h3 {
+        font-size: 1rem;
+    }
+
+    .popup-message p {
+        font-size: 0.9rem;
+    }
+
+    .popup-message .close-btn {
+        font-size: 1rem;
+    }
+}
+
+</style>
    
 <!-- Font Awesome for Icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
