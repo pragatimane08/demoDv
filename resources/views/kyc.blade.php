@@ -3,19 +3,21 @@
 @section('content')
 
   <!-- Page Header Start -->
-  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container text-center py-5">
-        <h1 class="display-2 text-white mb-4 animated slideInDown">KYC</h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-            <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">KYC</a></li>
-            </ol>
-        </nav>
-    </div>
-</div>
-<!-- Page Header End -->
-
+ <!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+    style="background: url('{{ asset('img/kychd.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+      <div class="container text-center py-5">
+         <h1 class="display-2 text-white mb-4 animated slideInDown">KYC</h1>
+           <nav aria-label="breadcrumb animated slideInDown">
+              <ol class="breadcrumb justify-content-center mb-0">
+                  <li class="breadcrumb-item"><a href="#">KYC</a></li>
+                  <li class="breadcrumb-item"><a href="#">KYC</a></li>
+              </ol>
+           </nav>
+      </div>
+   </div>
+<!-- public/img/kychd.jpg -->
 <!-- kyc start -->
  <!-- KYC Compliance Portal -->
 <div id="download-kyc-page" class="section" style="display: block;">
@@ -26,10 +28,28 @@
 
 <!-- Buttons to switch between sections -->
 <div class="kyc-buttons">
-    <button class="kyc-btn" onclick="showSection('checkkyc')">Check KYC Status</button>
-    <button class="kyc-btn" onclick="showSection('validatekyc')">Validate KYC</button>
-    <button class="kyc-btn" onclick="showSection('downloadform')">Download Forms</button>
+    <button class="kyc-btn" onclick="showSection('checkkyc'); toggleActiveButton(this);">Check KYC Status</button>
+    <button class="kyc-btn" onclick="showSection('validatekyc'); toggleActiveButton(this);">Validate KYC</button>
+    <button class="kyc-btn" onclick="showSection('downloadform'); toggleActiveButton(this);">Download Forms</button>
 </div>
+
+<script>
+    function toggleActiveButton(button) {
+        var buttons = document.querySelectorAll('.kyc-btn');
+        buttons.forEach(function(btn) {
+            btn.classList.remove('active');  // Remove active class from all buttons
+        });
+        button.classList.add('active');  // Add active class to the clicked button
+    }
+</script>
+
+<style>
+    .kyc-btn.active {
+        background-color: white; /* Example active color */
+        color: #cb9f42; /* Active button text color */
+    }
+</style>
+
 
 <!-- Cards Section -->
 <div class="kyc-cards-section">
@@ -37,6 +57,7 @@
     <!-- Check KYC Status -->
     <div class="kyc-card" id="checkkyc" style="display: block;">
         <h3 class="kyc-card-title">Check KYC Status</h3>
+        <div class="kyc-card-icon">✅</div>
         <p class="kyc-card-description">Verify your KYC details across multiple platforms.</p>
         <a class="kyc-card-link" href="https://www.cvlkra.com" target="_blank">
                 <img src="img/cvl_logo.jpg" alt="CVL KRA Icon" width="80" height="25"> CVL KRA
@@ -58,6 +79,7 @@
     <!-- Validate KYC -->
     <div class="kyc-card" id="validatekyc" style="display: none;">
         <h3 class="kyc-card-title">Validate KYC</h3>
+        <div class="kyc-card-icon">🔍</div>
         <p class="kyc-card-description">Ensure your KYC details are up-to-date.</p>
         <a class="kyc-card-link" href="https://validate.cvlindia.com/CVLKRAVerification_V1/" target="_blank">
                 <img src="img/cvl_logo.jpg" alt="CVL KRA Icon" width="80" height="25"> CVL KRA
@@ -76,6 +98,7 @@
     <!-- Download Forms -->
     <div class="kyc-card" id="downloadform" style="display: none;">
         <h3 class="kyc-card-title">Download Forms</h3>
+        <div class="kyc-card-icon">📂</div>
         <p class="kyc-card-description">Access and download important KYC forms.</p>
         <a class="kyc-card-link" href="https://resources.investwellonline.com/forms/CAMSKRA_Non_Individual.pdf" target="_blank">
                 <img src="img/cams-kra.jpg" alt="CAMS KRA Icon" width="80" height="25"> KYC Non-Individual

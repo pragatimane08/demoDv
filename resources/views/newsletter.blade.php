@@ -2,19 +2,22 @@
 @section('content')
 
 <!-- Page Header Start -->
-<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container text-center py-5">
-        <h1 class="display-2 text-white mb-4 animated slideInDown">Newsletter</h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-            <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Newsletter</li>
-            </ol>
-        </nav>
-    </div>
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+    style="background: url('{{ asset('img/neswletterh1.avif') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+      <div class="container text-center py-5">
+         <h1 class="display-2 text-white mb-4 animated slideInDown">Newsletter</h1>
+           <nav aria-label="breadcrumb animated slideInDown">
+              <ol class="breadcrumb justify-content-center mb-0">
+                  <li class="breadcrumb-item"><a href="#">Newsletter</a></li>
+                  <li class="breadcrumb-item"><a href="#">Newsletter</a></li>
+              </ol>
+           </nav>
+      </div>
+   </div>
 </div>
-<!-- Page Header End -->
-
+    <!-- Page Header End -->
+<!-- public/img/neswletterh1.avif -->
 <div class="container-xxl pt-5">
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0" style="max-width: 500px;">

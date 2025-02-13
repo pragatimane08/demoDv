@@ -120,6 +120,7 @@ Route::view('/pms-aif', 'pms-aif')->name('pms-aif');
 Route::view('/fixed-deposits', 'fixed-deposits')->name('fixed-deposits');
 
 Route::view('/bonds', 'bonds')->name('bonds');
+Route::view('/loan', 'loan')->name('loan');
 
 Route::view('/wealth-management', 'wealth-management')->name('wealth-management');
 Route::view('/financial-planning', 'financial-planning')->name('financial-planning');

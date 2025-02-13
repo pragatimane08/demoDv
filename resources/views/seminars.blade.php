@@ -1,17 +1,19 @@
 @extends('layouts.app')
 @section('content')
   <!-- Page Header Start -->
+  <!-- Page Header Start -->
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container text-center py-5">
-        <h1 class="display-2 text-white mb-4 animated slideInDown">Seminars</h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-            <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Seminars</a></li>
-            </ol>
-        </nav>
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-white mb-4 animated slideInDown">Investment Seminar</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0 animated slideInDown">
+                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Investment Seminar For Youth</li>
+                </ol>
+            </nav>
+        </div>
     </div>
-</div>
+    <!-- Page Header End -->
 <!-- Page Header End -->
 
    
@@ -40,7 +42,28 @@
         </ul>
     </nav>
     
+    <script>
+    function toggleActiveTab(button) {
+        var buttons = document.querySelectorAll('.tab-button');
+        buttons.forEach(function(btn) {
+            btn.classList.remove('active');  // Remove active class from all buttons
+        });
+        button.classList.add('active');  // Add active class to the clicked button
+    }
 
+    // Function to show the content of each seminar (just an example)
+    function showContent(seminar) {
+        // Add code here to display the content for the selected seminar
+        console.log('Show content for:', seminar);
+    }
+</script>
+
+<style>
+    .tab-button.active {
+        background-color: #cb9f42;  /* Example active background color */
+        color: white;  /* Active button text color */
+    }
+</style>
     
     <!-- Main Content Section -->
     <section id="content">
@@ -439,6 +462,7 @@
         overflow: hidden;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         border: 1px solid #ddd;
+        margin-right: 17%;
     }
 
     .flyer-header {

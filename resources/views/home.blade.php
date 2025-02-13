@@ -4,6 +4,7 @@
 <div class="container-fluid px-0 mb-5">
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-inner">
+            <!-- Carousel Item 1 -->
             <div class="carousel-item active">
                 <img class="w-100" src="img/carousel-1.jpg" alt="Image" loading="lazy">
                 <div class="carousel-caption">
@@ -18,6 +19,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Carousel Item 2 -->
             <div class="carousel-item">
                 <video class="w-100" autoplay loop muted playsinline>
                     <source src="img/save.mp4" type="video/mp4">
@@ -34,7 +37,58 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Carousel Item 3 - Investment (Left-aligned) -->
+            <div class="carousel-item">
+                <img class="w-100" src="img/investement.jpg" alt="Investment" loading="lazy">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-7 text-start">
+                                <p class="fs-4 text-white animated fadeIn">Welcome to <strong>Dhanavruksha</strong></p>
+                                <h1 class="display-1 text-white mb-4 animated fadeIn">Secure Your Future with Smart Investments</h1>
+                                <a href="#" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">Start Investing</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Item 4 - Newsletter (Right-aligned) -->
+            <div class="carousel-item">
+                <img class="w-100" src="img/newsletterheder.jpg" alt="Newsletter" loading="lazy">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-end">
+                            <div class="col-lg-7 text-end">
+                                <p class="fs-4 text-white animated fadeIn">Welcome to <strong>Dhanavruksha</strong></p>
+                                <h1 class="display-1 text-white mb-4 animated fadeIn">Stay Informed with Our Newsletter</h1>
+                                <a href="#" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">Subscribe Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Item 5 - Portfolio (Left-aligned) -->
+            <div class="carousel-item">
+                <img class="w-100" src="img/portfolioheader.jpg" alt="Portfolio" loading="lazy">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-7 text-start">
+                                <p class="fs-4 text-white animated fadeIn">Welcome to <strong>Dhanavruksha</strong></p>
+                                <h1 class="display-1 text-white mb-4 animated fadeIn">Build and Manage Your Portfolio</h1>
+                                <a href="#" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">View Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <!-- Carousel Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
@@ -43,7 +97,6 @@
         </button>
     </div>
 </div>
-<!-- Carousel End -->
 
 <!-- About Us - Start -->
 <div class="container-xxl py-6">
@@ -234,34 +287,78 @@
 <!-- Products Offered End -->
 
 <!-- How It Works Start -->
+<!-- How It Works - Start -->
 <div class="home-dv-how-it-work">
-    <h2 class="home-section-title">How It Works</h2>
-    <div class="home-steps-container">
-        @foreach ([
-            ['hiw-img-1.png', 'Register', 'Register with us to kickstart your financial journey.'],
-            ['hiw-home-img-2.png', 'Elaborate Engagement on Your Financials & Investments', 'Understand your financial situation, investment goals, and aspirations to create a tailored strategy.'],
-            ['hiw-home-img-3.png', 'Assessment of Your Risk Profile', 'Analyze your risk appetite to determine the best investment approach for you.'],
-            ['hiw-home-img-4.png', 'Constructing/Reconstructing Your Portfolio', 'Build or optimize your investment portfolio to align with your financial objectives.'],
-            ['hiw-home-img-5.png', 'Mapping Investments to Financial Goals', 'Ensure your investments are strategically mapped to achieve specific financial milestones.'],
-            ['hiw-home-img-6.png', 'Regular Monitoring & Review of Portfolio', 'Continuously track and evaluate your investments for optimal performance.'],
-            ['hiw-home-img-7.png', 'Timely Updates on Market Events & Their Impact on Investments', 'Stay informed about market trends and how they affect your portfolio, ensuring proactive financial decision-making.']
-        ] as $step)
-        <div class="home-step">
-            <div class="home-icon-container">
-                <img src="img/{{ $step[0] }}" alt="{{ $step[1] }} Icon" class="home-step-icon">
-                <span class="home-step-number">{{ $loop->iteration }}</span>
-            </div>
-            <h3 class="home-step-title">{{ $step[1] }}</h3>
-            <p class="home-step-description">{{ $step[2] }}</p>
-        </div>
-        @endforeach
+  <h2 class="home-section-title">How It Works</h2>
+  <div class="home-steps-container">
+    <!-- Step 1 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-img-1.png" alt="Step 1 Icon" class="home-step-icon">
+        <span class="home-step-number">1</span>
+      </div>
+      <h3 class="home-step-title">Register</h3>
+      <p class="home-step-description">Register with us to kickstart your financial journey.</p>
     </div>
+    <!-- Step 2 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-2.png" alt="Step 2 Icon" class="home-step-icon">
+        <span class="home-step-number">2</span>
+      </div>
+      <h3 class="home-step-title">Elaborate Engagement on Your Financials & Investments</h3>
+      <p class="home-step-description">Understand your financial situation, investment goals, and aspirations to create a tailored strategy.</p>
+    </div>
+    <!-- Step 3 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-3.png" alt="Step 3 Icon" class="home-step-icon">
+        <span class="home-step-number">3</span>
+      </div>
+      <h3 class="home-step-title">Assessment of Your Risk Profile</h3>
+      <p class="home-step-description">Analyze your risk appetite to determine the best investment approach for you.</p>
+    </div>
+    <!-- Step 4 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-4.png" alt="Step 4 Icon" class="home-step-icon">
+        <span class="home-step-number">4</span>
+      </div>
+      <h3 class="home-step-title">Constructing/Reconstructing Your Portfolio</h3>
+      <p class="home-step-description">Build or optimize your investment portfolio to align with your financial objectives.</p>
+    </div>
+    <!-- Step 5 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-5.png" alt="Step 5 Icon" class="home-step-icon">
+        <span class="home-step-number">5</span>
+      </div>
+      <h3 class="home-step-title">Mapping Investments to Financial Goals</h3>
+      <p class="home-step-description">Ensure your investments are strategically mapped to achieve specific financial milestones.</p>
+    </div>
+    <!-- Step 6 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-6.png" alt="Step 6 Icon" class="home-step-icon">
+        <span class="home-step-number">6</span>
+      </div>
+      <h3 class="home-step-title">Regular Monitoring & Review of Portfolio</h3>
+      <p class="home-step-description">Continuously track and evaluate your investments for optimal performance.</p>
+    </div>
+    <!-- Step 7 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-7.png" alt="Step 7 Icon" class="home-step-icon">
+        <span class="home-step-number">7</span>
+      </div>
+      <h3 class="home-step-title">Timely Updates on Market Events & Their Impact on Investments</h3>
+      <p class="home-step-description">Stay informed about market trends and how they affect your portfolio, ensuring proactive financial decision-making.</p>
+    </div>
+  </div>
 </div>
-<!-- How It Works End -->
- 
+<!-- How It Works - End -->
 <!-- Blog Start -->
-<!-- Blog Section Start -->
-    
+
 <!-- Blog Section Start -->
     
 <div class="container">

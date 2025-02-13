@@ -3,18 +3,23 @@
 
 <!-- Include Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<!-- Include Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">Bonds</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#">Products</a></li>
-                    <li class="breadcrumb-item"><a href="#">Bonds</a></li>
-                </ol>
-            </nav>
-        </div>
-    </div>
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+    style="background: url('{{ asset('img/bonds-header-img1.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+      <div class="container text-center py-5">
+         <h1 class="display-2 text-white mb-4 animated slideInDown">Bonds</h1>
+           <nav aria-label="breadcrumb animated slideInDown">
+              <ol class="breadcrumb justify-content-center mb-0">
+                  <li class="breadcrumb-item"><a href="#">Products</a></li>
+                  <li class="breadcrumb-item"><a href="#">Bonds</a></li>
+              </ol>
+           </nav>
+      </div>
+   </div>
+</div>
     <!-- Page Header End -->
 
     <!-- bond-info-start -->

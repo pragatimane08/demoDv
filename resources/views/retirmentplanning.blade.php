@@ -12,44 +12,43 @@
         </nav>
     </div>
 </div>
-<div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="d-flex flex-column">
-                        <img class="img-fluid rounded w-75 align-self-end" src="img/retirement2.jpg" alt="">
-                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="img/retirement3.jpg" alt=""
-                            style="margin-top: -25%;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                   
-                    <h1 class="mb-4">What is Retirement Planning?</h1>
-                    <div class="info-card">
-                    <p>Retirement saving is a much sought and discussed subject in our time. It is said that retirement assesment is never too late though ideal if you start it at very young age. Retirement is the ultimate reality that happens to a working professional and it should be the most enjoyable phase of an individual. Effective retirement assesment gives individual a benefit to retain their financial independence even after their work life. Thus, retirement assesment is as important as your education and marriage. We must understand that future largely depends on the choices that we make today. An individual will be able to maintain high standards of living with the help of effective retirement assesment.</p>
-                    </div>
-                   
-                </div>
-            </div>
+
+   <!-- retirement-saving-info-container-start -->
+   <div class="retirement-planning-section1">
+    <div class="retirement-planning-container">
+        <div class="retirement-planning-content">
+            <h2 class="retirement-planning-heading">Retirement Planning</h2>
+            <p class="retirement-planning-text">
+                Retirement saving is a much sought and discussed subject in our time. It is said that retirement assessment is never too late, though ideal if you start it at a very young age. Retirement is the ultimate reality that happens to a working professional, and it should be the most enjoyable phase of an individual. Effective retirement assessment gives individuals the benefit of retaining their financial independence even after their work life. Thus, retirement assessment is as important as your education and marriage. We must understand that the future largely depends on the choices that we make today. An individual will be able to maintain high standards of living with the help of effective retirement assessment.
+            </p>
+            <a href="{{ route('schedulemeeting') }}" class="schedule-meeting-btn">Schedule Meeting</a>
         </div>
-        <div class="card">
-  <div class="content">
-    <p class="heading">Retirement Savings Features</p>
-    <p class="para">
-    We must overcome one obstacle which is that no clue is available with us for how long we are going to live. There are certain things for an effective retirement like you must decide how much money you require to live a comfortable life after retirement and ascertain how much you require investing to achieve this goal.</p>
-    <p class="para">
-    You should invest in a right investment cum retirement plan to build determined corpus.
-Most of the retirement plans offered in the market either provides you fixed monthly income or a lump sum after you retire from your professional life.
-
-
-    </p>
-    <button class="btn">Retirement Features</button>
-  </div>
+        <div class="retirement-planning-image">
+            <img src="img/retirement2.jpg" alt="Retirement Planning">
+        </div>
     </div>
-    <!-- About End -->
-   
-       
- 
+</div>
+
+  <!-- retirement-saving-info-container-end -->
+
+  <!-- Retirement-Saving-feature-start -->
+  <section class="Retirement-Saving-feature">
+        <div class="Retirement-Saving-feature-image-container">
+            <img src="img/retirement-planning-feature.webp" alt="Retirement Saving Image">
+        </div>
+        <div class="Retirement-Saving-feature-content">
+            <span class="Retirement-Saving-feature-subheading">About Retirement Saving</span>
+            <h2 class="Retirement-Saving-feature-heading">Features of <br> Retirement Saving</h2>
+            <p class="Retirement-Saving-feature-description">
+                We must overcome one obstacle which is that no clue is available with us for how long we are going to live. There are certain things for an effective retirement like you must decide how much money you require to live a comfortable life after retirement and ascertain how much you require investing to achieve this goal.
+                You should invest in a right investment cum retirement plan to build determined corpus.
+                Most of the retirement plans offered in the market either provide you with a fixed monthly income or a lump sum after you retire from your professional life.
+            </p>
+            <a href="{{ route('schedulemeeting') }}" class="schedule-meeting-btn">Schedule Meeting</a>
+        </div>
+    </section>
+ <!-- Retirement-Saving-feature-end -->
+
 <style>
 
 .card {
@@ -125,7 +124,10 @@ Most of the retirement plans offered in the market either provides you fixed mon
   color: #fff;
 }
 
-
+.card:hover .btn {
+  color: #333;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  
 
 .content .btn:active {
   box-shadow: none;
@@ -224,11 +226,17 @@ Most of the retirement plans offered in the market either provides you fixed mon
     </div>
   </div>
 
-        <div class="retirement-sidebar">
-   
-        <h3>Key Insights</h3>
-        <p>Accumulation of wealth through SIPs of Mutual Funds & recurring investment in equities, Retirement Solutions of Life Insurance Companies, Bonds, Fixed Deposits and NPS are essential components for various stages of Retirement Planning.</p>
+     <!-- retirement-section-imp-container-start -->
+  <div class="retirement-section-imp-container">
+    <div class="retirement-section-imp-box">
+        <p class="retirement-section-imp-text">
+            Accumulation of wealth through SIPs of Mutual Funds & recurring investment in equities, 
+            Retirement Solutions of Life Insurance Companies, Bonds, Fixed Deposits, and NPS are 
+            essential components for various stages of Retirement Planning.
+        </p>
     </div>
+</div>
+<!-- retirement-section-imp-container-end -->
     </div>
 
    
@@ -237,19 +245,7 @@ Most of the retirement plans offered in the market either provides you fixed mon
 <h1 class="why-planning-h2"> Retirement Calculator</h1>
 
 <iframe src="https://www.investwell.in/updation/parameter/Calculator/par_retirement_calculatorN.jsp" width="100%" height="1150" frameborder="0" scrolling="auto"></iframe>
-                   
-   
+<!-- retiremnt code end -->
 
- <!-- retiremnt code end -->
-
-
-
-        
-
-
-  
-
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 @endsection

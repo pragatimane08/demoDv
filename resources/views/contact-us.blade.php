@@ -2,20 +2,24 @@
 @extends('layouts.app')
 @section('content')
 
-  <!-- Page Header Start -->
-  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container text-center py-5">
-        <h1 class="display-2 text-white mb-4 animated slideInDown">Contact us</h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-            <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Contact Us</a></li>
-            </ol>
-        </nav>
-    </div>
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+    style="background: url('{{ asset('img/contactushead1.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+      <div class="container text-center py-5">
+         <h1 class="display-2 text-white mb-4 animated slideInDown">Contact Us</h1>
+           <nav aria-label="breadcrumb animated slideInDown">
+              <ol class="breadcrumb justify-content-center mb-0">
+                  <li class="breadcrumb-item"><a href="#">Contact Us</a></li>
+                  <li class="breadcrumb-item"><a href="#">Contact Us</a></li>
+              </ol>
+           </nav>
+      </div>
+   </div>
 </div>
+    <!-- Page Header End -->
 <!-- Page Header End -->
-
+<!-- public/img/contactusheader.jpg -->
 <!-- contact-us-start -->
 <!-- contact-us-start -->
 <div class="contact-us-contact-container">

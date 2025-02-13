@@ -441,97 +441,89 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-wrap: nowrap;
   padding: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sec-features .feature {
   display: flex;
   align-items: center;
-  flex: 1;
-  min-width: 200px;
-  padding: 10px;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
+  padding: 15px;
+  color: #fff;
 }
 
 .sec-features .feature [class^="bi-"] {
-  flex: 0 0 60px;
   font-size: 50px;
-  position: relative;
-  margin-right: 10px;
-}
-
-.sec-features .feature [class^="bi-"]:before {
+  margin-bottom: 10px;
   color: #fff;
-  z-index: 2;
   position: relative;
-}
-
-.sec-features .feature [class^="bi-"]:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  left: -10px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: rgba(108, 117, 125, 0.1);
 }
 
 .sec-features .feature h3 {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 1.5rem; /* Updated font size */
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.sec-features .feature h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 5px;
   color: #fff;
 }
 
 .sec-features .feature p {
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.sec-features .feature p:last-child {
-  margin-bottom: 0;
-}
-
-/* Responsive features */
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1024px) {
   .sec-features {
-    height: auto;
-    margin-left: 20px;
-    margin-right: 20px;
+    flex-wrap: wrap;
   }
 
   .sec-features .feature {
-    margin-bottom: 20px;
+    min-width: 45%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec-features {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .sec-features .feature {
     min-width: 100%;
-  }
-
-  .sec-features .feature [class^="bi-"] {
-    margin-right: 0;
     margin-bottom: 10px;
-  }
-
-  .sec-features .feature h3 {
-    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .sec-features .feature h3 {
-    font-size: 14px;
+    font-size: 1.8rem;
   }
-
+  
+  .sec-features .feature h4 {
+    font-size: 1.4rem;
+  }
+  
   .sec-features .feature p {
-    font-size: 12px;
+    font-size: 0.9rem;
   }
 
-  .about-studio-text h5 {
-    font-size: 1.1em;
-  }
-
-  .about-studio-text p {
-    font-size: 0.8em;
+  .sec-features .feature {
+    margin-bottom: 0px; /* Increased spacing between cards */
   }
 }

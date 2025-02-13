@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 @section('content')
 
@@ -19,26 +18,41 @@
 </div>
 <!-- Page Header End -->
 
-<section class="info-section">
-        <div class="info-image">
-            <img src="img/childfuturesaving.jpg" alt="child future saving">
-        </div>
-        <div class="info-content">
-            <h1> Child Future Saving</h1>
-            <p>The birth of a child is one of the most important events in one’s life – other than the celebration; it brings maturity and responsibility to the parents. It also brings seriousness regarding our financial life and if we talk about priority of goals, sometimes Child Future Plan is even a shade above retirement planning.
 
-There has been a paradigm shift in the thought process of people and generally they don’t make any distinction between sons and daughters. Socially their thinking may have changed but financially they still belong to that old school which is happy with buying insurance policies or some bonds in name of the children. Few new age parents have started buying child Unit Linked Insurance Plans (ULIPs) rather than money-back policies. But is it actually a smart strategy? The simple answer is NO. Emotional sales take place where investors take decisions based on their emotions.</p>
-<p>As a parent you want to be the pillar of strength and support for your child, making sure that his/her future plans remain undisturbed even when you are not around.
+<!-- Child Future Saving Section-1 -->
+<div class="pms-info-container" id="pms-info-section1">
+    <h1 class="pms-info-heading">Child Future Saving</h1>
+    <p class="pms-info-content">
+        <span class="highlight">The birth of a child is one of the most important events in one’s life</span> other than the celebration; it brings maturity and responsibility to the parents. It also brings seriousness regarding our financial life and if we talk about priority of goals, sometimes Child Future Plan is even a shade above retirement planning.
 
-We can help you to make you child future safe and secure. 
-
-SIPs of Mutual Funds and Recurring investment in Equities facilitate building a corpus to meet the future needs of children like higher education and marriage. </p>
-        </div>
-
-    </section>
-
+        <span class="highlight">There has been a paradigm shift </span> in the thought process of people and generally they don’t make any distinction between <span class="highlight">sons and daughters.</span> Socially their thinking may have changed but financially they still belong to that old school which is happy with buying insurance policies or some bonds in name of the children.
+        Few new age parents have started buying child <span class="highlight">Unit Linked Insurance Plans (ULIPs)</span> rather than <span class="highlight">money-back policies.</span> But is it actually a smart strategy? The simple answer is NO. Emotional sales take place where investors take decisions based on their emotions.</p>
+    <p class="pms-info-content">
+     <span class="highlight">As a parent you want to be the pillar of strength and support</span>  for your child, making sure that his/her future plans remain undisturbed even when you are not around.
+    We can help you to make you child future safe and secure.  
+    </p>
 </div>
-</div>
+<!-- child future -heading -->
+
+<!-- Child Future Saving Section-2 -->
+<section class="child-future-saving-section">
+    <div class="child-future-saving-container">
+        <div class="child-future-saving-image">
+            <img src="img/childfuturesaving.jpg" alt="Child Future Saving">
+        </div>
+        <div class="child-future-saving-content">
+            <h1>Secure Your Child's Future</h1>
+            <p>
+                The birth of a child is a life-changing moment. Beyond the joy and celebration, it brings responsibility and financial planning to ensure a bright future. While many parents opt for traditional insurance plans, it's essential to explore smarter investment strategies.
+            </p>
+            <p>
+                <strong>Plan wisely</strong> and ensure your child's education and future dreams are secured with modern financial instruments that offer better returns and flexibility.
+            </p>
+            <a href="{{ route('schedulemeeting') }}" class="child-future-saving-btn">Schedule Meeting</a>
+        </div>
+    </div>
+</section>
+
     <!-- Why Planning Section with Moving Circular Structure -->
 <section class="why-planning">
     <div class="container">

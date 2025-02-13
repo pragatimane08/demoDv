@@ -1,21 +1,23 @@
 
 @extends('layouts.app')
 @section('content')
-
-  <!-- Page Header Start -->
-  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container text-center py-5">
-        <h1 class="display-2 text-white mb-4 animated slideInDown">Downloads</h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-            <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Investor Zone</a></li>
-                <li class="breadcrumb-item"><a href="#">Downloads</a></li>
-            </ol>
-        </nav>
-    </div>
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+    style="background: url('{{ asset('img/downloadshd.avif ') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+      <div class="container text-center py-5">
+         <h1 class="display-2 text-white mb-4 animated slideInDown">Downloads</h1>
+           <nav aria-label="breadcrumb animated slideInDown">
+              <ol class="breadcrumb justify-content-center mb-0">
+                  <li class="breadcrumb-item"><a href="#">Investore Zone</a></li>
+                  <li class="breadcrumb-item"><a href="#">Downloads</a></li>
+              </ol>
+           </nav>
+      </div>
+   </div>
 </div>
-<!-- Page Header End -->
-
+    <!-- Page Header End -->
+<!-- public/img/downloadshd.avif -->
 <!-- Navigation Tabs -->
 <nav class="nav1">
     <ul class="tabs">
@@ -24,7 +26,39 @@
     </ul>
 </nav>
 <!-- Navigation Tabs -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".tab-button");
 
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            // Remove 'active' class from all buttons
+            buttons.forEach(btn => btn.classList.remove("active"));
+
+            // Add 'active' class to the clicked button
+            this.classList.add("active");
+        });
+    });
+});
+
+
+</script>
+<style>
+    .tab-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-button.active {
+    background-color: #D2AC47; /* Active button color */
+    color: white;
+    font-weight: bold;
+}
+
+</style>
 <!-- Section: MF Forms-start -->
 <div id="current" class="section" style="display: block;">
   <div class="downloads-section">
@@ -56,10 +90,28 @@
 
     <!-- Buttons to switch between sections -->
     <div class="kyc-buttons">
-        <button class="kyc-btn" onclick="showSection('checkkyc')">Check KYC Status</button>
-        <button class="kyc-btn" onclick="showSection('validatekyc')">Validate KYC</button>
-        <button class="kyc-btn" onclick="showSection('downloadform')">Download Forms</button>
-    </div>
+    <button class="kyc-btn" onclick="showSection('checkkyc'); toggleActiveButton(this);">Check KYC Status</button>
+    <button class="kyc-btn" onclick="showSection('validatekyc'); toggleActiveButton(this);">Validate KYC</button>
+    <button class="kyc-btn" onclick="showSection('downloadform'); toggleActiveButton(this);">Download Forms</button>
+</div>
+
+<script>
+    function toggleActiveButton(button) {
+        var buttons = document.querySelectorAll('.kyc-btn');
+        buttons.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        button.classList.add('active');
+    }
+</script>
+
+<style>
+    .kyc-btn.active {
+        background-color: white; /* Example active color */
+        color: #cb9f42;
+    }
+</style>
+
 
     <!-- Cards Section -->
     <div class="kyc-cards-section">

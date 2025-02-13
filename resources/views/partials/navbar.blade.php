@@ -16,126 +16,73 @@
     @endif
 
 
-<!-- Topbar Start -->
+
+<style>
+    /* Default styling */
+.topabar-h1 {
+    background: linear-gradient(135deg, #AE8625 0%, #F7EF8A 30%, #D2AC47 60%, #EDC967 100%);
+    font-weight: bold;
+    -webkit-background-clip: text; /* Clips the gradient inside the text */
+    -webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
+    text-transform: uppercase;
+    white-space: nowrap; /* Prevents text wrapping */
+    font-size: 13.8px;
+    margin-right: 31px;
+}
+
+/* Tablet View (Screen width <= 1024px) */
+@media (max-width: 1024px) {
+    .topabar-h1 {
+        font-size: 12px;
+        margin-right: 25px;
+    }
+}
+
+/* Mobile View (Screen width <= 768px) */
+@media (max-width: 768px) {
+    .topabar-h1 {
+        font-size: 10.7px;
+        text-align: center;
+        margin-right: 0;
+    }
+}
+
+/* Small Mobile View (Screen width <= 480px) */
+@media (max-width: 480px) {
+    .topabar-h1 {
+        font-size: 9.7px;
+        text-align: center;
+        white-space: normal; /* Allows text wrapping on small screens */
+    }
+}
+
+
+
+</style>
+        
+           <!-- Topbar Start -->
 <div class="Topbar-container-fluid text-white d-flex d-lg-flex" style="background-color: #06060b;">
     <div class="Topbar-container py-3">
         <div class="Topbar-d-flex align-items-center">
             <!-- Logo Section -->
-           <!-- Logo Section -->
-<div class="logo-container">
-    <a href="index.html" class="logo-link">
-        <img src="img/cropped-logo_Dhanavruksha-01.jpg" alt="DV Logo" class="logo-img">
-    </a>
-    <div class="logo-text">
-        <span class="logo-title">DHANAVRUKSHA</span>
-        <span class="logo-subtitle">FINANCIAL SERVICES PVT. LTD.</span>
-       <h6 class="topabar">YOUR GATEWAY TO FINANCIAL WELLNESS</h6>
-    </div>
-</div>
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img src="img/cropped-logo_Dhanavruksha-01.jpg" alt="DV Logo" class="logo-img">
+                </a>
+                <div class="logo-text">
+                    <span class="logo-title">DHANAVRUKSHA</span>
+                    <span class="logo-subtitle">FINANCIAL SERVICES PVT. LTD.</span>
+                    <h6 class="topabar-h1">YOUR GATEWAY TO FINANCIAL WELLNESS</h6>
+                </div>
+            </div>
 
-<style>
-    .topabar {
-        background: linear-gradient(135deg, #AE8625 0%, #F7EF8A 30%, #D2AC47 60%, #EDC967 100%);
-    font-weight: bold;
-    -webkit-background-clip: text; /* Clips the gradient inside the text */
-    -webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
-    text-transform: uppercase;
-    white-space: nowrap; /* Prevents text wrapping */
-    font-size: 12px;
-}
+            <!-- Toggler Navbar for Mobile View -->
+            <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#topbarNav" aria-controls="topbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-/* Logo container with flexbox for alignment */
-.logo-container {
-    display: flex;
-    align-items: center;
-    margin-left: 5px;
-}
-
-/* Styling for the DV logo */
-.logo-img {
-    max-height: 60px;
-    width: auto;
-}
-
-/* Logo text container */
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 15px; /* Adjust spacing between logo and text */
-    font-family: 'Arial', sans-serif;
-}
-
-/* Gold Gradient Text Styling */
-.logo-title, .logo-subtitle {
-    font-size: 22px;
-    font-weight: bold;
-    background: linear-gradient(135deg, #AE8625 0%, #F7EF8A 30%, #D2AC47 60%, #EDC967 100%);
-    -webkit-background-clip: text; /* Clips the gradient inside the text */
-    -webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
-    text-transform: uppercase;
-    white-space: nowrap; /* Prevents text wrapping */
-}
-
-/* Subtitle size adjustment */
-.logo-subtitle {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .logo-container {
-        margin-left: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo-container {
-        flex-direction: column; /* Stack logo and text vertically */
-        align-items: center;
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .logo-img {
-        max-height: 50px; /* Reduce logo size for smaller screens */
-    }
-
-    .logo-text {
-        margin-left: 0;
-        margin-top: 5px; /* Space between logo and text */
-    }
-
-    .logo-title {
-        font-size: 18px;
-    }
-
-    .logo-subtitle {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-title {
-        font-size: 16px;
-    }
-
-    .logo-subtitle {
-        font-size: 12px;
-    }
-
-    .logo-img {
-        max-height: 40px;
-    }
-
-    .logo-container {
-        padding: 10px;
-    }
-}
-</style>
-        
-            <!-- Right Section -->
-            <div class="Topbar-right d-flex align-items-center ms-3" style="flex-wrap: nowrap;">
+            <!-- Right Section (Hidden on Mobile) -->
+            <div class="Topbar-right d-none d-lg-flex align-items-center ms-3" style="flex-wrap: nowrap;">
                 <small class="d-flex align-items-center me-3 hide-on-mobile">
                     <i class="fa fa-envelope me-2" color="#cb9f42"></i>customerservice@dhanavruksha.in
                 </small>
@@ -148,6 +95,16 @@
                 <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
                     <i class="fa fa-briefcase me-2" color="#cb9f42"></i>Open Demat Account
                 </a>
+            </div>
+        </div>
+
+        <!-- Collapsible Navbar for Mobile View -->
+        <div class="collapse navbar-collapse d-lg-none" id="topbarNav">
+            <div class="navbar-nav">
+                <a href="{{ route('home') }}" class="nav-item nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
+                <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link">Schedule Meeting</a>
+                <a href="{{ route('opendemata') }}" class="nav-item nav-link">Open Demat Account</a>
+                <a href="{{ route('contact-us') }}" class="nav-item nav-link">Contact</a>
             </div>
         </div>
     </div>
@@ -188,6 +145,7 @@
                             <a href="{{ route('pms-aif') }}" class="dropdown-item {{ request()->routeIs('pms-aif') ? 'active' : '' }}">PMS-AIF</a>
                             <a href="{{ route('fixed-deposits') }}" class="dropdown-item {{ request()->routeIs('fixed-deposits') ? 'active' : '' }}">Fixed Deposits</a>
                             <a href="{{ route('bonds') }}" class="dropdown-item {{ request()->routeIs('bonds') ? 'active' : '' }}">Bonds</a>
+                            <a href="{{ route('loan') }}" class="dropdown-item {{ request()->routeIs('loan') ? 'active' : '' }}">Loan</a>
                         </div>
                     </div>
 
@@ -201,11 +159,11 @@
                             <a href="{{ route('portfolio-restucturing') }}" class="dropdown-item {{ request()->routeIs('portfolio-restucturing') ? 'active' : '' }}">Portfolio Restructuring</a>
                             <a href="{{ route('child-future-saving') }}" class="dropdown-item {{ request()->routeIs('child-future-saving') ? 'active' : '' }}">Child Future Saving</a>
                             <a href="{{ route('retirmentplanning') }}" class="dropdown-item {{ request()->routeIs('retirmentplanning') ? 'active' : '' }}">Retirement Planning</a>
-                            <a href="{{ route('seminars') }}" class="dropdown-item {{ request()->routeIs('seminars') ? 'active' : '' }}">Investment Seminar For Youth</a>
-                            <a href="{{ route('external-Portfolio') }}" class="dropdown-item {{ request()->routeIs('external-Portfolio') ? 'active' : '' }}">Free Review of External Portfolio</a>
+                            <a href="{{ route('seminars') }}" class="dropdown-item {{ request()->routeIs('seminars') ? 'active' : '' }}">Investment Seminar <br>For Youth</a>
+                            <a href="{{ route('external-Portfolio') }}" class="dropdown-item {{ request()->routeIs('external-Portfolio') ? 'active' : '' }}">Free Review of External <br>Portfolio</a>
                             <a href="{{ route('equity-advisory') }}" class="dropdown-item {{ request()->routeIs('equity-advisory') ? 'active' : '' }}">Equity Advisory</a>
                             <a href="{{ route('estate-planning') }}" class="dropdown-item {{ request()->routeIs('estate-planning') ? 'active' : '' }}">Estate Planning</a>
-                            <a href="{{ route('Insurance_pr') }}" class="dropdown-item {{ request()->routeIs('Insurance_pr') ? 'active' : '' }}">Insurance and Investment Portfolio Restructuring</a>
+                            <a href="{{ route('Insurance_pr') }}" class="dropdown-item {{ request()->routeIs('Insurance_pr') ? 'active' : '' }}">Insurance and Investment <br>Portfolio Restructuring</a>
                         </div>
                     </div>
 
@@ -213,7 +171,6 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('financial-calculator') || request()->routeIs('downloads') || request()->routeIs('blogs') || request()->routeIs('learning') ? 'active' : '' }}" data-bs-toggle="dropdown">Investor Zone</a>
                         <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                            <!-- <a href="{{ route('newsletter') }}" class="dropdown-item {{ request()->routeIs('newsletter') ? 'active' : '' }}">Newsletter</a> -->
                             <a href="{{ route('financial-calculator') }}" class="dropdown-item {{ request()->routeIs('financial-calculator') ? 'active' : '' }}">Financial calculator</a>
                             <a href="{{ route('downloads') }}" class="dropdown-item {{ request()->routeIs('downloads') ? 'active' : '' }}">Downloads</a>
                             <a href="{{ route('blogs') }}" class="dropdown-item {{ request()->routeIs('blogs') ? 'active' : '' }}">Blogs</a>
@@ -224,6 +181,16 @@
 
                     <a href="{{ route('kyc') }}" class="nav-item nav-link {{ request()->routeIs('kyc') ? 'active' : '' }}">KYC</a>
                     <a href="{{ route('contact-us') }}" class="nav-item nav-link {{ request()->routeIs('contact-us') ? 'active' : '' }}">Contact</a>
+
+                    <!-- Mobile View Only: Schedule Meeting and Open Demat Account -->
+                    <div class="d-lg-none">
+                        <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center">
+                            <i class="fa fa-calendar-alt me-2" color="#cb9f42"></i>Schedule Meeting
+                        </a>
+                        <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
+                            <i class="fa fa-briefcase me-2" color="#cb9f42"></i>Open Demat Account
+                        </a>
+                    </div>
                 </div>
 
                 <div class="ms-auto d-none d-lg-block">
