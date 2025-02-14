@@ -1,22 +1,27 @@
 @extends('layouts.app')
 @section('content')
   <!-- Page Header Start -->
-  <!-- Page Header Start -->
-  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">Investment Seminar</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center mb-0 animated slideInDown">
-                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Investment Seminar For Youth</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
+  
+    <!-- Page Header Start -->
+    
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+    style="background: url('{{ asset('img/seminarhd.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+      <div class="container text-center py-5">
+         <h1 class="display-2 text-white mb-4 animated slideInDown">Investment Seminar For Youth</h1>
+           <nav aria-label="breadcrumb animated slideInDown">
+              <ol class="breadcrumb justify-content-center mb-0">
+                  <li class="breadcrumb-item"><a href="#">Investor Zone</a></li>
+                  <li class="breadcrumb-item"><a href="#">Investment Seminar For Youth</a></li>
+              </ol>
+           </nav>
+      </div>
+   </div>
+</div>
     <!-- Page Header End -->
 <!-- Page Header End -->
 
-   
+   <!-- public/img/seminarhd.jpg -->
 
     <!-- New Image and Information Section -->
     <section class="info-section">

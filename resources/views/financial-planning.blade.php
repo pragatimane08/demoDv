@@ -2,20 +2,23 @@
 @section('content')
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">Financial Planning</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#">Services</a></li>
-                    <li class="breadcrumb-item"><a href="#">Financial Planning</a></li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
+       <!-- Page Header Start -->
+       <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+    style="background: url('{{ asset('img/financialpanning.jpeg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+      <div class="container text-center py-5">
+         <h1 class="display-2 text-white mb-4 animated slideInDown">Financial Planning</h1>
+           <nav aria-label="breadcrumb animated slideInDown">
+              <ol class="breadcrumb justify-content-center mb-0">
+                  <li class="breadcrumb-item"><a href="#">Services</a></li>
+                  <li class="breadcrumb-item"><a href="#">Financial Planning</a></li>
+              </ol>
+           </nav>
+      </div>
+   </div>
+</div>
+   
+<!-- public/img/financialpanning.jpeg -->
     <!-- what is financial planning-start -->
     <div class="financial-intro-container">
     <section class="financial-intro">
@@ -94,31 +97,32 @@
   <!-- Steps end -->
 
  <!-- Benefits of Financial Planning Section-start -->
+<!-- Benefits of Financial Planning Section-start -->
 <div class="financial-planning-bef">
-  <div class="heading-container">
-    <h1 class="section-heading">Benefits of Financial Planning</h1>
+  <div class="financial-planning-bef-heading-container">
+    <h1 class="financial-planning-bef-section-heading">Benefits of Financial Planning</h1>
   </div>
-  <div class="image-section">
-    <div class="image-background">
+  <div class="financial-planning-bef-image-section">
+    <div class="financial-planning-bef-image-background">
       <img src="img/fp-bef-2.jpeg" alt="Person smiling" class="profile-image">
     </div>
   </div>
-  <div class="content-section">
-    <div class="card-container">
-      <div class="card">
+  <div class="financial-planning-bef-content-section">
+    <div class="financial-planning-bef-card-container">
+      <div class="financial-planning-bef-card">
         <h2>Direction & Clarity</h2>
         <p>Financial planning serves as a roadmap for your financial future, giving clarity to your financial decisions. It helps you understand how each decision, whether it's investing in a product or managing your budget, influences other aspects of your finances.</p>
       </div>
-      <div class="card">
+      <div class="financial-planning-bef-card">
         <h2>Long-Term Vision</h2>
         <p>A solid financial plan helps you evaluate how each choice aligns with your long-term goals. For example, buying an investment product could fast-track your mortgage repayment or delay your retirement, allowing you to make more informed decisions for the future.</p>
       </div>
-      <div class="card">
+      <div class="financial-planning-bef-card">
         <h2>Adaptability</h2>
-        <p>Financial planning serves as a roadmap for your financial future, giving clarity to your financial decisions. It helps you understand how each decision, whether it's investing in a product or managing your budget, influences other aspects of your finances.</p>
+        <p>Financial planning helps you adapt to changing circumstances by creating a structured approach that allows flexibility when needed.</p>
       </div>
-      <div class="card">
-        <h2> Security & Confidence</h2>
+      <div class="financial-planning-bef-card">
+        <h2>Security & Confidence</h2>
         <p>Knowing your financial goals are on track provides peace of mind. A comprehensive financial plan ensures you're prepared for the future and boosts your confidence in making proactive decisions towards achieving a secure financial future.</p>
       </div>
     </div>

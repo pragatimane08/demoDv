@@ -5411,172 +5411,92 @@ label {
   background: linear-gradient(135deg, #f4e9c9, #fff5e5);
   padding: 60px 20px;
   max-width: 1400px;
-  margin: 30px 60px;
+  margin: 30px auto;
   border-radius: 10px;
   position: relative;
 }
-
 .fd-feature-container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  margin-top: -40px;
 }
-
 .fd-feature-left h1 {
   font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
 }
-
 .fd-feature-left h1 span {
   color: #d4af37;
-  font-weight: normal;
 }
-
 .fd-feature-left p {
   font-size: 1rem;
   color: #555;
   line-height: 1.8;
   margin-bottom: 10px;
 }
-
-.fd-feature-left .fd-feature-read-more {
-  display: inline-block;
-  padding: 12px 30px;
-  font-size: 1rem;
-  color: #fff;
-  background: linear-gradient(135deg, #d4af37, #f0c75e);
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.fd-feature-left .fd-feature-read-more:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
-}
-
 .fd-feature-steps-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 30px;
   margin-top: 40px;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 1s ease, transform 1s ease;
 }
-
 .fd-feature-step {
   text-align: center;
-  width: auto;
+  width: 100%;
+  max-width: 200px;
 }
-
 .fd-feature-icon img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
-  margin: 10px;
   transition: transform 0.3s ease;
 }
-
 .fd-feature-step img:hover {
   transform: scale(1.2);
 }
-
 .fd-feature-step h3 {
-  margin-top: 15px;
-  font-size: 1.5rem;
+  margin-top: 10px;
+  font-size: 1.2rem;
   color: #333;
   font-weight: 500;
 }
 
-.show-icon {
-  opacity: 1 !important;
-  transform: translateX(0%) !important;
-}
-
-@media (max-width: 1024px) {
-  .fd-feature {
-    margin: 30px 40px;
-  }
-
-  .fd-feature-container {
-    padding: 0 20px;
-  }
-
-  .fd-feature-left h1 {
-    font-size: 2rem;
-  }
-
-  .fd-feature-left p {
-    font-size: 1rem;
-  }
-
-  .fd-feature-left .fd-feature-read-more {
-    font-size: 1rem;
-    padding: 12px 25px;
-  }
-
-  .fd-feature-step img {
-    width: 110px;
-    height: 110px;
-  }
-}
-
 @media (max-width: 768px) {
   .fd-feature {
-    margin: 20px 30px;
+    padding: 40px 15px;
   }
-
-  .fd-feature-container {
-    padding: 0 15px;
+  .fd-feature-left h1 {
+    font-size: 1.8rem;
   }
-
   .fd-feature-steps-container {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
   }
-
-  .fd-feature-step img {
-    width: 100px;
-    height: 100px;
+  .fd-feature-step {
+    width: 100%;
+    max-width: 300px;
   }
-
-  .fd-feature-left h1 {
-    font-size: 2rem;
-  }
-
-  .fd-feature-left p {
-    font-size: 1rem;
-  }
-
-  .fd-feature-left .fd-feature-read-more {
-    font-size: 1rem;
-    padding: 10px 20px;
+  .fd-feature-icon img {
+    width: 80px;
+    height: 80px;
   }
 }
 
 @media (max-width: 480px) {
-  .fd-feature {
-    margin: 20px;
-  }
-
   .fd-feature-left h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-
   .fd-feature-left p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-
-  .fd-feature-step img {
-    width: 80px;
-    height: 80px;
+  .fd-feature-icon img {
+    width: 70px;
+    height: 70px;
+  }
+  .fd-feature-step h3 {
+    font-size: 1rem;
   }
 }
 
@@ -6233,216 +6153,130 @@ label {
 }
 
 /* Benefits Section Styles */
+/* Benefits Section Styles */
+/* Benefits of Financial Planning Section Styles */
 .financial-planning-bef {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   max-width: 1400px;
-  margin: 40px auto;
+  margin: 40px 50px; 
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: #f8f8f8;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin-left: 60px;
-  margin-right: 60px;
-  margin-bottom: 30px;
 }
 
-.financial-planning-bef .heading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.financial-planning-bef-heading-container {
+  text-align: center;
   width: 100%;
 }
 
-.financial-planning-bef .section-heading {
+.financial-planning-bef-section-heading {
   font-size: 2rem;
-  text-align: center;
   color: goldenrod;
   margin-bottom: 15px;
 }
 
-.financial-planning-bef .image-section {
+.financial-planning-bef-image-section {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   margin-bottom: 20px;
   transition: transform 0.3s ease;
 }
 
-.financial-planning-bef .image-section:hover {
+.financial-planning-bef-image-section:hover {
   transform: scale(1.05);
 }
 
-.financial-planning-bef .image-background {
+.financial-planning-bef-image-background {
   background-color: #fff8dc;
   padding: 20px;
   border-radius: 10px;
 }
 
-.financial-planning-bef .profile-image {
+.profile-image {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
-  display: block;
 }
 
-.financial-planning-bef .content-section {
+.financial-planning-bef-content-section {
   flex: 2;
   padding: 12px;
   text-align: center;
 }
 
-.financial-planning-bef .card-container {
+.financial-planning-bef-card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3%;
+  gap: 15px;
   justify-items: center;
 }
 
-.financial-planning-bef .card {
-  padding: 13px;
+.financial-planning-bef-card {
+  padding: 15px;
   background-color: #fff;
   border: 2px solid #b8860b;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-left: 10px;
 }
 
-.financial-planning-bef .card:hover {
+.financial-planning-bef-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.financial-planning-bef .card h2 {
-  font-size: 1.5rem;
+.financial-planning-bef-card h2 {
+  font-size: 1.4rem;
   color: #b8860b;
   margin-bottom: 10px;
 }
 
-.financial-planning-bef .card p {
+.financial-planning-bef-card p {
   font-size: 1rem;
   margin-bottom: 10px;
   color: #666;
 }
 
+/* Responsive Design */
 @media (max-width: 1024px) {
   .financial-planning-bef {
     flex-direction: column;
+    margin: 30px; /* Reduce margin for tablets */
     padding: 15px;
   }
-
-  .financial-planning-bef .image-section,
-  .financial-planning-bef .content-section {
-    flex: 1;
-    width: 100%;
-  }
-
-  .financial-planning-bef .card-container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 5%;
+  .financial-planning-bef-card-container {
+    grid-template-columns: repeat(1, 1fr); /* Single column for better readability */
   }
 }
 
 @media (max-width: 768px) {
   .financial-planning-bef {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 20px; /* Reduce margin further for smaller screens */
+    padding: 15px;
   }
-
-  .financial-planning-bef .section-heading {
-    font-size: 2rem;
+  .financial-planning-bef-section-heading {
+    font-size: 1.8rem;
   }
-
-  .financial-planning-bef .card h2 {
-    font-size: 1.5rem;
-  }
-
-  .financial-planning-bef .image-section {
-    order: 1;
-  }
-
-  .financial-planning-bef .card-container {
-    margin-top: 20px;
-    justify-content: center;
-  }
-
-  .financial-planning-bef .content-section {
-    order: 2;
-    text-align: center;
-  }
-
-  .financial-planning-bef .card {
-    margin: 0 auto;
+  .financial-planning-bef-card {
+    padding: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .financial-planning-bef {
-    margin: 10px;
+    margin: 20px; /* 20px margin left & right for mobile view */
     padding: 10px;
   }
-
-  .financial-planning-bef .card {
-    padding: 15px;
-  }
-
-  .financial-planning-bef .card h2 {
-    font-size: 1.5rem;
-  }
-
-  .financial-planning-bef .card p {
-    font-size: 1rem;
-  }
-
-  .financial-planning-bef .card-container {
-    margin-top: 20px;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 820px) {
-  .financial-planning-bef .image-section {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .financial-planning-bef .card-container {
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    margin-top: 20px;
-  }
-
-  .financial-planning-bef .content-section {
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .financial-planning-bef .card {
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 600px) {
-  .financial-planning-bef .profile-image {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .financial-planning-bef .card-container {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .financial-planning-bef .card {
-    margin: 10px auto;
-    padding: 15px;
+  .financial-planning-bef-card {
+    padding: 10px;
   }
 }
 
@@ -10036,4 +9870,67 @@ body {
     font-size: 0.95rem;
     padding: 8px 18px;
   }
+}
+/* Hero Section */
+.hero-section {
+  color: #fbfaf9;
+  padding: 120px 30px;
+  text-align: center;
+  background-image: url("/img/y45.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1400px;
+  margin-left: 20%;
+}
+
+.hero-section .cta-button {
+  background-color: #d0a94e;
+  color: #060606;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* Image and Information Section */
+.info-section {
+  display: flex;
+  flex-direction: row;
+  /* Align image and content horizontally */
+  align-items: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  max-width: 1400px;
+  margin-left: 4%;
+}
+
+.info-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.info-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-content {
+  flex: 2;
+  padding: 20px;
+}
+
+.info-content h2 {
+  font-size: 24px;
+  color: #060606;
+  margin-bottom: 10px;
+}
+
+.info-content p {
+  font-size: 18px;
+  color: #060606;
+  line-height: 1.6;
 }
