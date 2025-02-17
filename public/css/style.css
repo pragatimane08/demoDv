@@ -6,6 +6,32 @@
   --light: #F1F3FA;
   --dark: #1C2035;
 }
+.display-2, .breadcrumb {
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black/grey background */
+  padding: 10px 20px; /* Adds spacing */
+  border-radius: 5px; /* Slightly rounded corners */
+  display: inline-block; /* Ensures the background wraps content properly */
+}
+
+.display-2 {
+  font-weight: bold; /* Makes the text bold */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Improves readability */
+  letter-spacing: 1px; /* Slightly increases letter spacing */
+}
+
+.breadcrumb {
+  padding: 10px; /* Adds spacing inside the breadcrumb */
+}
+
+.breadcrumb-item a {
+  color: white !important; /* Keeps breadcrumb links white for visibility */
+  text-decoration: none; /* Removes underline */
+}
+
+.breadcrumb-item a:hover {
+  color: #ddd !important; /* Light grey hover effect */
+}
+
 
 .back-to-top {
   position: fixed;

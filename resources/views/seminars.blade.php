@@ -22,8 +22,8 @@
 <!-- Page Header End -->
 
    <!-- public/img/seminarhd.jpg -->
-
-    <!-- New Image and Information Section -->
+  
+   <!-- New Image and Information Section -->
     <section class="info-section">
         <div class="info-image">
             <img src="img/y45.jpeg" alt="Investment Seminars">
