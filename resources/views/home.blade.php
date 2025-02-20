@@ -179,35 +179,26 @@
 </section>
 
 <script>
-// Function to check if an element is in the viewport
-// Function to check if an element is in the viewport
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+// Intersection Observer for better visibility detection on mobile
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Stop observing once it's visible
+        }
+      });
+    },
+    { threshold: 0.2 } // Trigger when at least 20% of the card is visible
   );
-}
 
-// Function to reveal cards when they scroll into view
-function revealCardsOnScroll() {
-  const cards = document.querySelectorAll('.why-choose-uscard');
-  cards.forEach(card => {
-    if (isInViewport(card)) {
-      card.classList.add('visible'); // Add the 'visible' class to trigger the animation
-    } else {
-      card.classList.remove('visible'); // Remove the class to reset animation
-    }
+  document.querySelectorAll(".why-choose-uscard").forEach((card) => {
+    observer.observe(card);
   });
-}
-
-// Add event listeners for page load and scroll
-window.addEventListener('scroll', revealCardsOnScroll);
-window.addEventListener('load', revealCardsOnScroll);
-
+});
 </script>
+
 <!-- why-choose-pms-end -->
 <!-- Video Modal Start -->
 <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
@@ -579,10 +570,14 @@ window.addEventListener('load', revealCardsOnScroll);
         </div>
     </div>
 </div>
+<!-- JavaScript for Auto-Scroll & Navigation -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const testimonials = document.querySelectorAll('.testimonial');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
         let currentIndex = 0;
+        let autoScroll;
 
         const updateTestimonials = () => {
             testimonials.forEach((testimonial, index) => {
@@ -590,19 +585,46 @@ window.addEventListener('load', revealCardsOnScroll);
             });
         };
 
-        document.getElementById('prev').addEventListener('click', () => {
+        const startAutoScroll = () => {
+            autoScroll = setInterval(() => {
+                currentIndex = (currentIndex + 1) % testimonials.length;
+                updateTestimonials();
+            }, 7000);
+        };
+
+        prevButton.addEventListener('click', () => {
+            clearInterval(autoScroll);
             currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
             updateTestimonials();
+            startAutoScroll();
         });
 
-        document.getElementById('next').addEventListener('click', () => {
+        nextButton.addEventListener('click', () => {
+            clearInterval(autoScroll);
             currentIndex = (currentIndex + 1) % testimonials.length;
             updateTestimonials();
+            startAutoScroll();
         });
 
         updateTestimonials();
+        startAutoScroll();
+
+        // Hide navigation buttons on small screens
+        function handleResize() {
+            if (window.innerWidth <= 768) {
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+            } else {
+                prevButton.style.display = 'block';
+                nextButton.style.display = 'block';
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
     });
 </script>
+<!-- Optimized Testimonial Section End -->
 <!-- Optimized Testimonial Section End -->
 
 
@@ -620,6 +642,13 @@ window.addEventListener('load', revealCardsOnScroll);
 </div>
 <!-- Our Partners End -->
 
+<style>
+    .home-our-partners-iframe {
+    animation: slowScroll linear infinite;
+    animation-duration: 20s; /* Adjust timing */
+}
+
+</style>
 <!-- CSS Optimization -->
 <style>
   /*** Service-home-start ***/
