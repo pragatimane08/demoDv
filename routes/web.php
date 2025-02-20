@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\ChangePasswordController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -284,7 +285,14 @@ Route::post('/submit-demat-form', function (Illuminate\Http\Request $request) {
         'message' => 'required|string|max:1000',
     ]);
 
-    Mail::to('admin@yourdomain.com')->send(new DematFormMail($data));
+    Mail::to('rockstarnihar22@gmail.com')->send(new DematFormMail($data));
 
     return back()->with('success', 'Your demat account request has been submitted successfully!');
 });
+
+
+// Show the contact form
+Route::get('/contact-us', [ContactController::class, 'showForm'])->name('contact-us');
+
+// Handle form submission
+Route::post('/send-mail', [ContactController::class, 'sendMail'])->name('sendMail');

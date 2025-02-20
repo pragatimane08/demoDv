@@ -1,7 +1,7 @@
 <div class="sidebar" id="sidebar">
         <div class="profile-section">
             <!-- <img src="https://via.placeholder.com/80" alt="Profile"> -->
-            <h4>Admin</h4>
+            <h4>Admin Dashboard</h4>
             <!-- <p>Admin Role</p> -->
         </div>
         <a href="{{route('admin.dashboard')}}><i class="fas fa-tachometer-alt"></i> Dashboard</a>

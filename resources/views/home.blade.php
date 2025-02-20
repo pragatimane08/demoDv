@@ -130,7 +130,85 @@
     </div>
 </div>
 <!-- About Us - End -->
+<!-- why-choose-pms-start -->
+   <!-- Updated Why Choose Us Section -->
+   <section class="why-choose-us">
+  <h2>Why <span class="highlight">choose</span> us?</h2>
+  <div class="why-choose-uscards-container">
+    <!-- <div class="why-choose-uscard">
+      <div class="icon">&#8377;</div>
+      <h3>&#8377;10,000 Cr+</h3>
+      <p>Assets managed in 2 years</p>
+    </div>
+    <div class="why-choose-uscard">
+      <div class="icon">📈</div>
+      <h3>30.67% CAGR</h3>
+      <p>Returns since inception</p>
+    </div>
+    <div class="why-choose-uscard">
+      <div class="icon">%</div>
+      <h3>0% Fixed Fee</h3>
+      <p>Pay only on profits made</p>
+    </div> -->
+    <div class="why-choose-uscard">
+      <div class="icon">⏳</div>
+      <h3>13 Decades</h3>
+      <p>Relevant industry experience of core team</p>
+    </div>
+    <div class="why-choose-uscard">
+      <div class="icon">💰</div>
+      <h3>&#8377;250 Cr+</h3>
+      <p>Assets under management in just 2 years</p>
+    </div>
+    <div class="why-choose-uscard">
+      <div class="icon">🔍</div>
+      <h3>Active Monitoring</h3>
+      <p>Execution to deliver top-quartile returns</p>
+    </div>
+    <div class="why-choose-uscard">
+      <div class="icon">⚖️</div>
+      <h3>Unbiased Selection</h3>
+      <p>Truly unbiased product selection</p>
+    </div>
+    <div class="why-choose-uscard">
+      <div class="icon">💻</div>
+      <h3>Tech-Enabled</h3>
+      <p>Seamless transactions & report generation</p>
+    </div>
+  </div>
+</section>
 
+<script>
+// Function to check if an element is in the viewport
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to reveal cards when they scroll into view
+function revealCardsOnScroll() {
+  const cards = document.querySelectorAll('.why-choose-uscard');
+  cards.forEach(card => {
+    if (isInViewport(card)) {
+      card.classList.add('visible'); // Add the 'visible' class to trigger the animation
+    } else {
+      card.classList.remove('visible'); // Remove the class to reset animation
+    }
+  });
+}
+
+// Add event listeners for page load and scroll
+window.addEventListener('scroll', revealCardsOnScroll);
+window.addEventListener('load', revealCardsOnScroll);
+
+</script>
+<!-- why-choose-pms-end -->
 <!-- Video Modal Start -->
 <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -285,9 +363,7 @@
     @endforeach
 </div>
 <!-- Products Offered End -->
-
 <!-- How It Works Start -->
-<!-- How It Works - Start -->
 <div class="home-dv-how-it-work">
   <h2 class="home-section-title">How It Works</h2>
   <div class="home-steps-container">
@@ -306,8 +382,8 @@
         <img src="img/hiw-home-img-2.png" alt="Step 2 Icon" class="home-step-icon">
         <span class="home-step-number">2</span>
       </div>
-      <h3 class="home-step-title">Elaborate Engagement on Your Financials & Investments</h3>
-      <p class="home-step-description">Understand your financial situation, investment goals, and aspirations to create a tailored strategy.</p>
+      <h3 class="home-step-title">Engage on Financials & Investments</h3>
+      <p class="home-step-description">Understand your financial situation and goals to create a tailored strategy.</p>
     </div>
     <!-- Step 3 -->
     <div class="home-step">
@@ -315,48 +391,57 @@
         <img src="img/hiw-home-img-3.png" alt="Step 3 Icon" class="home-step-icon">
         <span class="home-step-number">3</span>
       </div>
-      <h3 class="home-step-title">Assessment of Your Risk Profile</h3>
-      <p class="home-step-description">Analyze your risk appetite to determine the best investment approach for you.</p>
+      <h3 class="home-step-title">Assess Risk Profile</h3>
+      <p class="home-step-description">Analyze your risk appetite for the best investment approach.</p>
     </div>
     <!-- Step 4 -->
     <div class="home-step">
       <div class="home-icon-container">
-        <img src="img/hiw-home-img-4.png" alt="Step 4 Icon" class="home-step-icon">
+        <img src="img/financialplst4.png" alt="Step 4 Icon" class="home-step-icon">
         <span class="home-step-number">4</span>
       </div>
-      <h3 class="home-step-title">Constructing/Reconstructing Your Portfolio</h3>
-      <p class="home-step-description">Build or optimize your investment portfolio to align with your financial objectives.</p>
+      <h3 class="home-step-title">Financial Planning</h3>
+      <p class="home-step-description"> Comprehensive Financial Planning done for your financial journey to meet each of your financial goals.</p>
     </div>
     <!-- Step 5 -->
     <div class="home-step">
       <div class="home-icon-container">
-        <img src="img/hiw-home-img-5.png" alt="Step 5 Icon" class="home-step-icon">
+        <img src="img/hiw-home-img-4.png" alt="Step 5 Icon" class="home-step-icon">
         <span class="home-step-number">5</span>
       </div>
-      <h3 class="home-step-title">Mapping Investments to Financial Goals</h3>
-      <p class="home-step-description">Ensure your investments are strategically mapped to achieve specific financial milestones.</p>
+      <h3 class="home-step-title">Portfolio Construction</h3>
+      <p class="home-step-description">Build or optimize your investment portfolio.</p>
     </div>
     <!-- Step 6 -->
     <div class="home-step">
       <div class="home-icon-container">
-        <img src="img/hiw-home-img-6.png" alt="Step 6 Icon" class="home-step-icon">
+        <img src="img/hiw-home-img-5.png" alt="Step 6 Icon" class="home-step-icon">
         <span class="home-step-number">6</span>
       </div>
-      <h3 class="home-step-title">Regular Monitoring & Review of Portfolio</h3>
-      <p class="home-step-description">Continuously track and evaluate your investments for optimal performance.</p>
+      <h3 class="home-step-title">Map Investments to Goals</h3>
+      <p class="home-step-description">Align investments with financial milestones.</p>
     </div>
     <!-- Step 7 -->
     <div class="home-step">
       <div class="home-icon-container">
-        <img src="img/hiw-home-img-7.png" alt="Step 7 Icon" class="home-step-icon">
+        <img src="img/hiw-home-img-6.png" alt="Step 7 Icon" class="home-step-icon">
         <span class="home-step-number">7</span>
       </div>
-      <h3 class="home-step-title">Timely Updates on Market Events & Their Impact on Investments</h3>
-      <p class="home-step-description">Stay informed about market trends and how they affect your portfolio, ensuring proactive financial decision-making.</p>
+      <h3 class="home-step-title">Monitor & Review Portfolio</h3>
+      <p class="home-step-description">Track and evaluate investments for optimal performance.</p>
+    </div>
+    <!-- Step 8 -->
+    <div class="home-step">
+      <div class="home-icon-container">
+        <img src="img/hiw-home-img-7.png" alt="Step 8 Icon" class="home-step-icon">
+        <span class="home-step-number">8</span>
+      </div>
+      <h3 class="home-step-title">Market Updates</h3>
+      <p class="home-step-description">Stay informed about market trends and their impact.</p>
     </div>
   </div>
 </div>
-<!-- How It Works - End -->
+<!-- How It Works End -->
 <!-- Blog Start -->
 
 <!-- Blog Section Start -->
@@ -472,14 +557,14 @@
                 <button id="next">&#x203A;</button>
             </div>
             @foreach ([
-                ['img/home-testi.png', 'Santhosh Krishna', 'Dallas, Texas, USA<br>Management Consultant, Autodesk Inc.', 'I am pleased to provide a testimonial for Dhanavruksha, whose exemplary service and expertise in the financial sector have been invaluable to my financial success.'],
-                ['img/home-testi2.png', 'Anand & Divya', 'USA', 'Choosing Dhanavruksha was one of the best decisions I have made for my financial future.'],
-                ['img/home-testi3.png', 'Dr. Saravana Raja', 'Urologist, Tirunelveli, Tamil Nadu', 'I trust Dhanavruksha for my complete wealth management requirements.'],
-                ['img/home-testi4.png', 'M. Venkataramana', 'EX-Indian Cricketer and Current Coach, Chennai', 'Being a part of Dhanavruksha has been an incredibly rewarding experience.'],
-                ['img/home-testi5.png', 'Dr. Nambi Appadurai', 'Director, WRI India, Chennai', 'Dhanavruksha has been managing my wealth ever since its inception.'],
-                ['img/home-testi6.png', 'A. Sivakumar', 'Principal Engineer, Bangalore', 'Dhanavruksha has been extremely useful and reliable.'],
-                ['img/home-testi7.png', 'Rajagopalan Venkataraman', 'Ex - Chairman, Mastek Ltd, UK', 'My experience with Dhanavruksha over the last year gives me great confidence.'],
-                ['img/home-testi8.png', 'Swathi Balasubramanian', 'Business Development Manager, Government of Western Australia', 'My experience with Dhanavruksha has made my life easy in planning my overall finances.']
+                ['img/home-testi.png', 'Santhosh Krishna', 'Dallas, Texas, USA<br>Management Consultant, Autodesk Inc.', 'I am pleased to provide a testimonial for Dhanavruksha, whose exemplary service and expertise in the financial sector have been invaluable to my financial success. Demonstrating an in-depth understanding of market dynamics, their strategic guidance has been instrumental in aligning my investment decisions with my long-term financial objectives. Their professionalism and dedication to client success are commendable, and under their advisement, my portfolio has achieved remarkable growth. I unreservedly recommend Dhanavruksha to any individual or organization seeking proficient and dependable financial consulting services.'],
+                ['img/home-testi2.png', 'Anand & Divya', 'USA', 'Choosing Dhanavruksha was one of the best decisions I have made for my financial future. Their personalized approach stood out immediately. They took the time to understand my unique financial situation, risk tolerance, and long-term objectives before crafting a tailored investment strategy for me. Not only did they provide comprehensive investment options, but they also offered insightful guidance every step of the way. I\'ve seen significant growth in my investments and feel secure in my financial future. I wholeheartedly recommend Dhanavruksha Financial Services to anyone looking to build and protect their wealth with a trusted partner by their side.'],
+                ['img/home-testi3.png', 'Dr. Saravana Raja', 'Urologist, Tirunelveli, Tamil Nadu', 'I trust Dhanavruksha for my complete Wealth Management requirements. They have helped me to organise my finances effectively and to generate great returns. While the construction of my hospital building was going on, I suddenly needed urgent funds and reached out to DV. I was pleasantly surprised that my investments had grown to a sizeable value and that amount came as a huge relief to fund the construction. I would strongly recommend DV for wealth creation.'],
+                ['img/home-testi4.png', 'M. Venkataramana', 'EX-Indian Cricketer and Current Coach, Chennai', 'Being a part of Dhanavruksha has been an incredibly rewarding experience. Their expertise and strategic insights have significantly enhanced my investment journey. I highly recommend their services to anyone seeking reliable and knowledgeable financial guidance.'],
+                ['img/home-testi5.png', 'Dr. Nambi Appadurai', 'Director, WRI India, Chennai', 'Dhanavruksha has been managing my wealth ever since its inception. I always found them honest and professional in their approach. They have a very good understanding of today\'s complex issues surrounding wealth management. They maintain their benchmark for integrity in the sphere of financial advisory and wealth management - a quality which is very rare these days but essential to establish customer confidence. I am extremely happy to be associated with Dhanavruksha. I wish them all the best in their future endeavors.'],
+                ['img/home-testi6.png', 'A. Sivakumar', 'Principal Engineer, Bangalore', 'Dhanavruksha has been extremely useful and reliable finance management firm catering to all my financial management requirements. Their communication is simple and good. Very professional in their approach. Always available for any quick wealth investment decisions too. On a whole I would recommend anybody to use their services and benefit.'],
+                ['img/home-testi7.png', 'Rajagopalan Venkataraman', 'Ex - Chairman, Mastek Ltd, UK', 'I was introduced to Dhanavruksha by one of many of their diligent employees. I had expressed very clear performance expectations for my portfolio with them. My returns have far exceeded what I expected. Their client management is unique and treats my funds as their own. My experience over the last year gives me great confidence, and I intend enhancing my funds under their management substantially over the next few months. My best wishes for Dhanavruksha to grow substantially so that many more investors are benefitted by their financial acumen.'],
+                ['img/home-testi8.png', 'Swathi Balasubramanian', 'Business Development Manager, Government of Western Australia', 'My experience with Dhanavruksha has made my life easy in planning my overall finances. Savings and investment plans were tailor-made and customized as per my preference and comfort with the support of their expert team. They simplified the concept of financial planning and I have witnessed a substantial improvement in the way my assets and income have been managed. For anyone who is looking for sustainable and consistent financial support or a planner, this team is a definite go from my side.']
             ] as $index => $testimonial)
             <div class="testimonial {{ $index === 0 ? '' : 'hidden' }}">
                 <img src="{{ $testimonial[0] }}" alt="Testimonial Photo">
@@ -519,6 +604,7 @@
     });
 </script>
 <!-- Optimized Testimonial Section End -->
+
 
 <!-- Our Partners Start -->
 <div class="home-our-partners-section">

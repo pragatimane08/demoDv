@@ -150,19 +150,21 @@
                     <h2>Our Mission</h2>
                     <ul>
                         <li>Build a base of 1 lakh customers each with a minimum portfolio of Rs.1 crore and scale up</li>
-                        <li>Create wealth for investors through uncompromised advisory quality and quality products</li>
+                        <li>Create wealth for investors through uncompromised advisory and quality products</li>
                         <li>Ethical Advisory keeping the customers’ interest as paramount</li>
                         <li>Synergize the power of technology and excellence of human advisory</li>
                         <li>Financial inclusion through quality Wealth Management to the masses</li>
                         <li>Build and train a large team of Business Associates for faster penetration</li>
-                    </ul>
+                        </ul>
                 </div>
                 <div class="company-profile-card">
                     <img src="img/value.png" alt="Values">
                     <h2>Our Values</h2>
                     <ul>
-                        <li>To educate the youth right from early days to empower them to make quality investments</li>
-                        <li>To groom and Build a large team of professionals through regular training and mentoring</li>
+                        <li>To educate the youth right from their college to empower them to make quality investments</li>
+                        <li>Conduct regular sessions on Financial Literacy to the youth at Educational institutions and Corporates</li>
+                        <li>Regular Social Media Communication to guide all sections of investors</li>
+                        <li>To groom and build a large team of committed Wealth Management professionals through constant training and mentoring</li>
                     </ul>
                 </div>
                 <div class="company-profile-card">
@@ -176,6 +178,11 @@
                         <li>Customizes advice based on dynamic psychological shifts of investors with technology support</li>
                         <li>Widen the reach, simplify processes, and ensure faster communication during market crises</li>
                         <li>Course correct with appropriate realignment of portfolio</li>
+                        <li>Implementing best industry practices and the wishful expectations of customers</li>
+                        <li>Institutionalization of strategy, ideas, and research with the team’s combined work experience of over 13 decades across the spectrum of Financial Services industry</li>
+                        <li>Human interface-based Financial Advisory complemented by the power of technology</li>
+                        <li>Constant communication with customers updating on every important market event and product innovation</li>
+                        <li>Swift action to replace products slipping into prolonged underperformance by appropriate options</li>
                     </ul>
                 </div>
             </div>

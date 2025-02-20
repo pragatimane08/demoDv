@@ -90,7 +90,7 @@
                     <i class="fa fa-phone-alt me-2" color="#cb9f42"></i>+91 7305888454
                 </small>
                 <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
-                    <i class="fa fa-calendar-alt me-2" color="#cb9f42"></i>Schedule Meeting
+                    <i class="fa fa-calendar-alt me-2" color="#cb9f42"></i>Schedule Meeting for Free Portfolio Review
                 </a>
                 <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
                     <i class="fa fa-briefcase me-2" color="#cb9f42"></i>Open Demat Account
@@ -102,7 +102,7 @@
         <div class="collapse navbar-collapse d-lg-none" id="topbarNav">
             <div class="navbar-nav">
                 <a href="{{ route('home') }}" class="nav-item nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
-                <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link">Schedule Meeting</a>
+                <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link">Schedule Meeting for Free Portfolio Review</a>
                 <a href="{{ route('opendemata') }}" class="nav-item nav-link">Open Demat Account</a>
                 <a href="{{ route('contact-us') }}" class="nav-item nav-link">Contact</a>
             </div>
@@ -145,7 +145,7 @@
                             <a href="{{ route('pms-aif') }}" class="dropdown-item {{ request()->routeIs('pms-aif') ? 'active' : '' }}">PMS-AIF</a>
                             <a href="{{ route('fixed-deposits') }}" class="dropdown-item {{ request()->routeIs('fixed-deposits') ? 'active' : '' }}">Fixed Deposits</a>
                             <a href="{{ route('bonds') }}" class="dropdown-item {{ request()->routeIs('bonds') ? 'active' : '' }}">Bonds</a>
-                            <a href="{{ route('loan') }}" class="dropdown-item {{ request()->routeIs('loan') ? 'active' : '' }}">Loan</a>
+                            <a href="{{ route('loan') }}" class="dropdown-item {{ request()->routeIs('loan') ? 'active' : '' }}"> Business Loans</a>
                         </div>
                     </div>
 
@@ -185,7 +185,7 @@
                     <!-- Mobile View Only: Schedule Meeting and Open Demat Account -->
                     <div class="d-lg-none">
                         <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center">
-                            <i class="fa fa-calendar-alt me-2" color="#cb9f42"></i>Schedule Meeting
+                            <i class="fa fa-calendar-alt me-2" color="#cb9f42"></i>Schedule Meeting for Free Portfolio Review
                         </a>
                         <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
                             <i class="fa fa-briefcase me-2" color="#cb9f42"></i>Open Demat Account

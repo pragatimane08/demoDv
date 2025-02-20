@@ -147,6 +147,7 @@
   /* Smaller font size */
   transition: all 0.3s ease;
   /* Smooth transition for hover effects */
+  margin-bottom: 20px;
 }
 
 .custom-outline-btn:hover {

@@ -20,10 +20,68 @@
 <!-- public/img/neswletterh1.avif -->
 <div class="container-xxl pt-5">
         <div class="container">
-            <div class="text-center text-md-start pb-5 pb-md-0" style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-custom">Our Newsletter</p>
-                <h1 class="display-5 mb-5">Stay Updated With Our Newsletter</h1>
+            
+<div class="container d-flex justify-content-between align-items-center mt-5">
+    <div class="text-center text-md-start" style="max-width: 500px;">
+        <p class="fs-5 fw-medium text-custom">Our Newsletter</p>
+        <h1 class="display-5 mb-5">Stay Updated With Our Newsletter</h1>
+    </div>
+    <button class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+        Subscribe Now
+    </button>
+</div>
+
+<!-- Subscription Modal -->
+<div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="subscribeModalLabel">Subscribe to Our Newsletter</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+                <form id="subscriptionForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mobile" class="form-label">Mobile Number</label>
+                        <input type="tel" class="form-control" id="mobile" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("subscriptionForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Get form values
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let mobile = document.getElementById("mobile").value;
+
+        if (name && email && mobile) {
+            alert("Thank you, " + name + "! You have successfully subscribed.");
+            
+            // Reset the form
+            document.getElementById("subscriptionForm").reset();
+
+            // Close the modal
+            let modalElement = document.getElementById("subscribeModal");
+            let modalInstance = bootstrap.Modal.getInstance(modalElement);
+            modalInstance.hide();
+        }
+    });
+</script>
 
             <!-- Newsletter Carousel -->
             <div class="owl-carousel project-carousel">

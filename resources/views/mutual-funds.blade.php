@@ -40,30 +40,50 @@
 </div>
 <!-- Mutual Fund Section End -->
 
-<!-- How It Works Section -->
+<!-- How It Works Section -->/
+ <!-- How It Works Section -->
+  <!-- How It Works Section -->
 <section id="how-it-works" class="how-it-works mutual-fund-hiw">
     <div class="container">
         <h2 class="section-title">How It Works</h2>
-        <div class="steps">
-            <div class="step" data-step="01">
-                <div class="step-number">01</div>
-                <p class="step-text">The pooled funds are managed by a professional investment company, which makes decisions on behalf of the investors to generate returns through interest, dividends, or capital gains.</p>
-            </div>
-            <div class="step" data-step="02">
-                <div class="step-number">02</div>
-                <p class="step-text">The pooled funds are managed by a professional investment company, which makes decisions on behalf of the investors to generate returns through interest, dividends, or capital gains.</p>
-            </div>
-            <div class="step" data-step="03">
-                <div class="step-number">03</div>
-                <p class="step-text">The pooled funds are managed by a professional investment company, which makes decisions on behalf of the investors to generate returns through interest, dividends, or capital gains.</p>
+        <div class="horizontal-timeline">
+            <div class="timeline-line"></div>
+            <div class="steps">
+                <div class="step" data-step="01">
+                    <div class="step-icon">
+                        <div class="icon-circle"></div>
+                        <div class="step-number">01</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Fund Management</h3>
+                        <p class="step-text">The pooled funds are managed by a professional investment company, which makes decisions on behalf of the investors to generate returns through interest, dividends, or capital gains.</p>
+                    </div>
+                </div>
+                <div class="step" data-step="02">
+                    <div class="step-icon">
+                        <div class="icon-circle"></div>
+                        <div class="step-number">02</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Investment Strategy</h3>
+                        <p class="step-text">The pooled funds are managed by a professional investment company, which makes decisions on behalf of the investors to generate returns through interest, dividends, or capital gains.</p>
+                    </div>
+                </div>
+                <div class="step" data-step="03">
+                    <div class="step-icon">
+                        <div class="icon-circle"></div>
+                        <div class="step-number">03</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Returns Generation</h3>
+                        <p class="step-text">The pooled funds are managed by a professional investment company, which makes decisions on behalf of the investors to generate returns through interest, dividends, or capital gains.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('#how-it-works');
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -76,9 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(container);
 });
-</script>
-
+    </script>
+</section>
 <!-- How It Works Section-end -->
+
+
 
 <!-- Advantages of Mutual Fund - Start -->
 <div class="mutual-fund-container-adv">
@@ -114,8 +136,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <li class="advantage-item-adv">
                     <img src="./img/mututal-4-resized (2).png" alt="Economies of Scale" class="icon-adv">
                     <div class="text-adv">
-                        <h3>Easy Online Access</h3>
-                        <p>Invest, track, and manage your mutual fund investments effortlessly through our online platform.</p>
+                        <h3>Ease Of Investing Online</h3>
+                        <p>Online investing is quick, convenient, and accessible, with real-time data, low fees, and automated tools for easy decision-making.</p>
                     </div>
                 </li>
             </ul>

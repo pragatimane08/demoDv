@@ -35,7 +35,7 @@
             </svg>
         </button>
         <div class="profile-pic">
-            <img src="img/team/img1.png" alt="Team Member">
+            <img src="img/Bhaskaran.png" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -67,7 +67,7 @@
             </svg>
         </button>
         <div class="profile-pic">
-            <img src="img/team/img-2.png" alt="Team Member">
+            <img src="img/Devanathan.png" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -99,7 +99,7 @@
             </svg>
         </button>
         <div class="profile-pic">
-            <img src="img/team/img3.jpg" alt="Team Member">
+            <img src="img/Dassan.png" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -131,7 +131,7 @@
             </svg>
         </button>
         <div class="profile-pic">
-            <img src="img/team/img4.JPG" alt="Team Member">
+            <img src="img/Balaji.png" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -163,7 +163,7 @@
             </svg>
         </button>
         <div class="profile-pic">
-            <img src="img/team/img5.jpg" alt="Team Member">
+            <img src="img/vbalaji.png" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -295,7 +295,7 @@
             </svg>
         </button>
         <div class="profile-pic">
-            <img src="img/team/img-a-1.png" alt="Team Member">
+            <img src="img/ramasamyad.png" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -326,7 +326,7 @@
             </svg>
         </button>
         <div class="profile-pic">
-            <img src="img/team/img-a-2 .png" alt="Team Member">
+            <img src="img/bhat.png" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -357,7 +357,7 @@
             </svg>
         </button>
         <div class="profile-pic">
-            <img src="img/team/img-a-3.png" alt="Team Member">
+            <img src="img/jainteamad.png" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -388,7 +388,7 @@
             </svg>
         </button>
         <div class="profile-pic">
-            <img src="img/team/img-a-4.png" alt="Team Member">
+            <img src="img/desai.png" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -420,7 +420,7 @@
             </svg>
         </button>
         <div class="profile-pic">
-            <img src="img/team/img-a-5 (1).png" alt="Team Member">
+            <img src="img/Subramania.png" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
