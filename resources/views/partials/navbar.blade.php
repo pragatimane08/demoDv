@@ -145,6 +145,11 @@
                             <a href="{{ route('pms-aif') }}" class="dropdown-item {{ request()->routeIs('pms-aif') ? 'active' : '' }}">PMS-AIF</a>
                             <a href="{{ route('fixed-deposits') }}" class="dropdown-item {{ request()->routeIs('fixed-deposits') ? 'active' : '' }}">Fixed Deposits</a>
                             <a href="{{ route('bonds') }}" class="dropdown-item {{ request()->routeIs('bonds') ? 'active' : '' }}">Bonds</a>
+                            <a href="{{ route('nps') }}" class="dropdown-item {{ request()->routeIs('nps') ? 'active' : '' }}">NPS</a>
+                            <a href="{{ route('lifeinsurance') }}" class="dropdown-item {{ request()->routeIs(' lifeinsurance') ? 'active' : '' }}">Life Insurance</a>
+                           <a href="{{ route('healthinsurance') }}" class="dropdown-item {{ request()->routeIs(' healthinsurance') ? 'active' : '' }}">Health Insurance</a>
+                            <a href="{{ route('giftcityfund') }}" class="dropdown-item {{ request()->routeIs('giftcityfund') ? 'active' : '' }}">Gift city Fund</a>
+                            <a href="{{ route('unlistedshares') }}" class="dropdown-item {{ request()->routeIs('unlistedshares') ? 'active' : '' }}"> Unlisted Shares</a>
                             <a href="{{ route('loan') }}" class="dropdown-item {{ request()->routeIs('loan') ? 'active' : '' }}"> Business Loans</a>
                         </div>
                     </div>
@@ -163,7 +168,7 @@
                             <a href="{{ route('external-Portfolio') }}" class="dropdown-item {{ request()->routeIs('external-Portfolio') ? 'active' : '' }}">Free Review of External <br>Portfolio</a>
                             <a href="{{ route('equity-advisory') }}" class="dropdown-item {{ request()->routeIs('equity-advisory') ? 'active' : '' }}">Equity Advisory</a>
                             <a href="{{ route('estate-planning') }}" class="dropdown-item {{ request()->routeIs('estate-planning') ? 'active' : '' }}">Estate Planning</a>
-                            <a href="{{ route('Insurance_pr') }}" class="dropdown-item {{ request()->routeIs('Insurance_pr') ? 'active' : '' }}">Insurance and Investment <br>Portfolio Restructuring</a>
+                            <a href="{{ route('Insurance_pr') }}" class="dropdown-item {{ request()->routeIs('Insurance_pr') ? 'active' : '' }}">Insurance Advisory</a>
                         </div>
                     </div>
 

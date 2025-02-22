@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <span class="home-step-number">1</span>
       </div>
       <h3 class="home-step-title">Register</h3>
-      <p class="home-step-description">Register with us to kickstart your financial journey.</p>
+      <p class="home-step-description">To Kickstart your Financial Journey.</p>
     </div>
     <!-- Step 2 -->
     <div class="home-step">
@@ -373,8 +373,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="img/hiw-home-img-2.png" alt="Step 2 Icon" class="home-step-icon">
         <span class="home-step-number">2</span>
       </div>
-      <h3 class="home-step-title">Engage on Financials & Investments</h3>
-      <p class="home-step-description">Understand your financial situation and goals to create a tailored strategy.</p>
+      <h3 class="home-step-title">Analyse Finances</h3>
+      <p class="home-step-description">Analysing income, liabilities, assets, and goals.</p>
     </div>
     <!-- Step 3 -->
     <div class="home-step">
@@ -382,8 +382,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="img/hiw-home-img-3.png" alt="Step 3 Icon" class="home-step-icon">
         <span class="home-step-number">3</span>
       </div>
-      <h3 class="home-step-title">Assess Risk Profile</h3>
-      <p class="home-step-description">Analyze your risk appetite for the best investment approach.</p>
+      <h3 class="home-step-title">Risk Profiling</h3>
+      <p class="home-step-description">Determining Risk Profile.</p>
     </div>
     <!-- Step 4 -->
     <div class="home-step">
@@ -391,8 +391,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="img/financialplst4.png" alt="Step 4 Icon" class="home-step-icon">
         <span class="home-step-number">4</span>
       </div>
-      <h3 class="home-step-title">Financial Planning</h3>
-      <p class="home-step-description"> Comprehensive Financial Planning done for your financial journey to meet each of your financial goals.</p>
+      <h3 class="home-step-title">Portfolio Construction</h3>
+      <p class="home-step-description">Construct portfolio based on risk profile, surplus, and goals.</p>
     </div>
     <!-- Step 5 -->
     <div class="home-step">
@@ -400,8 +400,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="img/hiw-home-img-4.png" alt="Step 5 Icon" class="home-step-icon">
         <span class="home-step-number">5</span>
       </div>
-      <h3 class="home-step-title">Portfolio Construction</h3>
-      <p class="home-step-description">Build or optimize your investment portfolio.</p>
+      <h3 class="home-step-title">Mapping Goals</h3>
+      <p class="home-step-description">Connecting maturity of investments to goals.</p>
     </div>
     <!-- Step 6 -->
     <div class="home-step">
@@ -409,29 +409,12 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="img/hiw-home-img-5.png" alt="Step 6 Icon" class="home-step-icon">
         <span class="home-step-number">6</span>
       </div>
-      <h3 class="home-step-title">Map Investments to Goals</h3>
-      <p class="home-step-description">Align investments with financial milestones.</p>
-    </div>
-    <!-- Step 7 -->
-    <div class="home-step">
-      <div class="home-icon-container">
-        <img src="img/hiw-home-img-6.png" alt="Step 7 Icon" class="home-step-icon">
-        <span class="home-step-number">7</span>
-      </div>
-      <h3 class="home-step-title">Monitor & Review Portfolio</h3>
-      <p class="home-step-description">Track and evaluate investments for optimal performance.</p>
-    </div>
-    <!-- Step 8 -->
-    <div class="home-step">
-      <div class="home-icon-container">
-        <img src="img/hiw-home-img-7.png" alt="Step 8 Icon" class="home-step-icon">
-        <span class="home-step-number">8</span>
-      </div>
-      <h3 class="home-step-title">Market Updates</h3>
-      <p class="home-step-description">Stay informed about market trends and their impact.</p>
+      <h3 class="home-step-title">Regular Review</h3>
+      <p class="home-step-description">Periodic engagement to review portfolio.</p>
     </div>
   </div>
 </div>
+<!-- How It Works End -->
 <!-- How It Works End -->
 <!-- Blog Start -->
 

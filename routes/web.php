@@ -121,6 +121,11 @@ Route::view('/pms-aif', 'pms-aif')->name('pms-aif');
 Route::view('/fixed-deposits', 'fixed-deposits')->name('fixed-deposits');
 
 Route::view('/bonds', 'bonds')->name('bonds');
+Route::view('/nps', 'nps')->name('nps');
+Route::view('/giftcityfund', 'giftcityfund')->name('giftcityfund');
+Route::view('/lifeinsurance','lifeinsurance')->name('lifeinsurance');
+Route::view('/healthinsurance','healthinsurance')->name('healthinsurance');
+Route::view('/unlistedshares', 'unlistedshares')->name('unlistedshares');
 Route::view('/loan', 'loan')->name('loan');
 
 Route::view('/wealth-management', 'wealth-management')->name('wealth-management');

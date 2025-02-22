@@ -71,27 +71,18 @@
 
 <!-- PMS Info Section -->
 <div class="pms-info-container" id="pms-info-section1">
-    <h1 class="pms-info-heading">Portfolio Management Services</h1>
+    <h1 class="pms-info-heading">Portfolio Management Services (PMS)</h1>
     <p class="pms-info-content">
-        <span class="highlight">Portfolio management services (pms)</span> is a customized and professionally managed investment vehicle that uses
-        different investment strategies to take advantage of market-linked opportunities.
-
-        <span class="highlight">pms</span> is ideal for <span class="highlight">high-net worth individuals (hni’s)</span> who are willing to take on risk and gain market
-        exposure by investing directly into a basket of securities such as equities, fixed income, structured
-        products, etc.
+        <span class="highlight">Portfolio Management Services (PMS)</span> is a customized, professionally managed investment solution designed to leverage market-linked opportunities through diverse investment strategies. Tailored for <span class="highlight">high-net-worth individuals (HNIs)</span>, PMS allows direct investment in a curated basket of securities, including equities, fixed income, and structured products, offering market exposure and risk-adjusted returns.
     </p>
     <p class="pms-info-content">
-        A quality portfolio is one that is not too much diversified, yet still offers the best risk-adjusted
-        returns. With us, this is identified through <span class="highlight">unbiased selection</span> based on our proprietary analytics. It’s
-        easy to socialize and sell products, which is what most wealth managers do. We’re reshaping the wealth
-        management industry by sticking to basics, <span class="highlight">in-depth analytics</span>. We maintain insight + integrity and aim at
-        the long-term prosperity of clients.
-
-        <span class="highlight">dhana vruksha</span> is empaneled with a wide range of reputed third-party pms providers across india, such as
-        amcs and financial institutions which provide their specialized pms offerings.
+        At <span class="highlight">Dhana Vruksha</span>, we focus on creating high-quality portfolios that strike the right balance between diversification and optimal returns. Our <span class="highlight">proprietary analytics</span> ensure an <span class="highlight">unbiased selection</span> of investments, backed by <span class="highlight">in-depth research</span> and a commitment to long-term client prosperity. Unlike traditional wealth managers, we prioritize <span class="highlight">insight and integrity</span>, reshaping the wealth management industry by sticking to the basics.
+    </p>
+    <p class="pms-info-content">
+        We are empaneled with a wide range of reputed <span class="highlight">third-party PMS providers</span> across India, including AMCs and financial institutions, to offer specialized PMS solutions tailored to your financial goals.
     </p>
 </div>
-    <!--pms-info-end -->
+<!-- pms-info-end -->
 
     <!--pms-sidebar-start-->
     <div class="pms-sidebar-container">

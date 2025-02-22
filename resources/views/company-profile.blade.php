@@ -69,68 +69,49 @@
                             periodic and intense portfolio reviews ensuring ideal asset allocation to meet their
                             financial goals.</p>
                     </div>
-                    <p><i class="far fa-check-circle text-primary me-3"></i>Regulatory Compliance</p>
+                   
                     <p><i class="far fa-check-circle text-primary me-3"></i>Client-Centric Approach</p>
                     <p><i class="far fa-check-circle text-primary me-3"></i>Expertise and Knowledge</p>
-                   
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Regulatory Compliance</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
 
-<!-- Ethics Section -->
+
+<!-- USP Section Start -->
 <div class="container-xxl">
     <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px; padding-top:20px">
-        <p class="fs-5 fw-medium" style="color: #B37F2B;">Our Ethics</p>
+        <p class="fs-5 fw-medium" style="color: #B37F2B;">Our USP</p>
     </div>
     <div class="section sec-features">
         <div class="container">
             <div class="row g-5">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
                     <div class="feature d-flex">
-                        <span class="bi-bag-check-fill"></span>
+                        <span class="bi-shield-fill-check"></span>
                         <div>
-                            <h3>Build Financial</h3>
-                            <p>Innovative ideas the core team desires to implement across all walks of Financial Services.</p>
+                            <h3>Foundation of Trust</h3>
+                            <p>Committed with our knowledge-driven and client-centric advisory to be the most trusted Wealth Management Specialist for our customers.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature d-flex">
-                        <span class="bi-wallet-fill"></span>
+                        <span class="bi-book-fill"></span>
                         <div>
-                            <h3>Invest for the Future</h3>
-                            <p>Thrive on feedback received from customers in various organizations the team has worked with.</p>
+                            <h3>Comprehensive Knowledge</h3>
+                            <p>Thrive to be well-updated on every development related to Personal Finance to be the go-to resource for wealth solutions.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature d-flex">
-                        <span class="bi-pie-chart-fill"></span>
+                        <span class="bi-binoculars-fill"></span>
                         <div>
-                            <h3>Responsible Banking</h3>
-                            <p>Implement learnings from various events that have influenced & impacted investments.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-5 justify-content-center">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature d-flex">
-                        <span class="bi-graph-up-arrow"></span>
-                        <div>
-                            <h3>Customer-Centric Service</h3>
-                            <p>Before and after-sales service expectation of customers in Investment Advisory.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature d-flex">
-                        <span class="bi-globe"></span>
-                        <div>
-                            <h3>Vision for Economic Growth</h3>
-                            <p>Vision of the founders to take quality investment advisory to the possible last mile for progressive economic development of the country.</p>
+                            <h3>Micro-optics to Risk</h3>
+                            <p>In-depth assessment of the risk of every investment product to ensure our customers remain in utmost peace regarding risk.</p>
                         </div>
                     </div>
                 </div>
@@ -138,7 +119,7 @@
         </div>
     </div>
 </div>
-<!-- Ethics Section End -->
+<!-- USP Section End -->
 
 <!-- Card Section -->
 <div class="company-profile">
