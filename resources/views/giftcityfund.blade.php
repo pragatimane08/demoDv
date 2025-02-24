@@ -19,7 +19,7 @@
     
     <!-- Page Header End -->
 
-    <section class="child-future-saving-section">
+    <!-- <section class="child-future-saving-section">
     <div class="child-future-saving-container">
         <div class="child-future-saving-image">
             <img src="img/giftcityfund.jpg" alt="Child Future Saving">
@@ -37,9 +37,100 @@
             <a href="{{ route('schedulemeeting') }}" class="child-future-saving-btn">Schedule Meeting</a>
         </div>
     </div>
-</section>
+</section> -->.
+<!-- About Section -->
+<section id="about-gift-city" class="about-gift-city-section">
+  <div class="about-container">
+    <h2 class="section-heading">Discover GIFT City</h2>
+    <p class="section-description">
+      GIFT City (Gujarat International Financial-Tec City) is India's premier International Financial Services Centre (IFSC), approved and regulated by the government under the Special Economic Zones Act, 2005. It offers world-class financial services to both residents and non-residents in foreign currency, fostering global economic growth.
+    </p>
 
+    <div class="timeline-features">
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="timeline-content">
+          <h3 class="feature-title">Global Reach</h3>
+          <p class="feature-text">Connecting businesses and investors across the globe with seamless financial services.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-building"></i>
+        </div>
+        <div class="timeline-content">
+          <h3 class="feature-title">World-Class Infrastructure</h3>
+          <p class="feature-text">State-of-the-art facilities designed to support international financial operations.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <div class="timeline-content">
+          <h3 class="feature-title">Favourable Regulations</h3>
+          <p class="feature-text">A business-friendly environment with streamlined policies and tax benefits.</p>
+        </div>
+      </div>
+    </div>
+    <!-- <p class="section-description">
+      GIFT City (Gujarat International Financial-Tec City) is India's premier International Financial Services Centre (IFSC), approved and regulated by the government under the Special Economic Zones Act, 2005. It offers world-class financial services to both residents and non-residents in foreign currency, fostering global economic growth.
+    </p> -->
+  </div>
+</section>
+<!-- info section end -->
+<!-- advantage of gift city  -->
+<div class="zigzag-container">
+    <h2 class="section-heading"> key advantages of Gifty City Funds </h2>
+    <!-- Advantage 1 -->
+    <div class="zigzag-item">
+      <div class="zigzag-icon">
+        <i class="fas fa-dollar-sign"></i>
+      </div>
+      <div class="zigzag-content">
+        <h3>Invest in USD</h3>
+        <p>Invest in USD and redeem in USD, protecting from rupee depreciation.</p>
+      </div>
+    </div>
+    <!-- Advantage 2 -->
+    <div class="zigzag-item reverse">
+      <div class="zigzag-icon">
+        <i class="fas fa-hand-holding-usd"></i>
+      </div>
+      <div class="zigzag-content">
+        <h3>No TDS on Returns</h3>
+        <p>No Tax Deducted at Source from returns generated, unlike Mutual Funds.</p>
+      </div>
+    </div>
+    <!-- Advantage 3 -->
+    <div class="zigzag-item">
+      <div class="zigzag-icon">
+        <i class="fas fa-percent"></i>
+      </div>
+      <div class="zigzag-content">
+        <h3>GST-Free</h3>
+        <p>Gift City Funds are free from the levy of GST.</p>
+      </div>
+    </div>
+    <!-- Advantage 4 -->
+    <div class="zigzag-item reverse">
+      <div class="zigzag-icon">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <div class="zigzag-content">
+        <h3>Diverse Investment Options</h3>
+        <p>Invest in Funds that invest in listed equities, unlisted equities, real estate, and more.</p>
+      </div>
+    </div>
+  </div>
     
+<style>
+  
+</style>
+
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

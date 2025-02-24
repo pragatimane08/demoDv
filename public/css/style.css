@@ -10675,3 +10675,278 @@ body {
   font-weight: bold;
 }
 /*benefits of health end */
+
+
+/* gift city  funds starts*/
+ /* About GIFT City Section */
+ .about-gift-city-section {
+  padding: 80px 0;
+  background-color:rgba(255, 215, 0, 0.1); /* White background */
+  text-align: center;
+  max-width:1400px;
+  margin-left:3.9%;
+  margin-bottom:30px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  color: #2c3e50; /* Dark text for contrast */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #d4af37; /* Golden accent */
+  margin: 10px auto 0;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #555; /* Slightly darker text for readability */
+  
+  margin: 0 auto 30px;
+  
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+.timeline-features {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  background: #d4af37; /* Golden background for icons */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff; /* White icons */
+  font-size: 1.5rem;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  text-align: left;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  color: #2c3e50; /* Dark text for contrast */
+  margin-bottom: 10px;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: #555; /* Slightly darker text for readability */
+  line-height: 1.6;
+}
+
+/* Golden line connecting timeline items */
+.timeline-features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 2px;
+  height: 100%;
+  background: #d4af37; /* Golden line */
+  z-index: 1;
+} 
+
+/* *** advantage of gift city funds starts ****/
+/* Zigzag Container */
+.zigzag-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 215, 0, 0.3); /* Corrected RGBA value */
+ 
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Zigzag Item */
+.zigzag-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.zigzag-item.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Zigzag Icon */
+.zigzag-icon {
+  flex: 0 0 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #ffd700, #daa520); /* Golden gradient */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
+  color: #fff;
+  font-size: 32px;
+  box-shadow: 0 8px 20px rgba(218, 165, 32, 0.3); /* Golden shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zigzag-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(218, 165, 32, 0.5);
+}
+
+/* Zigzag Content */
+.zigzag-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.zigzag-content:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.zigzag-content h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.zigzag-content h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #ffd700; /* Golden underline */
+}
+
+.zigzag-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .zigzag-container {
+    padding: 15px;
+  }
+
+  .zigzag-item {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .zigzag-icon {
+    flex: 0 0 80px;
+    height: 80px;
+    font-size: 28px;
+    margin: 10px auto;
+  }
+
+  .zigzag-content {
+    padding: 15px;
+  }
+
+  .zigzag-content h3 {
+    font-size: 22px;
+  }
+
+  .zigzag-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .zigzag-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .zigzag-item.reverse {
+    flex-direction: column;
+  }
+
+  .zigzag-icon {
+    flex: 0 0 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  .zigzag-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .zigzag-content h3 {
+    font-size: 20px;
+  }
+
+  .zigzag-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .zigzag-container {
+    padding: 10px;
+  }
+
+  .zigzag-icon {
+    flex: 0 0 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .zigzag-content {
+    padding: 10px;
+  }
+
+  .zigzag-content h3 {
+    font-size: 18px;
+  }
+
+  .zigzag-content p {
+    font-size: 13px;
+  }
+}
+
+
+/* ***advantage of gift city funds ends  *** */
+
+/* gift city funds ends */
+
+
+/* ***why unlisted shares starts  *** */
+/* ***why unlisted shares starts  *** */
+
+/* ***why unlisted shares ends *** */

@@ -167,8 +167,8 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: left;
-            margin-left: 50px;
-            margin-right: 50px;
+            margin-left:11%;
+           
         }
 
         .nps-header {

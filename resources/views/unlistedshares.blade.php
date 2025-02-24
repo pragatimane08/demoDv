@@ -19,130 +19,170 @@
     
     <!-- Page Header End -->
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insurance Information</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header>
-        <h1>Secure Your Future with Insurance</h1>
-        <p>Providing Financial Protection and Peace of Mind</p>
-    </header>
-    <section class="insurance-container">
-        <div class="insurance-card term-insurance">
-            <div class="image-container">
-                <img src="term-insurance-banner.jpg" alt="Term Insurance">
-            </div>
-            <div class="insurance-content">
-                <div class="icon"><i class="fas fa-user-shield"></i></div>
-                <h2>Term Insurance</h2>
-                <p>Term insurance ensures your family's financial security in case of an unfortunate event. It is an affordable and straightforward life insurance policy that provides a lump sum to beneficiaries.</p>
-                <h3>Key Benefits:</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Affordable premiums with high coverage</li>
-                    <li><i class="fas fa-check-circle"></i> Customizable policy terms (10-40 years)</li>
-                    <li><i class="fas fa-check-circle"></i> Additional riders for critical illness & disability</li>
-                    <li><i class="fas fa-check-circle"></i> Tax benefits under Section 80C</li>
-                    <li><i class="fas fa-check-circle"></i> Payout options: Lump sum or monthly income</li>
-                </ul>
-                <button class="learn-more">Learn More</button>
-            </div>
+    <section class="Retirement-Saving-feature">
+        <div class="Retirement-Saving-feature-image-container">
+            <img src="img/unlistedsharenew.jpg" alt="Retirement Saving Image">
         </div>
-        <div class="insurance-card health-insurance">
-            <div class="image-container">
-                <img src="health-insurance-banner.jpg" alt="Health Insurance">
-            </div>
-            <div class="insurance-content">
-                <div class="icon"><i class="fas fa-heartbeat"></i></div>
-                <h2>Health Insurance</h2>
-                <p>Health insurance protects you from high medical costs, covering hospitalization, treatments, and preventive healthcare services.</p>
-                <h3>Key Benefits:</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Cashless treatment at network hospitals</li>
-                    <li><i class="fas fa-check-circle"></i> Coverage for pre-existing diseases</li>
-                    <li><i class="fas fa-check-circle"></i> Critical illness & maternity coverage</li>
-                    <li><i class="fas fa-check-circle"></i> Free annual health check-ups</li>
-                    <li><i class="fas fa-check-circle"></i> Tax benefits under Section 80D</li>
-                </ul>
-                <button class="learn-more">Learn More</button>
-            </div>
+        <div class="Retirement-Saving-feature-content">
+            <span class="Retirement-Saving-feature-subheading">Unlisted Shares</span>
+            <p class="Retirement-Saving-feature-description">
+            Invest in companies that are not yet listed on the stock exchange and be a part of their growth story. Unlisted shares provide exclusive investment opportunities in promising private companies with the potential for high returns.   
+            </p>
+            <a href="{{ route('schedulemeeting') }}" class="schedule-meeting-btn">Schedule Meeting</a>
         </div>
     </section>
-</body>
-</html>
+
+    <div class="container-unlisted">
+    <div class="image-section" style="background-image: url('img/unlist1.jpg');"></div>
+    <div class="content-unlisted">
+        <h2 class="section-heading">Why Unlisted Shares?</h2>
+        <div class="wyhunlisted-shares-section">
+            <div class="wyhunlisted-shares-ribbon"></div>
+            <div class="wyhunlisted-shares-icon">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <div class="wyhunlisted-shares-text">
+                <h2 class="wyhunlisted-shares-title">Early Stage Investments</h2>
+                <p class="wyhunlisted-shares-description">Invest in high-growth companies before they go public. Gain early access to potential unicorns and high-return ventures.</p>
+            </div>
+        </div>
+        <div class="wyhunlisted-shares-section">
+            <div class="wyhunlisted-shares-ribbon"></div>
+            <div class="wyhunlisted-shares-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="wyhunlisted-shares-text">
+                <h2 class="wyhunlisted-shares-title">High Return Potential</h2>
+                <p class="wyhunlisted-shares-description">Unlisted shares offer the potential for significant returns, often outperforming traditional listed investments.</p>
+            </div>
+        </div>
+        <div class="wyhunlisted-shares-section">
+            <div class="wyhunlisted-shares-ribbon"></div>
+            <div class="wyhunlisted-shares-icon">
+                <i class="fas fa-globe"></i>
+            </div>
+            <div class="wyhunlisted-shares-text">
+                <h2 class="wyhunlisted-shares-title">Unique Industries</h2>
+                <p class="wyhunlisted-shares-description">Diversify your portfolio by investing in unique sectors and industries not represented in the current market listings.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #fff4e6, #d4af37);
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
-    header {
-        text-align: center;
-        padding: 20px;
-        background: #d4af37;
-        color: white;
-    }
-    .insurance-container {
+    .container-unlisted {
         display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px;
-    }
-    .insurance-card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        max-width: 400px;
-        text-align: center;
-    }
-    .image-container img {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        max-width: 1200px;
         width: 100%;
-        height: auto;
+        background: #fff8dc;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 0 auto; /* Center the container */
     }
-    .insurance-content {
+
+    .image-section {
+        width: 50%;
+        background: url('img/unlist1.jpg') no-repeat center center/cover;
+    }
+
+    .content-unlisted {
+        width: 50%;
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-    .icon {
-        font-size: 40px;
-        color: #d4af37;
-        margin-bottom: 10px;
-    }
-    h2 {
-        color: #333;
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-    ul li {
+
+    .wyhunlisted-shares-section {
         display: flex;
         align-items: center;
-        gap: 10px;
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        padding: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .learn-more {
-        background: #d4af37;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        margin-top: 10px;
-        cursor: pointer;
-        border-radius: 5px;
+
+    .wyhunlisted-shares-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     }
-    .learn-more:hover {
-        background: #b8952a;
+
+    .wyhunlisted-shares-ribbon {
+        position: absolute;
+        left: 0;
+        width: 10px;
+        height: 100%;
+        background: #D4AF37;
+    }
+
+    .wyhunlisted-shares-icon {
+        font-size: 2rem;
+        color: #D4AF37;
+        margin-right: 15px;
+    }
+
+    .wyhunlisted-shares-text {
+        flex: 1;
+    }
+
+    .wyhunlisted-shares-title {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    .wyhunlisted-shares-description {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.4;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .container-unlisted {
+            flex-direction: column; /* Stack sections vertically on smaller screens */
+        }
+
+        .image-section,
+        .content-unlisted {
+            width: 100%; /* Full width on smaller screens */
+        }
+
+        .image-section {
+            height: 200px; /* Set a fixed height for the image section */
+        }
+
+        .content-unlisted {
+            padding: 15px; /* Reduce padding for smaller screens */
+        }
+
+        .wyhunlisted-shares-section {
+            flex-direction: column; /* Stack icon and text vertically */
+            align-items: flex-start;
+        }
+
+        .wyhunlisted-shares-icon {
+            margin-bottom: 10px; /* Add space between icon and text */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .wyhunlisted-shares-title {
+            font-size: 1rem; /* Smaller font size for mobile */
+        }
+
+        .wyhunlisted-shares-description {
+            font-size: 0.8rem; /* Smaller font size for mobile */
+        }
     }
 </style>
-
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
