@@ -102,9 +102,9 @@
             <!-- Right Content -->
             <div class="pms-right-content">
                 <div class="pms-image-container">
-                    <img src="img/aboutus-3.jpg" alt="Step 1" class="pms-step-image active" id="image1">
-                    <img src="img/aboutus-2.jpg" alt="Step 2" class="pms-step-image" id="image2">
-                    <img src="img/aboutus-1.jpg" alt="Step 3" class="pms-step-image" id="image3">
+                    <img src="img/aboutus-3.jpg" alt="Portfolio manager analyzing investment charts for PMS solutions." class="pms-step-image active" id="image1">
+                    <img src="img/aboutus-2.jpg" alt="Investment expert reviewing AIF strategy charts." class="pms-step-image" id="image2">
+                    <img src="img/aboutus-1.jpg" alt="Financial consultant examining PMS and AIF investment reports." class="pms-step-image" id="image3">
                 </div>
             </div>
         </div>

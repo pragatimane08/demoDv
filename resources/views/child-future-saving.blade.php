@@ -39,7 +39,8 @@
 <section class="child-future-saving-section">
     <div class="child-future-saving-container">
         <div class="child-future-saving-image">
-            <img src="img/childfuturesaving.jpg" alt="Child Future Saving">
+            <img src="img/childfuturesaving.jpg" alt="Parents planning a secure financial future for their child’s
+education.">
         </div>
         <div class="child-future-saving-content">
             <h1>Secure Your Child's Future</h1>

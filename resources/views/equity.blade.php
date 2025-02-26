@@ -68,7 +68,7 @@
     <section id="equity-section1" class="what-is-equi">
         <div class="content-container">
             <div class="image-container">
-                <img src="img/equi-img-1.jpg" alt="Equity Derivative">
+                <img src="img/equi-img-1.jpg" alt="Stock market trading concept with equity derivative charts">
             </div>
             <div class="text-container">
                 <h4>What is an Equity Derivative?</h4>
@@ -99,7 +99,7 @@
 
         <!-- Right Section: Image -->
         <div class="eq-understanding-right-section">
-            <img src="img/equi-img-2.webp" alt="Group of People" class="right-image">
+            <img src="img/equi-img-2.webp" alt="Group of financial analysts discussing stock trends" class="right-image">
         </div>
     </div>
     <!-- eq-understanding - end -->
@@ -107,7 +107,7 @@
      <!-- Risk Section Start -->
 <div class="risk-container" id="risk-section2">
   <div class="image-container">
-    <img src="img/risk1.jpeg" alt="Image representing risks" class="left-image">
+    <img src="img/risk1.jpeg" alt="Stock market risk representation with declining graphs" class="left-image">
   </div>
   <div class="content-container">
     <h2>Risks in Equity and Derivatives</h2>
@@ -131,13 +131,9 @@
 
     <!-- Risk Section End -->
 
-
-    
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
-
-
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

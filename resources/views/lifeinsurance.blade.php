@@ -49,12 +49,16 @@
       </div>
     </div>
    
-    <button class="cta-button" onclick="alert('Contact us for more details!')">Learn More</button>
+    <button class="cta-button" onclick="window.location.href='{{ route('schedulemeeting') }}'">
+    Get quick advice
+</button>
+
   </div>
   <div class="insurance-wrapper">
     <h2>Protecting What Matters Most</h2>
     <div class="image-content">
-      <img src="img/lifeinsurance.jpg" alt="Life Insurance Image">
+      <img src="img/lifeinsurance.jpg" alt="Happy family secured with life insurance protection and
+financial security.">
     </div>
     <div class="info-content">
       <h3>Why It Matters</h3>

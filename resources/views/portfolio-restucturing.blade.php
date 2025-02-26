@@ -24,10 +24,12 @@
             <!-- Left Images Section -->
             <div class="portfolio-restructuring-info-images">
                 <div class="portfolio-restructuring-info-image-top">
-                    <img src="img/about.jpg" alt="Consulting" class="portfolio-restructuring-info-image">
+                    <img src="img/about.jpg" alt="Investment portfolio being optimized for better returns
+and lower risks." class="portfolio-restructuring-info-image">
                 </div>
                 <div class="portfolio-restructuring-info-image-bottom">
-                    <img src="img/project-3.jpg" alt="Graphs and Analysis" class="portfolio-restructuring-info-image">
+                    <img src="img/project-3.jpg" alt="Graphs and Analysis,Investment portfolio being optimized for better returns
+and lower risks." class="portfolio-restructuring-info-image">
                 </div>
             </div>
             <!-- Right Content Section -->

@@ -22,7 +22,8 @@
     <!--FREP: Heading text-start  -->
     <div class="frep-container">
     <div class="frep-image">
-      <img src="img/fepr-1.jpg" alt="Portfolio Review">
+      <img src="img/fepr-1.jpg" alt="Financial advisor reviewing an investment portfolio for
+optimization.">
     </div>
     <div class="frep-content">
       <h1>Free External Portfolio Review</h1>

@@ -25,7 +25,7 @@
       <div class="iipr-image-side">
         <div class="iipr-decorative-shape iipr-shape-1"></div>
         <div class="iipr-decorative-shape iipr-shape-2"></div>
-        <img src="img/iipr-img-1.jpeg" alt="Portfolio Management">
+        <img src="img/iipr-img-1.jpeg" alt="Client comparing insurance policies with expert guidance.">
       </div>
 
       <div class="iipr-content-side">

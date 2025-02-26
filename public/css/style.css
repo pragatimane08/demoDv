@@ -10763,6 +10763,82 @@ body {
   line-height: 1.6;
 }
 
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller desktops */
+@media (max-width: 1200px) {
+  .about-gift-city-section {
+    margin-left: 5%; /* Adjust margin for smaller screens */
+    padding: 60px 0; /* Reduce padding */
+  }
+
+  .section-heading {
+    font-size: 2.2rem; /* Reduce heading size */
+  }
+
+  .section-description {
+    font-size: 1rem; /* Reduce description text size */
+  }
+}
+
+/* For tablets in portrait mode */
+@media (max-width: 768px) {
+  .about-gift-city-section {
+    margin-left: 10%; /* Further adjust margin */
+    padding: 50px 0; /* Reduce padding */
+  }
+
+  .section-heading {
+    font-size: 2rem; /* Further reduce heading size */
+  }
+
+  .section-description {
+    font-size: 0.95rem; /* Further reduce description text size */
+    text-align: left; /* Align text to the left for better readability */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .about-gift-city-section {
+    margin-left: 5%; /* Adjust margin for mobile */
+    padding: 40px 0; /* Reduce padding */
+    width: 90%; /* Ensure it doesn't overflow */
+    margin: 0 auto 30px; /* Center the section */
+  }
+
+  .section-heading {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .section-description {
+    font-size: 0.9rem; /* Further reduce description text size */
+    line-height: 1.8; /* Adjust line height for better readability */
+  }
+}
+
+/* For very small devices (e.g., smartphones < 400px) */
+@media (max-width: 400px) {
+  .about-gift-city-section {
+    padding: 30px 0; /* Further reduce padding */
+    width: 95%; /* Increase width to use more screen space */
+  }
+
+  .section-heading {
+    font-size: 1.6rem; /* Further reduce heading size */
+  }
+
+  .section-heading::after {
+    width: 40px; /* Reduce the width of the golden line */
+    height: 2px; /* Reduce the height of the golden line */
+  }
+
+  .section-description {
+    font-size: 0.85rem; /* Further reduce description text size */
+    line-height: 1.7; /* Adjust line height for better readability */
+  }
+}
+
 /* Golden line connecting timeline items */
 .timeline-features::before {
   content: '';
@@ -10948,5 +11024,116 @@ body {
 
 /* ***why unlisted shares starts  *** */
 /* ***why unlisted shares starts  *** */
+.container-unlisted {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  max-width: 1200px;
+  width: 100%;
+  background: #fff8dc;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the container */
+}
 
+.image-section {
+  width: 100%; /* Full width on smaller screens */
+  height: 300px; /* Set a fixed height for the image section */
+  background: url('img/unlist1.jpg') no-repeat center center/cover;
+}
+
+.content-unlisted {
+  width: 100%; /* Full width on smaller screens */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wyhunlisted-shares-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wyhunlisted-shares-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.wyhunlisted-shares-ribbon {
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: #D4AF37;
+}
+
+.wyhunlisted-shares-icon {
+  font-size: 2rem;
+  color: #D4AF37;
+  margin-right: 15px;
+}
+
+.wyhunlisted-shares-text {
+  flex: 1;
+}
+
+.wyhunlisted-shares-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.wyhunlisted-shares-description {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Responsive Media Queries */
+@media (min-width: 768px) {
+  .image-section {
+    width: 50%; /* Half width on tablets and larger screens */
+    height: auto; /* Reset height to auto */
+  }
+
+  .content-unlisted {
+    width: 50%; /* Half width on tablets and larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-unlisted {
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  }
+}
+/* Media Queries for Responsive Design */
+
+/* For tablets and larger screens (768px and above) */
+@media (min-width: 768px) {
+  .image-section {
+    width: 50%; /* Half width on tablets and larger screens */
+    height: auto; /* Reset height to auto */
+  }
+
+  .content-unlisted {
+    width: 50%; /* Half width on tablets and larger screens */
+  }
+}
+
+/* For desktops and larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .container-unlisted {
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  }
+}
 /* ***why unlisted shares ends *** */

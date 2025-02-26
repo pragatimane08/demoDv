@@ -6,7 +6,7 @@
     
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/seminarhd.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    style="background: url('{{ asset('img/seminaryouthhd.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 60vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Investment Seminar For Youth</h1>
            <nav aria-label="breadcrumb animated slideInDown">
@@ -26,7 +26,8 @@
    <!-- New Image and Information Section -->
     <section class="info-section">
         <div class="info-image">
-            <img src="img/y45.jpeg" alt="Investment Seminars">
+            <img src="img/y45.jpeg" alt="Speaker educating attendees on stock market and
+mutual fund investments.">
         </div>
         <div class="info-content">
             <h1> Investment Seminars for Youth</h1>
@@ -141,9 +142,12 @@
     <div class="flyer-content">
     <div class="carousel">
     <div class="carousel-images">
-        <img src="img/seminar2_1.jpg" alt="Image 1">
-        <img src="img/seminar2_2.jpg" alt="Image 2">
-        <img src="img/seminar2_3.jpg" alt="Image 3">
+        <img src="img/seminar2_1.jpg" alt="Young adults learning about money
+management and investment strategies.">
+        <img src="img/seminar2_2.jpg" alt="Image 2,Young adults learning about money
+management and investment strategies.">
+        <img src="img/seminar2_3.jpg" alt="Image 3,Young adults learning about money
+management and investment strategies.">
     </div>
     <div class="carousel-buttons">
         <button class="carousel-button prev">&#10094;</button>

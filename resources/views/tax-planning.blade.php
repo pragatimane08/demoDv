@@ -55,7 +55,8 @@
     <div class="tax-saving-container">
       <!-- Left Side: Image -->
       <div class="tax-saving-image">
-        <img src="img/tax-saving-1.webp" alt="Tax Saving" />
+        <img src="img/tax-saving-1.webp" alt="Tax Saving,Tax consultant helping a client with tax-saving investment
+options." />
       </div>
 
       <!-- Right Side: Text Content -->

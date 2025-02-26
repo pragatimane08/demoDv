@@ -30,7 +30,8 @@
         <a href="{{ route('schedulemeeting') }}" class="fd-cta">Schedule Meeting</a>
     </div>
     <div class="fd-intro-image">
-        <img src="img/fixed_depo1.jpg" alt="Fixed Deposit Investments">
+    <img src="img/fixed_depo1.jpg" alt="Stack of coins symbolizing safe and secure fixed deposit investments">
+
     </div>
 </section>
 <!-- FD Header End -->

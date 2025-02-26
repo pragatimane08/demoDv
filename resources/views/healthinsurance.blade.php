@@ -33,7 +33,10 @@
         </div>
 
         <div class="health-insurance-cta-buttons">
-            <a href="#" id="advisorButton"><i class="fas fa-headset"></i> TALK TO OUR ADVISOR</a>
+        <a href="{{ route('schedulemeeting') }}" id="advisorButton">
+    <i class="fas fa-headset"></i> TALK TO OUR ADVISOR
+</a>
+</div>
         </div>
     </div>
 <!-- benefits of health insurance -->

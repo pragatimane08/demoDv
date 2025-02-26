@@ -29,7 +29,8 @@
             <a href="{{ route('schedulemeeting') }}" class="schedule-meeting-btn">Schedule Meeting</a>
         </div>
         <div class="retirement-planning-image">
-            <img src="img/retirement2.jpg" alt="Retirement Planning">
+            <img src="img/retirement2.jpg" alt="Elderly couple enjoying a peaceful retirement with smart
+investments.">
         </div>
     </div>
 </div>
@@ -39,7 +40,8 @@
   <!-- Retirement-Saving-feature-start -->
   <section class="Retirement-Saving-feature">
         <div class="Retirement-Saving-feature-image-container">
-            <img src="img/retirement-planning-feature.webp" alt="Retirement Saving Image">
+            <img src="img/retirement-planning-feature.webp" alt="Elderly couple enjoying a peaceful retirement with smart
+investments.">
         </div>
         <div class="Retirement-Saving-feature-content">
             <span class="Retirement-Saving-feature-subheading">About Retirement Saving</span>

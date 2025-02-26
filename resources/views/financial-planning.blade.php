@@ -33,7 +33,8 @@
           </p>
         </div>
         <div class="image-section">
-          <img src="img/financial-planning-img2.jpeg" alt="Financial Planning" class="hero-image">
+          <img src="img/financial-planning-img2.jpeg" alt="Planner analyzing financial goals and savings strategies
+for clients." class="hero-image">
         </div>
       </div>
     </section>
@@ -104,7 +105,8 @@
   </div>
   <div class="financial-planning-bef-image-section">
     <div class="financial-planning-bef-image-background">
-      <img src="img/fp-bef-2.jpeg" alt="Person smiling" class="profile-image">
+      <img src="img/fp-bef-2.jpeg" alt="Person smiling,Planner analyzing financial goals and savings strategies
+for clients." class="profile-image">
     </div>
   </div>
   <div class="financial-planning-bef-content-section">

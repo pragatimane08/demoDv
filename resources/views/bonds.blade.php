@@ -24,7 +24,8 @@
 
     <!-- bond-info-start -->
     <div class="bond-content">
-    <img src="/img/bond_left2.webp" alt="Bond Representation" class="bond-image">
+    <img src="/img/bond_left2.webp" alt="Government and corporate bonds certificate with stable returns
+indicator." class="bond-image">
 
     <div class="bond-text">
         <h3>Bonds</h3>
@@ -93,7 +94,8 @@
       <p>Retail investors have not tapped this investment avenue as much as others. It is good for investors looking for reasonable returns with no risk of default as the securities the Government offers these securities. These securities can be held in a demat format. The market is limited so liquidity can be a problem. Investors need to have a thorough knowledge of this investment format to invest in them. Well, then if you are the one who prefer the comforts of safety to the greed of high returns all the above debt instruments are yours to invest in.</p>
     </div>
     <div class="image-content">
-      <img src="/img/bond-gov-img1.webp" alt="Team Collaboration">
+      <img src="/img/bond-gov-img1.webp" alt="Team Collaboration,Government and corporate bonds certificate with stable returns
+indicator.">
     </div>
   </div>
 <!--Government-bond-section-end-->

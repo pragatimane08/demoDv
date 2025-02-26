@@ -25,7 +25,8 @@
         <div class="estate-planning1-herocontainer">
             <!-- Left Side: Image -->
             <div class="estate-planning1-heroimage">
-                <img src="img/ep-img-1.webp" alt="Estate Planning">
+                <img src="img/ep-img-1.webp" alt="Legal document showing estate planning and wealth transfer
+strategies.">
             </div>
 
             <!-- Right Side: Text -->

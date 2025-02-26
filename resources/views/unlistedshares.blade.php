@@ -21,7 +21,8 @@
 
     <section class="Retirement-Saving-feature">
         <div class="Retirement-Saving-feature-image-container">
-            <img src="img/unlistedsharenew.jpg" alt="Retirement Saving Image">
+            <img src="img/unlistedsharenew.jpg" alt="Private equity investor reviewing pre-IPO and unlisted shares
+portfolio.">
         </div>
         <div class="Retirement-Saving-feature-content">
             <span class="Retirement-Saving-feature-subheading">Unlisted Shares</span>
@@ -33,7 +34,7 @@
     </section>
 
     <div class="container-unlisted">
-    <div class="image-section" style="background-image: url('img/unlist1.jpg');"></div>
+    <div class="image-section" style="background-image: url('img/unlist1.jpg');" aria-label="Pre-IPO and unlisted shares portfolio"></div>
     <div class="content-unlisted">
         <h2 class="section-heading">Why Unlisted Shares?</h2>
         <div class="wyhunlisted-shares-section">
@@ -69,120 +70,7 @@
     </div>
 </div>
 
-<style>
-    .container-unlisted {
-        display: flex;
-        flex-wrap: wrap; /* Allow wrapping on smaller screens */
-        max-width: 1200px;
-        width: 100%;
-        background: #fff8dc;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        margin: 0 auto; /* Center the container */
-    }
 
-    .image-section {
-        width: 50%;
-        background: url('img/unlist1.jpg') no-repeat center center/cover;
-    }
-
-    .content-unlisted {
-        width: 50%;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .wyhunlisted-shares-section {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 15px;
-        padding: 15px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        position: relative;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .wyhunlisted-shares-section:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    }
-
-    .wyhunlisted-shares-ribbon {
-        position: absolute;
-        left: 0;
-        width: 10px;
-        height: 100%;
-        background: #D4AF37;
-    }
-
-    .wyhunlisted-shares-icon {
-        font-size: 2rem;
-        color: #D4AF37;
-        margin-right: 15px;
-    }
-
-    .wyhunlisted-shares-text {
-        flex: 1;
-    }
-
-    .wyhunlisted-shares-title {
-        font-size: 1.2rem;
-        color: #333;
-        margin-bottom: 5px;
-        font-weight: 600;
-    }
-
-    .wyhunlisted-shares-description {
-        font-size: 0.9rem;
-        color: #555;
-        line-height: 1.4;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-        .container-unlisted {
-            flex-direction: column; /* Stack sections vertically on smaller screens */
-        }
-
-        .image-section,
-        .content-unlisted {
-            width: 100%; /* Full width on smaller screens */
-        }
-
-        .image-section {
-            height: 200px; /* Set a fixed height for the image section */
-        }
-
-        .content-unlisted {
-            padding: 15px; /* Reduce padding for smaller screens */
-        }
-
-        .wyhunlisted-shares-section {
-            flex-direction: column; /* Stack icon and text vertically */
-            align-items: flex-start;
-        }
-
-        .wyhunlisted-shares-icon {
-            margin-bottom: 10px; /* Add space between icon and text */
-        }
-    }
-
-    @media (max-width: 480px) {
-        .wyhunlisted-shares-title {
-            font-size: 1rem; /* Smaller font size for mobile */
-        }
-
-        .wyhunlisted-shares-description {
-            font-size: 0.8rem; /* Smaller font size for mobile */
-        }
-    }
-</style>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
