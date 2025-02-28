@@ -301,3 +301,8 @@ Route::get('/contact-us', [ContactController::class, 'showForm'])->name('contact
 
 // Handle form submission
 Route::post('/send-mail', [ContactController::class, 'sendMail'])->name('sendMail');
+
+
+// newsletter subscribe button:
+Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
+Route::get('/newsletter/verify/{token}', [NewsletterController::class, 'verify'])->name('newsletter.verify'); 

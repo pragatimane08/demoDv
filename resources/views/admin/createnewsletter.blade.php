@@ -36,9 +36,16 @@
                 </div>
                 <div id="pdf-preview" class="preview-area"></div>
             </div>
-
+            <div class="form-group">
+    <label for="display_on_website">Display on Website:</label>
+    <select name="display_on_website" id="display_on_website" class="form-control" required>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+</div>
             <button type="submit" class="btn-submit">Create</button>
         </form>
+        
     </div>
 
     <style>

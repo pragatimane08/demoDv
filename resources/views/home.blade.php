@@ -420,96 +420,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- Blog Section Start -->
     
-<div class="container">
+<!-- Blog Start -->
 
-<div class="row justify-content-center mb-5 pb-2">
-    <div class="col-md-8 text-center heading-section ftco-animate">
-        <h2 class="mb-4"><span>Recent</span> Blog</h2>
-        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the
-            necessary regelialia. It is a paradisematic country</p>
-    </div>
-</div>
-<!-- img/houseb1.jpg',
-                'img/bigifgblog2.png',
-                'img/fixdepoblo3.png',
-                'img/incomtablog4.jpg -->
-<div class="row">
-  
-    <div class="col-md-6 col-lg-4 ftco-animate">
-        <div class="blog-entry">
-            <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                style="background-image: url('img/incomtablog4.jpg');">
-                <div class="meta-date text-center p-2">
-                    <span class="day">11</span>
-                    <span class="mos">feb</span>
-                    <span class="yr">2025</span>
-                </div>
-            </a>
-            <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">Income Tax Changes in Budget 2024: Dos and don’ts for individual taxpayers.</a></h3>
-                <div class="d-flex align-items-center mt-4">
-                    <p class="mb-0">
-                        <a href="https://www.livemint.com/budget/income-tax-changes-in-budget-2024-dos-and-don-ts-for-individual-taxpayers-gold-nps-real-estate-retirement-equities-11721819477187.html" class="btn custom-outline-btn">Read More <span
-                                class="ion-ios-arrow-round-forward"></span></a>
-                    </p>
-
-                </div>
-
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-8 text-center heading-section ftco-animate">
+                <h2 class="mb-4"><span>Recent</span> Blog</h2>
+                <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
             </div>
         </div>
-    </div>
-    <div class="col-md-6 col-lg-4 ftco-animate">
-        <div class="blog-entry">
-            <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                style="background-image: url('img/bigifgblog2.png');">
-                <div class="meta-date text-center p-2">
-                    <span class="day">11</span>
-                    <span class="mos">feb</span>
-                    <span class="yr">2025</span>
-                </div>
-            </a>
-            <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">How big a gift are GIFT city funds to NRIs? MintGenie explores.</a></h3>
-                <div class="d-flex align-items-center mt-4">
-                    <p class="mb-0">
-                        <a href="https://www.livemint.com/mutual-fund/mutual-funds-how-big-a-gift-are-gift-city-funds-to-nris-mintgenie-explore-11722323164277.html" class="btn custom-outline-btn">Read More <span
-                                class="ion-ios-arrow-round-forward"></span></a>
-                    </p>
 
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- img/fixdepoblo3.png',
-                'img/incomtablog4.jpg -->
-    <div class="col-md-6 col-lg-4 ftco-animate">
-        <div class="blog-entry">
-            <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                style="background-image: url('img/fixdepoblo3.png');">
-                <div class="meta-date text-center p-2">
-                    <span class="day">11</span>
-                    <span class="mos">Feb</span>
-                    <span class="yr">2025</span>
-                </div>
-            </a>
-            <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">Fixed Deposits: Safe investment or risky gamble? What you need to understand</a></h3>
-
-                <div class="d-flex align-items-center mt-4">
-                    <p class="mb-0">
-                        <a href="https://www.livemint.com/money/personal-finance/fixed-deposits-safe-investment-or-risky-gamble-what-you-need-to-understand-11735537809836.html" class="btn custom-outline-btn">Read More <span
-                                class="ion-ios-arrow-round-forward"></span>
+        <div class="row">
+            @foreach ($blogs as $blog)
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="blog-entry">
+                        <a href="{{ $blog->link }}" class="block-20 d-flex align-items-end" style="background-image: url('{{ asset('storage/' . $blog->image) }}');">
+                            <div class="meta-date text-center p-2">
+                                <span class="day">{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</span>
+                                <span class="mos">{{ \Carbon\Carbon::parse($blog->created_at)->format('F') }}</span>
+                                <span class="yr">{{ \Carbon\Carbon::parse($blog->created_at)->format('Y') }}</span>
+                            </div>
                         </a>
-                    </p>
-                    
+                        <div class="text bg-white p-4">
+                            <h3 class="heading"><a href="{{ $blog->link }}">{{ $blog->title }}</a></h3>
+                            <p>{{ Str::limit($blog->description, 150) }}</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <p class="mb-0"><a href="{{ $blog->link }}" class="btn custom-outline-btn">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                               
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </div>
-    
-</div>
-</div>
 </div>
 
     <!-- Blog End -->
