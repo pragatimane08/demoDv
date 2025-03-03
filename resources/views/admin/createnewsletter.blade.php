@@ -1,52 +1,53 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container">
-        <h1 class="page-title">Create Newsletter</h1>
+<div class="container">
+    <h1 class="page-title">Create Newsletter</h1>
 
-        <form action="{{ route('newsletters.store') }}" method="POST" enctype="multipart/form-data" class="newsletter-form">
-            @csrf
-            <div class="form-group">
-                <label for="title">Title:</label>
-                <input type="text" name="title" id="title" class="form-control" required>
-            </div>
+    <form action="{{ route('newsletters.store') }}" method="POST" enctype="multipart/form-data" class="newsletter-form">
+        @csrf
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" class="form-control" required>
+        </div>
 
-            <!-- Image Upload Section -->
-            <div class="form-group file-upload">
-                <label for="image">Image:</label>
-                <div class="upload-area">
-                    <input type="file" name="image" id="image" class="file-input-field" accept="image/*" required>
-                    <span class="upload-placeholder">
-                        <i class="fas fa-upload"></i>
-                        Drag & Drop or Click to Upload Image
-                    </span>
-                </div>
-                <div id="image-preview" class="preview-area"></div>
+        <!-- Image Upload Section -->
+        <div class="form-group file-upload">
+            <label for="image">Image:</label>
+            <div class="upload-area">
+                <input type="file" name="image" id="image" class="file-input-field" accept="image/*" required>
+                <span class="upload-placeholder">
+                    <i class="fas fa-upload"></i>
+                    Drag & Drop or Click to Upload Image
+                </span>
             </div>
+            <div id="image-preview" class="preview-area"></div>
+        </div>
 
-            <!-- PDF Upload Section -->
-            <div class="form-group file-upload">
-                <label for="pdf">PDF:</label>
-                <div class="upload-area">
-                    <input type="file" name="pdf" id="pdf" class="file-input-field" accept=".pdf" required>
-                    <span class="upload-placeholder">
-                        <i class="fas fa-file-pdf"></i>
-                        Drag & Drop or Click to Upload PDF
-                    </span>
-                </div>
-                <div id="pdf-preview" class="preview-area"></div>
+        <!-- PDF Upload Section -->
+        <div class="form-group file-upload">
+            <label for="pdf">PDF:</label>
+            <div class="upload-area">
+                <input type="file" name="pdf" id="pdf" class="file-input-field" accept=".pdf" required>
+                <span class="upload-placeholder">
+                    <i class="fas fa-file-pdf"></i>
+                    Drag & Drop or Click to Upload PDF
+                </span>
             </div>
-            <div class="form-group">
-    <label for="display_on_website">Display on Website:</label>
-    <select name="display_on_website" id="display_on_website" class="form-control" required>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-    </select>
+            <div id="pdf-preview" class="preview-area"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="display_on_website">Display on Website:</label>
+            <select name="display_on_website" id="display_on_website" class="form-control" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-submit">Create</button>
+    </form>
 </div>
-            <button type="submit" class="btn-submit">Create</button>
-        </form>
-        
-    </div>
 
     <style>
         /* General Styles */

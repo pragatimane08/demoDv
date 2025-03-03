@@ -8627,6 +8627,7 @@ body {
 /*retirement css end*/
 
 /* Our Partners Section-home page-start */
+/* Our Partners Section-home page-start */
 .home-our-partners-text {
   margin-bottom: 20px;
   text-align: left;
@@ -8692,6 +8693,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  .home-our-partners-text {
+    margin: 0 20px 20px 20px; /* Added 20px margin on left and right */
+  }
+
   .home-our-partners-text h3 {
     font-size: 1.4rem;
   }
@@ -8702,9 +8707,12 @@ body {
   }
 
   .home-our-partners-iframe {
-    height: 250px;
+    height: 100px;
+    margin: 0 20px; /* Added 20px margin on left and right for iframe */
   }
 }
+
+/* Our Partners Section-home page-end */
 
 /* Our Partners Section-home page-end */
 
@@ -11137,3 +11145,63 @@ body {
   }
 }
 /* ***why unlisted shares ends *** */
+
+
+
+/* floating bar  start*/
+/*Floting-bar-start*/
+/* Floating Form - Full Width with Reduced Height */
+.floating-form-on-all-pages {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  background: linear-gradient(to right, #d4af37, rgb(242, 216, 138), #d4af37);
+  padding: 8px 10px; 
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Input Fields */
+.floating-form-on-all-pages .input-field {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  min-width: 140px;
+  font-size: 14px; 
+  height: 36px;
+}
+
+/* Button */
+.floating-form-on-all-pages .apply-button {
+  padding: 8px 16px; 
+  background: #d4af37;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem; 
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  min-width: 180px;
+  height: 36px; 
+  margin: 0 10px; 
+}
+
+.floating-form-on-all-pages .apply-button:hover {
+  background: #b8962e;
+}
+
+/* Hide the floating form on mobile devices */
+@media (max-width: 768px) {
+  .floating-form-on-all-pages {
+      display: none; 
+  }
+}
+/*Floating-bar-end*/

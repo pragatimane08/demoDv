@@ -8,6 +8,8 @@ use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\ChangePasswordController;
 use App\Http\Controllers\ContactController;
 
+use App\Http\Controllers\QuickAdviceController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -306,3 +308,7 @@ Route::post('/send-mail', [ContactController::class, 'sendMail'])->name('sendMai
 // newsletter subscribe button:
 Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 Route::get('/newsletter/verify/{token}', [NewsletterController::class, 'verify'])->name('newsletter.verify'); 
+
+
+
+Route::post('/send-quick-advice', [QuickAdviceController::class, 'sendQuickAdvice'])->name('send.quick.advice');

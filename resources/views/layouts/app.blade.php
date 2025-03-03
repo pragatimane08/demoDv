@@ -265,6 +265,7 @@
     
     @yield('content')
     
+    @include('partials.floating_bar')
 
     <!-- Footer -->
     @include('partials.footer')

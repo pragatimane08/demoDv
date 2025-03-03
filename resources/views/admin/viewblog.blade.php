@@ -96,6 +96,7 @@
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 /* Header */
@@ -274,10 +275,12 @@ td img {
 @media (max-width: 768px) {
     .admin-container {
         padding: 0.5rem;
+        margin-bottom: 20px;
     }
 
     h1 {
         font-size: 22px;
+        margin-top: 40px;
     }
 
     .alert.success {
@@ -332,6 +335,7 @@ td img {
 @media (max-width: 480px) {
     h1 {
         font-size: 18px;
+        margin-top: 40px;
     }
 
     .alert.success {
@@ -388,6 +392,7 @@ td img {
     h1 {
         font-size: 18px;
         margin: 10px 0;
+        margin-top: 40px;
     }
 
     .alert.success {
@@ -460,6 +465,7 @@ td img {
 
     h1 {
         font-size: 20px;
+        margin-top: 40px;
     }
 
     .card {

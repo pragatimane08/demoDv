@@ -7,70 +7,102 @@
     <style>
         /* Add styles as you see fit */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f9;
-        }
-        .container {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 14px;
-            color: #333;
-        }
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 12px;
-            color: #aaa;
-        }
-        .alert {
-            padding: 10px;
-            margin: 10px 0;
-            color: white;
-            background-color: #f44336;
-            border-radius: 5px;
-        }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 100%;
+    padding: 25px 45px 25px 25px;
+    box-sizing: border-box;
+    border: 2px solid #d0a94e;
+}
+
+h2 {
+    text-align: center;
+    color: #d0a94e;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d0a94e;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    transition: border 0.3s ease-in-out;
+}
+
+input[type="password"]:focus {
+    border-color: #b8913b;
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #d0a94e, #b8913b);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 15px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #b8913b, #a37d2e);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.alert {
+    padding: 12px;
+    margin: 12px 0;
+    color: white;
+    background-color: #f44336;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #777;
+    font-style: italic;
+}
     </style>
 </head>
 <body>
@@ -119,7 +151,7 @@
         </form>
         
         <div class="footer">
-            <p>&copy; 2025 Your Company. All rights reserved.</p>
+            <p>&copy; 2025 DhanaVruksha Financial services Pvt Ltd . All rights reserved.</p>
         </div>
     </div>
 </body>

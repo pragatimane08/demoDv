@@ -1,7 +1,4 @@
 
-
-
-<html>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,129 +42,124 @@
         <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'/>
         
         <style>
-    body {
-        display: flex;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        height: 100vh;
-        background-color: #f4f4f4; /* Light background for the entire page */
-    }
+  body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
 
-    .sidebar {
-        width: 250px;
-        background: #d4af37; /* Gold color */
-        color: white;
-        position: fixed;
-        height: 100%;
-        left: 0;
-        top: 0;
-        transform: translateX(0);
-        transition: transform 0.3s ease;
-    }
+        .sidebar {
+            width: 250px;
+            background: #d4af37;
+            color: white;
+            position: fixed;
+            height: 100%;
+            left: 0;
+            top: 0;
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
 
-    .sidebar.hidden {
-        transform: translateX(-250px);
-    }
+        .sidebar.hidden {
+            transform: translateX(-250px);
+        }
 
-    .sidebar .profile-section {
-        text-align: center;
-        padding: 20px;
-        border-bottom: 1px solid #fff; /* White border for contrast */
-    }
+        .sidebar .profile-section {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #fff;
+        }
 
-    .sidebar .profile-section img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-    }
+        .sidebar .profile-section h4 {
+            margin: 0;
+            font-size: 18px;
+            color: white;
+        }
 
-    .sidebar .profile-section h4 {
-        margin: 0;
-        font-size: 18px;
-        color: white;
-    }
+        .sidebar a, .sidebar button {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            gap: 10px;
+            font-size: 1rem;
+            border: none;
+            background: #d4af37;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+        }
 
-    .sidebar .profile-section p {
-        font-size: 14px;
-        color: #f8f9fa; /* Light gray text for better readability */
-    }
-
-    .sidebar a,
-    .sidebar button {
-        color: white;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        padding: 15px 20px;
-        gap: 10px;
-        font-size: 1.0rem; /* Adjusted size */
-    }
-
-    .sidebar a i,
-    .sidebar button i {
-        font-size: 1.2rem; /* Icon size */
-    }
-
-    .sidebar a:hover,
-    .sidebar button:hover {
-        background: #f1c40f; /* Brighter gold on hover */
-    }
-
-    .content {
-        flex-grow: 1;
-        margin-left: 250px;
-        width: calc(100% - 250px);
-        padding: 20px;
-        background: #fff; /* White background for content */
-        overflow-y: auto;
-        transition: margin-left 0.3s ease;
-    }
-
-    .content.collapsed {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #d4af37; /* Gold color for navbar */
-        color: white;
-        padding: 10px 20px;
-    }
-
-    .navbar .navbar-brand {
-        font-size: 1.5rem;
-        color: white;
-        text-decoration: none;
-    }
-
-    .toggle-btn {
-        display: none;
-        cursor: pointer;
-        font-size: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-        .toggle-btn {
-            display: block;
+        .sidebar a:hover, .sidebar button:hover {
+            background: #f1c40f;
         }
 
         .content {
+            flex-grow: 1;
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            padding: 20px;
+            background: #fff;
+            overflow-y: auto;
+            transition: margin-left 0.3s ease;
+        }
+
+        .content.collapsed {
             margin-left: 0;
             width: 100%;
         }
 
-        .sidebar {
-            transform: translateX(-250px);
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #d4af37;
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999;
         }
 
-        .sidebar.active {
-            transform: translateX(0);
+        .navbar .navbar-brand {
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
         }
-    }
+
+        .toggle-btn {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .toggle-btn {
+                display: block;
+            }
+
+            .sidebar {
+                transform: translateX(-250px);
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
 </style>
 
 </head>
@@ -190,4 +182,3 @@
     </script>
 </body>
 </html>
-     

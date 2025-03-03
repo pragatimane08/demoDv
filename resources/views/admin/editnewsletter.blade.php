@@ -1,41 +1,58 @@
 @extends('layouts.admin')
 
 @section('content')
-<h1>Edit Newsletter</h1>
-<form action="{{ route('newsletters.update', $newsletter->id) }}" method="POST" enctype="multipart/form-data" class="newsletter-form">
-    @csrf
-    @method('PUT')
-    <div>
-        <label for="title">Title:</label>
-        <input type="text" name="title" id="title" value="{{ $newsletter->title }}" required>
-    </div>
-    <div class="file-section">
-        <label for="image">Image:</label>
-        <div class="file-preview">
-            <input type="file" name="image" id="image" class="file-input">
-            <div class="preview-container">
+<div class="container">
+    <h1>Edit Newsletter</h1>
+
+    <form action="{{ route('newsletters.update', $newsletter->id) }}" method="POST" enctype="multipart/form-data" class="newsletter-form">
+        @csrf
+        @method('PUT')
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" value="{{ $newsletter->title }}" required>
+        </div>
+
+        <!-- Image Upload Section -->
+        <div class="form-group file-upload">
+            <label for="image">Image:</label>
+            <div class="upload-area">
+                <input type="file" name="image" id="image" class="file-input-field" accept="image/*">
+                <span class="upload-placeholder">
+                    <i class="fas fa-upload"></i>
+                    Drag & Drop or Click to Upload Image
+                </span>
+            </div>
+            <div id="image-preview" class="preview-area">
                 <img src="{{ asset('storage/' . $newsletter->image) }}" alt="Current Image" class="preview-image">
             </div>
         </div>
-    </div>
-    <div class="file-section">
-        <label for="pdf">PDF:</label>
-        <div class="file-preview">
-            <input type="file" name="pdf" id="pdf" class="file-input">
-            <div class="preview-container">
+
+        <!-- PDF Upload Section -->
+        <div class="form-group file-upload">
+            <label for="pdf">PDF:</label>
+            <div class="upload-area">
+                <input type="file" name="pdf" id="pdf" class="file-input-field" accept=".pdf">
+                <span class="upload-placeholder">
+                    <i class="fas fa-file-pdf"></i>
+                    Drag & Drop or Click to Upload PDF
+                </span>
+            </div>
+            <div id="pdf-preview" class="preview-area">
                 <a href="{{ asset('storage/' . $newsletter->pdf) }}" class="preview-link" target="_blank">View Current PDF</a>
             </div>
         </div>
-    </div>
-    <div class="form-group">
+
+        <div class="form-group">
     <label for="display_on_website">Display on Website:</label>
     <select name="display_on_website" id="display_on_website" class="form-control" required>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
+        <option value="1" {{ old('display_on_website', $newsletter->display_on_website) == 1 ? 'selected' : '' }}>Yes</option>
+        <option value="0" {{ old('display_on_website', $newsletter->display_on_website, 0) == 0 ? 'selected' : '' }}>No</option>
     </select>
 </div>
-    <button type="submit">Update</button>
-</form>
+
+        <button type="submit" class="btn-submit">Update</button>
+    </form>
+</div>
 
 <style>
     /* General Styling */
@@ -148,4 +165,21 @@
         }
     }
 </style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const displaySelect = document.getElementById("display_on_website");
+
+    function toggleNewsletterDisplay() {
+        if (displaySelect.value == "1") {
+            document.querySelector(".newsletter-content").style.display = "block";
+        } else {
+            document.querySelector(".newsletter-content").style.display = "none";
+        }
+    }
+
+    displaySelect.addEventListener("change", toggleNewsletterDisplay);
+    toggleNewsletterDisplay(); // Initial call to set correct state
+});
+
+</script>
 @endsection

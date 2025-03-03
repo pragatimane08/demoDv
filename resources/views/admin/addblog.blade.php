@@ -1,10 +1,8 @@
-<!-- resources/views/admin/addblog.blade.php -->
-
 @extends('layouts.admin')
 
 @section('content')    
 <style>
-  /* General Reset */
+/* General Reset */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -12,8 +10,8 @@ body {
     color: #333;
 }
 
-/* Form Container */
-.form-container {
+/* Form Wrapper */
+.blog-form-wrapper {
     width: 700px;
     margin: 50px auto;
     padding: 50px;
@@ -25,7 +23,7 @@ body {
 }
 
 /* Form Title */
-.form-container h1 {
+.blog-form-title {
     margin-bottom: 20px;
     font-size: 2rem;
     color: #d4af37; /* Gold color */
@@ -33,7 +31,7 @@ body {
 }
 
 /* Labels */
-form label {
+.blog-label {
     display: block;
     margin-bottom: 8px;
     text-align: left;
@@ -42,9 +40,9 @@ form label {
 }
 
 /* Input Fields */
-form input[type="text"],
-form input[type="file"],
-form input[type="url"] {
+.blog-input[type="text"],
+.blog-input[type="file"],
+.blog-input[type="url"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -54,14 +52,14 @@ form input[type="url"] {
 }
 
 /* Input Field Focus */
-form input:focus {
+.blog-input:focus {
     border-color: #d4af37;
     outline: none;
     box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
 }
 
 /* Submit Button */
-form button[type="submit"] {
+.blog-submit-btn {
     width: 103%; /* Increased button width */
     padding: 14px; /* Increased padding */
     background-color: #d4af37; /* Gold */
@@ -75,64 +73,64 @@ form button[type="submit"] {
 }
 
 /* Submit Button Hover */
-form button[type="submit"]:hover {
+.blog-submit-btn:hover {
     background-color: #b8902f; /* Darker gold */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .form-container {
+    .blog-form-wrapper {
         width: 90%; /* Adjusted container width */
         padding: 30px;
     }
 
-    form input[type="text"],
-    form input[type="file"],
-    form input[type="url"],
-    form button[type="submit"] {
+    .blog-input[type="text"],
+    .blog-input[type="file"],
+    .blog-input[type="url"],
+    .blog-submit-btn {
         font-size: 14px;
     }
 
-    form button[type="submit"] {
+    .blog-submit-btn {
         width: 100%; /* Full-width button for smaller screens */
     }
 }
 
 @media (max-width: 500px) {
-    .form-container {
+    .blog-form-wrapper {
         width: 95%; /* Slightly smaller container for extra-small screens */
         padding: 20px;
     }
 
-    form input[type="text"],
-    form input[type="file"],
-    form input[type="url"] {
+    .blog-input[type="text"],
+    .blog-input[type="file"],
+    .blog-input[type="url"] {
         font-size: 13px;
         padding: 8px;
     }
 
-    form button[type="submit"] {
+    .blog-submit-btn {
         font-size: 15px;
         padding: 12px; /* Reduced padding for smaller screens */
     }
 }
+</style>
 
-    </style>
-    <div class="form-container">
-        <h1>Add New Blog</h1>
+<div class="blog-form-wrapper">
+    <h1 class="blog-form-title">Add New Blog</h1>
 
-        <form action="{{ route('admin.storeblog') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" required>
+    <form action="{{ route('admin.storeblog') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <label for="title" class="blog-label">Title</label>
+        <input type="text" name="title" id="title" class="blog-input" required>
 
-            <label for="image">Image</label>
-            <input type="file" name="image" id="image">
+        <label for="image" class="blog-label">Image</label>
+        <input type="file" name="image" id="image" class="blog-input">
 
-            <label for="link">Link</label>
-            <input type="url" name="link" id="link" required>
+        <label for="link" class="blog-label">Link</label>
+        <input type="url" name="link" id="link" class="blog-input" required>
 
-            <button type="submit">Add Blog</button>
-        </form>
-    </div>
+        <button type="submit" class="blog-submit-btn">Add Blog</button>
+    </form>
+</div>
 @endsection
