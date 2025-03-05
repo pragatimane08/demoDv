@@ -25,7 +25,10 @@ class NewsletterController extends Controller
     public function create()
     {
         Log::info('Admin accessed the create newsletter page.');
-        return view('admin.createnewsletter');
+        // Create a default newsletter object to avoid undefined variable error
+        $newsletter = new Newsletter();
+        $newsletter->display_on_website = 0; // Default to 'No' if it's a new newsletter
+        return view('admin.createnewsletter', compact('newsletter'));
     }
 
     // Admin: Store a new newsletter
@@ -48,7 +51,7 @@ class NewsletterController extends Controller
             'title' => $request->input('title'),
             'image' => $imagePath,
             'pdf' => $pdfPath,
-            'display_on_website' => $request->input('display_on_website', false),
+            'display_on_website' => $request->input('display_on_website', false), // Default to false if not provided
         ]);
 
         Log::info('Newsletter created successfully.', ['newsletter_id' => $newsletter->id]);
@@ -95,7 +98,7 @@ class NewsletterController extends Controller
 
         // Update newsletter data
         $newsletter->title = $request->input('title');
-        $newsletter->display_on_website = $request->input('display_on_website', false);
+        $newsletter->display_on_website = $request->input('display_on_website', false); // Default to false if not provided
         $newsletter->save();
 
         Log::info('Newsletter updated successfully.', ['newsletter_id' => $newsletter->id]);
@@ -127,7 +130,7 @@ class NewsletterController extends Controller
     public function frontendIndex()
     {
         Log::info('User accessed the newsletter index page.');
-        $newsletters = Newsletter::where('display_on_website', true)->latest()->paginate(10); // Ensure pagination
+        $newsletters = Newsletter::where('display_on_website', 1)->latest()->paginate(10); // Ensure pagination
         return view('newsletter', compact('newsletters'));
     }
 

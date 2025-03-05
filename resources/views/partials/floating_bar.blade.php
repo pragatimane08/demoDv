@@ -3,9 +3,9 @@
     <form id="quick-advice-form" action="{{ route('send.quick.advice') }}" method="POST">
         @csrf <!-- CSRF token for security -->
         <input type="text" name="name" placeholder="Name" class="input-field" required />
-        <input type="text" name="mobile" placeholder="Mobile" class="input-field" required />
+        <input type="text" name="mobile" placeholder="Mobile" class="input-field" id="mobile-input" required />
         <input type="email" name="email" placeholder="Email" class="input-field" required />
-        <button type="submit" class="apply-button">Schedule Meeting</button>
+        <button type="submit" class="apply-button" id="submit-button">Schedule Meeting</button>
     </form>
 </div>
 
@@ -13,6 +13,45 @@
 <div id="popup-message" style="display: none; position: fixed; top: 20px; right: 20px; background: green; color: white; padding: 10px; border-radius: 5px;">
     Meeting is scheduled. Check your email.
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Restrict mobile input to 10 digits
+        $('#mobile-input').on('input', function() {
+            this.value = this.value.replace(/\D/g, '').substring(0, 10); // Allow only digits and limit to 10
+        });
+
+        // Form submission handler
+        $('#quick-advice-form').on('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Disable the submit button to prevent multiple submissions
+            $('#submit-button').prop('disabled', true).text('Scheduling...');
+
+            $.ajax({
+                url: $(this).attr('action'),
+                method: 'POST',
+                data: $(this).serialize(),
+                success: function(response) {
+                    // Show the popup message
+                    $('#popup-message').fadeIn().delay(3000).fadeOut();
+
+                    // Reset the form fields
+                    $('#quick-advice-form')[0].reset();
+
+                    // Re-enable the submit button
+                    $('#submit-button').prop('disabled', false).text('Schedule Meeting');
+                },
+                error: function(xhr) {
+                    alert('An error occurred. Please try again.');
+
+                    // Re-enable the submit button on error
+                    $('#submit-button').prop('disabled', false).text('Schedule Meeting');
+                }
+            });
+        });
+    });
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
