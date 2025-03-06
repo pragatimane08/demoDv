@@ -38,12 +38,13 @@
         </div>
 
         <div class="form-group">
-            <label for="display_on_website">Display on Website:</label>
-            <select name="display_on_website" id="display_on_website" class="form-control" required>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-            </select>
-        </div>
+    <label for="display_on_website">Display on Website:</label>
+    <select name="display_on_website" id="display_on_website" class="form-control" required>
+        <option value="1" {{ old('display_on_website', $newsletter->display_on_website) == 1 ? 'selected' : '' }}>Yes</option>
+        <option value="0" {{ old('display_on_website', $newsletter->display_on_website) == 0 ? 'selected' : '' }}>No</option>
+    </select>
+</div>
+
 
         <button type="submit" class="btn-submit">Create</button>
     </form>

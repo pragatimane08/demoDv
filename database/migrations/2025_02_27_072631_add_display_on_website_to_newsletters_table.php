@@ -12,7 +12,7 @@ return new class extends Migration
     public function up()
 {
     Schema::table('newsletters', function (Blueprint $table) {
-        $table->boolean('display_on_website')->default(true);
+        $table->boolean('display_on_website')->default(false)->change();
     });
 }
 

@@ -378,6 +378,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
     <!-- Step 3 -->
     <div class="home-step">
+        
       <div class="home-icon-container">
         <img src="img/hiw-home-img-3.png" alt="Step 3 Icon" class="home-step-icon">
         <span class="home-step-number">3</span>

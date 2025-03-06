@@ -19,7 +19,7 @@
 
 <style>
     /* Default styling */
-.topabar-h1 {
+    .topabar-h1 {
     background: linear-gradient(135deg, #AE8625 0%, #F7EF8A 30%, #D2AC47 60%, #EDC967 100%);
     font-weight: bold;
     -webkit-background-clip: text; /* Clips the gradient inside the text */
@@ -41,7 +41,7 @@
 /* Mobile View (Screen width <= 768px) */
 @media (max-width: 768px) {
     .topabar-h1 {
-        font-size: 10.7px;
+        font-size: 9.5px;
         text-align: center;
         margin-right: 0;
     }
@@ -50,7 +50,7 @@
 /* Small Mobile View (Screen width <= 480px) */
 @media (max-width: 480px) {
     .topabar-h1 {
-        font-size: 9.7px;
+        font-size: 9.45px;
         text-align: center;
         white-space: normal; /* Allows text wrapping on small screens */
     }
