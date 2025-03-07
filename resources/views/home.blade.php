@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+
+
 <!-- Carousel Start -->
 <div class="container-fluid px-0 mb-5">
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
@@ -540,7 +542,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Hide navigation buttons on small screens
         function handleResize() {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 880) {
                 prevButton.style.display = 'none';
                 nextButton.style.display = 'none';
             } else {

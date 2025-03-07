@@ -18,8 +18,8 @@
 
 
 <style>
-    /* Default styling */
-    .topabar-h1 {
+ /* Default styling */
+.topabar-h1 {
     background: linear-gradient(135deg, #AE8625 0%, #F7EF8A 30%, #D2AC47 60%, #EDC967 100%);
     font-weight: bold;
     -webkit-background-clip: text; /* Clips the gradient inside the text */
@@ -30,15 +30,15 @@
     margin-right: 31px;
 }
 
-/* Tablet View (Screen width <= 1024px) */
-@media (max-width: 1024px) {
+/* Tablet View (769px <= Screen width <= 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
     .topabar-h1 {
-        font-size: 12px;
-        margin-right: 25px;
+        font-size: 10.35px; /* Slightly larger font size for tablets */
+        margin-right: 20px; /* Adjusted margin for better spacing */
     }
 }
 
-/* Mobile View (Screen width <= 768px) */
+/* Smaller Tablet View (Screen width <= 768px) */
 @media (max-width: 768px) {
     .topabar-h1 {
         font-size: 9.5px;
@@ -47,15 +47,14 @@
     }
 }
 
-/* Small Mobile View (Screen width <= 480px) */
+/* Mobile View (Screen width <= 480px) */
 @media (max-width: 480px) {
     .topabar-h1 {
-        font-size: 9.45px;
+        font-size: 10px;
         text-align: center;
         white-space: normal; /* Allows text wrapping on small screens */
     }
 }
-
 
 
 </style>

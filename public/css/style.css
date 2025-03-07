@@ -64,13 +64,6 @@
   font-weight: normal;
 }
 
-/* topbar home  start*/
-/* General Styles-home */
-<<<<<<< HEAD
-=======
-/* topbar home  start*/
-/* General Styles-home */
->>>>>>> 1c864ffa67da4e755968d189b02a509aec2d03eb
 
 .Topbar-container-fluid {
   background-color: #06060b;
@@ -108,6 +101,10 @@
   flex-direction: column;
   margin-left: 15px;
   text-align: center;
+  align-content: stretch;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-between
 }
 
 .logo-title, .logo-subtitle {
@@ -194,7 +191,7 @@
   }
 
   .logo-subtitle {
-    font-size: 14px; /* Reduced from 16px */
+    font-size: 12.67px; /* Reduced from 16px */
     margin-right: 10px;
   }
 
@@ -236,12 +233,12 @@
   }
 
   .logo-title {
-     font-size: 19px; /*Reduced from 20px */
+     font-size: 21px; /*Reduced from 20px */
     margin-right: 13px;
   }
 
   .logo-subtitle {
-    font-size: 11.25px; /* Reduced from 12px */
+    font-size: 12px; /* Reduced from 12px */
     margin-right: 6px;
   }
 
@@ -1437,6 +1434,26 @@
   }
 
   
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .testimonial {
+    flex-direction: row; /* Ensure the layout is correct for iPads */
+    height: auto; /* Adjust height if necessary */
+  }
+
+  .testimonial img {
+    width: 40%; /* Adjust image width for iPads */
+    height: auto;
+  }
+
+  .testimonial-content {
+    padding: 30px; /* Adjust padding for iPads */
+  }
+
+  .testimonial-carousel .owl-nav {
+    top: -50px; /* Adjust navigation button position */
+  }
+
 }
 /* General styles for the nav buttons */
 /* General styles for the nav buttons */
@@ -3295,7 +3312,7 @@ html {
     margin-bottom: 10px;
   }
 
-  .mutual-fund-right h1 {
+  .mutual-fund-right h1 
     font-size: 1.4rem;
   }
 
@@ -8978,7 +8995,25 @@ body {
     max-width: 100%;
   }
 }
+/* Tablet Specific Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-dv-how-it-work .home-steps-container {
+    gap: 1.5rem;
+  }
 
+  .home-dv-how-it-work .home-step {
+    flex: 1 1 calc(50% - 1.5rem); /* Two steps per row for tablets */
+    max-width: calc(50% - 1.5rem);
+  }
+
+  .home-dv-how-it-work .home-step-title {
+    font-size: 1.2rem;
+  }
+
+  .home-dv-how-it-work .home-step-description {
+    font-size: 0.9rem;
+  }
+}
 
 /*learning page start*/
 /*learning page start*/
@@ -10354,6 +10389,55 @@ body {
 }
 
 /* life insurance start */
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframe for rotating background */
+@keyframes rotateBackground {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keyframe for pulse effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Keyframe for gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Main card styling */
 .insurance-card {
   background: linear-gradient(135deg, #fff7e6, #fff);
   border-radius: 15px;
@@ -10366,8 +10450,11 @@ body {
   overflow: hidden;
   margin: 0 auto; /* Center the card */
   width: 90%; /* Make it responsive */
+  opacity: 0; /* Start with opacity 0 for fade-in */
+  animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
 }
 
+/* Background animation for the card */
 .insurance-card::before {
   content: '';
   position: absolute;
@@ -10381,23 +10468,17 @@ body {
   animation: rotateBackground 10s linear infinite;
 }
 
-@keyframes rotateBackground {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
+/* Heading styling */
 .insurance-card h2 {
   color: #d4af37;
   font-size: 32px;
   margin-bottom: 25px;
   position: relative;
   z-index: 2;
+  animation: pulse 2s infinite ease-in-out; /* Add pulse animation */
 }
 
+/* Paragraph styling */
 .insurance-card p {
   font-size: 16px;
   line-height: 1.8;
@@ -10407,6 +10488,7 @@ body {
   z-index: 2;
 }
 
+/* Icon container styling */
 .icon-container {
   display: flex;
   justify-content: space-around;
@@ -10416,23 +10498,29 @@ body {
   flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
 }
 
+/* Individual icon styling */
 .icon-container .icon {
   font-size: 50px;
   color: #d4af37;
   transition: transform 0.3s ease, color 0.3s ease;
   margin: 10px; /* Add spacing between icons */
+  animation: pulse 2s infinite ease-in-out; /* Add pulse animation */
 }
 
+/* Icon hover effect */
 .icon-container .icon:hover {
   transform: scale(1.2);
   color: #b8860b;
+  animation: none; /* Disable pulse animation on hover */
 }
 
+/* Highlight text styling */
 .highlight {
   color: #d4af37;
   font-weight: bold;
 }
 
+/* Info boxes container styling */
 .info-boxes {
   display: flex;
   justify-content: space-between;
@@ -10443,6 +10531,7 @@ body {
   flex-wrap: wrap; /* Allow info boxes to wrap on smaller screens */
 }
 
+/* Individual info box styling */
 .info-box {
   background: rgba(255, 215, 0, 0.1);
   border: 1px solid #ffd700;
@@ -10452,40 +10541,70 @@ body {
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 20px; /* Add spacing between boxes */
+  position: relative;
+  overflow: hidden;
 }
 
+/* Info box hover effect */
 .info-box:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Info box gradient overlay on hover */
+.info-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.info-box:hover::before {
+  opacity: 1;
+}
+
+/* Info box heading styling */
 .info-box h3 {
   color: #d4af37;
   font-size: 20px;
   margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
 }
 
+/* Info box paragraph styling */
 .info-box p {
   font-size: 14px;
   color: #555;
+  position: relative;
+  z-index: 2;
 }
 
+/* Call-to-action button styling */
 .cta-button {
-  background-color: #d4af37;
+  background: linear-gradient(135deg, #d4af37, #b8860b);
   color: white;
   border: none;
   padding: 15px 30px;
   border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   z-index: 2;
+  animation: gradientAnimation 3s infinite ease-in-out; /* Add gradient animation */
 }
 
+/* Button hover effect */
 .cta-button:hover {
-  background-color: #b8860b;
   transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
 }
 
 /* Responsive Design */
