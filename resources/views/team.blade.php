@@ -163,7 +163,7 @@
             </svg>
         </button>
         <div class="profile-pic">
-            <img src="img/vbalaji.png" alt="Team Member">
+            <img src="img/vbalaji.webp" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">

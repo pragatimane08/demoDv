@@ -92,7 +92,7 @@
 }
 
 .logo-img {
-  max-height: 78px;
+  max-height: 55px;
   width: auto;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .logo-title {
-  font-size: 31px;
+  font-size: 32px;
   margin-right: 27px;
   margin-bottom: -5px;
 }
@@ -165,8 +165,8 @@
 /* For screens smaller than 1200px */
 @media (max-width: 1200px) {
   .logo-title {
-    font-size: 26px; /* Reduced from 31px */
-    margin-right: 20px;
+    font-size: 31px; /* Reduced from 31px */
+   
   }
 
   .logo-subtitle {
@@ -186,8 +186,8 @@
   }
 
   .logo-title {
-    font-size: 22px; /* Reduced from 26px */
-    margin-right: 15px;
+    font-size: 29px; /* Reduced from 26px */
+   
   }
 
   .logo-subtitle {
@@ -202,13 +202,17 @@
   .Topbar-right a, .Topbar-right small {
     font-size: 12px; /* Reduced from 13px */
   }
+  .logo-img {
+    max-height: 40px;
+  }
 }
+
 
 /* For screens smaller than 768px */
 @media (max-width: 768px) {
   .logo-title {
-    font-size: 20px; /* Reduced from 22px */
-    margin-right: 10px;
+    font-size: 23px; /* Reduced from 22px */
+ 
   }
 
   .logo-subtitle {
@@ -224,7 +228,11 @@
   .Topbar-right a, .Topbar-right small {
     font-size: 11px; /* Reduced from 12px */
   }
+  .logo-img {
+    max-height: 30px;
+  }
 }
+
 
 /* For screens smaller than 576px */
 @media (max-width: 576px) {
@@ -233,8 +241,8 @@
   }
 
   .logo-title {
-     font-size: 21px; /*Reduced from 20px */
-    margin-right: 13px;
+     font-size: 24px; /*Reduced from 20px */
+    
   }
 
   .logo-subtitle {
@@ -248,6 +256,9 @@
 
   .Topbar-right a, .Topbar-right small {
     font-size: 10px; /* Reduced from 11px */
+  }
+  .logo-img {
+    max-height: 25px;
   }
 }
 /* topbar home end */
@@ -445,7 +456,7 @@
 /* Page Header */
 .page-header {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
-              url(../img/carousel-1.jpg) center center no-repeat;
+              url(../img/carousel-1.webp) center center no-repeat;
   background-size: cover;
   padding: 50px 20px;
   text-align: center;
@@ -1538,11 +1549,13 @@
 }
 
 /*** Footer ***/
+
 /*** Footer ***/
 .footer {
   color: #B0B9AE;
   background: #111111;
-  padding: 40px 20px;
+  padding: 40px 40px 40px 60px;
+  margin-bottom: 20px;
 }
 
 .footer .btn.btn-link {
@@ -1669,6 +1682,8 @@
 @media (max-width: 768px) {
   .footer {
     text-align: center;
+    margin: 0 20px 20px;
+    padding-left: 40px;
   }
 
   .footer .row {
@@ -1693,6 +1708,8 @@
 @media (max-width: 480px) {
   .footer {
     padding: 10px 15px;
+    margin: 0 20px 20px;
+    padding-left: 40px;
   }
 
   .footer input[type="text"] {
@@ -1708,7 +1725,53 @@
     font-size: 12px;
   }
 }
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    margin: 0 0px 20px;
+    padding-left: 40px;
+  }
 
+  .footer .row {
+    flex-direction: column;
+  }
+
+  .footer .col-lg-3 {
+    margin-bottom: 20px;
+  }
+
+  .footer p {
+    font-size: 13px;
+  }
+
+  .copyright {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+  }
+}
+
+/* Adjustments for Surface Duo (540x720) */
+@media (max-width: 540px) {
+  .footer {
+    padding: 10px;  /* Adjusted padding for balanced spacing */
+    margin: 0;  /* Removed left and bottom margin */
+  }
+
+  .footer input[type="text"] {
+    font-size: 12px;
+  }
+
+  .footer button[type="button"] {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+}
+/* footer ends  */
 
 /*seminar start*/
 /* Hero Section */
@@ -7783,8 +7846,8 @@ body {
 
 /*schedule meeting start*/
 
-/*schedule meeting*/
-/* Main Container */
+/*schedule meeting start*/
+/* General Styles */
 .schedule-meeting-container {
   display: flex;
   max-width: 1200px;
@@ -7793,52 +7856,43 @@ body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   overflow: hidden;
-  align-items: center;
-  gap: 20px;
-  position: relative;
-  padding: 0 15px;
-  /* Added some padding for spacing */
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
-/* Left Panel with Image */
+/* Image Section */
 .schedule-image {
-  flex: 1.3;
-  position: relative;
-  margin-left: 10px;
-  padding-left: 10px;
+  flex: 1;
+  min-width: 400px;
   display: flex;
   justify-content: center;
-  /* Center image */
   align-items: center;
-  /* Center image */
+  background-color: #f0f0f0;
 }
 
 .schedule-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
-  max-height: 500px;
-  transition: transform 0.3s ease;
+  border-radius: 20px 0 0 20px;
 }
 
-.schedule-image img:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-/* Right Panel (Form) */
+/* Form Section */
 .schedule-form {
   flex: 1;
-  padding: 60px 50px;
+  min-width: 450px;
+  padding: 40px;
   text-align: center;
   background-color: #fff;
   border-radius: 0 20px 20px 0;
   box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .schedule-form h2 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   color: #d4af37;
   margin-bottom: 15px;
   font-weight: bold;
@@ -7850,8 +7904,8 @@ body {
   margin-bottom: 30px;
 }
 
-/* Input Fields */
-.schedule-form input {
+.schedule-form input,
+.schedule-date-field input[type="date"] {
   width: 100%;
   padding: 15px 18px;
   margin-bottom: 20px;
@@ -7862,35 +7916,15 @@ body {
   transition: border-color 0.3s ease;
 }
 
-.schedule-form input:focus {
-  border-color: #d4af37;
-  outline: none;
-  box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
-}
-
-/* Date Field with Icon */
-.schedule-date-field {
-  position: relative;
-}
-
-.schedule-date-field input[type="date"] {
-  width: 100%;
-  padding: 15px 18px;
-  padding-right: 45px;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  font-size: 1rem;
-  color: #333;
-  transition: border-color 0.3s ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
+.schedule-form input:focus,
 .schedule-date-field input:focus {
   border-color: #d4af37;
   outline: none;
   box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+.schedule-date-field {
+  position: relative;
 }
 
 .schedule-date-field i {
@@ -7903,7 +7937,6 @@ body {
   pointer-events: none;
 }
 
-/* Button Styling */
 .schedule-form button {
   width: 100%;
   padding: 15px 0;
@@ -7923,130 +7956,124 @@ body {
 }
 
 /* Responsive Design */
-
-/* Small Screens (Mobile, <= 480px) */
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
   .schedule-meeting-container {
     flex-direction: column;
-    margin: 5% auto;
-    gap: 0;
+    max-width: 90%;
   }
-
   .schedule-image {
-    flex: none;
-    height: auto;
-    /* Allow the image to scale freely */
-    margin-left: 0;
-    padding-left: 0;
+    height: 300px;
   }
-
   .schedule-image img {
     border-radius: 20px 20px 0 0;
-    object-fit: contain;
-    /* Adjust this to avoid cutting off image */
-    max-height: 350px;
-    /* Ensure image doesn't overflow */
   }
-
   .schedule-form {
-    padding: 30px 20px;
     border-radius: 0 0 20px 20px;
+    padding: 35px;
   }
+}
 
+@media (max-width: 1024px) {
+  .schedule-meeting-container {
+    flex-direction: column;
+    max-width: 95%;
+  }
+  .schedule-image {
+    height: 280px;
+  }
+  .schedule-form {
+    padding: 30px;
+  }
   .schedule-form h2 {
     font-size: 2rem;
   }
+}
 
+@media (max-width: 768px) {
+  .schedule-meeting-container {
+    flex-direction: column;
+    width: 95%;
+  }
+  .schedule-image {
+    height: 250px;
+  }
+  .schedule-form {
+    padding: 25px;
+  }
+  .schedule-form h2 {
+    font-size: 1.8rem;
+  }
   .schedule-form p {
     font-size: 1rem;
   }
-
-  .schedule-form input {
+  .schedule-form input,
+  .schedule-date-field input[type="date"] {
     padding: 12px 15px;
+    font-size: 0.95rem;
   }
-
   .schedule-form button {
     padding: 12px 0;
     font-size: 1rem;
   }
 }
 
-/* Medium Screens (Tablets, <= 768px) */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .schedule-meeting-container {
     flex-direction: column;
-    margin: 10% auto;
-    gap: 0;
+    width: 100%;
+    margin: 5% auto;
   }
-
   .schedule-image {
-    flex: none;
-    height: 300px;
-    margin-left: 0;
-    padding-left: 0;
+    height: 220px;
   }
-
-  .schedule-image img {
-    border-radius: 20px 20px 0 0;
-    object-fit: cover;
-    max-height: 300px;
-    /* Prevent overflow */
-  }
-
   .schedule-form {
-    padding: 40px 30px;
-    border-radius: 0 0 20px 20px;
+    padding: 20px;
   }
-
   .schedule-form h2 {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
   }
-
   .schedule-form p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
-
-  .schedule-form input {
-    padding: 14px 18px;
+  .schedule-form input,
+  .schedule-date-field input[type="date"] {
+    padding: 10px 12px;
+    font-size: 0.9rem;
   }
-
   .schedule-form button {
-    padding: 14px 0;
-    font-size: 1.1rem;
+    padding: 10px 0;
+    font-size: 0.9rem;
   }
 }
 
-/* Large Screens (>= 1024px) */
-@media (min-width: 1024px) {
+@media (max-width: 480px) {
   .schedule-meeting-container {
-    margin: 5% auto;
-    gap: 30px;
+    width: 100%;
   }
-
-  .schedule-image img {
-    border-radius: 20px;
-    max-height: 500px;
+  .schedule-image {
+    height: 200px;
   }
-
   .schedule-form {
-    padding: 60px 50px;
+    padding: 18px;
   }
-
   .schedule-form h2 {
-    font-size: 2.8rem;
+    font-size: 1.4rem;
   }
-
-  .schedule-form input {
-    padding: 15px 18px;
+  .schedule-form p {
+    font-size: 0.85rem;
   }
-
+  .schedule-form input,
+  .schedule-date-field input[type="date"] {
+    padding: 9px 10px;
+    font-size: 0.85rem;
+  }
   .schedule-form button {
-    padding: 15px 0;
+    padding: 10px 0;
+    font-size: 0.85rem;
   }
 }
 
 /*schedule meeting end*/
-
 /* Sidebar start */
 /* Default Styling for Floating Buttons */
 .float-slider-page .floating-buttons {
@@ -8138,6 +8165,14 @@ body {
 }
 
 /* Media Queries for Responsiveness */
+/* Hide icons on iPad (portrait & landscape) and Surface Pro */
+@media (max-width: 1024px) {
+  .float-slider-page .floating-buttons,
+  .float-slider-page .contact-buttons {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
 
   /* Hide all buttons in mobile view */
@@ -8669,13 +8704,14 @@ body {
   font-size: 2rem;
   color: #393838;
   line-height: 1.5;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .home-our-partners-iframe {
   width: 100%;
   max-width: 1280px;
-  height: 100px;
+  height: auto;
+  min-height: 100px;
   margin: 0 auto;
   display: block;
   border-radius: 8px;
@@ -8685,7 +8721,7 @@ body {
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .home-our-partners-text {
-    padding-left: 20px;
+    padding-left: 50px;
   }
 
   .home-our-partners-text h3 {
@@ -8694,11 +8730,13 @@ body {
 
   .home-our-partners-text p {
     font-size: 0.95rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .home-our-partners-iframe {
-    height: 350px;
+    height: 50vw;
+    max-height: 100px;
+    margin-left: 20px 20px;
   }
 }
 
@@ -8709,17 +8747,18 @@ body {
 
   .home-our-partners-text p {
     font-size: 0.9rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .home-our-partners-iframe {
-    height: 200px;
+    height: 45vw;
+    max-height: 100px;
   }
 }
 
 @media (max-width: 480px) {
   .home-our-partners-text {
-    margin: 0 20px 20px 20px; /* Added 20px margin on left and right */
+    margin: 0 20px 20px 20px;
   }
 
   .home-our-partners-text h3 {
@@ -8728,17 +8767,42 @@ body {
 
   .home-our-partners-text p {
     font-size: 0.85rem;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
 
   .home-our-partners-iframe {
-    height: 100px;
-    margin: 0 20px; /* Added 20px margin on left and right for iframe */
+    height: 40vw;
+    max-height: 100px;
+    margin: 0 20px;
+  }
+}
+/* Surface Duo (540x720) */
+@media (max-width: 540px) {
+  .home-our-partners-text {
+    margin: 0 auto; /* Centering the text block */
+    padding: 0 20px; /* Adjusted padding for better spacing */
+    text-align: center; /* Align text in center */
+  }
+
+  .home-our-partners-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .home-our-partners-text p {
+    font-size: 0.9rem;
+    margin-bottom: 15px; /* Reduced margin to remove extra space */
+  }
+
+  .home-our-partners-iframe {
+    width: 100%;
+    height: 45vw;
+    max-height: 100px;
+    margin: 0 auto 10px; /* Adjusted margin-bottom to reduce extra space */
+    display: block;
   }
 }
 
 /* Our Partners Section-home page-end */
-
 /* Our Partners Section-home page-end */
 
 /* How It Works Section */
@@ -11332,3 +11396,335 @@ body {
   }
 }
 /*Floating-bar-end*/
+
+/* nps start */
+/***NPS***/
+/**NPS-Info**/
+/* Base Styles */
+.nps-info-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #f7e7ce, #d0a94e);
+  color: black;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.nps-info-container h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.nps-info-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: #765300;
+  font-weight: bold;
+}
+
+.nps-info-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nps-info-container ul li {
+  background-color: white;
+  color: black;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.nps-info-container ul li.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .nps-info-container { max-width: 95%; margin: 50px auto; }
+}
+
+@media (max-width: 1023px) {
+  .nps-info-container { max-width: 90%; margin: 50px auto; }
+}
+
+@media (max-width: 768px) {
+  .nps-info-container { max-width: 85%; margin: 40px auto; }
+}
+
+@media (max-width: 480px) {
+  .nps-info-container { max-width: calc(100% - 40px); margin: 40px 20px; }
+}
+
+/**NPS-types-acc**/
+/**NPS-types-acc**/
+.nps-type-acc-container {
+  max-width: 1400px;
+  margin: auto;
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-bottom: 30px;
+  padding: 20px;
+  text-align: center;
+  background-color: #e2e2e2;
+  border-radius: 10px;
+}
+
+.nps-type-acc-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #D4AF37;
+  margin-bottom: 20px;
+}
+
+.nps-type-acc-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nps-type-acc-tier1,
+.nps-type-acc-tier2 {
+  width: 400px;
+  max-width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #D4AF37;
+  border-radius: 10px;
+  background: #f9f9f9;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease-in-out;
+}
+
+.nps-type-acc-tier2 {
+  transform: translateX(100px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nps-type-acc-container {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nps-type-acc-container {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .nps-type-acc-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nps-type-acc-tier1,
+  .nps-type-acc-tier2 {
+    width: 90%;
+    height: auto;
+  }
+}
+
+
+/**NPS-Fund**/
+.nps-fund-container {
+  width: calc(100% - 120px); /* 60px margin on both sides */
+  max-width: 1400px;
+  margin: 20px 60px;
+  padding: 20px;
+  background: white;
+  border: 2px solid #D4AF37;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+/* Heading */
+.nps-fund-header {
+  background: #D4AF37;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-size: 2rem; /* Heading size */
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Subheading */
+.nps-fund-subheader {
+  font-size: 1.5rem; /* Subheading size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Content */
+.nps-fund-content {
+  padding: 15px;
+  color: #333;
+  font-size: 1rem; /* Other text size */
+  line-height: 1.6;
+}
+
+/* Highlighted Text */
+.nps-fund-highlight {
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+/* List */
+.nps-fund-list {
+  padding-left: 20px;
+}
+
+.nps-fund-list-item {
+  margin-bottom: 10px;
+  font-size: 1rem; /* Other text size */
+}
+
+/* Contact Button */
+.nps-fund-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  background: #D4AF37;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 1rem; /* Other text size */
+  transition: background 0.3s ease-in-out;
+}
+
+.nps-fund-button:hover {
+  background: #b8962e;
+  color: white;
+}
+
+/* Text Fade-in Animation */
+.nps-fund-text {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) { /* Large screens and laptops */
+  .nps-fund-container {
+      width: calc(100% - 120px);
+      max-width: 750px;
+      margin: 20px 60px;
+  }
+}
+
+@media screen and (max-width: 992px) { /* Tablets and small desktops */
+  .nps-fund-container {
+      width: calc(100% - 120px);
+      max-width: 700px;
+      margin: 20px 60px;
+  }
+}
+
+@media screen and (max-width: 768px) { /* Tablets & large mobile devices */
+  .nps-fund-container {
+      width: calc(100% - 120px);
+      max-width: 650px;
+      padding: 15px;
+      margin: 15px 60px;
+  }
+
+  .nps-fund-header {
+      font-size: 1.8rem;
+  }
+
+  .nps-fund-subheader {
+      font-size: 1.4rem;
+  }
+
+  .nps-fund-content,
+  .nps-fund-list-item,
+  .nps-fund-button {
+      font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 576px) { /* Mobile devices */
+  .nps-fund-container {
+      width: calc(100% - 40px); /* 20px margin on both sides */
+      max-width: 500px;
+      padding: 10px;
+      margin: 10px 20px;
+  }
+
+  .nps-fund-header {
+      font-size: 1.6rem;
+      padding: 12px;
+  }
+
+  .nps-fund-subheader {
+      font-size: 1.3rem;
+  }
+
+  .nps-fund-content,
+  .nps-fund-list-item,
+  .nps-fund-button {
+      font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 400px) { /* Small mobile screens */
+  .nps-fund-container {
+      width: calc(100% - 40px); /* 20px margin on both sides */
+      max-width: 350px;
+      padding: 8px;
+      margin: 5px 20px;
+  }
+
+  .nps-fund-header {
+      font-size: 1.5rem;
+      padding: 10px;
+  }
+
+  .nps-fund-subheader {
+      font-size: 1.2rem;
+  }
+
+  .nps-fund-content,
+  .nps-fund-list-item,
+  .nps-fund-button {
+      font-size: 0.85rem;
+  }
+}
+
+/* nps ends */

@@ -25,6 +25,7 @@
 
 <!-- schudle-meeting start --> 
 <!-- Schedule Meeting Section -->
+<!-- Schedule Meeting Section -->
 <div class="schedule-meeting-container">
     <!-- Left Panel with Image -->
     <div class="schedule-image">
@@ -37,31 +38,41 @@
         <p>Let's connect and discuss your requirements!</p>
 
         <!-- Form -->
-        <form method="POST" action="{{ route('schedule.meeting') }}">
+        <form method="POST" action="{{ route('schedule.meeting') }}" onsubmit="return validateForm()">
             @csrf
-            <input type="text" name="name" placeholder="Your Name" value="{{ old('name') }}" required>
+
+            <!-- Name Field -->
+            <input type="text" name="name" id="name" placeholder="Your Name" value="{{ old('name') }}" required oninput="validateName(this)">
+<div class="error-message" id="name-error"></div>
+<!-- Email Field -->
             @error('name')
                 <div class="error-message">{{ $message }}</div>
             @enderror
 
-            <input type="email" name="email" placeholder="Your Email" value="{{ old('email') }}" required>
+            <!-- Email Field -->
+            <input type="email" name="email" id="email" placeholder="Your Email" value="{{ old('email') }}" required>
+            <div class="error-message" id="email-error"></div>
             @error('email')
                 <div class="error-message">{{ $message }}</div>
             @enderror
 
+            <!-- Phone Field -->
             <input type="tel" id="phone" name="phone" placeholder="Your Phone" value="{{ old('phone') }}" required pattern="\d{10}" maxlength="10" oninput="validatePhoneNumber(this)">
-            <span class="error-message" id="phone-error"></span>
-
+            <div class="error-message" id="phone-error"></div>
             @error('phone')
                 <div class="error-message">{{ $message }}</div>
             @enderror
 
-            <input type="date" name="date" value="{{ old('date') }}" required>
+            <!-- Date Field -->
+            <input type="date" name="date" id="date" value="{{ old('date') }}" required>
+            <div class="error-message" id="date-error"></div>
             @error('date')
                 <div class="error-message">{{ $message }}</div>
             @enderror
 
-            <input type="time" name="time" value="{{ old('time') }}" required>
+            <!-- Time Field -->
+            <input type="time" name="time" id="time" value="{{ old('time') }}" required>
+            <div class="error-message" id="time-error"></div>
             @error('time')
                 <div class="error-message">{{ $message }}</div>
             @enderror
@@ -71,6 +82,52 @@
     </div>
 </div>
 <script>
+
+function validateName(input) {
+    let nameValue = input.value.trim();
+    let nameError = document.getElementById('name-error');
+
+    // Check if the input contains any numbers
+    if (/\d/.test(nameValue)) {
+        nameError.textContent = "Name should not contain numbers.";
+        nameError.style.color = "red"; // Style the error message
+        return false; // Return false if validation fails
+    } else {
+        nameError.textContent = ""; // Clear the error message if valid
+        return true; // Return true if validation passes
+    }
+}
+
+// Validate Entire Form
+function validateForm() {
+    let nameValid = validateName(document.getElementById('name'));
+    let emailValid = validateEmail(document.getElementById('email'));
+    let phoneValid = validatePhoneNumber(document.getElementById('phone'));
+    let dateValid = validateDate(document.getElementById('date'));
+    let timeValid = validateTime(document.getElementById('time'));
+
+    // Prevent form submission if any validation fails
+    if (!nameValid || !emailValid || !phoneValid || !dateValid || !timeValid) {
+        return false; // Stop form submission
+    }
+    return true; // Allow form submission
+}
+// Validate Email Format
+function validateEmail(input) {
+    let emailValue = input.value.trim();
+    let emailError = document.getElementById('email-error');
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(emailValue)) {
+        emailError.textContent = "Please enter a valid email address.";
+        return false;
+    } else {
+        emailError.textContent = "";
+        return true;
+    }
+}
+
+// Validate Phone Number (Exactly 10 Digits)
 function validatePhoneNumber(input) {
     let phoneValue = input.value;
     let phoneError = document.getElementById('phone-error');
@@ -85,11 +142,57 @@ function validatePhoneNumber(input) {
     // Check if it is exactly 10 digits
     if (input.value.length < 10) {
         phoneError.textContent = "Enter a valid 10-digit number.";
+        return false;
     } else {
-        phoneError.textContent = ""; // Clear error if valid
+        phoneError.textContent = "";
+        return true;
     }
 }
+
+// Validate Date (Future Date Only)
+function validateDate(input) {
+    let dateValue = new Date(input.value);
+    let currentDate = new Date();
+    let dateError = document.getElementById('date-error');
+
+    if (dateValue <= currentDate) {
+        dateError.textContent = "Please select a future date.";
+        return false;
+    } else {
+        dateError.textContent = "";
+        return true;
+    }
+}
+
+// Validate Time (Future Time Only)
+function validateTime(input) {
+    let timeValue = input.value;
+    let dateValue = document.getElementById('date').value;
+    let currentDate = new Date();
+    let selectedDateTime = new Date(`${dateValue}T${timeValue}`);
+    let timeError = document.getElementById('time-error');
+
+    if (selectedDateTime <= currentDate) {
+        timeError.textContent = "Please select a future time.";
+        return false;
+    } else {
+        timeError.textContent = "";
+        return true;
+    }
+}
+
+// Validate Entire Form
+function validateForm() {
+    let nameValid = validateName(document.getElementById('name'));
+    let emailValid = validateEmail(document.getElementById('email'));
+    let phoneValid = validatePhoneNumber(document.getElementById('phone'));
+    let dateValid = validateDate(document.getElementById('date'));
+    let timeValid = validateTime(document.getElementById('time'));
+
+    return nameValid && emailValid && phoneValid && dateValid && timeValid;
+}
 </script>
+
 
 
 <!-- JavaScript for Popup Message -->

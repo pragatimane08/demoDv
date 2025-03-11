@@ -70,8 +70,8 @@
                 </a>
                 <div class="logo-text">
                     <span class="logo-title">DHANAVRUKSHA</span>
-                    <span class="logo-subtitle">FINANCIAL SERVICES PVT. LTD.</span>
-                    <h6 class="topabar-h1">YOUR GATEWAY TO FINANCIAL WELLNESS</h6>
+                    <!-- <span class="logo-subtitle">FINANCIAL SERVICES PVT. LTD.</span>
+                    <h6 class="topabar-h1">YOUR GATEWAY TO FINANCIAL WELLNESS</h6> -->
                 </div>
             </div>
 
@@ -243,7 +243,22 @@
     </div>
 </div>
 <!-- /Sidebar end -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".float-slider-page .button");
 
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            const tooltip = this.querySelector(".tooltip");
+            if (tooltip) {
+                tooltip.style.visibility = "hidden";
+                tooltip.style.opacity = "0";
+            }
+        });
+    });
+});
+
+</script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
     <script>

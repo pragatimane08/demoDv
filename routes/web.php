@@ -312,3 +312,4 @@ Route::get('/newsletter/verify/{token}', [NewsletterController::class, 'verify']
 
 
 Route::post('/send-quick-advice', [QuickAdviceController::class, 'sendQuickAdvice'])->name('send.quick.advice');
+

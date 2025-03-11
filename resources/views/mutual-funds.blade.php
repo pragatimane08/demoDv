@@ -3,7 +3,7 @@
   
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-        style="background: url('{{ asset('img/mututal fund-header-img1 (2).jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+        style="background: url('{{ asset('img/mututalfund-header-img1(2).webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
         <div class="container text-center py-5">
             <h1 class="display-2 text-white mb-4 animated slideInDown">Mutual Fund</h1>
             <nav aria-label="breadcrumb animated slideInDown">
@@ -90,7 +90,7 @@
                 <h2>Advantages of Mutual Fund</h2>
                 <ul class="advantages-list-adv">
                     <li class="advantage-item-adv">
-                        <img src="./img/mututal-1-resized.png" alt="Professional money manager analyzing financial charts" class="icon-adv">
+                        <img src="./img/mututal-1-resized.webp" alt="Professional money manager analyzing financial charts" class="icon-adv">
                         <div class="text-adv">
                             <h3>Professional Management</h3>
                             <p>Mutual funds provide professional money management, making them ideal for investors who lack 
@@ -98,21 +98,21 @@
                         </div>
                     </li>
                     <li class="advantage-item-adv">
-                        <img src="./img/mututal-2-resized.png" alt="Stacks of coins representing economies of scale in mutual funds" class="icon-adv">
+                        <img src="./img/mututal-2-resized.webp" alt="Stacks of coins representing economies of scale in mutual funds" class="icon-adv">
                         <div class="text-adv">
                             <h3>Economies of Scale</h3>
                             <p>Mutual funds buy and sell large quantities of securities, resulting in lower transaction costs for investors.</p>
                         </div>
                     </li>
                     <li class="advantage-item-adv">
-                        <img src="./img/mututal-3-resized.png" alt="Simple dashboard representation showing ease of mutual fund investing" class="icon-adv">
+                        <img src="./img/mututal-3-resized.webp" alt="Simple dashboard representation showing ease of mutual fund investing" class="icon-adv">
                         <div class="text-adv">
                             <h3>Simplicity</h3>
                             <p>Investing in mutual funds is simple, with minimum investments starting as low as Rs. 500 per month.</p>
                         </div>
                     </li>
                     <li class="advantage-item-adv">
-                        <img src="./img/mututal-4-resized (2).png" alt="A person using a smartphone to invest online" class="icon-adv">
+                        <img src="./img/mututal-4-resized (2).webp" alt="A person using a smartphone to invest online" class="icon-adv">
                         <div class="text-adv">
                             <h3>Ease Of Investing Online</h3>
                             <p>Online investing is quick, convenient, and accessible, with real-time data, low fees, and automated tools for easy decision-making.</p>

@@ -489,42 +489,70 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  /* iPad landscape and smaller desktop screens */
   .sec-features {
-    flex-wrap: wrap;
+    flex-direction: row; /* Ensure row layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    align-content: stretch; /* Stretch content to fill the container */
+    justify-content: center; /* Center items horizontally */
+    align-items: normal; /* Reset align-items to default */
   }
 
   .sec-features .feature {
-    min-width: 45%;
+    min-width: 45%; /* Two columns for iPad landscape */
     margin-bottom: 15px;
   }
 }
 
 @media (max-width: 768px) {
+  /* iPad portrait and smaller tablets */
   .sec-features {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row; /* Ensure row layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    align-content: stretch; /* Stretch content to fill the container */
+    justify-content: center; /* Center items horizontally */
+    align-items: normal; /* Reset align-items to default */
   }
-  
+
   .sec-features .feature {
-    min-width: 100%;
-    margin-bottom: 10px;
+    min-width: 45%; /* Two columns for iPad portrait */
+    margin-bottom: 20px; /* Increased spacing for better readability */
+  }
+
+  .sec-features .feature h3 {
+    font-size: 1.8rem; /* Slightly larger font for better readability */
+  }
+
+  .sec-features .feature h4 {
+    font-size: 1.4rem;
+  }
+
+  .sec-features .feature p {
+    font-size: 0.95rem; /* Adjusted for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
-  .sec-features .feature h3 {
-    font-size: 1.8rem;
-  }
-  
-  .sec-features .feature h4 {
-    font-size: 1.4rem;
-  }
-  
-  .sec-features .feature p {
-    font-size: 0.9rem;
+  /* Mobile devices */
+  .sec-features {
+    flex-direction: column; /* Switch to column layout for mobile */
+    align-items: center; /* Center items vertically */
   }
 
   .sec-features .feature {
-    margin-bottom: 0px; /* Increased spacing between cards */
+    min-width: 100%; /* Full width for mobile */
+    margin-bottom: 15px; /* Adjusted spacing for mobile */
+  }
+
+  .sec-features .feature h3 {
+    font-size: 1.6rem; /* Adjusted for smaller screens */
+  }
+
+  .sec-features .feature h4 {
+    font-size: 1.3rem;
+  }
+
+  .sec-features .feature p {
+    font-size: 0.9rem;
   }
 }

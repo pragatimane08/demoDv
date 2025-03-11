@@ -36,7 +36,7 @@
         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
             <div class="owl-carousel header-carousel">
                 <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid" src="{{ asset('img/header=5.jpg') }}" alt="Header Image">
+                    <img class="img-fluid" src="{{ asset('img/header=5.webp') }}" alt="Header Image">
                     <div class="owl-carousel-text">
                         <h4 class="display-1 text-white mb-0"></h4>
                     </div>
@@ -53,8 +53,8 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-flex flex-column">
-                        <img class="img-fluid rounded w-75 align-self-end" src="img/team-1.jpg" alt="">
-                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="img/handsh-3.jpeg" alt=""
+                        <img class="img-fluid rounded w-75 align-self-end" src="img/team-1.webp" alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="img/handsh-3.webp" alt=""
                             style="margin-top: -25%;">
                     </div>
                 </div>
@@ -127,7 +127,7 @@
             <h1 class="company-profile-heading">Our Vision & Strength</h1>
             <div class="company-profile-cards-section">
                 <div class="company-profile-card">
-                    <img src="img/target.png" alt="Mission">
+                    <img src="img/target.webp" alt="Mission">
                     <h2>Our Mission</h2>
                     <ul>
                         <li>Build a base of 1 lakh customers each with a minimum portfolio of Rs.1 crore and scale up</li>
@@ -139,7 +139,7 @@
                         </ul>
                 </div>
                 <div class="company-profile-card">
-                    <img src="img/value.png" alt="Values">
+                    <img src="img/value.webp" alt="Values">
                     <h2>Our Values</h2>
                     <ul>
                         <li>To educate the youth right from their college to empower them to make quality investments</li>
@@ -149,7 +149,7 @@
                     </ul>
                 </div>
                 <div class="company-profile-card">
-                    <img src="img/determination.png" alt="Strengths">
+                    <img src="img/determination.webp" alt="Strengths">
                     <h2>Our Strengths</h2>
                     <ul>
                         <li>Best of both worlds of Corporate Advisory and Individual Financial Advisors (IFA)</li>

@@ -20,186 +20,120 @@
 <!-- Page Header End -->
 <style>
     /* Open demat account start */
-    .open-demat-acc-container {
-        font-family: 'Poppins', Arial, sans-serif;
-        background-color: #f0f2f5;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: calc(100% - 100px); /* Account for 50px margin on both sides */
-        min-height: 100vh;
-        padding: 20px;
-        margin-left: 50px;
-        margin-right: 50px;
-        color: #333;
-        border-radius: 5px;
-    }
+     /* Open Demat Account Section */
+  .open-demat-acc-container {
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 5px;
+  }
 
-    .open-demat-acc-container .open-demat-acc-header {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+  .open-demat-acc-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-    .open-demat-acc-container .open-demat-acc-header h1 {
-        font-size: 2rem !important; /* Maintain 2rem for all screen sizes */
-        color: #d4af37; /* Golden */
-        margin-bottom: 10px;
-    }
+  .open-demat-acc-header h1 {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 10px;
+  }
 
-    .open-demat-acc-container .open-demat-acc-header p {
-        font-size: 1rem !important; /* Maintain 1rem for all screen sizes */
-        color: #555;
-    }
+  .open-demat-acc-header p {
+    font-size: 1rem;
+    color: #555;
+  }
 
-    .open-demat-acc-container .open-demat-acc-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        flex-wrap: wrap; /* Wrap items to prevent overflow */
-    }
+  .open-demat-acc-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-    .open-demat-acc-container .open-demat-acc-image-section {
-        flex: 1;
-        text-align: center;
-        padding: 20px;
-    }
+  .open-demat-acc-image-section {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+  }
 
-    .open-demat-acc-container .open-demat-acc-image-section img {
-        width: 100%;
-        height: 50%;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        object-fit: cover;
-        max-width: 100%; /* Ensure no overflow */
-    }
+  .open-demat-acc-image-section img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
 
-    .open-demat-acc-container .open-demat-acc-form-container {
-        flex: 1.5;
-        background: #f9f9f9;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+  .open-demat-acc-form-container {
+    flex: 1.5;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-    .open-demat-acc-container .open-demat-acc-form-group {
-        margin-bottom: 15px;
-        text-align: left;
-    }
+  .open-demat-acc-form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
 
-    .open-demat-acc-container .open-demat-acc-form-group label {
-        font-size: 1rem;
-        color: #d4af37; /* Golden */
-        font-weight: bold;
-    }
+  .open-demat-acc-form-group label {
+    font-size: 1rem;
+    color: #d4af37;
+    font-weight: bold;
+  }
 
-    .open-demat-acc-container .open-demat-acc-form-group input,
-    .open-demat-acc-container .open-demat-acc-form-group textarea {
-        width: calc(100% - 20px); /* Reduce width by 20px */
-        padding: 12px;
-        margin-top: 5px;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-    }
+  .open-demat-acc-form-group input,
+  .open-demat-acc-form-group textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
 
-    .open-demat-acc-container .open-demat-acc-form-group input:focus,
-    .open-demat-acc-container .open-demat-acc-form-group textarea:focus {
-        border-color: #d4af37; /* Golden */
-        box-shadow: 0 0 5px rgba(212, 175, 55, 0.5); /* Golden glow */
-        outline: none;
-    }
+  .open-demat-acc-form-group input:focus,
+  .open-demat-acc-form-group textarea:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+    outline: none;
+  }
 
-    .open-demat-acc-container .open-demat-acc-form-group textarea {
-        height: 100px;
-        resize: vertical;
-    }
+  .open-demat-acc-form-group textarea {
+    height: 100px;
+    resize: vertical;
+  }
 
-    .open-demat-acc-container .submit-btn {
-        background-color: #d4af37; /* Golden */
-        color: white;
-        padding: 15px;
-        border: none;
-        border-radius: 8px;
-        width: calc(100% - 20px); /* Reduce width by 20px */
-        cursor: pointer;
-        font-size: 1rem;
-        font-weight: bold;
-        transition: all 0.3s ease;
-    }
+  .submit-btn {
+    background-color: #d4af37;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
 
-    .open-demat-acc-container .submit-btn:hover {
-        background-color: #c39a2b; /* Slightly darker golden */
-    }
+  .submit-btn:hover {
+    background-color: #c39a2b;
+  }
 
-    .open-demat-acc-container .submit-btn:active {
-        background-color: #a87e1f; /* Even darker golden */
-    }
+  .submit-btn:active {
+    background-color: #a87e1f;
+  }
 
-    @media (max-width: 1024px) {
-        .open-demat-acc-container .open-demat-acc-content {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .open-demat-acc-container .open-demat-acc-image-section {
-            padding: 10px;
-        }
-
-        .open-demat-acc-container .open-demat-acc-form-container {
-            padding: 15px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .open-demat-acc-container {
-            padding: 10px;
-        }
-
-        /* Ensure consistent font sizes */
-        .open-demat-acc-container .open-demat-acc-header h1 {
-            font-size: 2rem !important;
-        }
-
-        .open-demat-acc-container p {
-            font-size: 1rem !important;
-        }
-
-        .open-demat-acc-container label,
-        .open-demat-acc-container input,
-        .open-demat-acc-container textarea,
-        .open-demat-acc-container .submit-btn {
-            font-size: 0.9rem;
-        }
-
-        .open-demat-acc-container .submit-btn {
-            padding: 12px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        /* Ensure consistent font sizes */
-        .open-demat-acc-container .open-demat-acc-header h1 {
-            font-size: 2rem !important;
-        }
-
-        .open-demat-acc-container p {
-            font-size: 1rem !important;
-        }
-
-        .open-demat-acc-container label,
-        .open-demat-acc-container input,
-        .open-demat-acc-container textarea,
-        .open-demat-acc-container .submit-btn {
-            font-size: 0.8rem;
-        }
-
-        .open-demat-acc-container .submit-btn {
-            padding: 10px;
-        }
-    }
-
-    /*what is oda ? */
+  /* What is a Demat Account Section */
+   /*what is oda ? */
 /* General Container for the Section */
 .wida-demat-container {
     margin: 40px auto;
@@ -338,408 +272,338 @@
         font-size: 1rem;
     }
 }
+  /* Benefits Section */
+  .odb-demat-benefits-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f0f2f5;
+  }
 
-/*benefits*/
-/* Benefits Section Styling */
-.odb-demat-benefits-section {
-  text-align: center;
-  padding: 40px 20px;
-  background:rgb(238, 235, 235);
-  margin-left: 50px;
-  margin-right: 50px;
-}
+  .benefits-heading {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
 
-/* Section Heading */
-.benefits-heading {
-  font-size: 2rem;
-  color: #333;
-  font-weight: 700;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-  font-family: 'Poppins', sans-serif;
-}
+  .odb-demat-benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-/* General Styling for the Parent Container of Benefit Cards */
-.odb-demat-benefits-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-/* Benefit Card Styling with Modern Glassmorphism Effect */
-.odb-demat-benefit-card {
-  background: linear-gradient(145deg, rgba(239, 197, 108, 0.8), rgba(245, 245, 245, 0.6));
-  backdrop-filter: blur(12px);
-  width: 30%;
-  padding: 25px 20px;
-  text-align: center;
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  position: relative;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
-}
-
-/* Hover Effect for Benefit Cards */
-.odb-demat-benefit-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(250, 250, 250, 0.8));
-}
-
-/* Subtle Glow Effect */
-.odb-demat-benefit-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 215, 0, 0.3), transparent);
-  transition: all 0.5s ease;
-  opacity: 0;
-}
-
-.odb-demat-benefit-card:hover::before {
-  opacity: 1;
-  transform: rotate(30deg);
-}
-
-/* Icon Styling inside Benefit Cards */
-.odb-demat-benefit-card i {
-  font-size: 3.5rem;
-  color: #f5a623;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.odb-demat-benefit-card:hover i {
-  color: #ff9800;
-  transform: scale(1.2);
-}
-
-/* Title Styling inside Benefit Cards */
-.odb-demat-benefit-card h3 {
-  font-size: 1.8rem;
-  color: #222;
-  font-weight: 600;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
-}
-
-/* Paragraph Styling inside Benefit Cards */
-.odb-demat-benefit-card p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-/* Responsive Media Queries */
-@media (max-width: 1024px) {
   .odb-demat-benefit-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  .odb-demat-benefit-card {
-    width: 80%;
-  }
-}
-
-@media (max-width: 480px) {
-  .odb-demat-benefit-card {
-    width: 100%;
-  }
-}
-
-/*advantage*/
-/* Advantages Section Container */
-.demat-advantages {
-  padding: 60px 50px;
-  background:rgb(233, 233, 233) /* Light Gold and White Gradient */
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  margin-top: 30px; /* Added margin top for the section */
-}
-
-/* Heading Styling */
-.advantages-heading {
-  font-size: 2.5rem;
-  color: #222; /* Black for the heading */
-  font-weight: 700;
-  margin-bottom: 40px;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Advantages Features Grid */
-.demat-features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  gap: 30px;
-  justify-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Individual Advantage Styling */
-.od-adv-demat-feature {
-  position: relative;
-  background: linear-gradient(135deg, #fff5e1 30%,rgb(244, 213, 135) 70%);
-  padding: 25px;
-  border-radius: 25px; /* Rounded design */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  background-color: white;
-}
-
-/* Hover Effect with Background */
-.od-adv-demat-feature:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  background: ;
-}
-
-/* Icon Styling */
-.od-adv-demat-feature-icon {
-  font-size: 3.5rem;
-  color: #f5a623; /* Gold color for the icon */
-  margin-bottom: 15px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Icon hover effect */
-.od-adv-demat-feature:hover .od-adv-demat-feature-icon {
-  color: #ffcc00; /* Lighter gold when hovered */
-  transform: scale(1.2);
-}
-
-/* Content Styling */
-.od-adv-demat-feature-content h2 {
-  font-size: 1.6rem;
-  color: #222; /* Black for text */
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 10px;
-}
-
-.od-adv-demat-feature-content p {
-  font-size: 1rem;
-  color: #555; /* Dark Grey for text */
-  line-height: 1.5;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .demat-features {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .demat-features {
-    grid-template-columns: 1fr; /* 1 card per row on small screens */
+    background: linear-gradient(145deg, rgba(239, 197, 108, 0.8), rgba(245, 245, 245, 0.6));
+    backdrop-filter: blur(12px);
+    width: 30%;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
 
-  .od-adv-demat-feature {
-    padding: 20px;
+  .odb-demat-benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .odb-demat-benefit-card i {
+    font-size: 3rem;
+    color: #f5a623;
+    margin-bottom: 15px;
+  }
+
+  .odb-demat-benefit-card h3 {
+    font-size: 1.5rem;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .odb-demat-benefit-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* Advantages Section */
+  .demat-advantages {
+    padding: 60px 20px;
+    background: #f0f2f5;
+    text-align: center;
   }
 
   .advantages-heading {
-    font-size: 2rem; /* Slightly smaller heading for mobile */
+    font-size: 2rem;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 40px;
   }
-}
 
-/* Margin Right and Left for the Section */
-.demat-advantages {
-  margin-right: 50px;
-  margin-left: 50px;
-}
+  .demat-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-/* Add margin-top to card's container */
-.demat-features {
-  margin-top: 30px; /* Add margin top to the grid container */
-}
+  .od-adv-demat-feature {
+    background: linear-gradient(135deg, #fff5e1 30%, #f4d587 70%);
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-/**Steps for oda**/
-/*open-demat-steps*/
-/*open-demat-steps*/
-.oda-step-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #d0a94e;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  font-weight: bold;
-}
+  .od-adv-demat-feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
 
-.oda-steps-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 0 20px;
-}
+  .od-adv-demat-feature-icon {
+    font-size: 3rem;
+    color: #f5a623;
+    margin-bottom: 15px;
+  }
 
-.oda-step {
-  display: flex;
-  align-items: center;
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 0 50px; /* Added margin on left and right */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  .od-adv-demat-feature-content h2 {
+    font-size: 1.5rem;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
 
-.oda-step:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
+  .od-adv-demat-feature-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
 
-.oda-number {
-  font-size: 1.5rem;
-  color: #ffffff;
-  background-color: #d0a94e;
-  border-radius: 50%;
-  width: 60px; /* Adjusted size */
-  height: 60px; /* Maintain a perfect circle */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  margin-right: 20px; /* Adjusted spacing */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.oda-icon {
-  font-size: 2rem;
-  color: #d0a94e;
-  margin-right: 15px;
-}
-
-.oda-step p {
-  font-size: 1rem;
-  color: #333333;
-  line-height: 1.5;
-  margin: 0;
-}
-
-@media (max-width: 1024px) {
-  .oda-step {
-    flex-direction: column;
+  /* Steps Section */
+  .oda-step-h1 {
     text-align: center;
-    margin: 0 30px; /* Adjusted for medium screens */
+    font-size: 2rem;
+    color: #d0a94e;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .oda-steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .oda-step {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .oda-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
   }
 
   .oda-number {
-    margin: 0 auto 15px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #d0a94e;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
   }
 
   .oda-icon {
-    margin: 0 auto 10px;
+    font-size: 2rem;
+    color: #d0a94e;
+    margin-right: 15px;
   }
-}
 
-@media (max-width: 768px) {
-  .oda-step {
-    width: 100%;
-    margin: 0 10px; /* Adjusted for small screens */
+  .oda-step p {
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.5;
   }
-}
 
-/*Document of open-demat-acc*/
-.oda-doc-wrapper-demat {
-      font-family: Arial, sans-serif;
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 30px;
-      background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-      border: 3px solid #d0a94e;
+  /* Documents Section */
+  .oda-doc-wrapper-demat {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 3px solid #d0a94e;
+  }
+
+  .oda-doc-wrapper-demat h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #d0a94e;
+    margin-bottom: 30px;
+  }
+
+  .oda-doc-doc-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+
+  .oda-doc-doc-item {
+    background: linear-gradient(to bottom, #fff, #f7f3ea);
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border: 2px solid #d0a94e;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .oda-doc-doc-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  .oda-doc-doc-icon {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #d0a94e;
+  }
+
+  .oda-doc-doc-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .oda-doc-doc-desc {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .odb-demat-benefit-card,
+    .od-adv-demat-feature {
+      width: 45%;
     }
 
-    h1 {
+    .oda-step {
+      flex-direction: column;
       text-align: center;
-      font-size: 2rem;
-      color: #d0a94e;
-      margin-bottom: 30px;
+    }
+
+    .oda-number {
+      margin: 0 auto 15px;
+    }
+
+    .oda-icon {
+      margin: 0 auto 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .odb-demat-benefit-card,
+    .od-adv-demat-feature {
+      width: 100%;
+    }
+
+    .open-demat-acc-content {
+      flex-direction: column;
+    }
+
+    .open-demat-acc-form-container {
+      margin-top: 20px;
+    }
+
+    .wida-demat-description {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .wida-demat-image {
+      max-width: 80%;
+    }
+
+    .wida-demat-text {
+      text-align: center;
+      max-width: 80%;
     }
 
     .oda-doc-doc-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 25px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .open-demat-acc-header h1 {
+      font-size: 1.5rem;
     }
 
-    .oda-doc-doc-item {
-      background: linear-gradient(to bottom, #fff, #f7f3ea);
-      border-radius: 15px;
-      padding: 25px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      border: 2px solid #d0a94e;
-      transition: transform 0.3s, box-shadow 0.3s;
+    .open-demat-acc-header p {
+      font-size: 0.9rem;
     }
 
-    .oda-doc-doc-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    .wida-demat-title {
+      font-size: 1.5rem;
     }
 
-    .oda-doc-doc-icon {
-      font-size: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      color: #fff;
-      background-color: #d0a94e;
+    .wida-demat-text p {
+      font-size: 0.9rem;
     }
 
-    .oda-doc-doc-title {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #333;
+    .benefits-heading,
+    .advantages-heading,
+    .oda-step-h1 {
+      font-size: 1.5rem;
     }
 
+    .odb-demat-benefit-card h3,
+    .od-adv-demat-feature-content h2 {
+      font-size: 1.2rem;
+    }
+
+    .odb-demat-benefit-card p,
+    .od-adv-demat-feature-content p,
+    .oda-step p,
     .oda-doc-doc-desc {
-      font-size: 1rem;
-      color: #555;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 768px) {
-      .oda-doc-doc-list {
-        grid-template-columns: 1fr;
-      }
-
-      .oda-doc-wrapper-demat {
-        padding: 20px;
-      }
-
-      .oda-doc-doc-item {
-        flex-direction: column;
-        text-align: center;
-      }
+    .oda-doc-wrapper-demat h1 {
+      font-size: 1.5rem;
     }
-/* open demat acccount end */
+  }
 
 </style>
 
@@ -1061,7 +925,7 @@ document.getElementById("phone").addEventListener("input", function (e) {
         </div>
     </div>
 </section>
-
+</br>
 <!-- Benefits of Opening a Demat Account-end -->
 
 <!--advantage - start -->
