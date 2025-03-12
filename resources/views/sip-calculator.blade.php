@@ -19,10 +19,9 @@
     
 <h1 class="why-planning-h2"> SIP Calculator</h1>
 
-<div style="margin-bottom: -550px;">
     <iframe src="https://www.investwell.in/updation/parameter/Calculator/par_sip_calculatorN.jsp?share=N" 
             width="100%" height="1000px" frameborder="0" scrolling="auto"></iframe>
-</div>
+
 
    
 

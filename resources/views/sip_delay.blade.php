@@ -21,10 +21,10 @@
 <!-- sip delay start -->
  
 <h1 class="why-planning-h2"> SIP Delay Calculator</h1>
-<div style="margin-bottom: -280px;">
+
     <iframe src="https://www.investwell.in/updation/parameter/Calculator/par_sipdelay_calculatorN.jsp?obgl=eeeeee&amp;fs=14&amp;ol=222222&amp;obgr=dddddddd&amp;or=111111&amp;share=N" 
             width="100%" height="800px" frameborder="0" scrolling="auto"></iframe>
-</div>
+
 
                                     
  <!-- sip delay end -->

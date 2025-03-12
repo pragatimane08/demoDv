@@ -21,10 +21,10 @@
 <!-- marriage start -->
 <h1 class="why-planning-h2"> Marriage Calculator</h1>
 
-<div style="margin-bottom: -350px;">
+
     <iframe src="https://www.investwell.in/updation/parameter/Calculator/par_marriage_plannerN.jsp?bbg=ffffff&amp;fs=12&amp;fsh=14&amp;bt=000000&amp;ht=ffffff&amp;lc=cccccc&amp;ocl=009d07&amp;share=N" 
             width="100%" height="1150" frameborder="0" scrolling="auto"></iframe>
-</div>
+
 
                             
  <!-- marriage end -->

@@ -21,9 +21,9 @@
 <!-- Page Header End -->
 
 <h1 class="why-planning-h2"> Education Calculator</h1>
-<div style="margin-bottom: -350px;">
+
 <iframe src="https://www.investwell.in/updation/parameter/Calculator/par_education_plannerN.jsp?obgl=eeeeee&amp;fs=14&amp;ol=222222&amp;obgr=dddddddd&amp;or=111111&amp;share=N" width="100%" height="1150" frameborder="0" scrolling="auto"></iframe>
-</div>
+
    
 
 

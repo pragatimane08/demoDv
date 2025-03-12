@@ -19,9 +19,9 @@
 
 <!-- lumpsum start -->
 <h1 class="why-planning-h2"> SIP+Lumpsum Calculator</h1>
-<div style="margin-bottom: -280px;">
+
 <iframe src="https://www.investwell.in/updation/parameter/Calculator/par_lumpsum_calculatorN.jsp?bbg=ffffff&ff=verdana&fs=12&fsh=14&bt=000000&ht=ffffff&lc=cccccc&ocl=455a64" width="90%" height="800" frameborder="0" scrolling="auto"></iframe>
-  </div>
+  
   <!-- lumpsum end -->
   <style>
     iframe{

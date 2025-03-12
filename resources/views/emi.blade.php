@@ -25,10 +25,10 @@
 
 <!-- Emi start -->
 <h1 class="why-planning-h2"> EMI Calculator</h>
-<div style="margin-bottom: -140px;">
+
 <iframe loading="lazy" src="https://www.investwell.in/updation/parameter/Calculator/par_emi_calculatorN.jsp?g1=00bfff&amp;g2=0086b3&amp;sbg=000000&amp;share=N" width="100%" height="750" frameborder="0" scrolling="auto"></iframe>
                                 
-</div>
+
  <!-- emi end -->
 
 
