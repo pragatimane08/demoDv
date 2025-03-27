@@ -77,6 +77,15 @@ body {
     background-color: #b8902f; /* Darker gold */
 }
 
+/* Error Messages */
+.blog-error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .blog-form-wrapper {
@@ -121,14 +130,24 @@ body {
 
     <form action="{{ route('admin.storeblog') }}" method="POST" enctype="multipart/form-data">
         @csrf
+
         <label for="title" class="blog-label">Title</label>
         <input type="text" name="title" id="title" class="blog-input" required>
+        @error('title')
+            <p class="blog-error">{{ $message }}</p>
+        @enderror
 
-        <label for="image" class="blog-label">Image</label>
-        <input type="file" name="image" id="image" class="blog-input">
+        <label for="image" class="blog-label">Image (Only JPG & PNG)</label>
+        <input type="file" name="image" id="image" class="blog-input" accept="image/jpeg, image/png" required>
+        @error('image')
+            <p class="blog-error">{{ $message }}</p>
+        @enderror
 
         <label for="link" class="blog-label">Link</label>
         <input type="url" name="link" id="link" class="blog-input" required>
+        @error('link')
+            <p class="blog-error">{{ $message }}</p>
+        @enderror
 
         <button type="submit" class="blog-submit-btn">Add Blog</button>
     </form>

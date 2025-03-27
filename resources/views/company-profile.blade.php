@@ -2,17 +2,18 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 @section('content')
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">Company Profile</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center mb-0 animated slideInDown">
-                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Company Profile</li>
-                </ol>
-            </nav>
-        </div>
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+  style="background: url('{{ asset('img/comapnyprofilehed.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    <div class="container text-center py-5">
+        <h1 class="display-2 text-white mb-4 animated slideInDown">Company Profile</h1>
+        <!-- <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="#">Contact Us</a></li>
+                <li class="breadcrumb-item"><a href="#">Contact Us</a></li>
+            </ol>
+        </nav> -->
     </div>
+</div>
     <!-- Page Header End -->
 
     <!-- Header Start -->
@@ -154,16 +155,13 @@
                     <ul>
                         <li>Best of both worlds of Corporate Advisory and Individual Financial Advisors (IFA)</li>
                         <li>High level of accountability of IFAs with the aim of having long-term relationships through quality and unbiased advisory</li>
-                        <li>Institutionalization of strategy, ideas, and research as the team has a combined work experience of 132 years in the Financial Services sector</li>
-                        <li>Human interface-based Financial Advisory</li>
-                        <li>Customizes advice based on dynamic psychological shifts of investors with technology support</li>
-                        <li>Widen the reach, simplify processes, and ensure faster communication during market crises</li>
-                        <li>Course correct with appropriate realignment of portfolio</li>
-                        <li>Implementing best industry practices and the wishful expectations of customers</li>
-                        <li>Institutionalization of strategy, ideas, and research with the team’s combined work experience of over 13 decades across the spectrum of Financial Services industry</li>
-                        <li>Human interface-based Financial Advisory complemented by the power of technology</li>
-                        <li>Constant communication with customers updating on every important market event and product innovation</li>
-                        <li>Swift action to replace products slipping into prolonged underperformance by appropriate options</li>
+                       <li>Institutionalization of strategy, ideas, and research with the team’s combined work
+                       experience of over 13 decades across the spectrum of Financial Services industry</li>    
+                      <li>Personal Financial Advisory complemented by technology for fast and seamless
+                      execution</li>
+                      <li>Constant communication with customers by instantly updating on every important
+                      market event and lucrative product opportunities</li>
+                    <li>Swift action to replace products slipping into prolonged underperformance</li>
                     </ul>
                 </div>
             </div>

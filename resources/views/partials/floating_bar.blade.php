@@ -93,6 +93,7 @@
         flex-wrap: wrap;
         justify-content: center;
         z-index: 1000;
+        height: 50px;
     }
 
     .floating-form-on-all-pages form {

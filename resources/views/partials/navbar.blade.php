@@ -50,7 +50,7 @@
 /* Mobile View (Screen width <= 480px) */
 @media (max-width: 480px) {
     .topabar-h1 {
-        font-size: 10px;
+        font-size: 9.2px;
         text-align: center;
         white-space: normal; /* Allows text wrapping on small screens */
     }
@@ -66,12 +66,12 @@
             <!-- Logo Section -->
             <div class="logo-container">
                 <a href="index.html" class="logo-link">
-                    <img src="img/cropped-logo_Dhanavruksha-01.jpg" alt="DV Logo" class="logo-img">
+                    <img src="img/dhanvrukshalogoupdated.jpg" alt="DV Logo" class="logo-img">
                 </a>
                 <div class="logo-text">
                     <span class="logo-title">DHANAVRUKSHA</span>
-                    <!-- <span class="logo-subtitle">FINANCIAL SERVICES PVT. LTD.</span>
-                    <h6 class="topabar-h1">YOUR GATEWAY TO FINANCIAL WELLNESS</h6> -->
+                    <!-- <span class="logo-subtitle">FINANCIAL SERVICES PVT. LTD.</span> -->
+                    <h6 class="topabar-h1">YOUR GATEWAY TO FINANCIAL WELLNESS</h6>
                 </div>
             </div>
 
@@ -88,9 +88,9 @@
                 <small class="d-flex align-items-center me-3 hide-on-mobile">
                     <i class="fa fa-phone-alt me-2" color="#cb9f42"></i>+91 7305888454
                 </small>
-                <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
-                    <i class="fa fa-calendar-alt me-2" color="#cb9f42"></i>Schedule Meeting for Free Portfolio Review
-                </a>
+                <!-- <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
+                    <i class="fa fa-calendar-alt me-2" color="#cb9f42"></i>Schedule Meeting for Free Portfolio Review 
+                </a> -->
                 <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
                     <i class="fa fa-briefcase me-2" color="#cb9f42"></i>Open Demat Account
                 </a>

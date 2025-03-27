@@ -13,12 +13,12 @@
     style="background: url('{{ asset('img/schedulemeetingheader.jpeg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Schedule Meeting</h1>
-           <nav aria-label="breadcrumb animated slideInDown">
+           <!-- <nav aria-label="breadcrumb animated slideInDown">
               <ol class="breadcrumb justify-content-center mb-0">
                   <li class="breadcrumb-item"><a href="#">Schedule Meeting</a></li>
                   <li class="breadcrumb-item"><a href="#">Schedule Meeting</a></li>
               </ol>
-           </nav>
+           </nav> -->
       </div>
    </div>
 </div>

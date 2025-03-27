@@ -153,7 +153,7 @@ Route::view('/blogs', 'blogs')->name('blogs');
 //blogsingle.blade.php
 Route::view('/blogsingle', 'blogsingle')->name('blogsingle');
 
-Route::view('/learning', 'learning')->name('learning');
+// Route::view('/learning', 'learning')->name('learning');
 Route::view('/kyc', 'kyc')->name('kyc');
 
 
@@ -313,3 +313,33 @@ Route::get('/newsletter/verify/{token}', [NewsletterController::class, 'verify']
 
 Route::post('/send-quick-advice', [QuickAdviceController::class, 'sendQuickAdvice'])->name('send.quick.advice');
 
+use App\Http\Controllers\ReportController;
+
+Route::prefix('admin')->group(function () {
+    Route::get('/reports', [ReportController::class, 'index'])->name('admin.viewreport');
+    Route::get('/reports/create', [ReportController::class, 'create'])->name('admin.createreport');
+    Route::post('/reports', [ReportController::class, 'store'])->name('reports.store');
+    Route::get('/reports/{id}/edit', [ReportController::class, 'edit'])->name('reports.edit');
+    Route::put('/reports/{id}', [ReportController::class, 'update'])->name('reports.update');
+    Route::delete('/reports/{id}', [ReportController::class, 'destroy'])->name('reports.destroy');
+});
+
+// Frontend route for displaying reports
+Route::get('/reports', [ReportController::class, 'frontendIndex'])->name('reports');
+
+
+use App\Http\Controllers\LearningVideoController;
+
+// Admin routes
+Route::prefix('admin')->group(function () {
+    Route::get('/videos', [LearningVideoController::class, 'index'])->name('admin.viewvideos');
+    Route::get('/videos/add', [LearningVideoController::class, 'create'])->name('admin.addvideo');
+    Route::post('/videos/store', [LearningVideoController::class, 'store'])->name('admin.storevideo');
+    Route::get('/videos/edit/{id}', [LearningVideoController::class, 'edit'])->name('admin.editvideo');
+    Route::put('/videos/update/{id}', [LearningVideoController::class, 'update'])->name('admin.updatevideo');
+    Route::delete('/videos/delete/{id}', [LearningVideoController::class, 'destroy'])->name('admin.deletevideo');
+});
+
+// Frontend route
+// Remove the view route and keep only this:
+Route::get('/learning', [LearningVideoController::class, 'showVideos'])->name('learning');

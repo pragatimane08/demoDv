@@ -8,12 +8,12 @@
     style="background: url('{{ asset('img/financialpanning.jpeg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Financial Planning</h1>
-           <nav aria-label="breadcrumb animated slideInDown">
+           <!-- <nav aria-label="breadcrumb animated slideInDown">
               <ol class="breadcrumb justify-content-center mb-0">
                   <li class="breadcrumb-item"><a href="#">Services</a></li>
                   <li class="breadcrumb-item"><a href="#">Financial Planning</a></li>
               </ol>
-           </nav>
+           </nav> -->
       </div>
    </div>
 </div>
@@ -139,49 +139,191 @@ for clients." class="profile-image">
     <p class="section-introduction">
       Financial Planning offers a coordinated and comprehensive approach to helping you achieve your personal and reasonable financial goals.
     </p>
-    <div class="section-content">
-      <p class="sequential-item">1. Building, managing, and preserving wealth is not an easy task. Maybe you have recently retired and are concerned about outliving your nest egg.</p>
-      <p class="sequential-item">2. Perhaps you are a baby boomer trying to plan for a secure retirement. Maybe you are part of the “sandwich generation”, caring for your own children at home while also caring for the needs of aging parents.</p>
-      <p class="sequential-item">3. Maybe you are recently widowed or divorced with all of the complications that these life challenges bring.</p>
-      <p class="sequential-item">4. Maybe you have accumulated substantial wealth and want to protect your assets from lawsuits, spendthrift relatives, divorce, or other potential threats not only to yourself but also to your heirs.</p>
-      <p class="sequential-item">5. Further complicating the financial landscape is the vast array of advisors and publications that typically offer conflicting opinions and advice.</p>
-      <p class="sequential-item">6. Selecting appropriate investments is simply one ingredient in the recipe for an effective financial plan that should also include retirement and estate planning.</p>
+    
+    <div class="cards-container">
+      <!-- Card 1 -->
+      <div class="planning-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Wealth Management</h3>
+          <p>Building, managing, and preserving wealth is not an easy task. Maybe you have recently retired and are concerned about outliving your nest egg.</p>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="planning-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V9h14v10zm0-12H5V5h14v2zM9.29 17.47l2.44-2.44 2.44 2.44 1.06-1.06-2.44-2.44 2.44-2.44-1.06-1.06-2.44 2.44-2.44-2.44-1.06 1.06 2.44 2.44-2.44 2.44z"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Retirement Planning</h3>
+          <p>Perhaps you are a baby boomer trying to plan for a secure retirement. Maybe you are part of the "sandwich generation".</p>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="planning-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V8z"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Life Transitions</h3>
+          <p>Maybe you are recently widowed or divorced with all of the complications that these life challenges bring.</p>
+        </div>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="planning-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Asset Protection</h3>
+          <p>Maybe you have accumulated substantial wealth and want to protect your assets from lawsuits, spendthrift relatives, or divorce.</p>
+        </div>
+      </div>
+      
+      <!-- Card 5 -->
+      <div class="planning-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Expert Guidance</h3>
+          <p>Further complicating the financial landscape is the vast array of advisors and publications that typically offer conflicting opinions.</p>
+        </div>
+      </div>
+      
+      <!-- Card 6 -->
+      <div class="planning-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"/>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Comprehensive Planning</h3>
+          <p>Selecting appropriate investments is simply one ingredient in the recipe for an effective financial plan.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<style>
+.financial-planning-section {
+  
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
 
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".sequential-item");
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  // Function to check if an element is in the viewport
-  const isInView = (element) => {
-    const rect = element.getBoundingClientRect();
-    return rect.top >= 0 && rect.bottom <= window.innerHeight;
-  };
+.section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  position: relative;
+}
 
-  // Function to reveal items sequentially on scroll
-  const showItemsSequentiallyOnScroll = () => {
-    let delay = 0;
+.section-heading:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #D4AF37;
+  margin: 15px auto;
+}
 
-    items.forEach((item) => {
-      if (isInView(item) && !item.classList.contains("show")) {
-        setTimeout(() => {
-          item.classList.add("show");
-        }, delay);
+.section-introduction {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
 
-        delay += 500; // Increment delay for sequential effect
-      }
-    });
-  };
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
 
-  // Trigger on scroll and initial page load
-  window.addEventListener("scroll", showItemsSequentiallyOnScroll);
-  window.addEventListener("load", showItemsSequentiallyOnScroll);
-});
+.planning-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-top: 4px solid #D4AF37;
+}
 
-  </script>
+.planning-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  padding: 25px 25px 0;
+  color: #D4AF37;
+}
+
+.card-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.card-content {
+  padding: 20px 25px 30px;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.card-content p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+  }
+}
+</style>
+
+
+
 <!-- FP Need -end -->
 
     

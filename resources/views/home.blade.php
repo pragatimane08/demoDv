@@ -479,14 +479,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 <button id="next">&#x203A;</button>
             </div>
             @foreach ([
-                ['img/home-testi.png', 'Santhosh Krishna', 'Dallas, Texas, USA<br>Management Consultant, Autodesk Inc.', 'I am pleased to provide a testimonial for Dhanavruksha, whose exemplary service and expertise in the financial sector have been invaluable to my financial success. Demonstrating an in-depth understanding of market dynamics, their strategic guidance has been instrumental in aligning my investment decisions with my long-term financial objectives. Their professionalism and dedication to client success are commendable, and under their advisement, my portfolio has achieved remarkable growth. I unreservedly recommend Dhanavruksha to any individual or organization seeking proficient and dependable financial consulting services.'],
-                ['img/home-testi2.png', 'Anand & Divya', 'USA', 'Choosing Dhanavruksha was one of the best decisions I have made for my financial future. Their personalized approach stood out immediately. They took the time to understand my unique financial situation, risk tolerance, and long-term objectives before crafting a tailored investment strategy for me. Not only did they provide comprehensive investment options, but they also offered insightful guidance every step of the way. I\'ve seen significant growth in my investments and feel secure in my financial future. I wholeheartedly recommend Dhanavruksha Financial Services to anyone looking to build and protect their wealth with a trusted partner by their side.'],
-                ['img/home-testi3.png', 'Dr. Saravana Raja', 'Urologist, Tirunelveli, Tamil Nadu', 'I trust Dhanavruksha for my complete Wealth Management requirements. They have helped me to organise my finances effectively and to generate great returns. While the construction of my hospital building was going on, I suddenly needed urgent funds and reached out to DV. I was pleasantly surprised that my investments had grown to a sizeable value and that amount came as a huge relief to fund the construction. I would strongly recommend DV for wealth creation.'],
-                ['img/home-testi4.png', 'M. Venkataramana', 'EX-Indian Cricketer and Current Coach, Chennai', 'Being a part of Dhanavruksha has been an incredibly rewarding experience. Their expertise and strategic insights have significantly enhanced my investment journey. I highly recommend their services to anyone seeking reliable and knowledgeable financial guidance.'],
-                ['img/home-testi5.png', 'Dr. Nambi Appadurai', 'Director, WRI India, Chennai', 'Dhanavruksha has been managing my wealth ever since its inception. I always found them honest and professional in their approach. They have a very good understanding of today\'s complex issues surrounding wealth management. They maintain their benchmark for integrity in the sphere of financial advisory and wealth management - a quality which is very rare these days but essential to establish customer confidence. I am extremely happy to be associated with Dhanavruksha. I wish them all the best in their future endeavors.'],
-                ['img/home-testi6.png', 'A. Sivakumar', 'Principal Engineer, Bangalore', 'Dhanavruksha has been extremely useful and reliable finance management firm catering to all my financial management requirements. Their communication is simple and good. Very professional in their approach. Always available for any quick wealth investment decisions too. On a whole I would recommend anybody to use their services and benefit.'],
-                ['img/home-testi7.png', 'Rajagopalan Venkataraman', 'Ex - Chairman, Mastek Ltd, UK', 'I was introduced to Dhanavruksha by one of many of their diligent employees. I had expressed very clear performance expectations for my portfolio with them. My returns have far exceeded what I expected. Their client management is unique and treats my funds as their own. My experience over the last year gives me great confidence, and I intend enhancing my funds under their management substantially over the next few months. My best wishes for Dhanavruksha to grow substantially so that many more investors are benefitted by their financial acumen.'],
-                ['img/home-testi8.png', 'Swathi Balasubramanian', 'Business Development Manager, Government of Western Australia', 'My experience with Dhanavruksha has made my life easy in planning my overall finances. Savings and investment plans were tailor-made and customized as per my preference and comfort with the support of their expert team. They simplified the concept of financial planning and I have witnessed a substantial improvement in the way my assets and income have been managed. For anyone who is looking for sustainable and consistent financial support or a planner, this team is a definite go from my side.']
+                ['img/11.webp', 'Santhosh Krishna', 'Dallas, Texas, USA<br>Management Consultant, Autodesk Inc.', 'I am pleased to provide a testimonial for Dhanavruksha, whose exemplary service and expertise in the financial sector have been invaluable to my financial success. Demonstrating an in-depth understanding of market dynamics, their strategic guidance has been instrumental in aligning my investment decisions with my long-term financial objectives. Their professionalism and dedication to client success are commendable, and under their advisement, my portfolio has achieved remarkable growth. I unreservedly recommend Dhanavruksha to any individual or organization seeking proficient and dependable financial consulting services.'],
+                ['img/12.webp', 'Anand & Divya', 'USA', 'Choosing Dhanavruksha was one of the best decisions I have made for my financial future. Their personalized approach stood out immediately. They took the time to understand my unique financial situation, risk tolerance, and long-term objectives before crafting a tailored investment strategy for me. Not only did they provide comprehensive investment options, but they also offered insightful guidance every step of the way. I\'ve seen significant growth in my investments and feel secure in my financial future. I wholeheartedly recommend Dhanavruksha Financial Services to anyone looking to build and protect their wealth with a trusted partner by their side.'],
+                ['img/13.webp', 'Dr. Saravana Raja', 'Urologist, Tirunelveli, Tamil Nadu', 'I trust Dhanavruksha for my complete Wealth Management requirements. They have helped me to organise my finances effectively and to generate great returns. While the construction of my hospital building was going on, I suddenly needed urgent funds and reached out to DV. I was pleasantly surprised that my investments had grown to a sizeable value and that amount came as a huge relief to fund the construction. I would strongly recommend DV for wealth creation.'],
+                ['img/14.webp', 'M. Venkataramana', 'EX-Indian Cricketer and Current Coach, Chennai', 'Being a part of Dhanavruksha has been an incredibly rewarding experience. Their expertise and strategic insights have significantly enhanced my investment journey. I highly recommend their services to anyone seeking reliable and knowledgeable financial guidance.'],
+                ['img/15.webp', 'Dr. Nambi Appadurai', 'Director, WRI India, Chennai', 'Dhanavruksha has been managing my wealth ever since its inception. I always found them honest and professional in their approach. They have a very good understanding of today\'s complex issues surrounding wealth management. They maintain their benchmark for integrity in the sphere of financial advisory and wealth management - a quality which is very rare these days but essential to establish customer confidence. I am extremely happy to be associated with Dhanavruksha. I wish them all the best in their future endeavors.'],
+                ['img/16.webp', 'A. Sivakumar', 'Principal Engineer, Bangalore', 'Dhanavruksha has been extremely useful and reliable finance management firm catering to all my financial management requirements. Their communication is simple and good. Very professional in their approach. Always available for any quick wealth investment decisions too. On a whole I would recommend anybody to use their services and benefit.'],
+                ['img/17.webp', 'Rajagopalan Venkataraman', 'Ex - Chairman, Mastek Ltd, UK', 'I was introduced to Dhanavruksha by one of many of their diligent employees. I had expressed very clear performance expectations for my portfolio with them. My returns have far exceeded what I expected. Their client management is unique and treats my funds as their own. My experience over the last year gives me great confidence, and I intend enhancing my funds under their management substantially over the next few months. My best wishes for Dhanavruksha to grow substantially so that many more investors are benefitted by their financial acumen.'],
+                ['img/18.webp', 'Swathi Balasubramanian', 'Business Development Manager, Government of Western Australia', 'My experience with Dhanavruksha has made my life easy in planning my overall finances. Savings and investment plans were tailor-made and customized as per my preference and comfort with the support of their expert team. They simplified the concept of financial planning and I have witnessed a substantial improvement in the way my assets and income have been managed. For anyone who is looking for sustainable and consistent financial support or a planner, this team is a definite go from my side.']
             ] as $index => $testimonial)
             <div class="testimonial {{ $index === 0 ? '' : 'hidden' }}">
                 <img src="{{ $testimonial[0] }}" alt="Testimonial Photo">
@@ -556,21 +556,155 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 </script>
 <!-- Optimized Testimonial Section End -->
-<!-- Optimized Testimonial Section End -->
+
 
 
 <!-- Our Partners Start -->
+<!-- Our Partners Start -->
 <div class="home-our-partners-section">
-    <div class="home-our-partners-container">
-        <div class="home-our-partners-text">
-            <h3>Our Partners</h3>
-            <p>We're fortunate to have incredible Partners</p>
-        </div>
-        <iframe src="https://resources.investwellonline.com/websiteitem/amc-logos-new/amc.html" 
-                class="home-our-partners-iframe" title="AMC Logos" frameborder="0">
-        </iframe>
+  <div class="home-our-partners-container">
+    <div class="home-our-partners-text">
+      <h3>Our Clients</h3>
+      <p>We're fortunate to have incredible clients.</p>
     </div>
+    <div class="home-our-partners-marquee-container">
+      <div class="home-our-partners-marquee">
+        <!-- Logo Set 1 -->
+        <div class="logo-wrapper">
+          <img src="img/our-partners/our-p-1.png" alt="Axis Mutual Fund">
+          <img src="img/our-partners/our-p-2.jpg" alt="Bank of India Mutual Fund">
+          <img src="img/our-partners/our-p-3.png" alt="Aditya Birla Capital">
+          <img src="img/our-partners/our-p-4.jpg" alt="Baroda BNP Paribas">
+          <img src="img/our-partners/our-p-5.png" alt="HDFC Mutual Fund">
+          <img src="img/our-partners/our-p-6.png" alt="ICICI Prudential">
+          <img src="img/our-partners/our-p-7.png" alt="SBI Mutual Fund">
+          <img src="img/our-partners/our-p-8.png" alt="Kotak Mahindra">
+          <img src="img/our-partners/our-p-9.png" alt="Tata Mutual Fund">
+          <img src="img/our-partners/our-p-10.png" alt="Tata Mutual Fund">
+          <img src="img/our-partners/our-p-11.png" alt="Axis Mutual Fund">
+          <img src="img/our-partners/our-p-12.png" alt="Bank of India Mutual Fund">
+          <img src="img/our-partners/our-p-13.png" alt="Aditya Birla Capital">
+          <img src="img/our-partners/our-p-14.png" alt="Baroda BNP Paribas">
+          <img src="img/our-partners/our-p-15.png" alt="HDFC Mutual Fund">
+          <img src="img/our-partners/our-p-16.png" alt="ICICI Prudential">
+          <img src="img/our-partners/our-p-17.png" alt="SBI Mutual Fund">
+          <img src="img/our-partners/our-p-18.png" alt="Kotak Mahindra">
+          <img src="img/our-partners/our-p-19.png" alt="Tata Mutual Fund">
+          <img src="img/our-partners/our-p-20.png" alt="Tata Mutual Fund">
+          <img src="img/our-partners/our-p-21.png" alt="Axis Mutual Fund">
+          <img src="img/our-partners/our-p-22.png" alt="Bank of India Mutual Fund">
+          <img src="img/our-partners/our-p-23.png" alt="Aditya Birla Capital">
+          <img src="img/our-partners/our-p-24.png" alt="Baroda BNP Paribas">
+          <img src="img/our-partners/our-p-25.png" alt="HDFC Mutual Fund">
+          <img src="img/our-partners/our-p-26.png" alt="ICICI Prudential">
+          <img src="img/our-partners/our-p-27.png" alt="SBI Mutual Fund">
+          <img src="img/our-partners/our-p-28.png" alt="Kotak Mahindra">
+          <img src="img/our-partners/our-p-29.png" alt="Tata Mutual Fund">
+          <img src="img/our-partners/our-p-30.png" alt="Tata Mutual Fund">
+          <img src="img/our-partners/our-p-31.png" alt="Axis Mutual Fund">
+          <img src="img/our-partners/our-p-32.png" alt="Bank of India Mutual Fund">
+          <img src="img/our-partners/our-p-33.png" alt="Aditya Birla Capital">
+          <img src="img/our-partners/our-p-34.png" alt="Baroda BNP Paribas">
+          <img src="img/our-partners/our-p-35.png" alt="HDFC Mutual Fund">
+        </div>
+
+        <!-- Duplicated Logo Set 2 for Infinite Scrolling -->
+        <div class="logo-wrapper">
+          <!-- Same 35 logos duplicated -->
+          <img src="img/our-partners/our-p-1.png" alt="Axis Mutual Fund">
+          <img src="img/our-partners/our-p-2.jpg" alt="Bank of India Mutual Fund">
+          <img src="img/our-partners/our-p-3.png" alt="Aditya Birla Capital">
+          <img src="img/our-partners/our-p-4.jpg" alt="Baroda BNP Paribas">
+          <img src="img/our-partners/our-p-5.png" alt="HDFC Mutual Fund">
+          <img src="img/our-partners/our-p-6.png" alt="ICICI Prudential">
+          <img src="img/our-partners/our-p-7.png" alt="SBI Mutual Fund">
+          <img src="img/our-partners/our-p-8.png" alt="Kotak Mahindra">
+          <img src="img/our-partners/our-p-9.png" alt="Tata Mutual Fund">
+          <img src="img/our-partners/our-p-10.png" alt="Tata Mutual Fund">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<!-- Our Partners End -->
+
+<style>
+/* Our Partners Section */
+.home-our-partners-section {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  color: #333;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-our-partners-text h3 {
+  font-size: 2rem;
+  color: #d4af37;
+  text-align: left;
+}
+
+.home-our-partners-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.home-our-partners-marquee {
+  display: flex;
+  width: 200%;
+  animation: scroll-left 10s linear infinite;
+}
+
+.logo-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.logo-wrapper img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-wrapper img:hover {
+  transform: scale(1.2);
+}
+
+/* Keyframes for Continuous Scrolling */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .home-our-partners-text h3 {
+    font-size: 1.5rem;
+  }
+  .logo-wrapper img {
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-our-partners-text h3 {
+    font-size: 1.3rem;
+  }
+  .logo-wrapper img {
+    height: 25px;
+  }
+}
+</style>
+
+<!-- Our Partners End -->
 <!-- Our Partners End -->
 
 <style>

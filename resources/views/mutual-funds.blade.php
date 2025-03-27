@@ -3,38 +3,64 @@
   
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-        style="background: url('{{ asset('img/mututalfund-header-img1(2).webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+        style="background: url('{{ asset('img/mututal fund-header-img1 (2).jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
         <div class="container text-center py-5">
             <h1 class="display-2 text-white mb-4 animated slideInDown">Mutual Fund</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
+            <!-- <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="#">Products</a></li>
                     <li class="breadcrumb-item"><a href="#">Mutual Fund</a></li>
                 </ol>
-            </nav>
+            </nav> -->
         </div>
     </div>
     <!-- Page Header End -->
 
     <!-- Mutual Fund Section Start -->
-    <div class="mutual-fund-section">
-        <div class="mutual-fund-container">
-            <!-- Left Column: Image -->
-            <div class="mutual-fund-left">
-                <img src="img/mutual_fund.webp" alt="Graph showing mutual fund growth over time with SIP investment" class="mutual-fund-img">
-            </div>
-            <!-- Right Column: Content -->
-            <div class="mutual-fund-right">
-                <h1>What is a Mutual Fund?</h1>
-                <p>
-                    A mutual fund is a financial vehicle that pools money from multiple investors to purchase securities 
-                    like stocks, bonds, and other assets. Managed by professional portfolio managers, mutual funds 
-                    provide individual investors access to diversified portfolios and professional management, 
-                    helping to reduce risks associated with individual security investments.
-                </p>
-            </div>
+<div class="mutual-fund-section">
+    <div class="mutual-fund-container">
+        <!-- Left Column: Image -->
+        <div class="mutual-fund-left">
+            <img src="img/mutual_fund.webp" alt="Graph showing mutual fund growth over time with SIP investment" class="mutual-fund-img">
+        </div>
+        <!-- Right Column: Content -->
+        <div class="mutual-fund-right">
+            <h1>What is a Mutual Fund?</h1>
+            <p>
+                A mutual fund is a financial vehicle that pools money from multiple investors to purchase securities 
+                like stocks, bonds, and other assets. Managed by professional portfolio managers, mutual funds 
+                provide individual investors access to diversified portfolios and professional management, 
+                helping to reduce risks associated with individual security investments.
+            </p>
         </div>
     </div>
+</div>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.3, // Trigger when 30% of the element is visible
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    document.querySelectorAll(".mutual-fund-left, .mutual-fund-right").forEach(el => {
+        observer.observe(el);
+    });
+});
+
+</script>
     <!-- Mutual Fund Section End -->
 
     <!-- How It Works Section -->
@@ -90,7 +116,7 @@
                 <h2>Advantages of Mutual Fund</h2>
                 <ul class="advantages-list-adv">
                     <li class="advantage-item-adv">
-                        <img src="./img/mututal-1-resized.webp" alt="Professional money manager analyzing financial charts" class="icon-adv">
+                        <img src="./img/mututal-1-resized.png" alt="Professional money manager analyzing financial charts" class="icon-adv">
                         <div class="text-adv">
                             <h3>Professional Management</h3>
                             <p>Mutual funds provide professional money management, making them ideal for investors who lack 
@@ -98,21 +124,21 @@
                         </div>
                     </li>
                     <li class="advantage-item-adv">
-                        <img src="./img/mututal-2-resized.webp" alt="Stacks of coins representing economies of scale in mutual funds" class="icon-adv">
+                        <img src="./img/mututal-2-resized.png" alt="Stacks of coins representing economies of scale in mutual funds" class="icon-adv">
                         <div class="text-adv">
                             <h3>Economies of Scale</h3>
                             <p>Mutual funds buy and sell large quantities of securities, resulting in lower transaction costs for investors.</p>
                         </div>
                     </li>
                     <li class="advantage-item-adv">
-                        <img src="./img/mututal-3-resized.webp" alt="Simple dashboard representation showing ease of mutual fund investing" class="icon-adv">
+                        <img src="./img/mututal-3-resized.png" alt="Simple dashboard representation showing ease of mutual fund investing" class="icon-adv">
                         <div class="text-adv">
                             <h3>Simplicity</h3>
                             <p>Investing in mutual funds is simple, with minimum investments starting as low as Rs. 500 per month.</p>
                         </div>
                     </li>
                     <li class="advantage-item-adv">
-                        <img src="./img/mututal-4-resized (2).webp" alt="A person using a smartphone to invest online" class="icon-adv">
+                        <img src="./img/mututal-4-resized (2).png" alt="A person using a smartphone to invest online" class="icon-adv">
                         <div class="text-adv">
                             <h3>Ease Of Investing Online</h3>
                             <p>Online investing is quick, convenient, and accessible, with real-time data, low fees, and automated tools for easy decision-making.</p>
@@ -122,6 +148,29 @@
             </div>
         </div>
     </div>
+    <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const advantages = document.querySelectorAll(".advantage-item-adv");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${index * 0.3}s`;
+                    entry.target.classList.add("show-adv");
+                } else {
+                    entry.target.classList.remove("show-adv"); // Remove to restart animation
+                }
+            });
+        },
+        { threshold: 0.3 } // Trigger when 30% of the section is visible
+    );
+
+    advantages.forEach((advantage) => {
+        observer.observe(advantage);
+    });
+});
+</script>
     <!-- Advantages of Mutual Fund End -->
 
     <!-- History of Mutual Fund -->
@@ -134,6 +183,28 @@
                 quantity-wise.</p>
         </div>
     </div>
+    <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const historySection = document.querySelector(".mutual-fund-history");
+
+    function animateOnScroll() {
+        const rect = historySection.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+            historySection.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+            historySection.style.opacity = "1";
+            historySection.style.transform = "translateX(0)";
+        } else {
+            historySection.style.transition = "none";
+            historySection.style.opacity = "0";
+            historySection.style.transform = "translateX(100%)";
+        }
+    }
+
+    window.addEventListener("scroll", animateOnScroll);
+    animateOnScroll();
+});
+
+</script>
     <!-- History of Mutual Fund End -->
 
     <!-- Back to Top -->

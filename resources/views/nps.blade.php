@@ -7,12 +7,12 @@
     style="background: url('{{ asset('img/npshd1new.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 67vh; min-height:350px;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">NPS</h1>
-           <nav aria-label="breadcrumb animated slideInDown">
+           <!-- <nav aria-label="breadcrumb animated slideInDown">
               <ol class="breadcrumb justify-content-center mb-0">
                   <li class="breadcrumb-item"><a href="#">Products</a></li>
                   <li class="breadcrumb-item"><a href="#">NPS</a></li>
               </ol>
-           </nav>
+           </nav> -->
       </div>
    </div>
 </div>
@@ -114,7 +114,7 @@
 
         <p class="nps-fund-text">Contact us to open your <span class="nps-fund-highlight">NPS account</span> or actively manage your NPS funds.</p>
 
-        <a href="mailto:your-email@example.com" class="nps-fund-button">Contact Us</a>
+        <a href="https://digital-onboard.finnate.app/iciciprupension/2" class="nps-fund-button">OPEN NPS ACCOUNT</a>
     </div>
 </div>
 <script>

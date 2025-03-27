@@ -47,20 +47,19 @@
                 <a class="btn btn-link" href="{{ route('tax-planning') }}">Tax Saving</a>
                 <a class="btn btn-link" href="{{ route('pms-aif') }}">PMS / AIF</a>
                 <a class="btn btn-link" href="{{ route('child-future-saving') }}">Child Future Saving</a>
-                <a class="btn btn-link" href="">Road show & Marketing Services</a>
+                <a class="btn btn-link" href="#">Road show & Marketing Services</a>
             </div>
             <div class="col-lg-3 col-md-6">
-            <h4 class="text-white mb-4">Business Hours</h4>
+                <h4 class="text-white mb-4">Business Hours</h4>
                 <p>Monday – Friday : 9 am to 6 pm</p>
-                <p>Saturday : 10am to 4 pm</p>
+                <p>Saturday : 10 am to 4 pm</p>
+                <p>Closed on: 2nd Saturdays</p>
 
                 <h4 class="text-white mb-4">SignUp</h4>
                 <div class="position-relative w-100">
                     <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                     <button type="button" class="btn py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
                 </div>
-
-                
             </div>
         </div>
     </div>
@@ -94,4 +93,3 @@
     </div>
 </div> -->
 <!-- Copyright End -->
- 

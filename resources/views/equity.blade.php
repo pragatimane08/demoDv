@@ -6,12 +6,12 @@
         style="background: url('{{ asset('img/equtityderivatieshd.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
         <div class="container text-center py-5">
             <h1 class="display-2 text-white mb-4 animated slideInDown">Equity And Derivatives</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
+            <!-- <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="#">Products</a></li>
                     <li class="breadcrumb-item"><a href="#">Equity And Derivatives</a></li>
                 </ol>
-            </nav>
+            </nav> -->
         </div>
     </div>
     <!-- Page Header End -->
@@ -38,7 +38,7 @@
     <!-- Equities - For Long Term Investment End -->
 
     <!-- Steps Start -->
-    <div class="eq1-steps">
+    <!-- <div class="eq1-steps">
         <h1 class="section-heading">Understanding Equity Derivatives</h1>
         <div class="eq1-steps-container">
             <div class="st1">
@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-    <!-- Steps End -->
+    Steps End -->
 
     <!-- What is an Equity Derivative Start -->
     <section id="equity-section1" class="what-is-equi">

@@ -8,66 +8,19 @@
     style="background: url('{{ asset('img/pmshd.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">PMS-AIF</h1>
-           <nav aria-label="breadcrumb animated slideInDown">
+           <!-- <nav aria-label="breadcrumb animated slideInDown">
               <ol class="breadcrumb justify-content-center mb-0">
                   <li class="breadcrumb-item"><a href="#">Product</a></li>
                   <li class="breadcrumb-item"><a href="#">PMS-AIF</a></li>
               </ol>
-           </nav>
+           </nav> -->
       </div>
    </div>
 </div>
     <!-- Page Header End -->
 
     <!-- pms-start -->
-    <section class="portfolio-section">
-        <div class="portfolio-container">
-            <div class="portfolio-text">
-                <h1>Portfolio Management Services</h1>
-                <p>PMS Services strives to beat returns of the market index</p>
-                <div class="cta-buttons">
-                    <a href="{{ route('schedulemeeting') }}"  class="tp-unique-cta-button">📅 Book an expert call</a>
-                    <button class="chat-whatsapp">💬 Chat with us</button>
-                </div>
-            </div>
-            <div class="portfolio-graph">
-                <h2>₹1 cr invested on Sept 2022 would have been:</h2>
-                <div class="graph-bars">
-                    <!-- First bar -->
-                    <div class="bar">
-    <div class="bar-value-wrapper">
-        <p class="bar-text">₹1.39 Cr</p> 
-        <div class="bar-value" style="--bar-height: 100px;"></div>
-    </div>
-    <p class="bar-label">Benchmark:( BSE 500 TRI)</p> 
-</div>
-
-
-                    <!-- Second bar -->
-                    <div class="bar">
-    <div class="bar-value-wrapper">
-        <p class="bar-text">₹1.51 Cr</p> <!-- Text above the bar -->
-        <div class="bar-value green-bar" style="--bar-height: 120px;"></div>
-    </div>
-    <p class="bar-label">Prosperity Equity Revival Strategy</p> <!-- Move this outside bar-value-wrapper -->
-</div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- pms-end -->
-<style>
-.bar-label {
-    display: block;
-    text-align: center;
-    margin-top: 5px; /* Space above text */
-    font-size: 14px;
-    color: black; /* Adjust as needed */
-    font-weight: bolder;
-}
-
-</style>
+   
 
 <!-- PMS Info Section -->
 <div class="pms-info-container" id="pms-info-section1">
