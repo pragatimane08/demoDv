@@ -4,11 +4,11 @@
 <h1>All Reports</h1>
 
 @if(session('success'))
-    <div class="alert success">{{ session('success') }}</div>
+    <div class="alert success" id="success-message">{{ session('success') }}</div>
 @endif
 
 <div class="card" onclick="window.location.href='{{ route('admin.createreport') }}';">
-    <i class="fas fa-file-alt"></i> <!-- Add a file icon -->
+    <i class="fas fa-file-alt"></i>
     <h2>Create Report</h2>
 </div>
 
@@ -62,6 +62,22 @@
         <span class="disabled">Next</span>
     @endif
 </div>
+
+<script>
+    // Auto-hide success message after 5 seconds (5000 milliseconds)
+    document.addEventListener('DOMContentLoaded', function() {
+        const successMessage = document.getElementById('success-message');
+        if (successMessage) {
+            setTimeout(function() {
+                successMessage.style.opacity = '0';
+                setTimeout(function() {
+                    successMessage.style.display = 'none';
+                }, 500); // This matches the transition time
+            }, 5000);
+        }
+    });
+</script>
+
 <style>
     /* Pagination Styling */
     .pagination {
@@ -102,7 +118,7 @@
     h1 {
         text-align: center;
         margin-top: 20px;
-        color: #b68e3c; /* Gold color */
+        color: #b68e3c;
     }
 
     /* Success Message */
@@ -113,6 +129,7 @@
         margin: 10px 0;
         border: 1px solid #c3e6cb;
         border-radius: 5px;
+        transition: opacity 0.5s ease, display 0.5s ease;
     }
 
     /* Table Styling */
@@ -153,7 +170,7 @@
     }
 
     form .delete-btn {
-        background-color: #b68e3c; /* Gold color */
+        background-color: #b68e3c;
         color: white;
         border: none;
         padding: 5px 10px;
@@ -163,7 +180,7 @@
     }
 
     form .delete-btn:hover {
-        background-color: #a17532; /* Darker gold on hover */
+        background-color: #a17532;
     }
 
     /* Action Button Styling */
@@ -175,7 +192,7 @@
     }
 
     .action-btn:hover {
-        color: #a17532; /* Darker gold on hover */
+        color: #a17532;
     }
 
     .delete-btn {
@@ -239,7 +256,7 @@
         }
 
         .pagination {
-            flex-wrap: nowrap; /* Keep pagination horizontally */
+            flex-wrap: nowrap;
         }
 
         .action-btn, .delete-btn {
@@ -266,5 +283,4 @@
         }
     }
 </style>
-<!-- Include the same CSS and JS as in the newsletter view -->
 @endsection

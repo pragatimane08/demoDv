@@ -5,7 +5,7 @@
     <h1>All Blogs</h1>
 
     @if(session('success'))
-        <div class="alert success">{{ session('success') }}</div>
+        <div class="alert success" id="success-message">{{ session('success') }}</div>
     @endif
 
     <div class="card-container">
@@ -81,6 +81,21 @@
     </div>
 </div>
 
+<script>
+    // Auto-hide success message after 5 seconds (5000 milliseconds)
+    document.addEventListener('DOMContentLoaded', function() {
+        const successMessage = document.getElementById('success-message');
+        if (successMessage) {
+            setTimeout(function() {
+                successMessage.style.opacity = '0';
+                setTimeout(function() {
+                    successMessage.style.display = 'none';
+                }, 500); // This matches the transition time
+            }, 5000);
+        }
+    });
+</script>
+
 <style>
 /* Base Styles */
 :root {
@@ -116,6 +131,7 @@ h1 {
     border: 1px solid rgb(241, 186, 6);
     border-radius: 5px;
     text-align: center;
+    transition: opacity 0.5s ease, display 0.5s ease;
 }
 
 /* Card */
@@ -381,7 +397,6 @@ td img {
         padding: 3px 6px;
     }
 }
-/* Responsive Styles */
 
 /* For very small devices (min-width: 200px and max-width: 389px) */
 @media (max-width: 389px) and (min-width: 200px) {
@@ -492,10 +507,5 @@ td img {
         padding: 6px 10px;
     }
 }
-
-
-
-
 </style>
-
 @endsection

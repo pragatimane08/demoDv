@@ -5,7 +5,7 @@
     <h1>Learning Videos</h1>
 
     @if(session('success'))
-        <div class="alert success">{{ session('success') }}</div>
+        <div class="alert success" id="success-message">{{ session('success') }}</div>
     @endif
 
     <div class="card-container">
@@ -34,9 +34,6 @@
                     </td>
                     <td data-label="Actions" class="action-cell">
                         <div class="action-buttons">
-                            <a href="{{ route('admin.editvideo', $video->id) }}" class="action-btn">
-                                <i class="fas fa-edit"></i>
-                            </a>
                             <form action="{{ route('admin.deletevideo', $video->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
@@ -52,12 +49,102 @@
         </table>
     </div>
 
-    <div class="pagination">
-        {{ $videos->links() }}
+    <!-- Integrated Pagination -->
+    @if ($videos->hasPages())
+    <div class="pagination-container">
+        <div class="pagination">
+            {{-- Previous Page Link --}}
+            @if ($videos->onFirstPage())
+                <span class="disabled">&laquo; Previous</span>
+            @else
+                <a href="{{ $videos->previousPageUrl() }}" rel="prev">&laquo; Previous</a>
+            @endif
+
+            {{-- Pagination Elements --}}
+            @foreach ($videos->getUrlRange(1, $videos->lastPage()) as $page => $url)
+                @if ($page == $videos->currentPage())
+                    <span class="active">{{ $page }}</span>
+                @else
+                    <a href="{{ $url }}">{{ $page }}</a>
+                @endif
+            @endforeach
+
+            {{-- Next Page Link --}}
+            @if ($videos->hasMorePages())
+                <a href="{{ $videos->nextPageUrl() }}" rel="next">Next &raquo;</a>
+            @else
+                <span class="disabled">Next &raquo;</span>
+            @endif
+        </div>
     </div>
+    @endif
 </div>
 
+<script>
+    // Auto-hide success message after 5 seconds (5000 milliseconds)
+    document.addEventListener('DOMContentLoaded', function() {
+        const successMessage = document.getElementById('success-message');
+        if (successMessage) {
+            setTimeout(function() {
+                successMessage.style.opacity = '0';
+                setTimeout(function() {
+                    successMessage.style.display = 'none';
+                }, 500); // This matches the transition time
+            }, 5000);
+        }
+    });
+</script>
+
 <style>
+/* Enhanced Pagination Styles */
+.pagination-container {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 14px;
+}
+
+.pagination a:hover {
+    background-color: rgba(182, 142, 60, 0.1);
+    border-color: var(--primary);
+}
+
+.pagination .active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    font-weight: bold;
+}
+
+.pagination .disabled {
+    color: #aaa;
+    background-color: #f5f5f5;
+    border-color: var(--border);
+    cursor: not-allowed;
+}
+
 /* Base Styles */
 :root {
     --primary: #b68e3c;
@@ -70,7 +157,7 @@
 /* Container */
 .admin-container {
     padding: 1rem;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     margin-bottom: 30px;
 }
@@ -92,6 +179,7 @@ h1 {
     border: 1px solid rgb(241, 186, 6);
     border-radius: 5px;
     text-align: center;
+    transition: opacity 0.5s ease, display 0.5s ease;
 }
 
 /* Card */
@@ -150,7 +238,7 @@ table {
 th, td {
     padding: 12px 15px;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 th {
@@ -162,7 +250,6 @@ th {
 td {
     border-bottom: 1px solid var(--border);
 }
-
 
 /* Link Styling */
 .video-link {
@@ -178,7 +265,7 @@ td {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 150px;
+    max-width: 350px;
 }
 
 /* Action Buttons */
@@ -196,49 +283,13 @@ td {
     font-size: 14px;
 }
 
-.action-btn {
-    color: var(--primary);
-    background: rgba(182, 142, 60, 0.1);
-}
-
 .delete-btn {
     color: white;
     background: var(--primary);
 }
 
-.action-btn:hover, .delete-btn:hover {
+.delete-btn:hover {
     opacity: 0.9;
-}
-
-/* Pagination */
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-.pagination a, .pagination span {
-    padding: 6px 12px;
-    border-radius: 5px;
-    min-width: 30px;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid var(--border);
-}
-
-.pagination .active {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
-}
-
-.pagination .disabled {
-    background: var(--background);
-    color: #999;
-    cursor: not-allowed;
 }
 
 /* Responsive Styles */
@@ -282,16 +333,11 @@ td {
         padding: 10px;
     }
 
-    td img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .video-link{
+    .video-link {
         font-size: 12px;
     }
 
-    .action-btn, .delete-btn {
+    .delete-btn {
         font-size: 12px;
         padding: 4px;
     }
@@ -332,16 +378,11 @@ td {
         padding: 8px;
     }
 
-    td img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .blog-link {
+    .video-link {
         font-size: 10px;
     }
 
-    .action-btn, .delete-btn {
+    .delete-btn {
         font-size: 10px;
         padding: 3px;
     }
@@ -351,9 +392,8 @@ td {
         padding: 3px 6px;
     }
 }
-/* Responsive Styles */
 
-/* For very small devices (min-width: 200px and max-width: 389px) */
+/* For very small devices (200px to 389px) */
 @media (max-width: 389px) and (min-width: 200px) {
     .admin-container {
         padding: 0.5rem;
@@ -368,11 +408,6 @@ td {
     .alert.success {
         font-size: 10px;
         padding: 6px;
-    }
-
-    .card-container {
-        flex-direction: column;
-        gap: 10px;
     }
 
     .card {
@@ -398,25 +433,15 @@ td {
         padding: 8px 10px;
     }
 
-    td img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .blog-link {
-        font-size: 12px;
-    }
-
     .link-text {
         max-width: 100px;
     }
 
     .action-buttons {
-        flex-wrap: wrap;
         gap: 5px;
     }
 
-    .action-btn, .delete-btn {
+    .delete-btn {
         padding: 4px;
         font-size: 12px;
     }
@@ -427,7 +452,7 @@ td {
     }
 }
 
-/* General responsive styles for larger devices (390px and up) */
+/* For medium devices (390px to 768px) */
 @media (min-width: 390px) and (max-width: 768px) {
     .admin-container {
         padding: 1rem;
@@ -444,7 +469,6 @@ td {
     }
 
     .card-container {
-        flex-wrap: wrap;
         gap: 15px;
     }
 
@@ -453,7 +477,7 @@ td {
         padding: 10px 12px;
     }
 
-    .action-btn, .delete-btn {
+    .delete-btn {
         font-size: 14px;
     }
 
@@ -463,8 +487,25 @@ td {
     }
 }
 
+/* Responsive Pagination */
+@media (max-width: 768px) {
+    .pagination a,
+    .pagination span {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
 
-
-
+@media (max-width: 480px) {
+    .pagination {
+        gap: 0.3rem;
+    }
+    
+    .pagination a,
+    .pagination span {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
 </style>
 @endsection

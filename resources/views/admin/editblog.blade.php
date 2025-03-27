@@ -1,137 +1,223 @@
 @extends('layouts.admin')
 
 @section('content')
+    <div class="edit-blog-container">
+        <h1>Edit Blog</h1>
+        <form class="edit-blog-form" action="{{ route('admin.updateblog', $blog->id) }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @method('POST')
 
-    <h1>Edit Blog</h1>
-    <form class="edit-blog-form" action="{{ route('admin.updateblog', $blog->id) }}" method="POST" enctype="multipart/form-data">
-        @csrf
-        @method('POST')
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" value="{{ $blog->title }}" required>
+                @error('title')
+                    <span class="error">{{ $message }}</span>
+                @enderror
+            </div>
 
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" value="{{ $blog->title }}" required><br>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" name="image" id="image" accept="image/*">
+                @error('image')
+                    <span class="error">{{ $message }}</span>
+                @enderror
+            </div>
 
-        <label for="image">Image</label>
-        <input type="file" name="image" id="image"><br>
+            <div class="form-group">
+                <label for="link">Link</label>
+                <input type="url" name="link" id="link" value="{{ $blog->link }}" required>
+                @error('link')
+                    <span class="error">{{ $message }}</span>
+                @enderror
+            </div>
 
-        <label for="link">Link</label>
-        <input type="url" name="link" id="link" value="{{ $blog->link }}" required><br>
-
-        <button type="submit">Update Blog</button>
-    </form>
+            <button type="submit" class="submit-btn">Update Blog</button>
+        </form>
+    </div>
 
     <style>
-       /* General Page Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
+        /* Base Styles */
+        .edit-blog-container {
+            /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-h1 {
-    text-align: center;
-    color: #b8860b;
-   
-}
+        h1 {
+            color: #b8860b;
+            text-align: center;
+            margin: 20px 0 30px;
+            font-size: 32px;
+            font-weight: 600;
+        }
 
+        .edit-blog-form {
+            background-color: white;
+            border: 2px solid #b8860b;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
-/* Form Specific Styles */
-.edit-blog-form {
-    background-color: white;
-    border: 2px solid #b8860b;
-    border-radius: 10px;
-    padding: 20px;
-    width: 90%; /* Adjusted for responsiveness */
-    max-width: 800px; /* Maximum width for larger screens */
-    margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-.edit-blog-form label {
-    font-weight: bold;
-    color: #b8860b;
-}
+        label {
+            display: block;
+            font-weight: 600;
+            color: #b8860b;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
 
-.edit-blog-form input[type="text"],
-.edit-blog-form input[type="url"],
-.edit-blog-form input[type="file"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-}
+        input[type="text"],
+        input[type="url"],
+        input[type="file"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
 
-.edit-blog-form input[type="text"]:focus,
-.edit-blog-form input[type="url"]:focus,
-.edit-blog-form input[type="file"]:focus {
-    outline: none;
-    border-color: #b8860b;
-    box-shadow: 0 0 5px #b8860b;
-}
+        input:focus {
+            outline: none;
+            border-color: #b8860b;
+            box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.2);
+        }
 
-.edit-blog-form button {
-    background-color: #b8860b;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        .error {
+            color: #e53e3e;
+            font-size: 14px;
+            margin-top: 5px;
+            display: block;
+        }
 
-.edit-blog-form button:hover {
-    background-color: #a6760a;
-}
+        .submit-btn {
+            background-color: #b8860b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.2s ease;
+        }
 
-.edit-blog-form button:active {
-    background-color: #916a09;
-}
+        .submit-btn:hover {
+            background-color: #a6760a;
+            transform: translateY(-1px);
+        }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    /* Adjustments for tablets and smaller devices */
-    .edit-blog-form {
-        width: 95%; /* Increase width for smaller screens */
-        padding: 15px;
-    }
+        .submit-btn:active {
+            transform: translateY(0);
+        }
 
-    .navbar a {
-        padding: 10px 15px; /* Reduce padding for smaller screens */
-    }
-}
+        /* Responsive Breakpoints */
+        
+        /* For tablets and small laptops (Surface Pro 7, iPad Mini) */
+        @media (max-width: 1024px) {
+            .edit-blog-container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 28px;
+                margin-top: 40px;
+            }
+        }
 
-@media (max-width: 480px) {
-    /* Adjustments for mobile devices */
-    h1 {
-        font-size: 24px; /* Reduce font size for smaller screens */
-        margin-top: 53px;
-    }
+        /* For large phones and small tablets (iPad Mini portrait, foldables) */
+        @media (max-width: 768px) {
+            .edit-blog-form {
+                padding: 20px;
+            }
+            
+            input[type="text"],
+            input[type="url"],
+            input[type="file"] {
+                padding: 10px 12px;
+                font-size: 15px;
+            }
+            
+            .submit-btn {
+                padding: 12px 18px;
+            }
+        }
 
-    .edit-blog-form {
-        width: 100%; /* Full width for mobile devices */
-        padding: 10px;
-    }
+        /* For foldables in folded state and large phones (Galaxy Z Fold folded) */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+                margin-top: 40px;
+            }
+        }
 
-    .edit-blog-form input[type="text"],
-    .edit-blog-form input[type="url"],
-    .edit-blog-form input[type="file"] {
-        font-size: 12px; /* Reduce font size for inputs */
-    }
+        /* For most smartphones (iPhone XR, Pixel 7, Galaxy S20) */
+        @media (max-width: 480px) {
+            .edit-blog-container {
+                padding: 10px;
+            }
+            
+            .edit-blog-form {
+                padding: 15px;
+                border-width: 1px;
+            }
+            
+            h1 {
+                font-size: 22px;
+                margin-top: 40px;
+            }
+            
+            label {
+                font-size: 15px;
+            }
+            
+            input[type="text"],
+            input[type="url"],
+            input[type="file"] {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+        }
 
-    .edit-blog-form button {
-        font-size: 14px; /* Reduce button font size */
-        padding: 8px 12px;
-    }
+        /* For small smartphones (iPhone SE) */
+        @media (max-width: 375px) {
+            h1 {
+                font-size: 20px;
+                margin-top: 40px;
+            }
+            
+            .edit-blog-form {
+                padding: 12px;
+            }
+            
+            .submit-btn {
+                padding: 10px 15px;
+                font-size: 15px;
+            }
+        }
 
-    .navbar a {
-        padding: 8px 10px; /* Further reduce padding for mobile */
-    }
-}
+        /* For landscape orientation on phones */
+        @media (max-height: 480px) and (orientation: landscape) {
+            .edit-blog-container {
+                padding: 5px;
+            }
+            
+            h1 {
+               
+                font-size: 20px;
+                margin-top: 40px;
+            }
+            
+            .form-group {
+                margin-bottom: 12px;
+            }
+        }
     </style>
-
 @endsection

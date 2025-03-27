@@ -2,12 +2,13 @@
 
 @section('content')
 <div class="container">
-    <h1>Edit Newsletter</h1>
+  
 
     <form action="{{ route('newsletters.update', $newsletter->id) }}" method="POST" enctype="multipart/form-data" class="newsletter-form">
         @csrf
         @method('PUT')
         <div class="form-group">
+        <h1>Edit Newsletter</h1>
             <label for="title">Title:</label>
             <input type="text" name="title" id="title" value="{{ $newsletter->title }}" required>
         </div>

@@ -21,7 +21,8 @@
 <style>
     /* Open demat account start */
      /* Open Demat Account Section */
-  .open-demat-acc-container {
+  /* Open Demat Account Section - Responsive */
+.open-demat-acc-container {
     background-color: #f0f2f5;
     display: flex;
     flex-direction: column;
@@ -30,88 +31,98 @@
     margin: 0 auto;
     max-width: 1200px;
     border-radius: 5px;
-  }
+    box-sizing: border-box;
+}
 
-  .open-demat-acc-header {
+.open-demat-acc-header {
     text-align: center;
     margin-bottom: 20px;
-  }
+    width: 100%;
+}
 
-  .open-demat-acc-header h1 {
-    font-size: 2rem;
+.open-demat-acc-header h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: #d4af37;
     margin-bottom: 10px;
-  }
+}
 
-  .open-demat-acc-header p {
-    font-size: 1rem;
+.open-demat-acc-header p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     color: #555;
-  }
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-  .open-demat-acc-content {
+.open-demat-acc-content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
-  }
+}
 
-  .open-demat-acc-image-section {
-    flex: 1;
+.open-demat-acc-image-section {
+    width: 100%;
     text-align: center;
-    padding: 20px;
-  }
+    padding: 10px;
+    box-sizing: border-box;
+}
 
-  .open-demat-acc-image-section img {
+.open-demat-acc-image-section img {
     width: 100%;
     height: auto;
-    max-width: 100%;
+    max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .open-demat-acc-form-container {
-    flex: 1.5;
+.open-demat-acc-form-container {
+    width: 100%;
     background: #f9f9f9;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    box-sizing: border-box;
+    margin-top: 20px;
+}
 
-  .open-demat-acc-form-group {
+/* Form elements styles */
+.open-demat-acc-form-group {
     margin-bottom: 15px;
     text-align: left;
-  }
+}
 
-  .open-demat-acc-form-group label {
-    font-size: 1rem;
+.open-demat-acc-form-group label {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     color: #d4af37;
     font-weight: bold;
-  }
+}
 
-  .open-demat-acc-form-group input,
-  .open-demat-acc-form-group textarea {
+.open-demat-acc-form-group input,
+.open-demat-acc-form-group textarea {
     width: 100%;
     padding: 12px;
     margin-top: 5px;
     border-radius: 8px;
     border: 1px solid #ddd;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     transition: all 0.3s ease;
-  }
+    box-sizing: border-box;
+}
 
-  .open-demat-acc-form-group input:focus,
-  .open-demat-acc-form-group textarea:focus {
+.open-demat-acc-form-group input:focus,
+.open-demat-acc-form-group textarea:focus {
     border-color: #d4af37;
     box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
     outline: none;
-  }
+}
 
-  .open-demat-acc-form-group textarea {
-    height: 100px;
+.open-demat-acc-form-group textarea {
+    min-height: 100px;
+    max-height: 200px;
     resize: vertical;
-  }
+    overflow-y: auto;
+}
 
-  .submit-btn {
+.submit-btn {
     background-color: #d4af37;
     color: white;
     padding: 15px;
@@ -119,19 +130,94 @@
     border-radius: 8px;
     width: 100%;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     font-weight: bold;
     transition: all 0.3s ease;
-  }
+}
 
-  .submit-btn:hover {
+.submit-btn:hover {
     background-color: #c39a2b;
-  }
+}
 
-  .submit-btn:active {
+.submit-btn:active {
     background-color: #a87e1f;
-  }
+}
 
+/* Media Queries */
+/* Mobile devices - stacked layout */
+@media only screen and (max-width: 767px) {
+    .open-demat-acc-image-section img {
+        max-width: 100%;
+    }
+}
+
+/* Desktop - side by side layout */
+@media only screen and (min-width: 1025px) {
+    .open-demat-acc-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .open-demat-acc-image-section {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .open-demat-acc-form-container {
+        flex: 1.2;
+        margin-top: 0;
+        margin-left: 20px;
+    }
+    
+    .open-demat-acc-image-section img {
+        max-height: 500px;
+        object-fit: contain;
+    }
+}
+
+/* iPad Air and Pro - stacked layout */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .open-demat-acc-content {
+        flex-direction: column;
+    }
+    
+    .open-demat-acc-image-section {
+        margin-bottom: 30px;
+    }
+    
+    .open-demat-acc-image-section img {
+        max-width: 80%;
+    }
+    
+    .open-demat-acc-form-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px;
+    }
+}
+
+/* Adjustments for very small screens */
+@media only screen and (max-width: 320px) {
+    .open-demat-acc-container {
+        padding: 15px;
+    }
+    
+    .open-demat-acc-form-container {
+        padding: 15px;
+    }
+    
+    .open-demat-acc-form-group input,
+    .open-demat-acc-form-group textarea {
+        padding: 10px;
+    }
+    
+    .submit-btn {
+        padding: 12px;
+    }
+}
   /* What is a Demat Account Section */
    /*what is oda ? */
 /* General Container for the Section */
@@ -144,6 +230,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     margin-top: 50px; /* Increased top margin to avoid overlap with the previous section */
+   
 }
 
 /* Header Styling */
@@ -229,46 +316,86 @@
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1024px) {
-    .wida-demat-description img {
-        max-width: 450px;
+/* Desktop Layout (side by side) */
+@media (min-width: 1024px) {
+    .wida-demat-description {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .wida-demat-image {
+        flex: 1;
+        max-width: 500px;
+        margin-bottom: 0;
+    }
+    
+    .wida-demat-text {
+        flex: 1;
+        max-width: none;
+        padding-left: 30px;
     }
 }
 
-@media (max-width: 768px) {
+/* iPad Pro/Air Specific (stacked layout with centered image) */
+@media (min-width: 768px) and (max-width: 1024px) {
     .wida-demat-description {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .wida-demat-image {
         max-width: 80%;
+        display: flex;
+        justify-content: center;
     }
-
+    
+    .wida-demat-image img {
+        width: auto;
+        max-height: 350px;
+    }
+    
     .wida-demat-text {
-        text-align: center;
-        max-width: 80%;
+        max-width: 90%;
+        text-align: left;
     }
-
-    .wida-demat-description p {
-        font-size: 1rem;
+    
+    .wida-demat-highlight-box {
+        max-width: 90%;
     }
 }
 
-@media (max-width: 480px) {
+/* Mobile adjustments */
+@media (max-width: 767px) {
     .wida-demat-container {
-        padding: 10px;
+        padding: 15px;
+        margin-top: 30px;
     }
-
-    .wida-demat-title {
-        font-size: 2rem;
+    
+    .wida-demat-header {
+        margin-bottom: 20px;
     }
-
-    .wida-demat-description p {
-        font-size: 0.9rem;
+    
+    .wida-demat-image {
+        max-width: 100%;
     }
-
+    
+    .wida-demat-image img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+    
+    .wida-demat-text {
+        max-width: 100%;
+    }
+    
+    .wida-demat-text p {
+        text-align: left;
+    }
+    
     .wida-demat-highlight-box {
+        margin-top: 30px;
+        padding: 15px;
         font-size: 1rem;
     }
 }
@@ -277,6 +404,7 @@
     text-align: center;
     padding: 40px 20px;
     background: #f0f2f5;
+    margin-left: 20px;
   }
 
   .benefits-heading {
@@ -336,6 +464,7 @@
     padding: 60px 20px;
     background: #f0f2f5;
     text-align: center;
+    margin-left: 18px;
   }
 
   .advantages-heading {
@@ -456,6 +585,7 @@
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     border: 3px solid #d0a94e;
+    
   }
 
   .oda-doc-wrapper-demat h1 {
@@ -659,10 +789,10 @@ document.getElementById("phone").addEventListener("input", function (e) {
 
         </div>
         <div class="open-demat-acc-form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            <span class="error-message" id="messageError"></span>
-        </div>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+    <span class="error-message" id="messageError"></span>
+</div>
         <button type="submit" class="submit-btn">Submit</button>
     </form>
 </div>

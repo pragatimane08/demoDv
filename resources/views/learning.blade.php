@@ -21,41 +21,7 @@
     <!-- public/img/learninghd.avif -->
 
     
-    <!-- learning videos start -->
-    <div class="video-gallery">
-        <h1 class="video-gallery-title">Learning Videos</h1>
-        <div class="video-grid">
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/r1qQpXWcDNQ" allowfullscreen></iframe>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/6dJmILRJU7E" allowfullscreen></iframe>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/LNQEPP2V6nE" allowfullscreen></iframe>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/o5IZ9huD3OM" allowfullscreen></iframe>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/bCdojayM3PI" allowfullscreen></iframe>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/TY5BiqOu6jI" allowfullscreen></iframe>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/TFE-xMOWlQA" allowfullscreen></iframe>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/1XSbjGMHOz8" allowfullscreen></iframe>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/OwSdwgsvnVQ" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-     <!-- /learning videos end -->
-
+    
    
 
      <div class="container">

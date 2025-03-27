@@ -3,9 +3,11 @@
 @section('content')
 <h1>All Newsletters</h1>
 
+
 @if(session('success'))
-    <div class="alert success">{{ session('success') }}</div>
+    <div class="alert success" id="success-message">{{ session('success') }}</div>
 @endif
+
 
 <div class="card" onclick="window.location.href='{{ route('newsletters.create') }}';">
     <i class="fas fa-newspaper"></i> <!-- Add a newspaper icon -->
@@ -62,6 +64,20 @@
         <span class="disabled">Next</span>
     @endif
 </div>
+<script>
+    // Auto-hide success message after 5 seconds (5000 milliseconds)
+    document.addEventListener('DOMContentLoaded', function() {
+        const successMessage = document.getElementById('success-message');
+        if (successMessage) {
+            setTimeout(function() {
+                successMessage.style.opacity = '0';
+                setTimeout(function() {
+                    successMessage.style.display = 'none';
+                }, 500); // This matches the transition time
+            }, 5000);
+        }
+    });
+</script>
 
 <style>
     /* Pagination Styling */
@@ -109,7 +125,7 @@
     /* Success Message */
     .alert.success {
         background-color: #d4edda;
-        color: #155724;
+        color: #b68e3c;
         padding: 10px;
         margin: 10px 0;
         border: 1px solid #c3e6cb;

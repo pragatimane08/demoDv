@@ -9,7 +9,7 @@ class LearningVideoController extends Controller
 {
     public function index()
     {
-        $videos = LearningVideo::latest()->paginate(6);
+        $videos = LearningVideo::latest()->paginate(5); // Make sure you're using paginate()
         return view('admin.viewvideos', compact('videos'));
     }
 
