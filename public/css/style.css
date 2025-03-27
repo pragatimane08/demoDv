@@ -3109,6 +3109,7 @@ html {
   box-sizing: border-box;
   margin: 0 auto;
   border: 30px solid #d0a94e;
+  
 }
 
 /* Left Column (Image) Styling */
@@ -3283,6 +3284,7 @@ html {
   padding: 100px 0;
   text-align: center;
   overflow: hidden;
+  margin-top: -15px;
 }
 
 .container {
@@ -3495,6 +3497,8 @@ html {
   /* Account for left & right margins */
   margin-left: 50px;
   margin-right: 50px;
+  
+  margin-bottom: 6px;
 
 }
 
