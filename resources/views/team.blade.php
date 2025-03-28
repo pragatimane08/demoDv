@@ -26,14 +26,14 @@
 
     <!--out team - card-1-start-->
     <div class="our-team-card" onclick="showPopup('our-team-popup-card-1')">
-        <button class="mail">
+        <!-- <button class="mail">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-mail">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
-        </button>
+        </button> -->
         <div class="profile-pic">
             <img src="img/Bhaskaran.png" alt="Team Member">
         </div>
@@ -58,14 +58,14 @@
 
     <!--out team - card-2-start-->
     <div class="our-team-card" onclick="showPopup('our-team-popup-card-2')">
-        <button class="mail">
+        <!-- <button class="mail">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-mail">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
-        </button>
+        </button> -->
         <div class="profile-pic">
             <img src="img/Devanathan.png" alt="Team Member">
         </div>
@@ -90,14 +90,14 @@
 
     <!--out team - card-3-start-->
     <div class="our-team-card" onclick="showPopup('our-team-popup-card-3')">
-        <button class="mail">
+        <!-- <button class="mail">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-mail">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
-        </button>
+        </button> -->
         <div class="profile-pic">
             <img src="img/Dassan.png" alt="Team Member">
         </div>
@@ -122,14 +122,14 @@
 
     <!--out team - card-4-start-->
     <div class="our-team-card" onclick="showPopup('our-team-popup-card-4')">
-        <button class="mail">
+        <!-- <button class="mail">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-mail">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
-        </button>
+        </button> -->
         <div class="profile-pic">
             <img src="img/Balaji.png" alt="Team Member">
         </div>
@@ -154,14 +154,14 @@
 
     <!--out team - card-5-start-->
     <div class="our-team-card" onclick="showPopup('our-team-popup-card-5')">
-        <button class="mail">
+        <!-- <button class="mail">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-mail">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
-        </button>
+        </button> -->
         <div class="profile-pic">
             <img src="img/vbalaji.webp" alt="Team Member">
         </div>
@@ -286,14 +286,14 @@
 
     <!--out Advisors - card-1-start-->
     <div class="our-team-card" onclick="showPopup('our-team-popup-card-1.1')">
-        <button class="mail">
+        <!-- <button class="mail">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-mail">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
-        </button>
+        </button> -->
         <div class="profile-pic">
             <img src="img/ramasamyad.png" alt="Team Member">
         </div>
@@ -305,7 +305,7 @@
             <div class="bottom-bottom">
                 <div class="social-links-container">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" color: white>
-                        <a href="linkedin.com/in/ramasamy-subbiah-090005b6" target="_blank">
+                        <a href="https://www.linkedin.com/in/ramasamy-subbiah-090005b6/" target="_blank">
                             <path d="M100.28 448H7.4V149.86h92.88zM53.79 108.1C24.09 108.1 0 83.68 0 54.36A54.31 54.31 0 0154.36 0a54.31 54.31 0 0154.36 54.36c.04 29.32-24.04 53.74-54.93 53.74zM447.91 448h-92.68V304.36c0-34.31-12.26-57.73-42.87-57.73-23.36 0-37.25 15.77-43.36 31.03-2.22 5.41-2.78 13.04-2.78 20.68V448h-92.67s1.24-241.17 0-266.14h92.67v37.71c-.19.31-.46.61-.64.92h.64v-.92c12.32-18.94 34.36-45.96 83.54-45.96 60.94 0 106.65 39.74 106.65 125.14V448z" />
                     </svg>
                 </div>
@@ -317,14 +317,14 @@
 
     <!--out Advisors - card-2-start-->
     <div class="our-team-card" onclick="showPopup('our-team-popup-card-1.2')">
-        <button class="mail">
+        <!-- <button class="mail">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-mail">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
-        </button>
+        </button> -->
         <div class="profile-pic">
             <img src="img/bhat.png" alt="Team Member">
         </div>
@@ -348,14 +348,14 @@
 
     <!--out Advisors - card-3-start-->
     <div class="our-team-card" onclick="showPopup('our-team-popup-card-1.3')">
-        <button class="mail">
+        <!-- <button class="mail">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-mail">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
-        </button>
+        </button> -->
         <div class="profile-pic">
             <img src="img/jainteamad.png" alt="Team Member">
         </div>
@@ -379,14 +379,14 @@
 
     <!--out Advisors - card-4-start-->
     <div class="our-team-card" onclick="showPopup('our-team-popup-card-1.4')">
-        <button class="mail">
+        <!-- <button class="mail">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-mail">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
-        </button>
+        </button> -->
         <div class="profile-pic">
             <img src="img/desai.png" alt="Team Member">
         </div>
@@ -411,14 +411,14 @@
 
     <!--out Advisors - card-5-start-->
     <div class="our-team-card" onclick="showPopup('our-team-popup-card-1.5')">
-        <button class="mail">
+        <!-- <button class="mail">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-mail">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
-        </button>
+        </button> -->
         <div class="profile-pic">
             <img src="img/Subramania.png" alt="Team Member">
         </div>
@@ -460,7 +460,7 @@
             was Chief Risk Officer of LIC Mutual Fund for two years</p>
         <p> </p>
         <div class="our-team-popup-social-icons">
-            <a href="#" class="our-team-linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/ramasamy-subbiah-090005b6/" class="our-team-linkedin"><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
 </div>
@@ -531,14 +531,14 @@
 
     <!--out  Managing Partners - card-1-start-->
     <div class="our-team-card" onclick="showPopup('our-team-popup-card-2.1')">
-        <button class="mail">
+        <!-- <button class="mail">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-mail">
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
-        </button>
+        </button> -->
         <div class="profile-pic">
             <img src="img/team/team-m.jpg" alt="Team Member">
         </div>
@@ -589,20 +589,40 @@
 <!-- Template Javascript -->
 
 <script src="js/main.js"></script>
-
 <script>
-    function showPopup(popupId) {
-        const popup = document.getElementById(popupId);
-        if (popup) {
+function showPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    if (popup) {
+        popup.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+        
+        // Optional: Add a small delay for smoother transition
+        setTimeout(() => {
             popup.classList.add('active');
-        }
+        }, 10);
     }
+}
 
-    function closePopup(popupId) {
-        const popup = document.getElementById(popupId);
-        if (popup) {
-            popup.classList.remove('active');
-        }
+function closePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    if (popup) {
+        popup.classList.remove('active');
+        
+        // Wait for transition to complete before hiding
+        setTimeout(() => {
+            popup.style.display = 'none';
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }, 300); // Match this with your CSS transition duration
     }
+}
+
+// Close when clicking outside the popup (optional)
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('our-team-popup-card')) {
+        closePopup(e.target.id);
+    }
+});
 </script>
 @endsection

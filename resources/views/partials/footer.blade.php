@@ -17,26 +17,27 @@
                     customerservice@dhanavruksha.in
                 </p>
                 <div class="d-flex pt-3">
-                    <a class="btn btn-square btn-light rounded-circle me-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="btn btn-square btn-light rounded-circle me-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="btn btn-square btn-light rounded-circle me-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a class="btn btn-square btn-light rounded-circle me-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
+    <a class="btn btn-square btn-light rounded-circle me-2" href="https://x.com/dhanavruksha" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.youtube.com/@dhanavrukshafinserv" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+    </a>
+    <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.linkedin.com/company/dhanavruksha-financial-services-private-ltd/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+   
+</div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-4">Quick Links</h4>
-                <a class="btn btn-link" href="{{ route('login-page') }}">Client Login</a>
+                <a class="btn btn-link" href="https://dhanavruksha.investwell.app/app/#/login">Client Login</a>
                 <a class="btn btn-link" href="{{ route('financial-calculator') }}">Calculators</a>
                 <a class="btn btn-link" href="{{ route('downloads') }}">Downloads</a>
-                <a class="btn btn-link" href="">Sign Up</a>
+                
                 <a class="btn btn-link" href="{{ route('learning') }}">Learning</a>
                 <a class="btn btn-link" href="">Career</a>
             </div>
@@ -47,7 +48,7 @@
                 <a class="btn btn-link" href="{{ route('tax-planning') }}">Tax Saving</a>
                 <a class="btn btn-link" href="{{ route('pms-aif') }}">PMS / AIF</a>
                 <a class="btn btn-link" href="{{ route('child-future-saving') }}">Child Future Saving</a>
-                <a class="btn btn-link" href="#">Road show & Marketing Services</a>
+                <a class="btn btn-link" href="{{ route('home') }}">Road show & Marketing Services</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-4">Business Hours</h4>
@@ -55,11 +56,7 @@
                 <p>Saturday : 10 am to 4 pm</p>
                 <p>Closed on: 2nd Saturdays</p>
 
-                <h4 class="text-white mb-4">SignUp</h4>
-                <div class="position-relative w-100">
-                    <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                    <button type="button" class="btn py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
-                </div>
+               
             </div>
         </div>
     </div>

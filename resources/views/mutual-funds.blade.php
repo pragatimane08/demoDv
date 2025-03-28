@@ -2,66 +2,33 @@
 @section('content')
   
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
+    <div class="container-fluid page-header py-5 mb-4 wow fadeIn" data-wow-delay="0.1s" 
         style="background: url('{{ asset('img/mututal fund-header-img1 (2).jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
         <div class="container text-center py-5">
             <h1 class="display-2 text-white mb-4 animated slideInDown">Mutual Fund</h1>
-            <!-- <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#">Products</a></li>
-                    <li class="breadcrumb-item"><a href="#">Mutual Fund</a></li>
-                </ol>
-            </nav> -->
         </div>
     </div>
     <!-- Page Header End -->
 
     <!-- Mutual Fund Section Start -->
-<div class="mutual-fund-section">
-    <div class="mutual-fund-container">
-        <!-- Left Column: Image -->
-        <div class="mutual-fund-left">
-            <img src="img/mutual_fund.webp" alt="Graph showing mutual fund growth over time with SIP investment" class="mutual-fund-img">
-        </div>
-        <!-- Right Column: Content -->
-        <div class="mutual-fund-right">
-            <h1>What is a Mutual Fund?</h1>
-            <p>
-                A mutual fund is a financial vehicle that pools money from multiple investors to purchase securities 
-                like stocks, bonds, and other assets. Managed by professional portfolio managers, mutual funds 
-                provide individual investors access to diversified portfolios and professional management, 
-                helping to reduce risks associated with individual security investments.
-            </p>
+    <div class="mutual-fund-section">
+        <div class="mutual-fund-container">
+            <!-- Left Column: Image -->
+            <div class="mutual-fund-left">
+                <img src="img/mutual_fund.webp" alt="Graph showing mutual fund growth over time with SIP investment" class="mutual-fund-img">
+            </div>
+            <!-- Right Column: Content -->
+            <div class="mutual-fund-right">
+                <h1>What is a Mutual Fund?</h1>
+                <p>
+                    A mutual fund is a financial vehicle that pools money from multiple investors to purchase securities 
+                    like stocks, bonds, and other assets. Managed by professional portfolio managers, mutual funds 
+                    provide individual investors access to diversified portfolios and professional management, 
+                    helping to reduce risks associated with individual security investments.
+                </p>
+            </div>
         </div>
     </div>
-</div>
-
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.3, // Trigger when 30% of the element is visible
-    };
-
-    const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    document.querySelectorAll(".mutual-fund-left, .mutual-fund-right").forEach(el => {
-        observer.observe(el);
-    });
-});
-
-</script>
-    <!-- Mutual Fund Section End -->
 
     <!-- How It Works Section -->
     <section id="how-it-works" class="how-it-works mutual-fund-hiw">
@@ -104,7 +71,6 @@
             </div>
         </div>
     </section>
-    <!-- How It Works Section End -->
 
     <!-- Advantages of Mutual Fund -->
     <div class="mutual-fund-container-adv">
@@ -148,30 +114,6 @@
             </div>
         </div>
     </div>
-    <script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const advantages = document.querySelectorAll(".advantage-item-adv");
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = `${index * 0.3}s`;
-                    entry.target.classList.add("show-adv");
-                } else {
-                    entry.target.classList.remove("show-adv"); // Remove to restart animation
-                }
-            });
-        },
-        { threshold: 0.3 } // Trigger when 30% of the section is visible
-    );
-
-    advantages.forEach((advantage) => {
-        observer.observe(advantage);
-    });
-});
-</script>
-    <!-- Advantages of Mutual Fund End -->
 
     <!-- History of Mutual Fund -->
     <div class="centered-container">
@@ -183,33 +125,51 @@
                 quantity-wise.</p>
         </div>
     </div>
-    <script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const historySection = document.querySelector(".mutual-fund-history");
-
-    function animateOnScroll() {
-        const rect = historySection.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
-            historySection.style.transition = "opacity 1s ease-out, transform 1s ease-out";
-            historySection.style.opacity = "1";
-            historySection.style.transform = "translateX(0)";
-        } else {
-            historySection.style.transition = "none";
-            historySection.style.opacity = "0";
-            historySection.style.transform = "translateX(100%)";
-        }
-    }
-
-    window.addEventListener("scroll", animateOnScroll);
-    animateOnScroll();
-});
-
-</script>
-    <!-- History of Mutual Fund End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <!-- JavaScript -->
+    <script>
+        // Intersection Observer for mutual fund section
+        document.addEventListener("DOMContentLoaded", function () {
+            const mutualFundObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll(".mutual-fund-left, .mutual-fund-right").forEach(el => {
+                mutualFundObserver.observe(el);
+            });
+
+            // Advantages section animation
+            const advantagesObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = `${index * 0.3}s`;
+                        entry.target.classList.add("show-adv");
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll(".advantage-item-adv").forEach(advantage => {
+                advantagesObserver.observe(advantage);
+            });
+
+            // History section animation
+            const historySection = document.querySelector(".mutual-fund-history");
+            function animateHistory() {
+                const rect = historySection.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    historySection.style.opacity = "1";
+                    historySection.style.transform = "translateX(0)";
+                }
+            }
+            window.addEventListener("scroll", animateHistory);
+            animateHistory();
+        });
+    </script>
 @endsection

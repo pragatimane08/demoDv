@@ -513,38 +513,59 @@
         color: #555;
     }
 
-    @media (max-width: 768px) {
-        .flyer-header h1 {
-            font-size: 6vw;
-        }
-
-        .flyer-header span {
-            font-size: 3vw;
-        }
-
-        .flyer-header .subtext {
-            font-size: 2.5vw;
-        }
-
-        .flyer-content h2 {
-            font-size: 4vw;
-        }
-
-        .flyer-content p {
-            font-size: 2.5vw;
-        }
-
-        .flyer-content .image img {
-            max-width: 100%;
-        }
-
-        .flyer-details div h3 {
-            font-size: 3vw;
-        }
-
-        .flyer-details div p {
-            font-size: 2vw;
+    /* ===== Mobile & Tablet Layout (Image Above, Content Below) ===== */
+@media (max-width: 1024px) {
+    .flyer-content {
+        flex-direction: column;
+    }
+    
+    .flyer-content .image {
+        margin-bottom: 20px;
+    }
+    
+    .flyer-content .details {
+        text-align: center;
+        padding: 10px;
+    }
+    
+    /* Adjust font sizes for smaller screens */
+    .flyer-header h1 {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+    
+    .flyer-header span {
+        font-size: clamp(14px, 3vw, 20px);
+    }
+    
+    .flyer-header .subtext {
+        font-size: clamp(12px, 2.5vw, 16px);
+    }
+    
+    .flyer-content h2 {
+        font-size: clamp(20px, 4vw, 28px);
+    }
+    
+    .flyer-content p {
+        font-size: clamp(14px, 2.5vw, 16px);
+    }
+    
+    /* Stack details on very small screens */
+    @media (max-width: 480px) {
+        .flyer-details div {
+            min-width: 100%;
         }
     }
+}
+
+/* ===== Desktop Layout (Side by Side) ===== */
+@media (min-width: 1025px) {
+    .flyer-content {
+        flex-direction: row;
+    }
+    
+    .flyer-content .details {
+        text-align: left;
+    }
+}
 </style>
 @endsection
