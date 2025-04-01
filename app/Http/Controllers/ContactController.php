@@ -34,7 +34,7 @@ class ContactController extends Controller
         ];
 
         // Send email
-        Mail::to('rockstarnihar22@gmail.com')->send(new ContactFormMail($details));
+        Mail::to('customerservice@dhanavruksha.in')->send(new ContactFormMail($details));
 
         // Redirect back with success message
         return redirect()->route('contact-us')->with('success', 'Your message has been sent successfully!');

@@ -128,7 +128,7 @@
             <h1 class="company-profile-heading">Our Vision & Strength</h1>
             <div class="company-profile-cards-section">
                 <div class="company-profile-card">
-                    <img src="img/target.webp" alt="Mission">
+                    <img src="img/c1.png" alt="Mission">
                     <h2>Our Mission</h2>
                     <ul>
                         <li>Build a base of 1 lakh customers each with a minimum portfolio of Rs.1 crore and scale up</li>
@@ -140,7 +140,7 @@
                         </ul>
                 </div>
                 <div class="company-profile-card">
-                    <img src="img/value.webp" alt="Values">
+                    <img src="img/c2.png" alt="Values">
                     <h2>Our Values</h2>
                     <ul>
                         <li>To educate the youth right from their college to empower them to make quality investments</li>
@@ -150,7 +150,7 @@
                     </ul>
                 </div>
                 <div class="company-profile-card">
-                    <img src="img/determination.webp" alt="Strengths">
+                    <img src="img/c3.png" alt="Strengths">
                     <h2>Our Strengths</h2>
                     <ul>
                         <li>Best of both worlds of Corporate Advisory and Individual Financial Advisors (IFA)</li>

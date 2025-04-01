@@ -35,7 +35,7 @@ public function handleForm(Request $request)
 
     try {
         // Send email notification
-        Mail::to('rockstarnihar22@gmail.com')->send(new MeetingScheduled($request));
+        Mail::to('customerservice@dhanavruksha.in')->send(new MeetingScheduled($request));
 
         // Set flash session variable
         return redirect()->route('schedule.meeting.form')

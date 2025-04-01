@@ -2,7 +2,6 @@
 @section('content')
 <!-- public/img/estateplanning.jpeg -->
     <!-- Page Header Start -->
-    <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
     style="background: url('{{ asset('img/estateplanning.jpeg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
@@ -19,7 +18,6 @@
 </div>
     <!-- Page Header End -->
 
-     <!-- Estate Planning-Header start -->
      <!-- Estate Planning Hero Section -->
     <div class="estate-planning1-hero"> 
         <div class="estate-planning1-herocontainer">
@@ -37,6 +35,27 @@ strategies.">
             </div>
         </div>
     </div> 
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const textSection = document.querySelector(".estate-planning1-hero-text");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          textSection.classList.add("visible");
+        } else {
+          textSection.classList.remove("visible"); // Remove class to re-trigger effect
+        }
+      });
+    },
+    { threshold: 0.5 } // Triggers when 50% of the element is visible
+  );
+
+  observer.observe(textSection);
+});
+
+</script>
   <!-- Estate Planning-Header end -->
 
  <!-- Estate Planning-Services start -->
@@ -62,6 +81,33 @@ strategies.">
     </div>
   </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const serviceSection = document.getElementById("estate-planning-services");
+    const serviceItems = document.querySelectorAll(".estate-planning-service-item");
+
+    function fadeInOnScroll() {
+        const sectionPosition = serviceSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionPosition < windowHeight - 50) {
+            serviceItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add("fade-in");
+                }, index * 200); // Staggered animation
+            });
+        } else {
+            serviceItems.forEach(item => {
+                item.classList.remove("fade-in"); // Reset effect when leaving
+            });
+        }
+    }
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    fadeInOnScroll(); // Trigger once on load
+});
+
+</script>
 <!-- Estate Planning-Services end -->
 
     <!-- Back to Top -->
@@ -110,13 +156,13 @@ strategies.">
         });
     </script>
        
-    <style>/**Estate Planning**/
-/*estate planning header*/
-/* Estate Planning Hero Section */
+<style>
+/**Estate Planning**/
+/* Estate Planning Header */
 .estate-planning1-hero {
-  background: linear-gradient(135deg, #d0a94e 0%, #d0a94e 100%);
+  background:rgb(223, 179, 78);
   color: white;
-  padding: 60px 30px;
+  padding: 20px 30px;
   border-radius: 10px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
@@ -129,15 +175,15 @@ strategies.">
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  flex-wrap: wrap; /* Ensure the content wraps on smaller screens */
-  flex-direction: row; /* Default to row direction */
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 /* Left Side - Image */
 .estate-planning1-heroimage {
-  flex-basis: 45%; /* Assign a fixed percentage for image width */
-  max-width: 50%; /* Control image size in desktop view */
-  order: 1; /* Ensure the image stays on the left */
+  flex-basis: 45%;
+  max-width: 50%;
+  order: 1;
 }
 
 .estate-planning1-heroimage img {
@@ -145,18 +191,26 @@ strategies.">
   height: auto;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Hover Effect */
 .estate-planning1-heroimage img:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.05);
 }
 
 /* Right Side - Text */
 .estate-planning1-hero-text {
-  flex-basis: 45%; /* Assign a fixed width for text block */
+  flex-basis: 45%;
   text-align: left;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.estate-planning1-hero-text.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .estate-planning1-hero-text h1 {
@@ -191,10 +245,20 @@ strategies.">
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .estate-planning1-hero {
+    margin: 50px 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .estate-planning1-herocontainer {
     flex-direction: column;
     text-align: center;
+  }
+
+  .estate-planning1-hero {
+    margin: 50px 20px;
   }
 
   .estate-planning1-heroimage {
@@ -204,6 +268,7 @@ strategies.">
 
   .estate-planning1-hero-text {
     flex: 1;
+    text-align: center;
   }
 
   .estate-planning1-hero-text h1 {
@@ -216,15 +281,16 @@ strategies.">
 
   .estate-planning-cta-button {
     padding: 10px 20px;
+    display: block;
+    margin: 0 auto;
   }
 }
-
 
 /* Estate planning - Our Key Services */
 #estate-planning-services {
   background-color: #f6f6f6;
   padding: 50px 0;
-  text-align: center; /* Center the content of the section */
+  text-align: center;
   margin-left: 60px;
   margin-right: 60px;
   border-radius: 10px;
@@ -233,32 +299,40 @@ strategies.">
 .estate-planning-container {
   width: 80%;
   margin: 0 auto;
-  display: flex; /* Enable flexbox */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center the heading and grid horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .estate-planning-container h2 {
-  font-size: 36px;
-  color: #d4af37; /* Gold */
+  font-size: 2rem;
+  color: #d4af37;
   margin-bottom: 40px;
-  text-align: center; /* Center the text inside h2 */
+  text-align: center;
 }
 
 .estate-planning-service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  justify-items: center; /* Center the items in the grid */
+  justify-items: center;
 }
 
+/* Fade-in Effect */
 .estate-planning-service-item {
   background-color: #f8f8f8;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
   text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(50px); /* Move from right */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.estate-planning-service-item.fade-in {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .estate-planning-service-item:hover {
@@ -266,18 +340,18 @@ strategies.">
 }
 
 .estate-planning-service-item i {
-  color: #d4af37; /* Gold for the icons */
+  color: #d4af37;
   margin-bottom: 20px;
 }
 
 .estate-planning-service-item h3 {
-  font-size: 24px;
-  color: #d4af37; /* Gold */
+  font-size: 1.5rem;
+  color: #d4af37;
   margin-bottom: 10px;
 }
 
 .estate-planning-service-item p {
-  font-size: 16px;
+  font-size: 1rem;
   color: #333;
 }
 
@@ -287,17 +361,24 @@ strategies.">
     margin-left: 30px;
     margin-right: 30px;
   }
-
+  
   .estate-planning-service-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    grid-template-columns: repeat(2, 1fr);
   }
-
+  
   .estate-planning-container h2 {
-    font-size: 32px;
+    font-size: 2rem;
   }
-
+  
   .estate-planning-service-item {
     padding: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #estate-planning-services {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -306,15 +387,15 @@ strategies.">
     margin-left: 20px;
     margin-right: 20px;
   }
-
+  
   .estate-planning-service-grid {
-    grid-template-columns: 1fr; /* 1 column on small screens */
+    grid-template-columns: 1fr;
   }
-
+  
   .estate-planning-container h2 {
-    font-size: 28px;
+    font-size: 2rem;
   }
-
+  
   .estate-planning-service-item {
     padding: 15px;
   }
@@ -322,22 +403,28 @@ strategies.">
 
 @media (max-width: 480px) {
   #estate-planning-services {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
-
+  
   .estate-planning-container {
-    width: 100%; /* Full width on very small screens */
+    width: 100%;
   }
-
+  
+  .estate-planning-service-grid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
   .estate-planning-service-item {
     padding: 10px;
   }
-
+  
   .estate-planning-container h2 {
-    font-size: 24px;
+    font-size: 2rem;
   }
 }
+
 </style>
 
     <!-- Template Javascript -->

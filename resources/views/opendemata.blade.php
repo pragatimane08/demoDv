@@ -203,6 +203,8 @@
 @media only screen and (max-width: 320px) {
     .open-demat-acc-container {
         padding: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     
     .open-demat-acc-form-container {
@@ -223,13 +225,15 @@
 /* General Container for the Section */
 .wida-demat-container {
     margin: 40px auto;
-    max-width: 1200px;
+    max-width: 1400px;
     padding: 20px;
     box-sizing: border-box;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     margin-top: 50px; /* Increased top margin to avoid overlap with the previous section */
+    margin-left: 50px;
+    margin-right: 47px;
    
 }
 
@@ -371,6 +375,7 @@
         margin-top: 30px;
     }
     
+    
     .wida-demat-header {
         margin-bottom: 20px;
     }
@@ -404,7 +409,8 @@
     text-align: center;
     padding: 40px 20px;
     background: #f0f2f5;
-    margin-left: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   .benefits-heading {
@@ -464,7 +470,8 @@
     padding: 60px 20px;
     background: #f0f2f5;
     text-align: center;
-    margin-left: 18px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   .advantages-heading {
@@ -640,7 +647,32 @@
     font-size: 1rem;
     color: #555;
   }
+/* Tablets & small desktops (768px - 992px) */
+@media only screen and (max-width: 992px) {
+  .oda-doc-wrapper-demat {
+    margin: 20px 15px; /* Slightly reduce side margins */
+  }
+}
 
+/* Mobile & small tablets (576px - 768px) */
+@media only screen and (max-width: 768px) {
+  .oda-doc-wrapper-demat {
+    margin: 15px 10px;
+    padding: 20px;
+    border-width: 2px;
+  }
+}
+
+/* Small phones (iPhone SE, etc. - under 430px) */
+@media only screen and (max-width: 430px) {
+  .oda-doc-wrapper-demat {
+    margin: 10px; /* Tight margins for small screens */
+    padding: 15px;
+    border-radius: 10px;
+    border-width: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Smaller shadow for mobile */
+  }
+}
   /* Responsive Design */
   @media (max-width: 1024px) {
     .odb-demat-benefit-card,

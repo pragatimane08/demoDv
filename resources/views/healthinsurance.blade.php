@@ -25,10 +25,10 @@
         
         <div class="health-insurance-features">
             <ul>
-                <li><i class="fas fa-hospital"></i>10,000+ network hospital in India</li>
-                <li><i class="fas fa-heartbeat"></i>Covers 18 types of heart diseases</li>
-                <li><i class="fas fa-shield-alt"></i>Cover of Rs.10 lakh for £ 15/Day²</li>
-                <li><i class="fas fa-file-medical"></i>No Medicals Required</li>
+                <li><i class="fas fa-hospital"> </i>  10,000+ network hospital in India</li>
+                <li><i class="fas fa-heartbeat">  </i>Covers 18 types of heart diseases</li>
+                <li><i class="fas fa-shield-alt"> </i>Cover of Rs.10 lakh for £ 15/Day²</li>
+                <li><i class="fas fa-file-medical"> </i>No Medicals Required</li>
             </ul>
         </div>
 

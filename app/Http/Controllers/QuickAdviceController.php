@@ -25,7 +25,7 @@ class QuickAdviceController extends Controller
         ];
 
         // Send email
-        Mail::to('rockstarnihar22@gmail.com')->send(new QuickAdviceMail($data));
+        Mail::to('customerservice@dhanavruksha.in')->send(new QuickAdviceMail($data));
 
         // Return a JSON response
         return response()->json(['success' => 'Your request has been submitted successfully!']);

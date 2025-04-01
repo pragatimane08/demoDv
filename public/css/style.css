@@ -86,14 +86,20 @@
   width: 100%;
 
 }
+@media (max-width: 1280px) and (min-height: 600px) {
+  .Topbar-d-flex a {
+    padding: 8px 12px; /* Larger touch targets */
+    min-width: 44px; /* Minimum recommended touch target size */
+  }
+}
 
 /* Logo Section */
 .logo-container {
   display: flex;
   align-items: center;
   text-align: center;
-  margin-left: 95px; /* Space on the left side of the logo */
-  margin-right: 135px; /* Space on the right side of the logo */
+  margin-left: 130px; /* Space on the left side of the logo */
+  margin-right: 80px; /* Space on the right side of the logo */
 }
 
 .logo-img {
@@ -219,6 +225,65 @@
     max-height: 41px;
     width: auto;
   }
+  @media (max-width: 1280px) and (min-height: 800px) {
+    .logo-container {
+      margin-left: 40px;
+      margin-right: 60px;
+    }
+    
+    .logo-title {
+      font-size: 26px;
+      margin-right: 15px;
+    }
+    
+    .logo-subtitle {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    
+    .Topbar-right {
+      gap: 15px;
+    }
+    
+    .Topbar-right a, .Topbar-right small {
+      font-size: 12px;
+    }
+  }
+  
+  /* For Nest Hub - 1024x600 */
+  @media (max-width: 1024px) and (min-height: 600px) {
+    .Topbar-container-fluid {
+      height: 75px;
+    }
+    
+    .logo-container {
+      margin-left: 20px;
+      margin-right: 30px;
+    }
+    
+    .logo-img {
+      max-height: 55px;
+    }
+    
+    .logo-title {
+      font-size: 22px;
+      margin-right: 10px;
+    }
+    
+    .logo-subtitle {
+      font-size: 14px;
+      margin-right: 8px;
+    }
+    
+    .Topbar-right {
+      gap: 10px;
+    }
+    
+    .Topbar-right a, .Topbar-right small {
+      font-size: 11px;
+    }
+  }
+  
 }
 /* topbar home end */
 
@@ -511,7 +576,7 @@
 /* Small devices (landscape phones, 300px and up) */
 @media (min-width: 300px) {
   .display-2 {
-    font-size: 60px;
+    font-size: 50px;
     padding: 8px 16px;
   }
   
@@ -565,7 +630,7 @@
 /* Adjustments for very large phones (like iPhone 14 Pro Max) */
 @media (min-width: 428px) and (max-width: 767px) {
   .display-2 {
-    font-size: 90px;
+    font-size: 70px;
   }
   
   .breadcrumb {
@@ -1478,6 +1543,21 @@
   .testimonial-carousel .owl-nav {
     top: -50px; /* Adjust navigation button position */
   }
+  /* Hide nav buttons on Nest Hub (1024x600) and Nest Hub Max (1280x800) */
+@media (min-width: 1024px) and (max-width: 1280px) and (min-height: 600px) and (max-height: 800px) {
+  .nav-buttons {
+    display: none !important;
+  }
+}
+
+/* Alternative approach that might catch more variations */
+@media (min-device-width: 1024px) and (max-device-width: 1280px) and 
+       (min-device-height: 600px) and (max-device-height: 800px) and 
+       (orientation: landscape) {
+  .nav-buttons {
+    display: none !important;
+  }
+}
 
 }
 /* General styles for the nav buttons */
@@ -1586,7 +1666,7 @@
 .footer .btn.btn-link::before {
   position: relative;
   content: "\f105";
-  font-family: "Font Awesome 5 Free";
+  /* font-family: "Font Awesome 5 Free"; */
   font-weight: 900;
   margin-right: 10px;
 }
@@ -2052,6 +2132,7 @@ html {
 }
 
 /*equity starts*/
+/*equity starts*/
 html {
   scroll-behavior: smooth;
 }
@@ -2144,187 +2225,8 @@ html {
   flex: 1;
 }
 
-/* Remove margin for the last step */
-/* .eq1-steps-container > .st4 {
-  margin-right: 0;
-} */
-
-/* Circle Styles */
-.eq1-circle {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background-color: white;
-  border: 18px solid transparent;
-  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.2), 0px 0px 8px rgb(243, 191, 223);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 1rem;
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  padding: 20%;
-
-}
-
-.eq1-circle::before {
-  content: '';
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.8);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
-}
-
-.eq1-circle:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 6px 12px rgba(247, 246, 246, 0.2), 0px 0px 12px rgb(255, 255, 255);
-}
-
-/* Circle Colors */
-.st1 .eq1-circle {
-  border-color: #f9c74f;
-}
-
-.st2 .eq1-circle {
-  border-color: #f9844a;
-}
-
-.st3 .eq1-circle {
-  border-color: #277da1;
-}
-
-.st4 .eq1-circle {
-  border-color: #f94144;
-}
-
-.st1 .eq1-circle::before {
-  border-color: #ffdd6f;
-}
-
-.st2 .eq1-circle::before {
-  border-color: #fcb69f;
-}
-
-.st3 .eq1-circle::before {
-  border-color: #a7d8e6;
-}
-
-.st4 .eq1-circle::before {
-  border-color: #ffb3b3;
-}
-
-.eq1-steps h3 {
-  font-size: 1.8rem;
-  margin-top: 0.2rem;
-  color: #444;
-  text-align: center;
-  width: 100%;
-  word-wrap: break-word;
-  line-height: 1.8;
-  max-width: 290px;
-}
-
-/* Add bottom padding to prevent overlap */
-.eq1-steps {
-  padding-bottom: 3rem;
-}
-
-/* Media Queries for Responsive Design (Tablet and Mobile View) */
-@media (max-width: 1024px) {
-  .eq1-steps-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
-  }
-
-  .st1,
-  .st2,
-  .st3,
-  .st4 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .eq1-circle {
-    width: 200px;
-    height: 200px;
-    font-size: 1.8rem;
-    margin: 0 auto 1rem;
-    padding: 15%;
-    border-width: 15px;
-  }
-
-  .eq1-circle::before {
-    width: 100px;
-    height: 100px;
-    border-width: 2px;
-  }
-
-  .eq1-steps h3 {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    line-height: 1.5;
-  }
-
-  .section-heading {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-
-  /* Prevent overlap on mobile by increasing bottom padding */
-  .eq1-steps {
-    padding-bottom: 4rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .eq1-circle {
-    width: 150px;
-    height: 150px;
-    font-size: 1.5rem;
-    margin: 0 auto 1rem;
-    padding: 10%;
-    border-width: 12px;
-  }
-
-  .eq1-circle::before {
-    width: 90px;
-    height: 90px;
-    border-width: 2px;
-  }
-
-  .eq1-steps h3 {
-    font-size: 1.4rem;
-    margin-top: 0.5rem;
-    line-height: 1.5;
-  }
-
-  .section-heading {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-  }
-
-  .eq1-steps {
-    padding-bottom: 4rem;
-  }
-}
-
-/* Hover effect */
-.eq1-circle:hover::before {
-  border-color: rgba(255, 255, 255, 1);
-}
-
 /*what is eq - equi page*/
+/* Equi Page Styling */
 .what-is-equi {
   justify-content: center;
   align-items: center;
@@ -2413,6 +2315,7 @@ html {
   color: #ffffff;
 }
 
+/* Tablet Responsiveness */
 @media (max-width: 1024px) {
   .what-is-equi .content-container {
     flex-direction: column;
@@ -2423,19 +2326,27 @@ html {
     height: 250px;
   }
 
+  .what-is-equi .text-container h1,
+  .what-is-equi .text-container h4 {
+    text-align: center;
+  }
+
   .what-is-equi {
-    margin: 20px 50px;
+    margin: 20px;
   }
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .what-is-equi {
     padding: 15px;
-    margin: 20px 50px;
+    margin: 20px 30px; /* Adjusted margin for better spacing */
   }
 
-  .what-is-equi .text-container h1 {
-    font-size: 2rem;
+  .what-is-equi .text-container h1,
+  .what-is-equi .text-container h4 {
+    font-size: 1.8rem;
+    text-align: center;
   }
 
   .what-is-equi .text-container p {
@@ -2447,23 +2358,26 @@ html {
   }
 }
 
+/* Small Mobile Devices */
 @media (max-width: 480px) {
   .what-is-equi {
     height: auto;
     padding: 10px;
-    margin: 20px 50px;
+    margin: 15px 20px; /* More margin for smaller screens */
   }
 
   .what-is-equi .text-container {
     padding: 15px;
   }
 
-  .what-is-equi .text-container h1 {
-    font-size: 2rem;
+  .what-is-equi .text-container h1,
+  .what-is-equi .text-container h4 {
+    font-size: 1.6rem;
+    text-align: center;
   }
 
   .what-is-equi .text-container p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -2473,7 +2387,7 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 40px;
-  max-width: 1350px;
+  max-width: 1410px;
   margin: 40px 50px;
   background-color: #fff;
   border-radius: 10px;
@@ -2490,6 +2404,7 @@ html {
   color: #d0a94e;
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center; /* Center title for all screen sizes */
 }
 
 .eq-understanding-subheading {
@@ -2549,12 +2464,16 @@ html {
   .eq-understanding-container {
     flex-direction: column;
     padding: 20px;
-    margin: 40px 50px;
+    margin: 40px 20px; /* Adjusted margin */
   }
 
   .eq-understanding-left-section {
     padding-right: 0;
     margin-bottom: 20px;
+  }
+
+  .eq-understanding-left-section h1 {
+    text-align: center; /* Center title on tablets */
   }
 
   .eq-understanding-right-section {
@@ -2563,9 +2482,32 @@ html {
   }
 }
 
+@media (max-width: 834px) { /* iPad Pro responsiveness */
+  .eq-understanding-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px;
+  }
+
+  .eq-understanding-left-section {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .eq-understanding-left-section h1 {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .eq-understanding-container {
+    margin: 40px 20px; /* Adjusted margin for mobile */
+  }
+
   .eq-understanding-left-section h1 {
     font-size: 2rem;
+    text-align: center;
   }
 
   .eq-understanding-subheading {
@@ -2581,18 +2523,19 @@ html {
 @media (max-width: 600px) {
   .eq-understanding-container {
     padding: 15px;
-    margin: 40px 50px;
+    margin: 40px 20px; /* Adjusted margin */
   }
 }
 
 @media (max-width: 480px) {
   .eq-understanding-container {
     padding: 10px;
-    margin: 40px 50px;
+    margin: 40px 20px; /* Adjusted margin */
   }
 
   .eq-understanding-left-section h1 {
     font-size: 2rem;
+    text-align: center;
   }
 
   .eq-understanding-subheading {
@@ -2714,8 +2657,8 @@ html {
 @media (max-width: 768px) {
   .risk-container {
     padding: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .risk-container .content-container h2 {
@@ -2730,8 +2673,8 @@ html {
 @media (max-width: 480px) {
   .risk-container {
     padding: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .risk-container .content-container h2 {
@@ -2743,10 +2686,14 @@ html {
   }
 }
 
+
+/* equity ends */
 /* equity ends */
 
 /* mutual funds start */
+/* mutual funds start */
 /* ===== Mutual Fund Main Styles ===== */
+/* Mutual Fund Container */
 .mutual-fund-container {
   background-color: white;
   display: flex;
@@ -2793,7 +2740,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 15px;
   width: 50%;
   color: #333;
@@ -2808,6 +2755,7 @@ html {
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 /* Visibility Animation */
@@ -2816,6 +2764,58 @@ html {
   opacity: 1;
   transform: translateX(0);
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .mutual-fund-container {
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    width: calc(100% - 40px);
+    max-width: 100%;
+  }
+  .mutual-fund-left, 
+  .mutual-fund-right {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mutual-fund-container {
+    padding: 20px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    width: calc(100% - 40px);
+    max-width: 100%;
+  }
+  .mutual-fund-left, 
+  .mutual-fund-right {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mutual-fund-container {
+    padding: 20px;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    width: calc(100% - 40px);
+    max-width: 100%;
+    flex-direction: column;
+  }
+  .mutual-fund-left, 
+  .mutual-fund-right {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
 
 /* ===== How It Works Section ===== */
 .how-it-works {
@@ -2956,6 +2956,8 @@ html {
   max-width: 1370px;
   margin: 0 auto;
   gap: 20px;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .left-image-container-adv {
@@ -6791,90 +6793,102 @@ body {
 /*downlodas ends*/
 
 /*contact us start*/
-/*contact us*/
-/* Contact Us Section */
 .contact-us-contact-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column; /* Default to column layout */
   background: #fff;
-  width: 80%;
-  margin: 50px auto;
+  width: 95%; /* Increased for mobile */
+  margin: 30px auto; /* Reduced margin for mobile */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Added for better mobile appearance */
+  overflow: hidden; /* Prevent content from overflowing rounded corners */
 }
 
 /* Left Section */
 .contact-us-contact-left {
-  flex: 2;
-  padding: 50px;
+  padding: 30px; /* Reduced padding for mobile */
+  width: 100%; /* Full width on mobile */
 }
 
 .contact-us-contact-left h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+  font-size: 1.8em; /* Reduced for mobile */
+  margin-bottom: 15px;
   color: #222;
 }
 
 .contact-us-contact-left p {
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Reduced for mobile */
   color: #555;
   line-height: 1.5;
+  font-size: 0.95em; /* Slightly smaller on mobile */
 }
 
 .contact-us-contact-left input,
 .contact-us-contact-left textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 12px; /* Slightly larger for better touch */
+  margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1em;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.contact-us-contact-left textarea {
+  min-height: 120px; /* Reduced for mobile */
 }
 
 .contact-us-contact-left button {
   background-color: #222;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 25px; /* Slightly larger for mobile */
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 1em;
+  width: 100%; /* Full width on mobile */
   transition: background 0.3s, transform 0.3s;
 }
 
 .contact-us-contact-left button:hover {
   background-color: #d4af37;
-  transform: scale(1.05);
-  /* Slightly enlarge the button */
+  transform: scale(1.02); /* More subtle hover effect for mobile */
 }
 
 /* Right Section */
 .contact-us-contact-right {
-  flex: 1.5;
-  /* Increased the flex size */
   background: #222;
   color: #fff;
-  padding: 50px;
+  padding: 30px; /* Reduced padding for mobile */
   position: relative;
-  margin-top: 140px;
+  margin-top: 0; /* Removed the large margin */
 }
 
 .contact-us-contact-right h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
+  font-size: 1.3em; /* Reduced for mobile */
+  margin-bottom: 15px;
+  margin-top: 10px;
   border-bottom: 2px solid #fff;
   display: inline-block;
-  margin-top: 10px;
+  padding-bottom: 5px;
   color: white;
 }
 
 .contact-us-contact-right ul {
   list-style: none;
+  padding-left: 0; /* Remove default padding */
 }
 
 .contact-us-contact-right li {
-  margin: 10px 0;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  gap: 5px;
+  margin: 12px 0; /* Adjusted spacing */
+  font-size: 0.95em; /* Slightly smaller on mobile */
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-us-contact-right li i {
+  margin-top: 3px; /* Better icon alignment */
 }
 
 /* Decorative Yellow Box */
@@ -6882,78 +6896,155 @@ body {
   content: '';
   position: absolute;
   background: #d4af37;
-  width: 50px;
-  height: 50px;
+  width: 40px; /* Smaller on mobile */
+  height: 40px;
   top: 0;
   left: 0;
-  margin-top: -10px;
-  margin-left: -10px;
 }
 
 /* Social Media Icons */
 .contact-us-social-links {
   display: flex;
-  justify-content: flex-start;
-  margin-top: 30px;
-  /* Space below the right section */
+  justify-content: center; /* Centered on mobile */
+  margin-top: 25px;
+  gap: 15px; /* Better than individual margins */
 }
 
 .contact-us-social-links .social-icon {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 2em;
+  font-size: 1.8em; /* Slightly smaller on mobile */
   color: #fff;
   transition: color 0.3s;
 }
 
-.contact-us-social-links .social-icon:hover {
-  color: #d4af37;
-  /* Change icon color on hover */
-}
-
-/* Additional Styling for Better Layout */
-.contact-us-contact-container {
-  flex-direction: column;
-  /* Stack the content vertically on small screens */
-}
-
-@media (min-width: 768px) {
-  .contact-us-contact-container {
-    flex-direction: row;
-    /* Display content in rows on larger screens */
-  }
-}
-
-
 /* Map Section */
 .map-contact-us-map-container {
-  width: 80%;
-  margin: 50px auto;
+  width: 95%; /* Increased for mobile */
+  margin: 30px auto; /* Reduced margin */
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: #fff;
-  padding: 30px;
+  padding: 20px; /* Reduced padding */
   border-radius: 8px;
 }
 
 .map-contact-us-map-container h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 1.3em; /* Reduced for mobile */
+  margin-bottom: 15px;
 }
 
 .map-contact-us-map-container iframe {
   width: 100%;
-  height: 400px;
+  height: 250px; /* Smaller on mobile */
   border: 0;
   border-radius: 8px;
 }
 
-/* contact us end */
+/* Tablet (Portrait) - 600px and up */
+@media (min-width: 600px) {
+  .contact-us-contact-container {
+    width: 90%;
+  }
+  
+  .contact-us-contact-left h1 {
+    font-size: 2em;
+  }
+  
+  .contact-us-contact-right h2 {
+    font-size: 1.4em;
+    margin-top: 10px;
+  }
+  
+  .map-contact-us-map-container iframe {
+    height: 300px;
+  }
+}
 
+/* Tablet (Landscape) - 768px and up */
+@media (min-width: 768px) {
+  .contact-us-contact-container {
+    flex-direction: row;
+    width: 85%;
+  }
+  
+  .contact-us-contact-left {
+    flex: 2;
+    padding: 40px;
+  width: auto;
+  }
+  
+  .contact-us-contact-right {
+    flex: 1.5;
+    padding: 40px;
+    margin-top: 40px; /* Smaller offset than desktop */
+  }
+  
+  .contact-us-contact-left h1 {
+    font-size: 2.2em;
+  }
+  
+  .contact-us-contact-left button {
+    width: auto; /* Auto width on tablets */
+  }
+  
+  .contact-us-social-links {
+    justify-content: flex-start; /* Align left on tablets */
+  }
+  
+  .map-contact-us-map-container {
+    width: 85%;
+  }
+  
+  .map-contact-us-map-container iframe {
+    height: 350px;
+  }
+}
 
-/*schedule meeting start*/
+/* Small Desktop - 992px and up */
+@media (min-width: 992px) {
+  .contact-us-contact-container {
+    width: 80%;
+    margin: 50px auto;
+  }
+  
+  .contact-us-contact-left {
+    padding: 50px;
+  }
+  
+  .contact-us-contact-right {
+    padding: 50px;
+    margin-top: 140px; /* Larger offset on desktop */
+  }
+  
+  .contact-us-contact-left h1 {
+    font-size: 2.5em;
+  }
+  
+  .contact-us-contact-right h2 {
+    font-size: 1.5em;
+  }
+  
+  .map-contact-us-map-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 30px;
+  }
+  
+  .map-contact-us-map-container iframe {
+    height: 400px;
+  }
+}
+
+/* Large Desktop - 1200px and up */
+@media (min-width: 1200px) {
+  .contact-us-contact-container {
+    max-width: 1200px;
+  }
+  
+  .map-contact-us-map-container {
+    max-width: 1200px;
+  }
+}
+
 
 /*schedule meeting start*/
 /* General Styles */
@@ -6972,7 +7063,7 @@ body {
 /* Image Section */
 .schedule-image {
   flex: 1;
-  min-width: 400px;
+  min-width: 300px; /* Reduced from 400px */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6989,8 +7080,8 @@ body {
 /* Form Section */
 .schedule-form {
   flex: 1;
-  min-width: 450px;
-  padding: 40px;
+  min-width: 300px; /* Reduced from 450px */
+  padding: 30px;
   text-align: center;
   background-color: #fff;
   border-radius: 0 20px 20px 0;
@@ -7001,7 +7092,7 @@ body {
 }
 
 .schedule-form h2 {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Reduced from 2.5rem */
   color: #d4af37;
   margin-bottom: 15px;
   font-weight: bold;
@@ -7009,20 +7100,21 @@ body {
 
 .schedule-form p {
   color: #777;
-  font-size: 1.1rem;
-  margin-bottom: 30px;
+  font-size: 1rem; /* Reduced from 1.1rem */
+  margin-bottom: 25px; /* Reduced from 30px */
 }
 
 .schedule-form input,
 .schedule-date-field input[type="date"] {
   width: 100%;
-  padding: 15px 18px;
-  margin-bottom: 20px;
+  padding: 12px 15px; /* Reduced from 15px 18px */
+  margin-bottom: 15px; /* Reduced from 20px */
   border: 2px solid #ddd;
   border-radius: 10px;
   font-size: 1rem;
   color: #333;
   transition: border-color 0.3s ease;
+  box-sizing: border-box; /* Added to ensure padding doesn't affect width */
 }
 
 .schedule-form input:focus,
@@ -7038,21 +7130,21 @@ body {
 
 .schedule-date-field i {
   position: absolute;
-  right: 18px;
+  right: 15px; /* Reduced from 18px */
   top: 50%;
   transform: translateY(-50%);
   color: #d4af37;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduced from 1.2rem */
   pointer-events: none;
 }
 
 .schedule-form button {
   width: 100%;
-  padding: 15px 0;
+  padding: 12px 0; /* Reduced from 15px 0 */
   background: linear-gradient(to right, #d4af37, #c19e34);
   color: #fff;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduced from 1.2rem */
   font-weight: bold;
   cursor: pointer;
   border-radius: 10px;
@@ -7065,124 +7157,111 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   .schedule-meeting-container {
     flex-direction: column;
     max-width: 90%;
+    margin: 20px auto; /* Added more margin for better spacing */
   }
+  
   .schedule-image {
-    height: 300px;
+    min-width: 100%;
+    height: 250px; /* Added fixed height */
   }
+  
   .schedule-image img {
     border-radius: 20px 20px 0 0;
   }
+  
   .schedule-form {
+    min-width: 100%;
     border-radius: 0 0 20px 20px;
-    padding: 35px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .schedule-meeting-container {
-    flex-direction: column;
-    max-width: 95%;
-  }
-  .schedule-image {
-    height: 280px;
-  }
-  .schedule-form {
-    padding: 30px;
-  }
-  .schedule-form h2 {
-    font-size: 2rem;
+    padding: 25px; /* Reduced from 35px */
   }
 }
 
 @media (max-width: 768px) {
-  .schedule-meeting-container {
-    flex-direction: column;
-    width: 95%;
-  }
-  .schedule-image {
-    height: 250px;
-  }
-  .schedule-form {
-    padding: 25px;
-  }
-  .schedule-form h2 {
-    font-size: 1.8rem;
-  }
-  .schedule-form p {
-    font-size: 1rem;
-  }
-  .schedule-form input,
-  .schedule-date-field input[type="date"] {
-    padding: 12px 15px;
-    font-size: 0.95rem;
-  }
-  .schedule-form button {
-    padding: 12px 0;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .schedule-meeting-container {
-    flex-direction: column;
-    width: 100%;
-    margin: 5% auto;
-  }
-  .schedule-image {
-    height: 220px;
-  }
   .schedule-form {
     padding: 20px;
   }
+  
   .schedule-form h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
+  
   .schedule-form p {
     font-size: 0.95rem;
+    margin-bottom: 20px;
   }
+  
   .schedule-form input,
   .schedule-date-field input[type="date"] {
     padding: 10px 12px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
   }
+  
   .schedule-form button {
     padding: 10px 0;
-    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .schedule-meeting-container {
-    width: 100%;
+    max-width: 95%;
+    border-radius: 15px;
   }
+  
   .schedule-image {
     height: 200px;
   }
+  
   .schedule-form {
-    padding: 18px;
+    padding: 15px;
   }
+  
   .schedule-form h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
   }
+  
   .schedule-form p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
   }
+  
   .schedule-form input,
   .schedule-date-field input[type="date"] {
-    padding: 9px 10px;
-    font-size: 0.85rem;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
   }
+  
   .schedule-form button {
-    padding: 10px 0;
-    font-size: 0.85rem;
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+  
+  .schedule-date-field i {
+    right: 10px;
+    font-size: 0.9rem;
   }
 }
 
-/*schedule meeting end*/
+@media (max-width: 400px) {
+  .schedule-form {
+    padding: 12px;
+  }
+  
+  .schedule-form h2 {
+    font-size: 1.3rem;
+  }
+  
+  .schedule-form p {
+    font-size: 0.85rem;
+  }
+}
+/* schedule meting end */
 /* Sidebar start */
 /* Default Styling for Floating Buttons */
 .float-slider-page .floating-buttons {
@@ -9702,6 +9781,7 @@ body {
   position: relative;
   z-index: 2;
   animation: gradientAnimation 3s infinite ease-in-out; /* Add gradient animation */
+  margin-top: -20px;
 }
 
 /* Button hover effect */
@@ -9714,6 +9794,7 @@ body {
 @media (max-width: 1024px) {
   .insurance-card {
     padding: 30px;
+    margin-bottom: 20px;
   }
 
   .info-box {
@@ -9724,6 +9805,7 @@ body {
 @media (max-width: 768px) {
   .insurance-card {
     padding: 20px;
+    margin-bottom: 20px;
   }
 
   .insurance-card h2 {
@@ -9751,6 +9833,7 @@ body {
 @media (max-width: 480px) {
   .insurance-card {
     padding: 15px;
+    margin-bottom: 15px;
   }
 
   .insurance-card h2 {
@@ -9776,6 +9859,8 @@ body {
   .cta-button {
     padding: 10px 20px;
     font-size: 12px;
+    margin-top: -18px;
+    margin-bottom: 20px;
   }
 }
 /* life insurance end */
@@ -9799,6 +9884,7 @@ body {
 .health-insurance-features ul {
   list-style-type: none;
   padding: 0;
+  margin-bottom: 10px; /* Add spacing between list items */
 }
 .health-insurance-features ul li {
   background: #ffffff; /* White background for list items */
@@ -9812,6 +9898,9 @@ body {
   opacity: 0; /* Start with invisible items */
   transform: translateY(20px); /* Start slightly below */
   animation: fadeInUp 0.5s ease-out forwards; /* Animation */
+  margin-right: 10px; /* Adds space between the icon and the text */
+
+  
 }
 .health-insurance-features ul li:nth-child(1) {
   animation-delay: 0.2s; /* Delay for first item */
@@ -10173,6 +10262,8 @@ body {
 @media (max-width: 1024px) {
   .zigzag-container {
     padding: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .zigzag-item {
@@ -10233,6 +10324,8 @@ body {
 @media (max-width: 480px) {
   .zigzag-container {
     padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .zigzag-icon {
@@ -10252,7 +10345,103 @@ body {
   .zigzag-content p {
     font-size: 13px;
   }
+  
 }
+/* For Nest Hub Max (1280x800) and similar smart displays */
+@media (max-width: 1280px) and (min-height: 800px) and (orientation: landscape) {
+  /* About Gift City Section */
+  .about-gift-city-section {
+    margin-left: 10px;
+    margin-right:20px;
+    padding: 70px 0;
+  }
+
+  .section-heading {
+    font-size: 2.3rem;
+  }
+
+  .section-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  /* Zigzag Container */
+  .zigzag-container {
+    padding: 25px;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  .zigzag-icon {
+    flex: 0 0 90px;
+    height: 90px;
+    font-size: 30px;
+  }
+
+  .zigzag-content h3 {
+    font-size: 23px;
+  }
+
+  .zigzag-content p {
+    font-size: 15px;
+  }
+}
+
+/* For Nest Hub (1024x600) and similar smaller smart displays */
+@media (max-width: 1024px) and (min-height: 600px) and (orientation: landscape) {
+  .about-gift-city-section {
+    margin-left: 5%;
+    padding: 60px 0;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .zigzag-container {
+    padding: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .zigzag-icon {
+    flex: 0 0 80px;
+    height: 80px;
+    font-size: 28px;
+  }
+}
+
+/* For tablet landscape mode (common breakpoint) */
+@media (max-width: 1024px) and (orientation: landscape) {
+  /* Add any additional tablet landscape specific styles here */
+}
+
+/* For tablet portrait mode */
+@media (max-width: 768px) and (orientation: portrait) {
+  /* Your existing tablet portrait styles */
+}
+
+/* For mobile landscape */
+@media (max-width: 850px) and (orientation: landscape) {
+  /* Adjustments for mobile in landscape mode */
+  .about-gift-city-section {
+    width: 85%;
+    margin: 0 auto 40px;
+  }
+  
+  .zigzag-item {
+    flex-direction: row;
+  }
+  
+  .zigzag-icon {
+    margin: 0 20px;
+  }
+}
+
 
 
 /* ***advantage of gift city funds ends  *** */
@@ -10262,43 +10451,50 @@ body {
 
 /* ***why unlisted shares starts  *** */
 /* ***why unlisted shares starts  *** */
+/* ===== Base Reset & Mobile-First Styles ===== */
+
+
+/* ===== Main Container ===== */
 .container-unlisted {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap;
   max-width: 1200px;
-  width: 100%;
+  width: calc(100% - 30px); /* Prevents edge touching */
+  margin: 20px auto; /* Vertical + horizontal spacing */
   background: #fff8dc;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Center the container */
 }
 
+/* ===== Image Section ===== */
 .image-section {
-  width: 100%; /* Full width on smaller screens */
-  height: 300px; /* Set a fixed height for the image section */
+  width: 100%;
+  height: 250px; /* Fixed height for mobile */
   background: url('img/unlist1.jpg') no-repeat center center/cover;
 }
 
+/* ===== Content Section ===== */
 .content-unlisted {
-  width: 100%; /* Full width on smaller screens */
-  padding: 20px;
+  width: 100%;
+  padding: 20px 15px; /* Better mobile padding */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 15px; /* Consistent spacing between items */
 }
 
+/* ===== Shares Card Styling ===== */
 .wyhunlisted-shares-section {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 18px 15px; /* Larger touch area */
   background: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
-  padding: 15px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Indicates interactivity */
 }
 
 .wyhunlisted-shares-section:hover {
@@ -10306,75 +10502,91 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
+/* Gold Ribbon (Left Border) */
 .wyhunlisted-shares-ribbon {
   position: absolute;
   left: 0;
-  width: 10px;
+  width: 8px;
   height: 100%;
   background: #D4AF37;
+  border-radius: 15px 0 0 15px;
 }
 
+/* Icon Styling */
 .wyhunlisted-shares-icon {
-  font-size: 2rem;
+  font-size: 1.8rem; /* Slightly smaller for mobile */
   color: #D4AF37;
-  margin-right: 15px;
+  margin-right: 12px;
+  min-width: 30px; /* Prevents icon squishing */
 }
 
+/* Text Styling */
 .wyhunlisted-shares-text {
   flex: 1;
 }
 
 .wyhunlisted-shares-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem; /* Better mobile readability */
   color: #333;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   font-weight: 600;
+  line-height: 1.3;
 }
 
 .wyhunlisted-shares-description {
   font-size: 0.9rem;
   color: #555;
-  line-height: 1.4;
+  line-height: 1.5; /* Improved readability */
 }
 
-/* Responsive Media Queries */
+/* ===== Responsive Breakpoints ===== */
+/* Tablet (768px+) */
 @media (min-width: 768px) {
   .image-section {
-    width: 50%; /* Half width on tablets and larger screens */
-    height: auto; /* Reset height to auto */
+    width: 45%; /* Flexible width */
+    height: 350px; /* Taller for tablets/desktops */
   }
 
   .content-unlisted {
-    width: 50%; /* Half width on tablets and larger screens */
+    width: 55%;
+    padding: 30px 25px; /* More spacious layout */
+  }
+
+  .wyhunlisted-shares-section {
+    padding: 20px 18px;
+  }
+
+  .wyhunlisted-shares-icon {
+    font-size: 2rem;
+  }
+
+  .wyhunlisted-shares-title {
+    font-size: 1.2rem;
   }
 }
 
+/* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .container-unlisted {
-    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    flex-wrap: nowrap; /* Side-by-side layout */
   }
-}
-/* Media Queries for Responsive Design */
 
-/* For tablets and larger screens (768px and above) */
-@media (min-width: 768px) {
   .image-section {
-    width: 50%; /* Half width on tablets and larger screens */
-    height: auto; /* Reset height to auto */
+    width: 40%; /* Adjust ratio as needed */
+    height: 400px; /* Full-height image */
   }
 
   .content-unlisted {
-    width: 50%; /* Half width on tablets and larger screens */
+    width: 60%;
   }
 }
 
-/* For desktops and larger screens (1024px and above) */
-@media (min-width: 1024px) {
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
   .container-unlisted {
-    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    margin: 30px auto; /* More vertical space */
   }
 }
-/* ***why unlisted shares ends *** */
 
 
 

@@ -292,7 +292,7 @@ Route::post('/submit-demat-form', function (Illuminate\Http\Request $request) {
         'message' => 'required|string|max:1000',
     ]);
 
-    Mail::to('rockstarnihar22@gmail.com')->send(new DematFormMail($data));
+    Mail::to('customerservice@dhanavruksha.in')->send(new DematFormMail($data));
 
     return back()->with('success', 'Your demat account request has been submitted successfully!');
 });
