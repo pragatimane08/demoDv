@@ -2,7 +2,7 @@
 @section('content')
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/seminaryouthhd.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 60vh;">
+    style="background: url('{{ Vite::asset('resources/theme/img/seminaryouthhd.webp')}}') center/cover no-repeat; background-size: cover; background-position: center; height: 60vh;">
     <div class="container text-center py-5">
         <h1 class="display-2 text-white mb-4 animated slideInDown">Investment Seminar For Youth</h1>
     </div>
@@ -12,7 +12,7 @@
 <!-- New Image and Information Section -->
 <section class="info-section">
     <div class="info-image">
-        <img src="img/y45.jpeg" alt="Speaker educating attendees on stock market and mutual fund investments.">
+        <img src="{{Vite::asset('resources/theme/img/y45.webp')}}" alt="Speaker educating attendees on stock market and mutual fund investments.">
     </div>
     <div class="info-content">
         <h1>Investment Seminars for Youth</h1>
@@ -34,8 +34,8 @@
             <div class="flyer-content">
                 <div class="carousel">
                     <div class="carousel-images">
-                        <img src="img/gsqaure2.jpg" alt="Image 1">
-                        <img src="img/gsquare1.jpg" alt="Image 2">
+                        <img src="{{Vite::asset('resources/theme/img/gsqaure2.webp')}}" alt="Image 1">
+                        <img src="{{Vite::asset('resources/theme/img/gsquare1.webp')}}" alt="Image 2">
                     </div>
                     <div class="carousel-buttons">
                         <button class="carousel-button prev">&#10094;</button>
@@ -79,9 +79,9 @@
             <div class="flyer-content">
                 <div class="carousel">
                     <div class="carousel-images">
-                        <img src="img/seminar2_1.jpg" alt="Young adults learning about money management and investment strategies.">
-                        <img src="img/seminar2_2.jpg" alt="Image 2, Young adults learning about money management and investment strategies.">
-                        <img src="img/seminar2_3.jpg" alt="Image 3, Young adults learning about money management and investment strategies.">
+                        <img src="{{Vite::asset('resources/theme/img/seminar2_1.webp')}}" alt="Young adults learning about money management and investment strategies.">
+                        <img src="{{Vite::asset('resources/theme/img/seminar2_2.webp')}}" alt="Image 2, Young adults learning about money management and investment strategies.">
+                        <img src="{{Vite::asset('resources/theme/img/seminar2_3.webp')}}" alt="Image 3, Young adults learning about money management and investment strategies.">
                     </div>
                     <div class="carousel-buttons">
                         <button class="carousel-button prev">&#10094;</button>
@@ -126,9 +126,9 @@
             <div class="flyer-content">
                 <div class="carousel">
                     <div class="carousel-images">
-                        <img src="img/seminar3_1.jpg" alt="Image 1">
-                        <img src="img/seminar3_2.jpg" alt="Image 2">
-                        <img src="img/seminar3_3.jpg" alt="Image 3">
+                        <img src="{{Vite::asset('resources/theme/img/seminar3_1.webp')}}" alt="Image 1">
+                        <img src="{{Vite::asset('resources/theme/img/seminar3_2.webp')}}" alt="Image 2">
+                        <img src="{{Vite::asset('resources/theme/img/seminar3_3.webp')}}" alt="Image 3">
                     </div>
                     <div class="carousel-buttons">
                         <button class="carousel-button prev">&#10094;</button>
@@ -173,10 +173,10 @@
             <div class="flyer-content">
                 <div class="carousel">
                     <div class="carousel-images">
-                        <img src="img/seminar4_1.png" alt="Image 1">
-                        <img src="img/seminar_4_2.jpg" alt="Image 2">
-                        <img src="img/seminar_4_3.png" alt="Image 3">
-                        <img src="img/seminar_4_4.png" alt="Image 4">
+                        <img src="{{Vite::asset('resources/theme/img/seminar4_1.webp')}}" alt="Image 1">
+                        <img src="{{Vite::asset('resources/theme/img/seminar_4_2.webp')}}" alt="Image 2">
+                        <img src="{{Vite::asset('resources/theme/img/seminar_4_3.webp')}}" alt="Image 3">
+                        <img src="{{Vite::asset('resources/theme/img/seminar_4_4.webp')}}" alt="Image 4">
                     </div>
                     <div class="carousel-buttons">
                         <button class="carousel-button prev">&#10094;</button>
@@ -221,10 +221,10 @@
             <div class="flyer-content">
                 <div class="carousel">
                     <div class="carousel-images">
-                        <img src="img/seminar5_1.jpg" alt="Image 1">
-                        <img src="img/seminar5_2.jpg" alt="Image 2">
-                        <img src="img/seminar5_3.jpg" alt="Image 3">
-                        <img src="img/seminar5_4.jpg" alt="Image 4">
+                        <img src="{{Vite::asset('resources/theme/img/seminar5_1.webp')}}" alt="Image 1">
+                        <img src="{{Vite::asset('resources/theme/img/seminar5_2.webp')}}" alt="Image 2">
+                        <img src="{{Vite::asset('resources/theme/img/seminar5_3.webp')}}" alt="Image 3">
+                        <img src="{{Vite::asset('resources/theme/img/seminar5_4.webp')}}" alt="Image 4">
                     </div>
                     <div class="carousel-buttons">
                         <button class="carousel-button prev">&#10094;</button>
@@ -332,240 +332,292 @@
 <!-- Styles -->
 <style>
     .details-section {
-        display: none;
-    }
+    display: none;
+}
 
-    .details-section.active {
-        display: block;
-    }
+.details-section.active {
+    display: block;
+}
 
-    .carousel {
-        max-width: 500px;
-        max-height: 500px;
-        overflow: hidden;
-        position: relative;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
+.carousel {
+    max-width: 500px;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
 
-    .carousel-images {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
 
-    .carousel-images img {
-        width: 100%;
-        flex-shrink: 0;
-    }
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+}
 
-    .carousel-buttons {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-    }
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
 
-    .carousel-button {
-        background-color: rgba(0, 0, 0, 0.5);
-        border: none;
-        color: white;
-        font-size: 18px;
-        padding: 10px 15px;
-        cursor: pointer;
-        border-radius: 50%;
-        transition: background-color 0.3s;
-    }
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
 
-    .carousel-button:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
-    .carousel-dots {
-        position: absolute;
-        bottom: 10px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-    .carousel-dot {
-        width: 10px;
-        height: 10px;
-        margin: 0 5px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    .carousel-dot.active {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
+.carousel-dot.active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
+.flyer {
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    margin-left: -4%;
+}
+
+.flyer-header {
+    background: linear-gradient(135deg, rgb(9, 9, 9), rgb(0, 5, 14));
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.flyer-header h1 {
+    margin: 0;
+    font-size: 4vw;
+    font-weight: bold;
+    color: #cb9f42;
+}
+
+.flyer-header span {
+    font-size: 1.8vw;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ddd;
+}
+
+.flyer-header .subtext {
+    font-size: 1.5vw;
+    margin-top: 15px;
+    color: #f9f9f9;
+}
+
+.flyer-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    align-items: center;
+}
+
+.flyer-content .image {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.flyer-content .image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flyer-content .details {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+}
+
+.flyer-content h2 {
+    margin: 0;
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: #cb9f42;
+    margin-bottom: 15px;
+}
+
+.flyer-content p {
+    margin: 10px 0;
+    font-size: 1.2vw;
+    line-height: 1.8;
+    color: #555;
+}
+
+.flyer-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px;
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.flyer-details div {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.flyer-details div h3 {
+    margin: 5px 0;
+    font-size: 1.8vw;
+    color: #cb9f42;
+}
+
+.flyer-details div p {
+    margin: 0;
+    font-size: 1.2vw;
+    color: #555;
+}
+
+/* ---------- Responsive Media Queries ---------- */
+
+/* Mobile devices */
+@media (max-width: 768px) {
     .flyer {
-        width: 100%;
-        max-width: 1400px;
-        margin: 20px auto;
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        border: 1px solid #ddd;
-         margin-left:-4%; 
-    }
-
-    .flyer-header {
-        background: linear-gradient(135deg, rgb(9, 9, 9), rgb(0, 5, 14));
-        color: #fff;
-        text-align: center;
-        padding: 30px 20px;
-        position: relative;
+        margin-left: 0 !important;
+        margin-right: 0;
+        border-radius: 0;
+        padding: 10px;
     }
 
     .flyer-header h1 {
-        margin: 0;
-        font-size: 4vw;
-        font-weight: bold;
-        color: #cb9f42;
+        font-size: 6vw;
     }
 
     .flyer-header span {
-        font-size: 1.8vw;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #ddd;
+        font-size: 3.5vw;
     }
 
     .flyer-header .subtext {
-        font-size: 1.5vw;
-        margin-top: 15px;
-        color: #f9f9f9;
+        font-size: 3vw;
     }
 
     .flyer-content {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 30px;
-        align-items: center;
+        flex-direction: column;
+        padding: 20px 10px;
     }
 
+    .flyer-content .details,
     .flyer-content .image {
-        flex: 1;
-        padding: 10px;
+        padding: 10px 0;
         text-align: center;
     }
 
-    .flyer-content .image img {
-        width: 100%;
-        max-width: 400px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .flyer-content .details {
-        flex: 2;
-        padding: 20px;
-        text-align: left;
-    }
-
     .flyer-content h2 {
-        margin: 0;
-        font-size: 2.5vw;
-        font-weight: bold;
-        color: #cb9f42;
-        margin-bottom: 15px;
+        font-size: 5vw;
     }
 
     .flyer-content p {
-        margin: 10px 0;
-        font-size: 1.2vw;
-        line-height: 1.8;
-        color: #555;
+        font-size: 3.5vw;
     }
 
     .flyer-details {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 25px;
-        background: #f9f9f9;
-        border-top: 1px solid #ddd;
+        flex-direction: column;
+        padding: 20px 10px;
     }
 
     .flyer-details div {
-        flex: 1;
-        min-width: 200px;
-        text-align: center;
-        margin: 10px 0;
+        margin-bottom: 15px;
     }
 
     .flyer-details div h3 {
-        margin: 5px 0;
-        font-size: 1.8vw;
-        color: #cb9f42;
+        font-size: 4vw;
     }
 
     .flyer-details div p {
-        margin: 0;
-        font-size: 1.2vw;
-        color: #555;
+        font-size: 3.2vw;
     }
 
-    /* ===== Mobile & Tablet Layout (Image Above, Content Below) ===== */
-@media (max-width: 1024px) {
+    .carousel-button {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Tablets and medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .flyer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .flyer-content {
         flex-direction: column;
+        padding: 25px 20px;
     }
-    
-    .flyer-content .image {
-        margin-bottom: 20px;
-    }
-    
-    .flyer-content .details {
-        text-align: center;
-        padding: 10px;
-    }
-    
-    /* Adjust font sizes for smaller screens */
-    .flyer-header h1 {
-        font-size: clamp(24px, 6vw, 36px);
-    }
-    
-    .flyer-header span {
-        font-size: clamp(14px, 3vw, 20px);
-    }
-    
-    .flyer-header .subtext {
-        font-size: clamp(12px, 2.5vw, 16px);
-    }
-    
+
     .flyer-content h2 {
-        font-size: clamp(20px, 4vw, 28px);
+        font-size: 3.5vw;
     }
-    
+
     .flyer-content p {
-        font-size: clamp(14px, 2.5vw, 16px);
+        font-size: 2vw;
     }
-    
-    /* Stack details on very small screens */
-    @media (max-width: 480px) {
-        .flyer-details div {
-            min-width: 100%;
-        }
+
+    .flyer-details {
+        padding: 25px 10px;
+    }
+
+    .flyer-details div h3 {
+        font-size: 3vw;
+    }
+
+    .flyer-details div p {
+        font-size: 2vw;
     }
 }
 
-/* ===== Desktop Layout (Side by Side) ===== */
-@media (min-width: 1025px) {
-    .flyer-content {
-        flex-direction: row;
-    }
     
-    .flyer-content .details {
-        text-align: left;
-    }
-}
+
 </style>
 @endsection

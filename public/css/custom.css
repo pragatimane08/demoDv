@@ -488,39 +488,23 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  /* iPad landscape and smaller desktop screens */
-  .sec-features {
-    flex-direction: row; /* Ensure row layout */
-    flex-wrap: wrap; /* Allow wrapping */
-    align-content: stretch; /* Stretch content to fill the container */
-    justify-content: center; /* Center items horizontally */
-    align-items: normal; /* Reset align-items to default */
-  }
-
-  .sec-features .feature {
-    min-width: 45%; /* Two columns for iPad landscape */
-    margin-bottom: 15px;
-  }
-}
-
 @media (max-width: 768px) {
-  /* iPad portrait and smaller tablets */
+  /* iPad portrait and smaller tablets and mobile devices */
   .sec-features {
-    flex-direction: row; /* Ensure row layout */
-    flex-wrap: wrap; /* Allow wrapping */
-    align-content: stretch; /* Stretch content to fill the container */
-    justify-content: center; /* Center items horizontally */
-    align-items: normal; /* Reset align-items to default */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: normal;
   }
 
   .sec-features .feature {
-    min-width: 45%; /* Two columns for iPad portrait */
-    margin-bottom: 20px; /* Increased spacing for better readability */
+    min-width: 45%;
+    margin-bottom: 20px;
   }
 
   .sec-features .feature h3 {
-    font-size: 1.8rem; /* Slightly larger font for better readability */
+    font-size: 1.8rem;
   }
 
   .sec-features .feature h4 {
@@ -528,24 +512,24 @@
   }
 
   .sec-features .feature p {
-    font-size: 0.95rem; /* Adjusted for smaller screens */
+    font-size: 1rem; 
   }
 }
 
 @media (max-width: 480px) {
   /* Mobile devices */
   .sec-features {
-    flex-direction: column; /* Switch to column layout for mobile */
-    align-items: center; /* Center items vertically */
+    flex-direction: column;
+    align-items: center;
   }
 
   .sec-features .feature {
-    min-width: 100%; /* Full width for mobile */
-    margin-bottom: 15px; /* Adjusted spacing for mobile */
+    min-width: 100%;
+    margin-bottom: 15px;
   }
 
   .sec-features .feature h3 {
-    font-size: 1.6rem; /* Adjusted for smaller screens */
+    font-size: 1.6rem;
   }
 
   .sec-features .feature h4 {
@@ -553,6 +537,6 @@
   }
 
   .sec-features .feature p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }

@@ -4,7 +4,7 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/portfoliofreereviewhd.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    style="background: url('{{ Vite::asset('resources/theme/img/portfoliofreereviewhd.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Portfolio Restructuring</h1>
            <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -24,11 +24,11 @@
             <!-- Left Images Section -->
             <div class="portfolio-restructuring-info-images">
                 <div class="portfolio-restructuring-info-image-top">
-                    <img src="img/about.jpg" alt="Investment portfolio being optimized for better returns
+                    <img src="{{Vite::asset('resources/theme/img/about.webp')}}" alt="Investment portfolio being optimized for better returns
 and lower risks." class="portfolio-restructuring-info-image">
                 </div>
                 <div class="portfolio-restructuring-info-image-bottom">
-                    <img src="img/project-3.jpg" alt="Graphs and Analysis,Investment portfolio being optimized for better returns
+                    <img src="{{Vite::asset('resources/theme/img/project-3.webp')}}" alt="Graphs and Analysis,Investment portfolio being optimized for better returns
 and lower risks." class="portfolio-restructuring-info-image">
                 </div>
             </div>

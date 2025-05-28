@@ -2,10 +2,10 @@
 @section('content')
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-       <!-- Page Header Start -->
+<!-- Page Header Start -->
        <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/financialpanning.jpeg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    style="background: url('{{ Vite::asset('resources/theme/img/financialpanning.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Financial Planning</h1>
            <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -18,7 +18,7 @@
    </div>
 </div>
    
-<!-- public/img/financialpanning.jpeg -->
+<!-- public/img/financialpanning.webp -->
     <!-- what is financial planning-start -->
     <div class="financial-intro-container">
     <section class="financial-intro">
@@ -33,13 +33,13 @@
           </p>
         </div>
         <div class="image-section">
-          <img src="img/financial-planning-img2.jpeg" alt="Planner analyzing financial goals and savings strategies
+          <img src="{{Vite::asset('resources/theme/img/financial-planning-img2.webp')}}" alt="Planner analyzing financial goals and savings strategies
 for clients." class="hero-image">
         </div>
       </div>
     </section>
   </div>
-    <!--what is financial planning-End -->
+<!--what is financial planning-End -->
 
    <!-- Steps start -->
    <!-- Financial Planning Steps -->
@@ -94,18 +94,49 @@ for clients." class="hero-image">
     </div>
   </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const stepCards = document.querySelectorAll(".fp-step-card");
 
+  function handleScroll() {
+    stepCards.forEach((card) => {
+      const cardPosition = card.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      // Add 'fade-in' class when the card is in view
+      if (cardPosition < windowHeight - 100) {
+        card.classList.add("fade-in");
+      } else {
+        // Remove 'fade-in' class when the card goes out of view
+        card.classList.remove("fade-in");
+      }
+    });
+  }
+
+  // Add a slight delay to smooth the transition
+  let scrollTimeout;
+  function debounceHandleScroll() {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(handleScroll, 70); // Adjust delay for smooth effect
+  }
+
+  // Run on scroll with a delay
+  window.addEventListener("scroll", debounceHandleScroll);
+
+  // Run once on page load to check visibility
+  handleScroll();
+});
+</script>
   <!-- Steps end -->
 
  <!-- Benefits of Financial Planning Section-start -->
-<!-- Benefits of Financial Planning Section-start -->
 <div class="financial-planning-bef">
   <div class="financial-planning-bef-heading-container">
     <h1 class="financial-planning-bef-section-heading">Benefits of Financial Planning</h1>
   </div>
   <div class="financial-planning-bef-image-section">
     <div class="financial-planning-bef-image-background">
-      <img src="img/fp-bef-2.jpeg" alt="Person smiling,Planner analyzing financial goals and savings strategies
+      <img src="{{Vite::asset('resources/theme/img/fp-bef-2.webp')}}" alt="Person smiling,Planner analyzing financial goals and savings strategies
 for clients." class="profile-image">
     </div>
   </div>
@@ -221,12 +252,37 @@ for clients." class="profile-image">
     </div>
   </div>
 </section>
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".planning-card");
+
+  function fadeInCards() {
+    cards.forEach((card) => {
+      const cardPosition = card.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight - 100;
+
+      if (cardPosition < screenPosition) {
+        card.classList.add("fade-in");
+      } else {
+        // Remove fade-in when card goes out of view to re-trigger the effect
+        card.classList.remove("fade-in");
+      }
+    });
+  }
+  window.addEventListener("scroll", fadeInCards);
+  fadeInCards();
+});
+
+</script>
 
 <style>
+/* Financial Planning Section */
 .financial-planning-section {
-  
-  padding: 60px 0;
+  padding: 30px 0;
   background-color: #f9f9f9;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 20px;
 }
 
 .container {
@@ -235,6 +291,7 @@ for clients." class="profile-image">
   padding: 0 20px;
 }
 
+/* Section Heading */
 .section-heading {
   text-align: center;
   font-size: 2.5rem;
@@ -252,6 +309,7 @@ for clients." class="profile-image">
   margin: 15px auto;
 }
 
+/* Section Introduction */
 .section-introduction {
   text-align: center;
   max-width: 700px;
@@ -261,12 +319,14 @@ for clients." class="profile-image">
   color: #555;
 }
 
+/* Cards Container */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
+/* Planning Card */
 .planning-card {
   background: white;
   border-radius: 10px;
@@ -284,6 +344,7 @@ for clients." class="profile-image">
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Card Icon */
 .card-icon {
   padding: 25px 25px 0;
   color: #D4AF37;
@@ -294,6 +355,7 @@ for clients." class="profile-image">
   height: 40px;
 }
 
+/* Card Content */
 .card-content {
   padding: 20px 25px 30px;
 }
@@ -311,23 +373,73 @@ for clients." class="profile-image">
   margin: 0;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+  .section-heading {
+    font-size: 2.2rem;
+  }
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
+  .financial-planning-section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   .cards-container {
     grid-template-columns: 1fr;
   }
-  
   .section-heading {
     font-size: 2rem;
   }
+  .section-introduction {
+    font-size: 1rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .financial-planning-section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .container {
+    padding: 0 10px;
+  }
+  .section-heading {
+    font-size: 1.8rem;
+  }
+  .section-introduction {
+    font-size: 0.95rem;
+  }
+  .planning-card {
+    border-radius: 8px;
+  }
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+}
+/* Initial state for fade-in effect */
+.planning-card {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Active state when element is in viewport */
+.planning-card.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 </style>
-
-
-
 <!-- FP Need -end -->
 
-    
-    <script>
+<script>
         document.addEventListener("DOMContentLoaded", function () {
             // Typewriter Effect for Wealth Content Only (Paragraph)
             (function () {
@@ -335,7 +447,7 @@ for clients." class="profile-image">
 
                 wealthContent.forEach((element) => {
                     const text = element.textContent;
-                    element.textContent = ""; // Clear the text initially
+                    element.textContent = ""; 
 
                     let index = 0;
 
@@ -343,7 +455,7 @@ for clients." class="profile-image">
                         if (index < text.length) {
                             element.textContent += text[index];
                             index++;
-                            setTimeout(typeEffect, 50); // Adjust typing speed for content
+                            setTimeout(typeEffect, 50); 
                         }
                     }
 

@@ -1,16 +1,13 @@
-
 <!-- @extends('layouts.app') If you have a layout -->
 
 
 @section('content')
      
-    
-  
 <!-- schudle-meeting start --> 
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/schedulemeetingheader.jpeg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    style="background: url('{{Vite::asset('resources/theme/img/schedulemeetingheader.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Schedule Meeting</h1>
            <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -29,7 +26,7 @@
 <div class="schedule-meeting-container">
     <!-- Left Panel with Image -->
     <div class="schedule-image">
-        <img src="{{ asset('img/schedule-meeting.webp') }}" alt="Schedule a Meeting">
+        <img src="{{ Vite::asset('resources/theme/img/schedule-meeting.webp') }}" alt="Schedule a Meeting">
     </div>
 
     <!-- Right Panel (Form) -->
@@ -64,6 +61,7 @@
             @enderror
 
             <!-- Date Field -->
+            <label class="schedule-label" for="date">Meeting Date</label>
             <input type="date" name="date" id="date" value="{{ old('date') }}" required>
             <div class="error-message" id="date-error"></div>
             @error('date')
@@ -71,6 +69,7 @@
             @enderror
 
             <!-- Time Field -->
+            <label class="schedule-label" for="time">Meeting Time</label>
             <input type="time" name="time" id="time" value="{{ old('time') }}" required>
             <div class="error-message" id="time-error"></div>
             @error('time')

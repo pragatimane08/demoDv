@@ -30,12 +30,22 @@
                     <span class="error">{{ $message }}</span>
                 @enderror
             </div>
+            <div class="form-group">
+    <label for="published_date">Published Date</label>
+    <input type="date" name="published_date" id="published_date" value="{{ old('published_date', $blog->published_date) }}" required>
+    @error('published_date')
+        <span class="error">{{ $message }}</span>
+    @enderror
+</div>
 
             <button type="submit" class="submit-btn">Update Blog</button>
         </form>
     </div>
 
     <style>
+
+        
+        
         /* Base Styles */
         .edit-blog-container {
             /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; */

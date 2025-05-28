@@ -3,7 +3,7 @@
 @section('content')
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-  style="background: url('{{ asset('img/comapnyprofilehed.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+  style="background: url('{{ Vite::asset('resources/theme/img/comapnyprofilehed.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
     <div class="container text-center py-5">
         <h1 class="display-2 text-white mb-4 animated slideInDown">Company Profile</h1>
         <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -16,6 +16,7 @@
 </div>
     <!-- Page Header End -->
 
+   
     <!-- Header Start -->
 <div class="container-fluid header p-0 mb-5" style="background-color: #d0a94e;">
     <div class="row g-0 align-items-center flex-column-reverse flex-lg-row">
@@ -24,7 +25,11 @@
                 Empowering Your Financial Future, One Smart Decision at a Time.
             </h1>
             <div class="row g-4">
-                @foreach ([['counter-trusted', 123, 'Trusted By'], ['counter-leaders', 1234, 'Industry Leaders'], ['counter-clients', 12345, 'Clients']] as $counter)
+                  @foreach ([ 
+    ['counter-trusted', 560, 'Customers'],
+    ['counter-clients', 125 , 'Crores Business Loans Facilitated'],
+    ['counter-leaders', 245, 'Crores Assets Under Management']
+] as $counter)
                     <div class="col-sm-4">
                         <div class="border-start border-light ps-4">
                             <h2 id="{{ $counter[0] }}" class="text-white mb-1" data-toggle="counter-up">{{ $counter[1] }}</h2>
@@ -37,7 +42,7 @@
         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
             <div class="owl-carousel header-carousel">
                 <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid" src="{{ asset('img/header=5.webp') }}" alt="Header Image">
+                    <img class="img-fluid" src="{{Vite::asset('resources/theme/img/header=5.webp') }}" alt="Header Image">
                     <div class="owl-carousel-text">
                         <h4 class="display-1 text-white mb-0"></h4>
                     </div>
@@ -46,7 +51,7 @@
         </div>
     </div>
 </div>
-<!-- Header End -->
+    <!-- Header End -->
 
     <!-- About Start -->
     <div class="container-xxl py-5">
@@ -54,8 +59,8 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-flex flex-column">
-                        <img class="img-fluid rounded w-75 align-self-end" src="img/team-1.webp" alt="">
-                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="img/handsh-3.webp" alt=""
+                        <img class="img-fluid rounded w-75 align-self-end" src="{{Vite::asset('resources/theme/img/team-1.webp')}}" alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="{{Vite::asset('resources/theme/img/handsh-3.webp')}}" alt=""
                             style="margin-top: -25%;">
                     </div>
                 </div>
@@ -128,7 +133,7 @@
             <h1 class="company-profile-heading">Our Vision & Strength</h1>
             <div class="company-profile-cards-section">
                 <div class="company-profile-card">
-                    <img src="img/c1.png" alt="Mission">
+                    <img src="img/c1.webp" alt="Mission">
                     <h2>Our Mission</h2>
                     <ul>
                         <li>Build a base of 1 lakh customers each with a minimum portfolio of Rs.1 crore and scale up</li>
@@ -140,7 +145,7 @@
                         </ul>
                 </div>
                 <div class="company-profile-card">
-                    <img src="img/c2.png" alt="Values">
+                    <img src="img/c2.webp" alt="Values">
                     <h2>Our Values</h2>
                     <ul>
                         <li>To educate the youth right from their college to empower them to make quality investments</li>
@@ -150,7 +155,7 @@
                     </ul>
                 </div>
                 <div class="company-profile-card">
-                    <img src="img/c3.png" alt="Strengths">
+                    <img src="img/c3.webp" alt="Strengths">
                     <h2>Our Strengths</h2>
                     <ul>
                         <li>Best of both worlds of Corporate Advisory and Individual Financial Advisors (IFA)</li>

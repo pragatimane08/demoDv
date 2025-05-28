@@ -8,14 +8,14 @@
         <div class="carousel-inner">
             <!-- Carousel Item 1 -->
             <div class="carousel-item active">
-                <img class="w-100" src="img/carousel-1.jpg" alt="Image" loading="lazy">
+                <img class="w-100" src="{{Vite::asset('resources/theme/img/h13.webp')}}" alt="Image" loading="lazy">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-lg-7 text-start">
                                 <p class="fs-4 text-white animated fadeIn">Welcome to <strong>Dhanavruksha</strong></p>
                                 <h1 class="display-1 text-white mb-4 animated fadeIn">Unlock <span class="auto-type" style="color: #faeb95;"></span></h1>
-                                <a href="#" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">Explore More</a>
+                                <a href="{{ route('home') }}" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">Explore More</a>
                             </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
             <!-- Carousel Item 2 -->
             <div class="carousel-item">
                 <video class="w-100" autoplay loop muted playsinline>
-                    <source src="img/save.mp4" type="video/mp4">
+                    <source src="{{Vite::asset('resources/theme/img/save.mp4')}}" type="video/mp4">
                 </video>
                 <div class="carousel-caption">
                     <div class="container">
@@ -33,7 +33,7 @@
                             <div class="col-lg-7 text-end">
                                 <p class="fs-4 text-white animated fadeIn">Welcome to <strong>Dhanavruksha</strong></p>
                                 <h1 class="display-1 text-white mb-5 animated fadeIn">Unlock Financial Freedom</h1>
-                                <a href="#" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">Explore More</a>
+                                <a href="{{ route('opendemata') }}" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">Explore More</a>
                             </div>
                         </div>
                     </div>
@@ -42,15 +42,16 @@
 
             <!-- Carousel Item 3 - Investment (Left-aligned) -->
             <div class="carousel-item">
-                <img class="w-100" src="img/investement.jpg" alt="Investment" loading="lazy">
+                <img class="w-100" src="{{Vite::asset('resources/theme/img/investement.webp')}}" alt="Investment" loading="lazy">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-lg-7 text-start">
                                 <p class="fs-4 text-white animated fadeIn">Welcome to <strong>Dhanavruksha</strong></p>
                                 <h1 class="display-1 text-white mb-4 animated fadeIn">Secure Your Future with Smart Investments</h1>
-                                <a href="#" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">Start Investing</a>
+                                <a href="{{ route('seminars') }}" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">Start Investing</a>
                             </div>
+                            <!-- seminars -->
                         </div>
                     </div>
                 </div>
@@ -58,14 +59,14 @@
 
             <!-- Carousel Item 4 - Newsletter (Right-aligned) -->
             <div class="carousel-item">
-                <img class="w-100" src="img/newsletterheder.jpg" alt="Newsletter" loading="lazy">
+                <img class="w-100" src="{{Vite::asset('resources/theme/img/newsletterheder.webp')}}" alt="Newsletter" loading="lazy">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-end">
                             <div class="col-lg-7 text-end">
                                 <p class="fs-4 text-white animated fadeIn">Welcome to <strong>Dhanavruksha</strong></p>
                                 <h1 class="display-1 text-white mb-4 animated fadeIn">Stay Informed with Our Newsletter</h1>
-                                <a href="#" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">Subscribe Now</a>
+                                <a href="{{ route('newsletter') }}" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">Subscribe Now</a>
                             </div>
                         </div>
                     </div>
@@ -74,14 +75,14 @@
 
             <!-- Carousel Item 5 - Portfolio (Left-aligned) -->
             <div class="carousel-item">
-                <img class="w-100" src="img/portfolioheader.jpg" alt="Portfolio" loading="lazy">
+                <img class="w-100" src="{{Vite::asset('resources/theme/img/portfolioheader.webp')}}" alt="Portfolio" loading="lazy">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-lg-7 text-start">
                                 <p class="fs-4 text-white animated fadeIn">Welcome to <strong>Dhanavruksha</strong></p>
                                 <h1 class="display-1 text-white mb-4 animated fadeIn">Build and Manage Your Portfolio</h1>
-                                <a href="#" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">View Portfolio</a>
+                                <a href="{{ route('portfolio-restucturing') }}" class="btn custom-btn rounded-pill py-3 px-5 animated fadeIn">View Portfolio</a>
                             </div>
                         </div>
                     </div>
@@ -106,8 +107,8 @@
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/aboutus-3.jpg" alt="About Us" style="object-fit: cover;" loading="lazy">
-                    <img class="position-absolute top-0 start-0 bg-white pe-3 pb-3" src="img/project-3.jpg" alt="Project" style="width: 200px; height: 200px;" loading="lazy">
+                    <img class="position-absolute w-100 h-100" src="{{Vite::asset('resources/theme/img/aboutus-3.webp')}}" alt="About Us" style="object-fit: cover;" loading="lazy">
+                    <img class="position-absolute top-0 start-0 bg-white pe-3 pb-3" src="{{Vite::asset('resources/theme/img/project-3.webp')}}" alt="Project" style="width: 200px; height: 200px;" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -123,7 +124,7 @@
                     </div>
                     <div class="row g-4">
                         <div class="col-sm-6">
-                            <a class="btn custom-outline-btn" href="#">Read More</a>
+                            <a class="btn custom-outline-btn" href="{{ route('company-profile') }}">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -253,17 +254,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="{{ route('financial-planning') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
             </div>
         </div>
-        <div class="home-service-item">
-            <div class="home-service-text">
-                <div class="home-btn-square">
-                    <i class="fas fa-hand-holding-usd" style="color: #d0a94e; font-size: 2rem; align-items: center;"></i>
-                </div>
-                <h5>Insurance & Investment Portfolio Restructuring</h5>
-            </div>
-            <div class="home-service-btn">
-                <a href="{{ route('Insurance_pr') }}">Read More <i class="bi bi-chevron-double-right"></i></a>
-            </div>
-        </div>
+        <!--<div class="home-service-item">-->
+        <!--    <div class="home-service-text">-->
+        <!--        <div class="home-btn-square">-->
+        <!--            <i class="fas fa-hand-holding-usd" style="color: #d0a94e; font-size: 2rem; align-items: center;"></i>-->
+        <!--        </div>-->
+        <!--        <h5>Insurance & Investment Portfolio Restructuring</h5>-->
+        <!--    </div>-->
+        <!--    <div class="home-service-btn">-->
+        <!--        <a href="{{ route('Insurance_pr') }}">Read More <i class="bi bi-chevron-double-right"></i></a>-->
+        <!--    </div>-->
+        <!--</div>-->
         <div class="home-service-item">
             <div class="home-service-text">
                 <div class="home-btn-square">
@@ -325,27 +326,28 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 </div>
 <!-- Service End -->
-<!-- Service End -->
-
-
 
 <!-- Products Offered Start -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <div class="home-products-section-container">
     <h2 class="products-heading">Products Offered</h2>
-    @foreach ([
-        ['fa-chart-line', '#ff5733', 'Mutual Funds', 'Professional management of pooled funds invested in diversified portfolios.'],
-        ['fa-sack-dollar', '#3498db', 'Equities', 'Stock market investments in publicly traded companies.'],
-        ['fa-building', '#27ae60', 'Unlisted Stocks', 'Investment opportunities in private company shares.'],
-        ['fa-briefcase', '#f39c12', 'PMS & AIFs', 'Professional portfolio management and alternative investment funds.'],
-        ['fa-globe', '#8e44ad', 'Gift City Investments', 'International financial services and investment opportunities.'],
-        ['fa-file-contract', '#2ecc71', 'Bonds', 'Fixed income securities with regular interest payments.'],
-        ['fa-piggy-bank', '#e74c3c', 'Corporate Deposits', 'Fixed deposits in corporate entities with attractive returns.'],
-        ['fa-user-shield', '#16a085', 'Term Insurance', 'Life coverage protection for financial security.'],
-        ['fa-heartbeat', '#d35400', 'Health Insurance', 'Comprehensive medical coverage for healthcare needs.'],
-        ['fa-rocket', '#9b59b6', 'Venture Capital', 'Investment in early-stage and high-growth potential startups.'],
-        ['fa-hand-holding-usd', '#2980b9', 'Business Loans', 'Financial solutions for business growth and expansion.']
-    ] as $product)
+    @php
+        $products = [
+            ['fa-chart-line', '#ff5733', 'Mutual Funds', 'Professional management of pooled funds invested in diversified portfolios.'],
+            ['fa-sack-dollar', '#3498db', 'Equities', 'Stock market investments in publicly traded companies.'],
+            ['fa-building', '#27ae60', 'Unlisted Stocks', 'Investment opportunities in private company shares.'],
+            ['fa-briefcase', '#f39c12', 'PMS & AIFs', 'Professional portfolio management and alternative investment funds.'],
+            ['fa-globe', '#8e44ad', 'Gift City Investments', 'International financial services and investment opportunities.'],
+            ['fa-file-contract', '#2ecc71', 'Bonds', 'Fixed income securities with regular interest payments.'],
+            ['fa-piggy-bank', '#e74c3c', 'Corporate Deposits', 'Fixed deposits in corporate entities with attractive returns.'],
+            // ['fa-user-shield', '#16a085', 'Term Insurance', 'Life coverage protection for financial security.'],
+            // ['fa-heartbeat', '#d35400', 'Health Insurance', 'Comprehensive medical coverage for healthcare needs.'],
+            ['fa-rocket', '#9b59b6', 'Venture Capital', 'Investment in early-stage and high-growth potential startups.'],
+            ['fa-hand-holding-usd', '#2980b9', 'Business Loans', 'Financial solutions for business growth and expansion.']
+        ];
+    @endphp
+
+    @foreach ($products as $product)
     <div class="home-products-section-card" style="cursor: pointer;" onclick="window.location.href='{{ route('schedulemeeting') }}'">
         <div class="home-products-section-image">
             <i class="fa-solid {{ $product[0] }}" style="color: {{ $product[1] }}; font-size: 40px;"></i>
@@ -356,6 +358,7 @@ document.addEventListener("DOMContentLoaded", function () {
     @endforeach
 </div>
 <!-- Products Offered End -->
+
 <!-- How It Works Start -->
 <div class="home-dv-how-it-work">
   <h2 class="home-section-title">How It Works</h2>
@@ -363,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Step 1 -->
     <div class="home-step">
       <div class="home-icon-container">
-        <img src="img/hiw-img-1.png" alt="Step 1 Icon" class="home-step-icon">
+        <img src="{{Vite::asset('resources/theme/img/hiw-img-1.webp')}}" alt="Step 1 Icon" class="home-step-icon">
         <span class="home-step-number">1</span>
       </div>
       <h3 class="home-step-title">Register</h3>
@@ -372,7 +375,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Step 2 -->
     <div class="home-step">
       <div class="home-icon-container">
-        <img src="img/hiw-home-img-2.png" alt="Step 2 Icon" class="home-step-icon">
+        <img src="{{Vite::asset('resources/theme/img/hiw-home-img-2.webp')}}" alt="Step 2 Icon" class="home-step-icon">
         <span class="home-step-number">2</span>
       </div>
       <h3 class="home-step-title">Analyse Finances</h3>
@@ -382,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="home-step">
         
       <div class="home-icon-container">
-        <img src="img/hiw-home-img-3.png" alt="Step 3 Icon" class="home-step-icon">
+        <img src="{{Vite::asset('resources/theme/img/hiw-home-img-3.webp')}}" alt="Step 3 Icon" class="home-step-icon">
         <span class="home-step-number">3</span>
       </div>
       <h3 class="home-step-title">Risk Profiling</h3>
@@ -391,7 +394,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Step 4 -->
     <div class="home-step">
       <div class="home-icon-container">
-        <img src="img/financialplst4.png" alt="Step 4 Icon" class="home-step-icon">
+        <img src="{{Vite::asset('resources/theme/img/financialplst4.webp')}}" alt="Step 4 Icon" class="home-step-icon">
         <span class="home-step-number">4</span>
       </div>
       <h3 class="home-step-title">Portfolio Construction</h3>
@@ -400,7 +403,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Step 5 -->
     <div class="home-step">
       <div class="home-icon-container">
-        <img src="img/hiw-home-img-4.png" alt="Step 5 Icon" class="home-step-icon">
+        <img src="{{Vite::asset('resources/theme/img/hiw-home-img-4.webp')}}" alt="Step 5 Icon" class="home-step-icon">
         <span class="home-step-number">5</span>
       </div>
       <h3 class="home-step-title">Mapping Goals</h3>
@@ -409,7 +412,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Step 6 -->
     <div class="home-step">
       <div class="home-icon-container">
-        <img src="img/hiw-home-img-5.png" alt="Step 6 Icon" class="home-step-icon">
+        <img src="{{Vite::asset('resources/theme/img/hiw-home-img-5.webp')}}" alt="Step 6 Icon" class="home-step-icon">
         <span class="home-step-number">6</span>
       </div>
       <h3 class="home-step-title">Regular Review</h3>
@@ -418,10 +421,6 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
 <!-- How It Works End -->
-<!-- How It Works End -->
-<!-- Blog Start -->
-
-<!-- Blog Section Start -->
     
 <!-- Blog Start -->
 
@@ -430,8 +429,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-8 text-center heading-section ftco-animate">
                 <h2 class="mb-4"><span>Recent</span> Blog</h2>
-                <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-            </div>
+                
         </div>
 
         <div class="row">
@@ -439,11 +437,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="blog-entry">
                         <a href="{{ $blog->link }}" class="block-20 d-flex align-items-end" style="background-image: url('{{ asset('storage/' . $blog->image) }}');">
-                            <div class="meta-date text-center p-2">
-                                <span class="day">{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</span>
-                                <span class="mos">{{ \Carbon\Carbon::parse($blog->created_at)->format('F') }}</span>
-                                <span class="yr">{{ \Carbon\Carbon::parse($blog->created_at)->format('Y') }}</span>
-                            </div>
+                        <div class="meta-date text-center p-2">
+    <span class="day">{{ \Carbon\Carbon::parse($blog->published_date)->format('d') }}</span>
+    <span class="mos">{{ \Carbon\Carbon::parse($blog->published_date)->format('F') }}</span>
+    <span class="yr">{{ \Carbon\Carbon::parse($blog->published_date)->format('Y') }}</span>
+</div>
                         </a>
                         <div class="text bg-white p-4">
                             <h3 class="heading"><a href="{{ $blog->link }}">{{ $blog->title }}</a></h3>
@@ -459,11 +457,13 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     </div>
 </div>
+</div>
 
     <!-- Blog End -->
-    <!-- Blog Section End -->
 
     <!-- Blog End -->
+ 
+  
 
 
 <!-- Optimized Testimonial Section Start -->
@@ -489,7 +489,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 ['img/18.webp', 'Swathi Balasubramanian', 'Business Development Manager, Government of Western Australia', 'My experience with Dhanavruksha has made my life easy in planning my overall finances. Savings and investment plans were tailor-made and customized as per my preference and comfort with the support of their expert team. They simplified the concept of financial planning and I have witnessed a substantial improvement in the way my assets and income have been managed. For anyone who is looking for sustainable and consistent financial support or a planner, this team is a definite go from my side.']
             ] as $index => $testimonial)
             <div class="testimonial {{ $index === 0 ? '' : 'hidden' }}">
-                <img src="{{ $testimonial[0] }}" alt="Testimonial Photo">
+                <img src="{{ Vite::asset('resources/theme/'.$testimonial[0]) }}" alt="Testimonial Photo">
                 <div class="testimonial-content">
                     <h3>{{ $testimonial[1] }}</h3>
                     <h4>{!! $testimonial[2] !!}</h4>
@@ -558,8 +558,6 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- Optimized Testimonial Section End -->
 
 
-
-<!-- Our Partners Start -->
 <!-- Our Partners Start -->
 <div class="home-our-partners-section">
   <div class="home-our-partners-container">
@@ -567,66 +565,21 @@ document.addEventListener("DOMContentLoaded", function () {
       <h3>Our Clients</h3>
       <p>We're fortunate to have incredible clients.</p>
     </div>
-    <div class="home-our-partners-marquee-container">
-      <div class="home-our-partners-marquee">
-        <!-- Logo Set 1 -->
-        <div class="logo-wrapper">
-          <img src="img/our-partners/our-p-1.png" alt="Axis Mutual Fund">
-          <img src="img/our-partners/our-p-2.jpg" alt="Bank of India Mutual Fund">
-          <img src="img/our-partners/our-p-3.png" alt="Aditya Birla Capital">
-          <img src="img/our-partners/our-p-4.jpg" alt="Baroda BNP Paribas">
-          <img src="img/our-partners/our-p-5.png" alt="HDFC Mutual Fund">
-          <img src="img/our-partners/our-p-6.png" alt="ICICI Prudential">
-          <img src="img/our-partners/our-p-7.png" alt="SBI Mutual Fund">
-          <img src="img/our-partners/our-p-8.png" alt="Kotak Mahindra">
-          <img src="img/our-partners/our-p-9.png" alt="Tata Mutual Fund">
-          <img src="img/our-partners/our-p-10.png" alt="Tata Mutual Fund">
-          <img src="img/our-partners/our-p-11.png" alt="Axis Mutual Fund">
-          <img src="img/our-partners/our-p-12.png" alt="Bank of India Mutual Fund">
-          <img src="img/our-partners/our-p-13.png" alt="Aditya Birla Capital">
-          <img src="img/our-partners/our-p-14.png" alt="Baroda BNP Paribas">
-          <img src="img/our-partners/our-p-15.png" alt="HDFC Mutual Fund">
-          <img src="img/our-partners/our-p-16.png" alt="ICICI Prudential">
-          <img src="img/our-partners/our-p-17.png" alt="SBI Mutual Fund">
-          <img src="img/our-partners/our-p-18.png" alt="Kotak Mahindra">
-          <img src="img/our-partners/our-p-19.png" alt="Tata Mutual Fund">
-          <img src="img/our-partners/our-p-20.png" alt="Tata Mutual Fund">
-          <img src="img/our-partners/our-p-21.png" alt="Axis Mutual Fund">
-          <img src="img/our-partners/our-p-22.png" alt="Bank of India Mutual Fund">
-          <img src="img/our-partners/our-p-23.png" alt="Aditya Birla Capital">
-          <img src="img/our-partners/our-p-24.png" alt="Baroda BNP Paribas">
-          <img src="img/our-partners/our-p-25.png" alt="HDFC Mutual Fund">
-          <img src="img/our-partners/our-p-26.png" alt="ICICI Prudential">
-          <img src="img/our-partners/our-p-27.png" alt="SBI Mutual Fund">
-          <img src="img/our-partners/our-p-28.png" alt="Kotak Mahindra">
-          <img src="img/our-partners/our-p-29.png" alt="Tata Mutual Fund">
-          <img src="img/our-partners/our-p-30.png" alt="Tata Mutual Fund">
-          <img src="img/our-partners/our-p-31.png" alt="Axis Mutual Fund">
-          <img src="img/our-partners/our-p-32.png" alt="Bank of India Mutual Fund">
-          <img src="img/our-partners/our-p-33.png" alt="Aditya Birla Capital">
-          <img src="img/our-partners/our-p-34.png" alt="Baroda BNP Paribas">
-          <img src="img/our-partners/our-p-35.png" alt="HDFC Mutual Fund">
-        </div>
+    
+    <!-- Iframe Instead of Logos -->
+    <iframe  
+      src="https://resources.investwellonline.com/websiteitem/amc-logos-new/amc.html" 
+      class="home-our-partners-iframe" 
+      title="AMC Logos" 
+      frameborder="0" 
+      width="100%" 
+      height="120"> <!-- Adjust height as needed -->
+    </iframe>
 
-        <!-- Duplicated Logo Set 2 for Infinite Scrolling -->
-        <div class="logo-wrapper">
-          <!-- Same 35 logos duplicated -->
-          <img src="img/our-partners/our-p-1.png" alt="Axis Mutual Fund">
-          <img src="img/our-partners/our-p-2.jpg" alt="Bank of India Mutual Fund">
-          <img src="img/our-partners/our-p-3.png" alt="Aditya Birla Capital">
-          <img src="img/our-partners/our-p-4.jpg" alt="Baroda BNP Paribas">
-          <img src="img/our-partners/our-p-5.png" alt="HDFC Mutual Fund">
-          <img src="img/our-partners/our-p-6.png" alt="ICICI Prudential">
-          <img src="img/our-partners/our-p-7.png" alt="SBI Mutual Fund">
-          <img src="img/our-partners/our-p-8.png" alt="Kotak Mahindra">
-          <img src="img/our-partners/our-p-9.png" alt="Tata Mutual Fund">
-          <img src="img/our-partners/our-p-10.png" alt="Tata Mutual Fund">
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 <!-- Our Partners End -->
+
 
 <style>
 /* Our Partners Section */

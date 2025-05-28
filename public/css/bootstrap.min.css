@@ -918,9 +918,43 @@ progress {
     --bs-gutter-x: 3rem
 }
 
+/*.g-5,*/
+/*.gy-5 {*/
+/*    --bs-gutter-y: 3rem*/
+/*}*/
+.g-5,
+.gx-5 {
+    --bs-gutter-x: 3rem
+}
+
+/* Default gutter spacing */
 .g-5,
 .gy-5 {
-    --bs-gutter-y: 3rem
+  --bs-gutter-y: 3rem;
+}
+
+/* iPad Mini - Portrait */
+@media screen and (max-width: 768px) and (min-width: 767px) {
+  .g-5,
+  .gy-5 {
+    margin-top: -58px;
+  }
+}
+
+/* iPad Mini - Landscape */
+@media screen and (max-width: 1024px) and (min-width: 1023px) {
+  .g-5,
+  .gy-5 {
+    margin-top: -58px;
+  }
+}
+
+/* General tablets and mid-size screens - Apply margin top */
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  .g-5,
+  .gy-5 {
+    margin-top: 77px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -8184,7 +8218,7 @@ fieldset:disabled .btn {
 }
 
 .fs-5 {
-    font-size: 1.25rem !important
+    font-size: 2rem !important
 }
 
 .fs-6 {
@@ -8285,7 +8319,7 @@ fieldset:disabled .btn {
 }
 
 .text-primary {
-    color: #4761FF !important
+    color: #D2AC47 !important
 }
 
 .text-secondary {

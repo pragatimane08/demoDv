@@ -1,31 +1,30 @@
 <!-- Spinner Start -->
 <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+</div>
+<!-- Spinner End -->
+
+@if(request()->is('/')) <!-- Check if it's the homepage -->
+    <!-- Loader Start -->
+    <div id="loader">
+        <h3 class="animate__animated animate__fadeIn">
+            <span class="welcome-text">Welcome to</span>
+            <span class="dhanvruksha-text">Dhanvruksha</span>
+        </h3>
     </div>
-    <!-- Spinner End -->
-    @if(request()->is('/')) <!-- Check if it's the homepage -->
-        <!-- Loader Start -->
-        <div id="loader">
-            <h3 class="animate__animated animate__fadeIn">
-                <span class="welcome-text">Welcome to</span>
-                <span class="dhanvruksha-text">Dhanvruksha</span>
-            </h3>
-        </div>
-        <!-- Loader End -->
-    @endif
-
-
+    <!-- Loader End -->
+@endif
 
 <style>
- /* Default styling */
+/* Default styling */
 .topabar-h1 {
     background: linear-gradient(135deg, #AE8625 0%, #F7EF8A 30%, #D2AC47 60%, #EDC967 100%);
     font-weight: bold;
-    -webkit-background-clip: text; /* Clips the gradient inside the text */
-    -webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-    white-space: nowrap; /* Prevents text wrapping */
+    white-space: nowrap;
     font-size: 13.8px;
     margin-right: 31px;
 }
@@ -33,15 +32,15 @@
 /* Tablet View (769px <= Screen width <= 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .topabar-h1 {
-        font-size: 10.35px; /* Slightly larger font size for tablets */
-        margin-right: 20px; /* Adjusted margin for better spacing */
+        font-size: 10.35px;
+        margin-right: 20px;
     }
 }
 
 /* Smaller Tablet View (Screen width <= 768px) */
 @media (max-width: 768px) {
     .topabar-h1 {
-        font-size: 9.5px;
+        font-size: 9.8px;
         text-align: center;
         margin-right: 0;
     }
@@ -50,23 +49,21 @@
 /* Mobile View (Screen width <= 480px) */
 @media (max-width: 480px) {
     .topabar-h1 {
-        font-size: 9.2px;
+        font-size: 10.2px;
         text-align: center;
-        white-space: normal; /* Allows text wrapping on small screens */
+        white-space: normal;
     }
 }
-
-
 </style>
-        
-           <!-- Topbar Start -->
+
+<!-- Topbar Start -->
 <div class="Topbar-container-fluid text-white d-flex d-lg-flex" style="background-color: #06060b;">
     <div class="Topbar-container py-3">
         <div class="Topbar-d-flex align-items-center">
             <!-- Logo Section -->
             <div class="logo-container">
-                <a href="index.html" class="logo-link">
-                    <img src="img/dhanvrukshalogoupdated.jpg" alt="DV Logo" class="logo-img">
+                <a href="{{ route('home') }}" class="logo-link">
+                    <img src="img/dhanvrukshalogoupdated.webp" alt="DV Logo" class="logo-img">
                 </a>
                 <div class="logo-text">
                     <span class="logo-title">DHANAVRUKSHA</span>
@@ -76,23 +73,26 @@
             </div>
 
             <!-- Toggler Navbar for Mobile View -->
-            <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#topbarNav" aria-controls="topbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#topbarNav" aria-controls="topbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <!-- Right Section (Hidden on Mobile) -->
             <div class="Topbar-right d-none d-lg-flex align-items-center ms-3" style="flex-wrap: nowrap;">
                 <small class="d-flex align-items-center me-3 hide-on-mobile">
-                    <i class="fa fa-envelope me-2" color="#cb9f42"></i>customerservice@dhanavruksha.in
+                    <a href="mailto:customerservice@dhanavruksha.in" class="text-white text-decoration-none">
+                        <i class="fa fa-envelope me-2" style="color:#cb9f42;"></i>customerservice@dhanavruksha.in
+                    </a>
                 </small>
                 <small class="d-flex align-items-center me-3 hide-on-mobile">
-                    <i class="fa fa-phone-alt me-2" color="#cb9f42"></i>+91 7305888454
+                    <a href="tel:+917305888454" class="text-white text-decoration-none">
+                        <i class="fa fa-phone-alt me-2" style="color:#cb9f42;"></i>+91 7305888454
+                    </a>
                 </small>
-                <!-- <a href="{{ route('schedulemeeting') }}" class="nav-item nav-link d-flex align-items-center me-3">
-                    <i class="fa fa-calendar-alt me-2" color="#cb9f42"></i>Schedule Meeting for Free Portfolio Review 
-                </a> -->
                 <a href="{{ route('opendemata') }}" class="nav-item nav-link d-flex align-items-center">
-                    <i class="fa fa-briefcase me-2" color="#cb9f42"></i>Open Demat Account
+                    <i class="fa fa-briefcase me-2" style="color:#cb9f42;"></i>Open Demat Account
                 </a>
             </div>
         </div>
@@ -136,40 +136,70 @@
                     </div>
 
                     <!-- Products Dropdown -->
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('mutual-funds') || request()->routeIs('equity') || request()->routeIs('pms-aif') || request()->routeIs('fixed-deposits') || request()->routeIs('bonds') ? 'active' : '' }}" data-bs-toggle="dropdown">Products</a>
-                        <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                            <a href="{{ route('mutual-funds') }}" class="dropdown-item {{ request()->routeIs('mutual-funds') ? 'active' : '' }}">Mutual Funds</a>
-                            <a href="{{ route('equity') }}" class="dropdown-item {{ request()->routeIs('equity') ? 'active' : '' }}">Equity And Derivatives</a>
-                            <a href="{{ route('pms-aif') }}" class="dropdown-item {{ request()->routeIs('pms-aif') ? 'active' : '' }}">PMS-AIF</a>
-                            <a href="{{ route('fixed-deposits') }}" class="dropdown-item {{ request()->routeIs('fixed-deposits') ? 'active' : '' }}">Fixed Deposits</a>
-                            <a href="{{ route('bonds') }}" class="dropdown-item {{ request()->routeIs('bonds') ? 'active' : '' }}">Bonds</a>
-                            <a href="{{ route('nps') }}" class="dropdown-item {{ request()->routeIs('nps') ? 'active' : '' }}">NPS</a>
-                            <a href="{{ route('lifeinsurance') }}" class="dropdown-item {{ request()->routeIs(' lifeinsurance') ? 'active' : '' }}">Life Insurance</a>
-                           <a href="{{ route('healthinsurance') }}" class="dropdown-item {{ request()->routeIs(' healthinsurance') ? 'active' : '' }}">Health Insurance</a>
-                            <a href="{{ route('giftcityfund') }}" class="dropdown-item {{ request()->routeIs('giftcityfund') ? 'active' : '' }}">Gift city Fund</a>
-                            <a href="{{ route('unlistedshares') }}" class="dropdown-item {{ request()->routeIs('unlistedshares') ? 'active' : '' }}"> Unlisted Shares</a>
-                            <a href="{{ route('loan') }}" class="dropdown-item {{ request()->routeIs('loan') ? 'active' : '' }}"> Business Loans</a>
-                        </div>
-                    </div>
+                    <!-- Products Dropdown -->
+<div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle {{ 
+        request()->routeIs('mutual-funds') ||
+        request()->routeIs('equity') ||
+        request()->routeIs('pms-aif') ||
+        request()->routeIs('fixed-deposits') ||
+        request()->routeIs('bonds') ||
+        request()->routeIs('nps') ||
+        request()->routeIs('lifeinsurance') ||
+        request()->routeIs('healthinsurance') ||
+        request()->routeIs('giftcityfund') ||
+        request()->routeIs('unlistedshares') ||
+        request()->routeIs('loan') 
+            ? 'active' : '' 
+    }}" data-bs-toggle="dropdown">Products</a>
+    <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+        <a href="{{ route('mutual-funds') }}" class="dropdown-item {{ request()->routeIs('mutual-funds') ? 'active' : '' }}">Mutual Funds</a>
+        <a href="{{ route('equity') }}" class="dropdown-item {{ request()->routeIs('equity') ? 'active' : '' }}">Equities</a>
+        <a href="{{ route('pms-aif') }}" class="dropdown-item {{ request()->routeIs('pms-aif') ? 'active' : '' }}">PMS-AIF</a>
+        <a href="{{ route('fixed-deposits') }}" class="dropdown-item {{ request()->routeIs('fixed-deposits') ? 'active' : '' }}">Fixed Deposits</a>
+        <a href="{{ route('bonds') }}" class="dropdown-item {{ request()->routeIs('bonds') ? 'active' : '' }}">Bonds</a>
+        <a href="{{ route('nps') }}" class="dropdown-item {{ request()->routeIs('nps') ? 'active' : '' }}">NPS</a>
+        <a href="{{ route('lifeinsurance') }}" class="dropdown-item {{ request()->routeIs('lifeinsurance') ? 'active' : '' }}">Life Insurance</a>
+        <a href="{{ route('healthinsurance') }}" class="dropdown-item {{ request()->routeIs('healthinsurance') ? 'active' : '' }}">Health Insurance</a>
+        <a href="{{ route('giftcityfund') }}" class="dropdown-item {{ request()->routeIs('giftcityfund') ? 'active' : '' }}">Gift City Fund</a>
+        <a href="{{ route('unlistedshares') }}" class="dropdown-item {{ request()->routeIs('unlistedshares') ? 'active' : '' }}">Unlisted Shares</a>
+        <a href="{{ route('loan') }}" class="dropdown-item {{ request()->routeIs('loan') ? 'active' : '' }}">Business Loans</a>
+    </div>
+</div>
+
+<!-- Services Dropdown -->
+<div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle {{ 
+        request()->routeIs('wealth-management') ||
+        request()->routeIs('financial-planning') ||
+        request()->routeIs('tax-planning') ||
+        request()->routeIs('portfolio-restucturing') ||
+        request()->routeIs('child-future-saving') ||
+        request()->routeIs('retirmentplanning') ||
+        request()->routeIs('seminars') ||
+        request()->routeIs('external-Portfolio') ||
+        request()->routeIs('equity-advisory') ||
+        request()->routeIs('estate-planning') ||
+        request()->routeIs('Insurance_pr') 
+            ? 'active' : '' 
+    }}" data-bs-toggle="dropdown">Services</a>
+    <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+        <a href="{{ route('wealth-management') }}" class="dropdown-item {{ request()->routeIs('wealth-management') ? 'active' : '' }}">Wealth Management</a>
+        <a href="{{ route('financial-planning') }}" class="dropdown-item {{ request()->routeIs('financial-planning') ? 'active' : '' }}">Financial Planning</a>
+        <a href="{{ route('tax-planning') }}" class="dropdown-item {{ request()->routeIs('tax-planning') ? 'active' : '' }}">Tax Planning</a>
+        <a href="{{ route('portfolio-restucturing') }}" class="dropdown-item {{ request()->routeIs('portfolio-restucturing') ? 'active' : '' }}">Portfolio Restructuring</a>
+        <a href="{{ route('child-future-saving') }}" class="dropdown-item {{ request()->routeIs('child-future-saving') ? 'active' : '' }}">Child Future Saving</a>
+        <a href="{{ route('retirmentplanning') }}" class="dropdown-item {{ request()->routeIs('retirmentplanning') ? 'active' : '' }}">Retirement Planning</a>
+        <a href="{{ route('seminars') }}" class="dropdown-item {{ request()->routeIs('seminars') ? 'active' : '' }}">Investment Seminar <br>For Youth</a>
+        <a href="{{ route('external-Portfolio') }}" class="dropdown-item {{ request()->routeIs('external-Portfolio') ? 'active' : '' }}">Free Review of External <br>Portfolio</a>
+        <a href="{{ route('equity-advisory') }}" class="dropdown-item {{ request()->routeIs('equity-advisory') ? 'active' : '' }}"> Equity Solutions</a>
+        <a href="{{ route('estate-planning') }}" class="dropdown-item {{ request()->routeIs('estate-planning') ? 'active' : '' }}">Estate Planning</a>
+        <a href="{{ route('Insurance_pr') }}" class="dropdown-item {{ request()->routeIs('Insurance_pr') ? 'active' : '' }}">Insurance Services</a>
+    </div>
+</div>
 
                     <!-- Services Dropdown -->
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('wealth-management') || request()->routeIs('financial-planning') || request()->routeIs('tax-planning') || request()->routeIs('portfolio-restucturing') || request()->routeIs('child-future-saving') || request()->routeIs('retirmentplanning') || request()->routeIs('seminars') || request()->routeIs('external-Portfolio') || request()->routeIs('equity-advisory') || request()->routeIs('estate-planning') || request()->routeIs('Insurance_pr') ? 'active' : '' }}" data-bs-toggle="dropdown">Services</a>
-                        <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                            <a href="{{ route('wealth-management') }}" class="dropdown-item {{ request()->routeIs('wealth-management') ? 'active' : '' }}">Wealth Management</a>
-                            <a href="{{ route('financial-planning') }}" class="dropdown-item {{ request()->routeIs('financial-planning') ? 'active' : '' }}">Financial Planning</a>
-                            <a href="{{ route('tax-planning') }}" class="dropdown-item {{ request()->routeIs('tax-planning') ? 'active' : '' }}">Tax Planning</a>
-                            <a href="{{ route('portfolio-restucturing') }}" class="dropdown-item {{ request()->routeIs('portfolio-restucturing') ? 'active' : '' }}">Portfolio Restructuring</a>
-                            <a href="{{ route('child-future-saving') }}" class="dropdown-item {{ request()->routeIs('child-future-saving') ? 'active' : '' }}">Child Future Saving</a>
-                            <a href="{{ route('retirmentplanning') }}" class="dropdown-item {{ request()->routeIs('retirmentplanning') ? 'active' : '' }}">Retirement Planning</a>
-                            <a href="{{ route('seminars') }}" class="dropdown-item {{ request()->routeIs('seminars') ? 'active' : '' }}">Investment Seminar <br>For Youth</a>
-                            <a href="{{ route('external-Portfolio') }}" class="dropdown-item {{ request()->routeIs('external-Portfolio') ? 'active' : '' }}">Free Review of External <br>Portfolio</a>
-                            <a href="{{ route('equity-advisory') }}" class="dropdown-item {{ request()->routeIs('equity-advisory') ? 'active' : '' }}">Equity Advisory</a>
-                            <a href="{{ route('estate-planning') }}" class="dropdown-item {{ request()->routeIs('estate-planning') ? 'active' : '' }}">Estate Planning</a>
-                            <a href="{{ route('Insurance_pr') }}" class="dropdown-item {{ request()->routeIs('Insurance_pr') ? 'active' : '' }}">Insurance Advisory</a>
-                        </div>
-                    </div>
+                    
 
                     <!-- Investor Zone Dropdown -->
                     <div class="nav-item dropdown">
@@ -278,4 +308,27 @@
             }
         }
     </script>
-    <!-- /Sidebar end -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  function handleResponsiveElements() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const topbarRight = document.querySelector('.Topbar-right');
+    const clientLogin = document.querySelector('.ms-auto.d-lg-block');
+    
+    // For Nest Hub (1024x600) and similar aspect ratios
+    if (width >= 992 && width <= 1024 && height <= 600) {
+      if (topbarRight) topbarRight.style.display = 'flex';
+      if (clientLogin) clientLogin.style.display = 'block';
+    }
+    // For iPad Pro in landscape
+    else if (width >= 992 && width <= 1024) {
+      if (topbarRight) topbarRight.style.display = 'flex';
+    }
+  }
+
+  // Run on load and resize
+  handleResponsiveElements();
+  window.addEventListener('resize', handleResponsiveElements);
+});
+    </script>

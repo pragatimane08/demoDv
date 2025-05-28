@@ -118,7 +118,7 @@
     /* Page Header */
     h1 {
         text-align: center;
-        margin-top: 20px;
+        margin-top: 54px;
         color: #b68e3c; /* Gold color */
     }
 

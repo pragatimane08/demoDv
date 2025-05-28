@@ -80,66 +80,68 @@
 
 <style>
     /* Floating Bar Styling */
+.floating-form-on-all-pages {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    background: linear-gradient(to right, #d4af37, rgb(242, 216, 138), #d4af37);
+    padding: 10px 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1000;
+    height: 50px;
+}
+
+.floating-form-on-all-pages form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Input Fields */
+.floating-form-on-all-pages .input-field {
+    flex: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    min-width: 300px;
+    font-size: 1rem;
+}
+
+/* Button */
+.floating-form-on-all-pages .apply-button {
+    padding: 10px 20px;
+    background: #d4af37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    margin: 0;
+}
+
+.floating-form-on-all-pages .apply-button:hover {
+    background: #b8962e;
+}
+
+/* Hide Floating Bar on Mobile & Tablet Devices */
+@media (max-width: 1024px), 
+       (max-device-width: 1366px) and (orientation: portrait), 
+       (max-device-width: 1024px) and (orientation: landscape) {
     .floating-form-on-all-pages {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        display: flex;
-        background: linear-gradient(to right, #d4af37, rgb(242, 216, 138), #d4af37);
-        padding: 10px 20px; /* Added padding left & right 20px */
-        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-        flex-wrap: wrap;
-        justify-content: center;
-        z-index: 1000;
-        height: 50px;
+        display: none;
     }
-
-    .floating-form-on-all-pages form {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 1400px; /* Keeps content centered */
-        margin: auto;
-    }
-
-    /* Input Fields */
-    .floating-form-on-all-pages .input-field {
-        flex: 1rem;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        outline: none;
-        min-width: 300px;
-        font-size: 1rem;
-    }
-
-    /* Button */
-    .floating-form-on-all-pages .apply-button {
-        padding: 10px 20px;
-        background: #d4af37;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        min-width: 200px;
-        margin: 0;
-    }
-
-    .floating-form-on-all-pages .apply-button:hover {
-        background: #b8962e;
-    }
-
-    /* Hide Floating Bar on Mobile Screens */
-    @media (max-width: 768px) {
-        .floating-form-on-all-pages {
-            display: none;
-        }
-    }
+}
 </style>

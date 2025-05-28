@@ -8,15 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      /* font-family: 'Roboto', sans-serif; */
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      
       color: #333;
+      overflow: hidden; /* This disables scrolling */
     }
 
     .container {
@@ -26,6 +26,8 @@
       padding: 40px;
       width: 100%;
       max-width: 400px;
+      max-height: 100vh; /* Ensure container doesn't exceed viewport height */
+      overflow-y: auto; /* Allow scrolling inside container if needed */
     }
 
     .brand-logo {

@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
-<!-- public/img/estateplanning.jpeg -->
+<!-- public/img/estateplanning.webp -->
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/estateplanning.jpeg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s"
+  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s"
+    style="background: url('{{ Vite::asset('resources/theme/img/estateplanning.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Estate Planning</h1>
            <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -19,22 +19,21 @@
     <!-- Page Header End -->
 
      <!-- Estate Planning Hero Section -->
-    <div class="estate-planning1-hero"> 
+    <div class="estate-planning1-hero">
         <div class="estate-planning1-herocontainer">
             <!-- Left Side: Image -->
             <div class="estate-planning1-heroimage">
-                <img src="img/ep-img-1.webp" alt="Legal document showing estate planning and wealth transfer
-strategies.">
+                <img src="{{Vite::asset('resources/theme/img/ep-img-1.webp')}}" alt="Legal document showing estate planning and wealth transferstrategies.">
             </div>
 
             <!-- Right Side: Text -->
             <div class="estate-planning1-hero-text">
                 <h1>Secure Your Legacy with Thoughtful Estate Planning</h1>
-                <p>Our experts provide tailored solutions to safeguard your assets and care for your loved ones.</p>
-                <a href="#services" class="estate-planning-cta-button">Schedule a Free Consultation</a>
+                <p>Our experts provide tailored solutions to safeguard your assets for your loved ones and hassle free transfer of wealth to your next generation.</p>
+                  <a href="{{ route('schedulemeeting') }}" class="estate-planning-cta-button">Schedule a Free Consultation</a>
             </div>
         </div>
-    </div> 
+    </div>
     <script>
 document.addEventListener("DOMContentLoaded", function () {
   const textSection = document.querySelector(".estate-planning1-hero-text");
@@ -242,6 +241,7 @@ document.addEventListener("DOMContentLoaded", function () {
 .estate-planning-cta-button:hover {
   background-color: #f8f8f8;
   transform: translateY(-3px);
+  color: #d0a94e;
 }
 
 /* Responsive Design */
@@ -287,6 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 /* Estate planning - Our Key Services */
+/* Estate planning - Our Key Services */
 #estate-planning-services {
   background-color: #f6f6f6;
   padding: 50px 0;
@@ -316,6 +317,8 @@ document.addEventListener("DOMContentLoaded", function () {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Fade-in Effect */
@@ -325,9 +328,11 @@ document.addEventListener("DOMContentLoaded", function () {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
-  opacity: 0; /* Initially hidden */
-  transform: translateX(50px); /* Move from right */
+  opacity: 0;
+  transform: translateX(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  width: 100%;
+  max-width: 400px; /* Uniform width for all devices */
 }
 
 .estate-planning-service-item.fade-in {
@@ -355,76 +360,98 @@ document.addEventListener("DOMContentLoaded", function () {
   color: #333;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  #estate-planning-services {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  
-  .estate-planning-service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .estate-planning-container h2 {
-    font-size: 2rem;
-  }
-  
-  .estate-planning-service-item {
-    padding: 20px;
-  }
-}
-
+/* Tablet devices (2 columns with centered last item) */
 @media (max-width: 1024px) {
   #estate-planning-services {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .estate-planning-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+
+  .estate-planning-service-item:nth-child(3) {
+    grid-column: span 2;
+    justify-self: center;
+    max-width: 400px;
   }
 }
 
+/* Smaller tablets */
 @media (max-width: 768px) {
   #estate-planning-services {
     margin-left: 20px;
     margin-right: 20px;
   }
-  
+
   .estate-planning-service-grid {
     grid-template-columns: 1fr;
+    max-width: 500px;
   }
-  
-  .estate-planning-container h2 {
-    font-size: 2rem;
+
+  .estate-planning-service-item:nth-child(3) {
+    grid-column: span 1;
+    max-width: 100%;
   }
-  
+
   .estate-planning-service-item {
-    padding: 15px;
+    padding: 25px;
+    max-width: 400px;
   }
 }
 
+/* Mobile devices */
 @media (max-width: 480px) {
   #estate-planning-services {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 30px 0;
   }
-  
+
   .estate-planning-container {
-    width: 100%;
+    width: 95%;
   }
-  
-  .estate-planning-service-grid {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
-  .estate-planning-service-item {
-    padding: 10px;
-  }
-  
+
   .estate-planning-container h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .estate-planning-service-item {
+    padding: 20px;
+    max-width: 400px;
   }
 }
 
+/* iPad and iPad Mini (portrait) - treat like tablets */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  #estate-planning-services {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .estate-planning-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+
+  .estate-planning-service-item:nth-child(3) {
+    grid-column: span 2;
+    justify-self: center;
+    max-width: 400px;
+  }
+
+  .estate-planning-service-item {
+    max-width: 400px;
+  }
+}
 </style>
 
     <!-- Template Javascript -->

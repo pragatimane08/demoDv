@@ -1,10 +1,9 @@
 @extends('layouts.app')
 @section('content')
-
  <!-- Page Header Start -->
  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/opendemat.jpeg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    style="background: url('{{Vite::asset('resources/theme/img/opendemat.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Open Demat Account</h1>
            <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -16,12 +15,10 @@
       </div>
    </div>
 </div>
-
 <!-- Page Header End -->
+
 <style>
-    /* Open demat account start */
-     /* Open Demat Account Section */
-  /* Open Demat Account Section - Responsive */
+/* Open demat account start */
 .open-demat-acc-container {
     background-color: #f0f2f5;
     display: flex;
@@ -144,8 +141,12 @@
 }
 
 /* Media Queries */
-/* Mobile devices - stacked layout */
 @media only screen and (max-width: 767px) {
+    .open-demat-acc-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .open-demat-acc-image-section img {
         max-width: 100%;
     }
@@ -173,13 +174,18 @@
     }
     
     .open-demat-acc-image-section img {
-        max-height: 500px;
+        max-height: 600px;
         object-fit: contain;
     }
 }
 
 /* iPad Air and Pro - stacked layout */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .open-demat-acc-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .open-demat-acc-content {
         flex-direction: column;
     }
@@ -220,9 +226,9 @@
         padding: 12px;
     }
 }
-  /* What is a Demat Account Section */
-   /*what is oda ? */
-/* General Container for the Section */
+
+/* What is a Demat Account Section */
+/*what is oda ? */
 .wida-demat-container {
     margin: 40px auto;
     max-width: 1400px;
@@ -231,13 +237,11 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 50px; /* Increased top margin to avoid overlap with the previous section */
+    margin-top: 50px; 
     margin-left: 50px;
     margin-right: 47px;
    
 }
-
-/* Header Styling */
 .wida-demat-header {
     text-align: center;
     margin-bottom: 40px;
@@ -246,7 +250,7 @@
 
 .wida-demat-title {
     font-size: 2rem;
-    color: #d4af37; /* Gold color for the title */
+    color: #d4af37; 
     font-weight: 500;
     letter-spacing: 2px;
     line-height: 1.4;
@@ -258,7 +262,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
-    align-items: flex-start;  /* Ensures text starts from top */
+    align-items: flex-start; 
     margin-top: 20px;
 }
 
@@ -288,15 +292,14 @@
     margin-top: 20px;
     font-size: 1.5rem;
     line-height: 2.0;
-    color: #555; /* Default color for the paragraph text */
+    color: #555; 
     text-align: justify;
     font-family: 'Arial', sans-serif;
 }
 
-/* Apply gold color to highlighted words in the paragraph */
 .wida-demat-text p strong,
 .wida-demat-text p em {
-    color: #d4af37; /* Gold color for the highlighted words */
+    color: #d4af37; 
 }
 
 /* Highlight Box Styling */
@@ -306,8 +309,8 @@
     padding: 20px;
     font-size: 1.2rem;
     text-align: center;
-    color: #d0a94e;  /* Gold color for the text */
-    border-left: 6px solid #d4af37;  /* Gold border */
+    color: #d0a94e;  
+    border-left: 6px solid #d4af37; 
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -319,7 +322,6 @@
     clear: both;
 }
 
-/* Media Queries for Responsiveness */
 /* Desktop Layout (side by side) */
 @media (min-width: 1024px) {
     .wida-demat-description {
@@ -365,6 +367,8 @@
     
     .wida-demat-highlight-box {
         max-width: 90%;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
@@ -374,7 +378,6 @@
         padding: 15px;
         margin-top: 30px;
     }
-    
     
     .wida-demat-header {
         margin-bottom: 20px;
@@ -402,68 +405,79 @@
         margin-top: 30px;
         padding: 15px;
         font-size: 1rem;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
-  /* Benefits Section */
-  .odb-demat-benefits-section {
-    text-align: center;
-    padding: 40px 20px;
-    background: #f0f2f5;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
 
-  .benefits-heading {
-    font-size: 2rem;
-    color: #333;
-    font-weight: 700;
-    margin-bottom: 30px;
-  }
+/* Benefits Section */
+.odb-demat-benefits-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f0f2f5;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
-  .odb-demat-benefits-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+.benefits-heading {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
 
-  .odb-demat-benefit-card {
-    background: linear-gradient(145deg, rgba(239, 197, 108, 0.8), rgba(245, 245, 245, 0.6));
-    backdrop-filter: blur(12px);
-    width: 30%;
-    padding: 25px 20px;
-    text-align: center;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
+.odb-demat-benefits-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .odb-demat-benefit-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-  }
+.odb-demat-benefit-card {
+  position: relative;
+  background: linear-gradient(145deg, rgba(239, 197, 108, 0.8), rgba(245, 245, 245, 0.6));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  background-clip: padding-box;
+  width: 30%;
+  padding: 25px 20px;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  z-index: 1;
+  will-change: transform;
+}
 
-  .odb-demat-benefit-card i {
-    font-size: 3rem;
-    color: #f5a623;
-    margin-bottom: 15px;
-  }
+.odb-demat-benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
 
-  .odb-demat-benefit-card h3 {
-    font-size: 1.5rem;
-    color: #222;
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
+.odb-demat-benefit-card i {
+  font-size: 3rem;
+  color: #f5a623;
+  margin-bottom: 15px;
+}
 
-  .odb-demat-benefit-card p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-  }
+.odb-demat-benefit-card h3 {
+  font-size: 1.5rem;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.odb-demat-benefit-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
 
   /* Advantages Section */
   .demat-advantages {
@@ -650,7 +664,7 @@
 /* Tablets & small desktops (768px - 992px) */
 @media only screen and (max-width: 992px) {
   .oda-doc-wrapper-demat {
-    margin: 20px 15px; /* Slightly reduce side margins */
+    margin: 20px 15px; 
   }
 }
 
@@ -666,11 +680,11 @@
 /* Small phones (iPhone SE, etc. - under 430px) */
 @media only screen and (max-width: 430px) {
   .oda-doc-wrapper-demat {
-    margin: 10px; /* Tight margins for small screens */
+    margin: 10px; 
     padding: 15px;
     border-radius: 10px;
     border-width: 1px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Smaller shadow for mobile */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
 }
   /* Responsive Design */
@@ -778,7 +792,7 @@
 
     <div class="open-demat-acc-content">
         <div class="open-demat-acc-image-section">
-            <img src="img/oda-img4.jpg" alt="Demat Account">
+            <img src="{{Vite::asset('resources/theme/img/oda-img4.webp')}}" alt="Demat Account">
         </div>
         <!-- Open Demat Account Form -->
 <!-- Right Side (Fixed Form)-start -->
@@ -808,7 +822,7 @@ document.getElementById("phone").addEventListener("input", function (e) {
 
     // Remove non-numeric characters
     phoneInput = phoneInput.replace(/\D/g, ""); 
-    e.target.value = phoneInput; // Update the input value with only digits
+    e.target.value = phoneInput; 
 
     // Validate phone number length
     if (phoneInput.length > 10) {
@@ -928,8 +942,8 @@ document.getElementById("phone").addEventListener("input", function (e) {
 <style>
   /* Error Message Styling */
 .error-message {
-    color: #f44336; /* Red color for error messages */
-    font-size: 1rem; /* Responsive font size */
+    color: #f44336; 
+    font-size: 1rem; 
     margin-top: 0.5rem;
     font-weight: bold;
 }
@@ -937,10 +951,10 @@ document.getElementById("phone").addEventListener("input", function (e) {
 /* Pop-up Message Container */
 .popup-message {
     position: fixed;
-    top: 5vh; /* 5% from the top */
-    right: 2vw; /* 2% from the right */
+    top: 5vh; 
+    right: 2vw; 
     max-width: 400px;
-    width: 90%; /* Adjust width for smaller screens */
+    width: 90%; 
     padding: 1rem;
     background-color: #333;
     color: #fff;
@@ -954,12 +968,12 @@ document.getElementById("phone").addEventListener("input", function (e) {
 
 /* Success Message */
 .popup-message.success {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
 }
 
 /* Error Message */
 .popup-message.error {
-    background-color: #f44336; /* Red */
+    background-color: #f44336; 
 }
 
 /* Pop-up Message Heading */
@@ -1048,7 +1062,7 @@ document.getElementById("phone").addEventListener("input", function (e) {
 
     <section class="wida-demat-description">
         <div class="wida-demat-image">
-            <img src="img/open-demat-img-1.jpg" alt="Demat Account Image">
+            <img src="{{Vite::asset('resources/theme/img/open-demat-img-1.webp')}}" alt="Demat Account Image">
         </div>
         <div class="wida-demat-text">
             <p>A Demat account is an <strong>electronic account</strong> that holds all your investments in <em>shares, government securities, exchange-traded funds, bonds,</em> and <em>mutual funds</em> in one place. It enables the digitization of the stock trading market and enforces better governance.</p>
@@ -1061,34 +1075,35 @@ document.getElementById("phone").addEventListener("input", function (e) {
 </div>
 
 <!-- Benefits of Opening a Demat Account -->
-<!-- Benefits Section -->
 <section class="odb-demat-benefits-section">
     <h2 class="benefits-heading">Benefits of Opening a Demat Account</h2>
     <div class="odb-demat-benefits-container">
+        
         <!-- Benefit Card 1 -->
         <div class="odb-demat-benefit-card">
-            <i class="fas fa-chart-line"></i> <!-- Example icon -->
+            <i class="fas fa-chart-line" aria-hidden="true"></i>
             <h3>Easy Trading</h3>
             <p>Trading becomes simple with easy access to your stocks, securities, and other investments directly from your Demat account.</p>
         </div>
 
         <!-- Benefit Card 2 -->
         <div class="odb-demat-benefit-card">
-            <i class="fas fa-shield-alt"></i> <!-- Example icon -->
+            <i class="fas fa-shield-alt" aria-hidden="true"></i>
             <h3>Safe and Secure</h3>
             <p>Your investments are stored electronically, providing a secure environment and reducing the risks associated with physical share certificates.</p>
         </div>
 
         <!-- Benefit Card 3 -->
         <div class="odb-demat-benefit-card">
-            <i class="fas fa-sync-alt"></i> <!-- Example icon -->
+            <i class="fas fa-sync-alt" aria-hidden="true"></i>
             <h3>Quick Transfers</h3>
             <p>Transfer securities seamlessly with the click of a button. Demat accounts enable fast and hassle-free transactions.</p>
         </div>
+
     </div>
 </section>
-</br>
 <!-- Benefits of Opening a Demat Account-end -->
+
 
 <!--advantage - start -->
 <!-- Advantages Section -->

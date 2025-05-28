@@ -7,7 +7,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\ChangePasswordController;
 use App\Http\Controllers\ContactController;
-
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\QuickAdviceController;
 
 /*
@@ -26,7 +26,19 @@ use App\Http\Controllers\QuickAdviceController;
 // });
 
 
+// Route::get('/storage-link', function () {
+//     Artisan::call('storage:link');
+//     return 'Storage link created!';
+// });
 
+Route::get('/link',function () {
+    Artisan::call('storage:link'); // ✅ Correct
+
+});
+
+// Route::get('/run',function () {
+//     Artisan::call('storage:link');
+// });
 
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
@@ -49,7 +61,7 @@ Route::middleware('auth')->group(function() {
 
     // Show the change password form
     Route::get('change-password', [ChangePasswordController::class, 'showChangePasswordForm'])->name('password.change');
-    
+   
     // Handle the password change form submission
     Route::post('change-password', [ChangePasswordController::class, 'changePassword']);
 });
@@ -69,7 +81,7 @@ Route::view('/adminlogin', 'Dashboard.pages.samples.adminlogin')->name('adminlog
 
 // Route for handling the form submission (POST request)
 Route::post('/admin/login', [AdminController::class, 'login'])->name('adminlogin.post');
-Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+
 
 // Routes for admin registration and login views
 Route::view('/adminlogin', 'Dashboard.pages.samples.adminlogin')->name('adminlogin');
@@ -82,7 +94,7 @@ Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.lo
 // Protect routes with the 'admin' guard
 // Route::middleware('auth:admin')->group(function () {
 //     Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('dashboard.index');
-//     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard.index'); 
+//     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard.index');
 // });
 
 // Admin login form (In case you're directly using view routes, this should be handled in the form)
@@ -94,17 +106,6 @@ Route::view('/adminlogin', 'Dashboard.pages.samples.adminlogin')->name('adminlog
 Route::get('/createblog', function () {
     return view('Dashboard.pages.Blog-features.createblog');
 })->name('createblog');
-
-
-
-
-
-
-
-
-
-
-
 
 
 //customer routes
@@ -223,27 +224,58 @@ Route::get('/iframe-content', function () {
 });
 
 
-Route::get('/views/admin/register', [AdminController::class, 'showRegister'])->name('admin.register');
-    Route::post('/views/admin/register', [AdminController::class, 'register'])->name('admin.register.submit');
-    Route::get('/admin/login', [AdminController::class, 'showLogin'])->name('admin.login');
-    Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
-    Route::get('/admin/profile', [AdminController::class, 'showProfile'])->name('admin.profile');
-    Route::post('/admin/profile', [AdminController::class, 'updateProfile'])->name('admin.profile.update');
-    Route::get('/admin/user', [AdminController::class, 'showUserList'])->name('admin.user');
-    Route::post('/users', [AdminController::class, 'store'])->name('users.store');
-    Route::put('/users/{id}', [AdminController::class, 'update'])->name('users.update');
-    Route::delete('/users/{id}', [AdminController::class, 'destroy'])->name('users.destroy');
-    Route::get('/admin/register', [AdminController::class, 'showRegister'])->name('admin.register');
-    Route::post('/admin/register', [AdminController::class, 'register'])->name('admin.register.submit');
+// Route::get('/views/admin/register', [AdminController::class, 'showRegister'])->name('admin.register');
+    // Route::post('/views/admin/register', [AdminController::class, 'register'])->name('admin.register.submit');
+    // Route::get('/admin/login', [AdminController::class, 'showLogin'])->name('admin.login');
+    // Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
+    // Route::get('/admin/profile', [AdminController::class, 'showProfile'])->name('admin.profile');
+    // Route::post('/admin/profile', [AdminController::class, 'updateProfile'])->name('admin.profile.update');
+    // Route::get('/admin/user', [AdminController::class, 'showUserList'])->name('admin.user');
+    // Route::post('/users', [AdminController::class, 'store'])->name('users.store');
+    // Route::put('/users/{id}', [AdminController::class, 'update'])->name('users.update');
+    // Route::delete('/users/{id}', [AdminController::class, 'destroy'])->name('users.destroy');
+    // Route::get('/admin/register', [AdminController::class, 'showRegister'])->name('admin.register');
+    // Route::post('/admin/register', [AdminController::class, 'register'])->name('admin.register.submit');
     // Route::get('/admin/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
-    Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+    // Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
  
 
-
-
-
     // latest blog route:16
-    
+    // ── Admin Registration & Auth Routes ────────────────────────────────────
+
+// Registration
+Route::get('/admin/register', [AdminController::class, 'showRegister'])
+     ->name('admin.register');
+Route::post('/admin/register', [AdminController::class, 'register'])
+     ->name('admin.register.submit');
+
+// Login
+Route::get('/admin/login', [AdminController::class, 'showLogin'])
+     ->name('admin.login');
+Route::post('/admin/login', [AdminController::class, 'login'])
+     ->name('admin.login.submit');
+
+// Profile
+Route::get('/admin/profile', [AdminController::class, 'showProfile'])
+     ->name('admin.profile');
+Route::post('/admin/profile', [AdminController::class, 'updateProfile'])
+     ->name('admin.profile.update');
+
+// Users
+Route::get('/admin/user', [AdminController::class, 'showUserList'])
+     ->name('admin.user');
+Route::post('/users', [AdminController::class, 'store'])
+     ->name('users.store');
+Route::put('/users/{id}', [AdminController::class, 'update'])
+     ->name('users.update');
+Route::delete('/users/{id}', [AdminController::class, 'destroy'])
+     ->name('users.destroy');
+
+// Logout
+// Route::post('/admin/logout', [AdminController::class, 'logout'])
+//      ->name('admin.logout');
+
+   
 
     use App\Http\Controllers\BlogController;
 
@@ -265,7 +297,7 @@ use App\Http\Controllers\NewsletterController;
 Route::prefix('admin')->group(function () {
     // Route to view newsletters (this will map to the 'index' method in NewsletterController)
     Route::get('viewnewsletter', [NewsletterController::class, 'index'])->name('admin.viewnewsletter');
-    
+   
     // Resource route for newsletters (creates CRUD routes except for 'index')
     Route::resource('newsletters', NewsletterController::class)->except(['index']);
 });
@@ -307,7 +339,7 @@ Route::post('/send-mail', [ContactController::class, 'sendMail'])->name('sendMai
 
 // newsletter subscribe button:
 Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
-Route::get('/newsletter/verify/{token}', [NewsletterController::class, 'verify'])->name('newsletter.verify'); 
+Route::get('/newsletter/verify/{token}', [NewsletterController::class, 'verify'])->name('newsletter.verify');
 
 
 
@@ -343,3 +375,84 @@ Route::prefix('admin')->group(function () {
 // Frontend route
 // Remove the view route and keep only this:
 Route::get('/learning', [LearningVideoController::class, 'showVideos'])->name('learning');
+
+// Route::get('/run-storage-link', function () {
+//     Artisan::call('storage:link');
+//     return 'Storage link created!';
+// });
+// use Illuminate\Support\Facades\Artisan;
+
+// Route::get('/maintenance-clear', function () {
+//     // 1. Clear & optimize
+//     Artisan::call('cache:clear');
+//     Artisan::call('route:clear');
+//     Artisan::call('config:clear');
+//     Artisan::call('view:clear');
+//     Artisan::call('clear-compiled');
+//     Artisan::call('config:cache');
+//     Artisan::call('route:cache');
+//     Artisan::call('optimize');
+//     Artisan::call('storage:link');
+
+//     // 2. Run migrations
+//   // Artisan::call('migrate');
+
+//     // // 3. Attempt to link storage, if possible
+//     // $message = '✅ Caches cleared, migrated, and optimized successfully!';
+//     // if (function_exists('symlink')) {
+//     //     try {
+//     //         Artisan::call('storage:link');
+//     //         $message = '✅ Caches cleared, migrated, optimized, and storage linked successfully!';
+//     //     } catch (\Throwable $e) {
+//     //         // catch both Exceptions and PHP Errors
+//     //         $message .= ' Storage link failed: ' . $e->getMessage();
+//     //     }
+//     // } else {
+//     //     $message .= ' Storage symlink function not available on this PHP build; skipped storage:link.';
+//     // }
+
+//     // return $message;
+// });
+// use Illuminate\Support\Facades\Artisan;
+
+// Route::get('/run-migrate', function () {
+//     Artisan::call('migrate', ['--force' => true]);
+//     return '✅ Migrations run successfully!';
+// });
+
+// Route::get('/create-storage-link', function () {
+//     Artisan::call('storage:link');
+//     return '✅ Storage link created!';
+// });
+
+
+
+
+Route::get('/clear-config', function () {
+    Artisan::call('config:clear');
+    Artisan::call('cache:clear');
+    Artisan::call('config:cache');
+    Artisan::call('route:clear');
+    Artisan::call('queue:restart');
+
+    return 'Config, cache cleared and queue restarted!';
+});
+
+
+use Symfony\Component\Process\Process;
+use Symfony\Component\Process\Exception\ProcessFailedException;
+
+Route::get('/start-vite', function () {
+    $process = new Process(['npm', 'run', 'dev']);
+    $process->setTimeout(null);
+    $process->start();
+
+    return '✅ Vite dev server started in background';
+});
+
+
+Route::get('/sitemap.xml', [\App\Http\Controllers\SitemapController::class, 'generate'])
+    ->name('sitemap.xml');
+
+
+

@@ -123,6 +123,79 @@ body {
         padding: 12px; /* Reduced padding for smaller screens */
     }
 }
+/* Updated CSS for the date input and form spacing */
+.blog-input[type="date"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: white;
+    cursor: pointer;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    appearance: none; /* Removes default styling */
+    -webkit-appearance: none; /* For Safari */
+}
+
+.blog-input[type="date"]:focus {
+    border-color: #d4af37;
+    outline: none;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+/* Custom calendar icon */
+.blog-input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%23d4af37"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    padding-left: 10px; /* Adds some spacing */
+}
+
+.blog-input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+/* Submit button spacing adjustment */
+.blog-submit-btn {
+    width: 100%; /* Changed from 103% to match other inputs */
+    padding: 14px;
+    margin-top: 10px; /* Added margin to separate from last input */
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-input[type="date"] {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .blog-submit-btn {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 500px) {
+    .blog-input[type="date"] {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+    
+    .blog-submit-btn {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
 </style>
 
 <div class="blog-form-wrapper">
@@ -149,6 +222,11 @@ body {
             <p class="blog-error">{{ $message }}</p>
         @enderror
 
+        <label for="published_date" class="blog-label">Published Date</label>
+<input type="date" name="published_date" id="published_date" class="blog-input" required>
+@error('published_date')
+    <p class="blog-error">{{ $message }}</p>
+@enderror
         <button type="submit" class="blog-submit-btn">Add Blog</button>
     </form>
 </div>

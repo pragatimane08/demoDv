@@ -3,7 +3,7 @@
 
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-  style="background: url('{{ asset('img/contactushead1.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+  style="background: url('{{Vite::asset('resources/theme/img/contactushead1.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
     <div class="container text-center py-5">
         <h1 class="display-2 text-white mb-4 animated slideInDown">Contact Us</h1>
         <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -45,16 +45,16 @@
         </ul>
         <!-- Social Media Links -->
         <div class="contact-us-social-links">
-            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+            <a href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" class="social-icon">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fdhanavruksha" target="_blank" class="social-icon">
                 <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+            <a href="https://www.instagram.com/dhanavruksha_/#" target="_blank" class="social-icon">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+            <a href="https://www.linkedin.com/company/dhanavruksha-financial-services-private-ltd/" target="_blank" class="social-icon">
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </div>

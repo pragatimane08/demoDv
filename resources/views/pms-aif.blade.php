@@ -5,7 +5,7 @@
        <!-- Page Header Start -->
 <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/pmshd.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    style="background: url('{{Vite::asset('resources/theme/img/pmshd.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">PMS-AIF</h1>
            <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -55,9 +55,9 @@
             <!-- Right Content -->
             <div class="pms-right-content">
                 <div class="pms-image-container">
-                    <img src="img/aboutus-3.jpg" alt="Portfolio manager analyzing investment charts for PMS solutions." class="pms-step-image active" id="image1">
-                    <img src="img/aboutus-2.jpg" alt="Investment expert reviewing AIF strategy charts." class="pms-step-image" id="image2">
-                    <img src="img/aboutus-1.jpg" alt="Financial consultant examining PMS and AIF investment reports." class="pms-step-image" id="image3">
+                    <img src="{{Vite::asset('resources/theme/img/aboutus-3.webp')}}" alt="Portfolio manager analyzing investment charts for PMS solutions." class="pms-step-image active" id="image1">
+                    <img src="{{Vite::asset('resources/theme/img/aboutus-2.webp')}}" alt="Investment expert reviewing AIF strategy charts." class="pms-step-image" id="image2">
+                    <img src="{{Vite::asset('resources/theme/img/aboutus-1.webp')}}" alt="Financial consultant examining PMS and AIF investment reports." class="pms-step-image" id="image3">
                 </div>
             </div>
         </div>

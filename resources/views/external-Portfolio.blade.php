@@ -4,7 +4,7 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/portfoliofreereviewhd.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    style="background: url('{{ Vite::asset('resources/theme/img/portfoliofreereviewhd.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Free Review of External Portfolio</h1>
            <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -22,7 +22,7 @@
     <!--FREP: Heading text-start  -->
     <div class="frep-container">
     <div class="frep-image">
-      <img src="img/fepr-1.jpg" alt="Financial advisor reviewing an investment portfolio for
+      <img src="{{Vite::asset('resources/theme/img/fepr-1.webp')}}" alt="Financial advisor reviewing an investment portfolio for
 optimization.">
     </div>
     <div class="frep-content">
@@ -165,8 +165,8 @@ optimization.">
 .frep-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensures content is spaced properly */
-  width: 100%;
+  justify-content: space-between;
+  width: calc(100% - 40px);
   max-width: 1200px;
   margin: 30px auto;
   padding: 25px;
@@ -175,21 +175,27 @@ optimization.">
   border-radius: 20px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
-  gap: 20px; /* Add space between image and content */
+  gap: 20px;
+  overflow: hidden; /* Ensures nothing spills outside container */
 }
 
-/* Image Section */
+/* Image Section - Fixed */
 .frep-image {
   flex: 1;
-  max-width: 40%; /* Restricts image size */
+  max-width: 40%;
   border-radius: 15px;
-  overflow: hidden;
+  overflow: hidden; /* Contains the image within the border radius */
+  height: auto;
+  display: flex; /* Better image containment */
+  align-items: center; /* Centers image vertically */
+  justify-content: center; /* Centers image horizontally */
 }
 
 .frep-image img {
   width: 100%;
   height: auto;
-  display: block;
+  max-height: 100%; /* Prevents vertical overflow */
+  object-fit: contain; /* Maintains aspect ratio */
   border-radius: 15px;
 }
 
@@ -199,80 +205,33 @@ optimization.">
   text-align: left;
 }
 
-.frep-content h1 {
-  font-size: 2.5rem;
-  color: #d0a94e;
-  margin: 10px 0;
-}
-
-.frep-content p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 20px; /* Add spacing below paragraph */
-}
-
-.frep-highlight {
-  font-weight: bold;
-  color: #d0a94e;
-}
-
-/* Button Styling */
-.frep-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  font-size: 1rem;
-  /* font-weight: bold; */
-  color: #fff;
-  background-color: #d0a94e;
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.frep-button:hover {
-  background-color: #b88941;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  transform: translateY(-3px); /* Adds a lift effect on hover */
-  color: white;
-}
-
 /* Responsive Design for Tablets */
 @media (max-width: 768px) {
   .frep-container {
-    flex-direction: column; /* Stacks content vertically */
+    flex-direction: column;
+    width: calc(100% - 40px);
+    margin: 20px auto;
     padding: 20px;
     gap: 15px;
   }
 
   .frep-image {
-    max-width: 100%; /* Ensures image takes full width */
-    margin-bottom: 20px; /* Adds spacing below the image */
-  }
-
-  .frep-content h1 {
-    font-size: 2rem;
-  }
-
-  .frep-content p {
-    font-size: 1rem;
-  }
-
-  .frep-button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    max-height: 300px; /* Limits image height on tablets */
   }
 }
 
 /* Responsive Design for Mobile */
 @media (max-width: 480px) {
   .frep-container {
+    width: calc(100% - 30px);
+    margin: 15px auto;
     padding: 15px;
+  }
+
+  .frep-image {
+    max-height: 250px; /* Limits image height on mobile */
   }
 
   .frep-content h1 {
@@ -289,6 +248,7 @@ optimization.">
     padding: 8px 15px;
   }
 }
+
 
 /*FREP: wealth-analysis*/
 /* Wealth Analysis Section */
@@ -469,11 +429,11 @@ optimization.">
   }
 }
 
-/*/*FREP: Portfolio Optimization Section*/
+/*FREP: Portfolio Optimization Section*/
 /* Container for the whole portfolio section */
 .fepr-portfolio-section {
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 20px auto 50px auto; /* Added 20px top margin here */
   padding: 30px;
   background-color: wheat;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -570,10 +530,27 @@ optimization.">
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  /* Stack elements on smaller screens */
+  .fepr-portfolio-section {
+    margin: 20px 16px 50px 16px; /* Maintained top margin */
+  }
+  
+  /* Center all cards */
+  .fepr-info-cards {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  /* Two cards side by side */
   .fepr-info-card {
-    width: 48%;
+    width: 45%;
     margin-bottom: 20px;
+  }
+
+  /* Center the third card */
+  .fepr-info-card:nth-child(3) {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 20px auto;
   }
 
   .fepr-cta-button {
@@ -594,7 +571,10 @@ optimization.">
 }
 
 @media (max-width: 480px) {
-  /* Stack elements further on extra small screens */
+  .fepr-portfolio-section {
+    margin: 20px 12px 50px 12px; /* Maintained top margin */
+  }
+  
   .fepr-info-card {
     width: 100%;
   }
@@ -616,30 +596,25 @@ optimization.">
     font-size: 14px;
   }
 }
-       </style>
-
-    
-
-
+</style>
 <style>
 .external-portfolio-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    
-    border: 2px solid #D4AF37; /* Adding a gold-colored border */
-    border-radius: 15px; /* Optional: add rounded corners */
+    border: 2px solid #D4AF37;
+    border-radius: 15px;
     background-color: whitesmoke;
 }
 
 .external-portfolio-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .external-portfolio-header h1 {
     font-size: 2.5rem;
-    color: #D4AF37; /* Gold color */
+    color: #D4AF37;
     margin-bottom: 10px;
 }
 
@@ -725,15 +700,88 @@ optimization.">
     opacity: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .external-portfolio-content {
+        gap: 12px;
+    }
+
     .external-portfolio-card {
-        width: calc(50% - 20px);
+        width: calc(48% - 12px);
+        padding: 22px;
+        height: auto;
+        margin-bottom: 20px; /* Added margin to prevent overlap */
+    }
+
+    .external-portfolio-container,
+    .table-responsive {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .external-portfolio-content {
+        gap: 8px;
+    }
+
+    .external-portfolio-card {
+        width: calc(49% - 8px);
+        padding: 18px;
+        height: auto;
+        margin-bottom: 20px; /* Added margin to prevent overlap */
+    }
+
+    .external-portfolio-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .external-portfolio-card p {
+        font-size: 0.9rem;
+    }
+
+    .external-portfolio-icon {
+        font-size: 1.8rem;
+    }
+
+    .external-portfolio-header {
+        margin-bottom: 40px;
+    }
+
+    .external-portfolio-container,
+    .table-responsive {
+        margin-left: 12px;
+        margin-right: 12px;
     }
 }
 
 @media (max-width: 480px) {
+    .external-portfolio-content {
+        gap: 6px;
+    }
+
     .external-portfolio-card {
         width: 100%;
+        padding: 16px;
+        height: auto;
+        margin-bottom: 20px; /* Added margin to prevent overlap */
+    }
+
+    .external-portfolio-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .external-portfolio-card p {
+        font-size: 0.85rem;
+    }
+
+    .external-portfolio-icon {
+        font-size: 1.6rem;
+    }
+
+    .external-portfolio-container,
+    .table-responsive {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 </style> 

@@ -22,6 +22,7 @@
                     <th>Title</th>
                     <th>Image</th>
                     <th>Link</th>
+                    <th>Date</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -30,7 +31,11 @@
                 <tr>
                     <td data-label="Title">{{ $blog->title }}</td>
                     <td data-label="Image">
-                        <img src="{{ asset('storage/'.$blog->image) }}" alt="Blog Image">
+                        @if($blog->image)
+                            <img src="{{ asset('storage/'.$blog->image) }}" alt="Blog Image">
+                        @else
+                            <span>No Image</span>
+                        @endif
                     </td>
                     <td data-label="Link">
                         <a href="{{ $blog->link }}" target="_blank" class="blog-link">
@@ -38,12 +43,13 @@
                             <i class="fas fa-external-link-alt"></i>
                         </a>
                     </td>
+                    <td data-label="Published Date">{{ \Carbon\Carbon::parse($blog->published_date)->format('M d, Y') }}</td>
                     <td data-label="Actions" class="action-cell">
                         <div class="action-buttons">
                             <a href="{{ route('admin.editblog', $blog->id) }}" class="action-btn">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <form action="{{ route('admin.deleteblog', $blog->id) }}" method="POST">
+                            <form action="{{ route('admin.deleteblog', $blog->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this blog?');">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="delete-btn">
@@ -82,7 +88,7 @@
 </div>
 
 <script>
-    // Auto-hide success message after 5 seconds (5000 milliseconds)
+    // Auto-hide success message after 5 seconds
     document.addEventListener('DOMContentLoaded', function() {
         const successMessage = document.getElementById('success-message');
         if (successMessage) {
@@ -90,13 +96,33 @@
                 successMessage.style.opacity = '0';
                 setTimeout(function() {
                     successMessage.style.display = 'none';
-                }, 500); // This matches the transition time
+                }, 500);
             }, 5000);
         }
     });
 </script>
 
 <style>
+    /* Published Date in Admin Table */
+td[data-label="Published Date"] {
+    font-family: 'Courier New', monospace;
+    color: #555;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Hover effect for date in admin */
+tr:hover td[data-label="Published Date"] {
+    color: #b8860b;
+    font-weight: bold;
+}
+
+/* Responsive adjustments for admin */
+@media (max-width: 768px) {
+    td[data-label="Published Date"] {
+        font-size: 12px;
+    }
+}
 /* Base Styles */
 :root {
     --primary: #b68e3c;
@@ -395,116 +421,6 @@ td img {
     .pagination a, .pagination span {
         font-size: 10px;
         padding: 3px 6px;
-    }
-}
-
-/* For very small devices (min-width: 200px and max-width: 389px) */
-@media (max-width: 389px) and (min-width: 200px) {
-    .admin-container {
-        padding: 0.5rem;
-    }
-
-    h1 {
-        font-size: 18px;
-        margin: 10px 0;
-        margin-top: 40px;
-    }
-
-    .alert.success {
-        font-size: 10px;
-        padding: 6px;
-    }
-
-    .card-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 180px;
-        padding: 15px;
-    }
-
-    .card i {
-        font-size: 20px;
-    }
-
-    .card h2 {
-        font-size: 16px;
-    }
-
-    .table-responsive {
-        margin: 10px 0;
-    }
-
-    th, td {
-        font-size: 12px;
-        padding: 8px 10px;
-    }
-
-    td img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .blog-link {
-        font-size: 12px;
-    }
-
-    .link-text {
-        max-width: 100px;
-    }
-
-    .action-buttons {
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-
-    .action-btn, .delete-btn {
-        padding: 4px;
-        font-size: 12px;
-    }
-
-    .pagination a, .pagination span {
-        padding: 4px 8px;
-        font-size: 12px;
-    }
-}
-
-/* General responsive styles for larger devices (390px and up) */
-@media (min-width: 390px) and (max-width: 768px) {
-    .admin-container {
-        padding: 1rem;
-    }
-
-    h1 {
-        font-size: 20px;
-        margin-top: 40px;
-    }
-
-    .card {
-        width: 90%;
-        max-width: 220px;
-    }
-
-    .card-container {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    th, td {
-        font-size: 14px;
-        padding: 10px 12px;
-    }
-
-    .action-btn, .delete-btn {
-        font-size: 14px;
-    }
-
-    .pagination a, .pagination span {
-        font-size: 14px;
-        padding: 6px 10px;
     }
 }
 </style>

@@ -3,7 +3,7 @@
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/our team-img4.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    style="background: url('{{ Vite::asset('resources/theme/img/our team-img4.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Our Team</h1>
            <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -35,7 +35,7 @@
             </svg>
         </button> -->
         <div class="profile-pic">
-            <img src="img/Bhaskaran.png" alt="Team Member">
+            <img src="{{Vite::asset('resources/theme/img/Bhaskaran.webp')}}" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -67,7 +67,7 @@
             </svg>
         </button> -->
         <div class="profile-pic">
-            <img src="img/Devanathan.png" alt="Team Member">
+            <img src="{{Vite::asset('resources/theme/img/Devanathan.webp')}}" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -99,7 +99,7 @@
             </svg>
         </button> -->
         <div class="profile-pic">
-            <img src="img/Dassan.png" alt="Team Member">
+            <img src="{{Vite::asset('resources/theme/img/Dassan.webp')}}" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -131,7 +131,7 @@
             </svg>
         </button> -->
         <div class="profile-pic">
-            <img src="img/Balaji.png" alt="Team Member">
+            <img src="{{Vite::asset('resources/theme/img/Balaji.webp')}}" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -163,7 +163,7 @@
             </svg>
         </button> -->
         <div class="profile-pic">
-            <img src="img/vbalaji.webp" alt="Team Member">
+            <img src="{{Vite::asset('resources/theme/img/vbalaji.webp')}}" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -195,7 +195,7 @@
 <div id="our-team-popup-card-1" class="our-team-popup-card">
     <div class="our-team-popup-content">
         <span class="our-team-close-btn" onclick="closePopup('our-team-popup-card-1')">&times;</span>
-        <img src="img/team/img1.png" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
+        <img src="{{Vite::asset('resources/theme/img/team/img1.webp')}}" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
         <h2>VH Bhaskaran</h2>
         <p>Designation: Director</p>
         <p>Years of Experience: 40 years in various fields.</p>
@@ -210,7 +210,7 @@
 <div id="our-team-popup-card-2" class="our-team-popup-card">
     <div class="our-team-popup-content">
         <span class="our-team-close-btn" onclick="closePopup('our-team-popup-card-2')">&times;</span>
-        <img src="img/team/img-2.png" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
+        <img src="{{Vite::asset('resources/theme/img/team/img-2.webp')}}" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
         <h2>G Devanathan</h2>
         <p>Designation: Director</p>
         <p>Years of Experience: Chartered Accountant with 30 years of Portfolio Management experience with
@@ -228,7 +228,7 @@
 <div id="our-team-popup-card-3" class="our-team-popup-card">
     <div class="our-team-popup-content">
         <span class="our-team-close-btn" onclick="closePopup('our-team-popup-card-3')">&times;</span>
-        <img src="img/team/img3.jpg" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
+        <img src="{{Vite::asset('resources/theme/img/team/img3.webp')}}" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
         <h2>V Krishna Dassan</h2>
         <p>Designation: Director, Wealth Management</p>
         <p>Years of Experience: 22 years of experience in Wealth Management, Mutual Funds, Private Banking & Retail
@@ -245,12 +245,12 @@
 <div id="our-team-popup-card-4" class="our-team-popup-card">
     <div class="our-team-popup-content">
         <span class="our-team-close-btn" onclick="closePopup('our-team-popup-card-4')">&times;</span>
-        <img src="img/team/img4.JPG" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
+        <img src="{{Vite::asset('resources/theme/img/team/img4.webp')}}" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
         <h2>Balaji S </h2>
         <p>Designation: Vice President, Wealth Management</p>
         <p>Years of Experience: 19 years of experience in Wealth Management, Mutual Funds, PMS/AIF Insurance &
             Equities..</p>
-        <p>Regular Speaker in TV Channels & Investor Seminars.</p>
+        <!--<p>Regular Speaker in TV Channels & Investor Seminars.</p>-->
         <p>Organisational Experience - ICICI Bank, IndiaNivesh, Emkay, HDFC Bank, Cholamandalam</p>
         <div class="our-team-popup-social-icons">
             <a href="https://www.linkedin.com/in/balaji-sathasivam-27b6a61a8/" class="our-team-linkedin"><i
@@ -263,12 +263,12 @@
 <div id="our-team-popup-card-5" class="our-team-popup-card">
     <div class="our-team-popup-content">
         <span class="our-team-close-btn" onclick="closePopup('our-team-popup-card-5')">&times;</span>
-        <img src="img/team/img5.jpg" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
+        <img src="{{Vite::asset('resources/theme/img/team/img5.webp')}}" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
         <h2>V.Balaji</h2>
         <p>Designation: Vice President, Equities</p>
         <p>Years of Experience: 17 years of experience in Stockbroking, Equity Advisory/Trading, Team Management,
             Assets & Banking</p>
-        <p>Regular Speaker in TV Channels & Investor Seminars.</p>
+        <!--<p>Regular Speaker in TV Channels & Investor Seminars.</p>-->
         <p>Organisational Experience - ICICI Bank, Emkay, IndiaNivesh, HP.</p>
         <div class="our-team-popup-social-icons">
             <a href="https://www.linkedin.com/in/balaji-vijayaraghavan-0953a275/" class="our-team-linkedin"><i
@@ -295,7 +295,7 @@
             </svg>
         </button> -->
         <div class="profile-pic">
-            <img src="img/ramasamyad.png" alt="Team Member">
+            <img src="{{Vite::asset('resources/theme/img/ramasamyad.webp')}}" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -326,7 +326,7 @@
             </svg>
         </button> -->
         <div class="profile-pic">
-            <img src="img/bhat.png" alt="Team Member">
+            <img src="{{Vite::asset('resources/theme/img/bhat.webp')}}" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -357,7 +357,7 @@
             </svg>
         </button> -->
         <div class="profile-pic">
-            <img src="img/jainteamad.png" alt="Team Member">
+            <img src="{{Vite::asset('resources/theme/img/jainteamad.webp')}}" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -388,7 +388,7 @@
             </svg>
         </button> -->
         <div class="profile-pic">
-            <img src="img/desai.png" alt="Team Member">
+            <img src="{{Vite::asset('resources/theme/img/desai.webp')}}" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -420,7 +420,7 @@
             </svg>
         </button> -->
         <div class="profile-pic">
-            <img src="img/Subramania.png" alt="Team Member">
+            <img src="{{Vite::asset('resources/theme/img/Subramania.webp')}}" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -451,7 +451,7 @@
 <div id="our-team-popup-card-1.1" class="our-team-popup-card">
     <div class="our-team-popup-content">
         <span class="our-team-close-btn" onclick="closePopup('our-team-popup-card-1.1')">&times;</span>
-        <img src="img/team/img-a-1.png" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
+        <img src="{{Vite::asset('resources/theme/img/team/img-a-1.webp')}}" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
         <h2>Mr. S. Ramasamy</h2>
         <p>Designation: Former CIO – Debt Funds & Equity Fund Manager of LIC Mutual Fund.</p>
         <p>Experience: A Chartered Accountant by Qualification, worked with Life Insurance Corporation of India for
@@ -468,7 +468,7 @@
 <div id="our-team-popup-card-1.2" class="our-team-popup-card">
     <div class="our-team-popup-content">
         <span class="our-team-close-btn" onclick="closePopup('our-team-popup-card-1.2')">&times;</span>
-        <img src="img/team/img-a-2 .png" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
+        <img src="{{Vite::asset('resources/theme/img/team/img-a-2 .webp')}}" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
         <h2>Mr. UR Bhat</h2>
         <p>Designation: Co-Founder and Director at Alphaniti Fintech Pvt. Ltd.</p>
         <p>Years of Experience: An IIT Alumnus with more than 45 years of experience in leading financial
@@ -483,7 +483,7 @@
 <div id="our-team-popup-card-1.3" class="our-team-popup-card">
     <div class="our-team-popup-content">
         <span class="our-team-close-btn" onclick="closePopup('our-team-popup-card-1.3')">&times;</span>
-        <img src="img/team/img-a-3.png" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
+        <img src="{{Vite::asset('resources/theme/img/team/img-a-3.webp')}}" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
         <h2>Mr. Suresh Jain</h2>
         <p>Experience: 30+ years of experience as Entrepreneur & Angel Investor. Built Networth Capital, Sun Capital
             and Sun Global in Finance. Created impact socially through Vidyaghar and VKK Institute.</p>
@@ -496,7 +496,7 @@
 <div id="our-team-popup-card-1.4" class="our-team-popup-card">
     <div class="our-team-popup-content">
         <span class="our-team-close-btn" onclick="closePopup('our-team-popup-card-1.4')">&times;</span>
-        <img src="img/team/img-a-4.png" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
+        <img src="{{Vite::asset('resources/theme/img/team/img-a-4.webp')}}" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
         <h2>Mr. Kaushik Desai</h2>
         <p>Designation: Managing Partner, Walton Street India Real Estate Advisors Pvt. Ltd.</p>
         <p>Experience: He is a CA and CS at Walton Street, he is responsible for strategic initiatives, investments
@@ -512,7 +512,7 @@
 <div id="our-team-popup-card-1.5" class="our-team-popup-card">
     <div class="our-team-popup-content">
         <span class="our-team-close-btn" onclick="closePopup('our-team-popup-card-1.5')">&times;</span>
-        <img src="img/team/img-a-5 (1).png" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
+        <img src="{{Vite::asset('resources/theme/img/team/img-a-5 (1).webp')}}" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
         <h2>Mr. Venkatesh Subramanian</h2>
         <p>Designation: CEO and Portfolio Manager at LogicTree Investment Advisors</p>
         <p>Years of Experience: 15 Years of investment track record in Portfolio Management Services
@@ -540,7 +540,7 @@
             </svg>
         </button> -->
         <div class="profile-pic">
-            <img src="img/team/team-m.jpg" alt="Team Member">
+            <img src="{{Vite::asset('resources/theme/img/team/team-m.webp')}}" alt="Team Member">
         </div>
         <div class="bottom">
             <div class="content">
@@ -565,7 +565,7 @@
 <div id="our-team-popup-card-2.1" class="our-team-popup-card">
     <div class="our-team-popup-content">
         <span class="our-team-close-btn" onclick="closePopup('our-team-popup-card-2.1')">&times;</span>
-        <img src="img/team/team-m.jpg" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
+        <img src="{{Vite::asset('resources/theme/img/team/team-m.webp')}}" alt="VH Bhaskaran" class="our-team-profile-pic-popup">
         <h2>AS Narayanan</h2>
         <p></p>
         <p>Experience: CA & CS with 30+ years of financial management experience including accounting,

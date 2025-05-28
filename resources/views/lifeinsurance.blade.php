@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
     <!-- Page Header Start -->
-     <!-- public/img/insurance.png -->
+     <!-- public/img/insurance.webp -->
      <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/lifeheader.jpg') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    style="background: url('{{ Vite::asset('resources/theme/img/lifeheader.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Life Insurance</h1>
            <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -57,7 +57,7 @@
   <div class="insurance-wrapper">
     <h2>Protecting What Matters Most</h2>
     <div class="image-content">
-      <img src="img/lifeinsurance.jpg" alt="Happy family secured with life insurance protection and
+      <img src="{{Vite::asset('resources/theme/img/lifeinsurance.webp')}}" alt="Happy family secured with life insurance protection and
 financial security.">
     </div>
     <div class="info-content">
@@ -75,7 +75,7 @@ financial security.">
     </div>
   </div>
   <style>
- /* Base Styles */
+/* Base Styles */
 .insurance-wrapper {
   background: linear-gradient(135deg, #fff7e6, #fff);
   border-radius: 15px;
@@ -86,9 +86,10 @@ financial security.">
   border: 2px solid #ffd700;
   position: relative;
   overflow: hidden;
-  margin-top: 2%;
-  margin-left: 7%;
-  height: auto; /* Changed from fixed height to auto for responsiveness */
+  margin-top: 30px; /* Updated margin-top to 30px */
+  margin-left: 100px;
+  margin-right: 100px;
+  height: auto;
 }
 
 .insurance-wrapper::before {
@@ -136,7 +137,7 @@ financial security.">
 }
 
 .info-content {
-  text-align: left;
+  text-align: center;
   margin-bottom: 30px;
   position: relative;
   z-index: 2;
@@ -180,7 +181,7 @@ financial security.">
 .image-content img {
   width: 100%;
   max-width: 100%;
-  height:397px; /* Changed from fixed height to auto for responsiveness */
+  height: 397px; 
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -197,6 +198,7 @@ financial security.">
   align-items: center;
   gap: 10px;
   color: #555;
+  justify-content: center;
 }
 
 .info-content ul li i {
@@ -207,103 +209,25 @@ financial security.">
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
   .insurance-wrapper {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 30px;
-  }
-
-  .insurance-wrapper h2 {
-    font-size: 28px;
-    margin-bottom: 40px;
-  }
-
-  .insurance-wrapper p {
-    font-size: 16px;
-  }
-
-  .info-content h3 {
-    font-size: 22px;
-  }
-
-  .info-content p {
-    font-size: 14px;
-  }
-
-  .action-button {
-    padding: 12px 25px;
-    font-size: 14px;
   }
 }
 
 @media (max-width: 768px) {
   .insurance-wrapper {
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 20px;
-  }
-
-  .insurance-wrapper h2 {
-    font-size: 24px;
-    margin-bottom: 50px;
-  }
-
-  .insurance-wrapper p {
-    font-size: 14px;
-  }
-
-  .info-content h3 {
-    font-size: 20px;
-  }
-
-  .info-content p {
-    font-size: 12px;
-  }
-
-  .action-button {
-    padding: 10px 20px;
-    font-size: 12px;
-  }
-
-  .image-content img {
-    height: auto; /* Ensure the image scales properly */
   }
 }
 
 @media (max-width: 480px) {
   .insurance-wrapper {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 15px;
-  }
-
-  .insurance-wrapper h2 {
-    font-size: 20px;
-    margin-bottom: 40px;
-  }
-
-  .insurance-wrapper p {
-    font-size: 12px;
-  }
-
-  .info-content h3 {
-    font-size: 18px;
-  }
-
-  .info-content p {
-    font-size: 10px;
-  }
-
-  .action-button {
-    padding: 8px 16px;
-    font-size: 10px;
-  }
-
-  .info-content ul li {
-    font-size: 12px;
-  }
-
-  .info-content ul li i {
-    font-size: 14px;
   }
 }
   </style>

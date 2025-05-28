@@ -4,7 +4,7 @@
     <!-- Page Header Start -->
 <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/bloghd.avif') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+    style="background: url('{{ Vite::asset('resources/theme/img/bloghd.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Blog</h1>
            <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -27,7 +27,7 @@
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-8 text-center heading-section ftco-animate">
                 <h2 class="mb-4"><span>Recent</span> Blog</h2>
-                <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+               
             </div>
         </div>
 
@@ -52,11 +52,16 @@
             <div class="blog-entry">
                 <a href="{{ $blog->link }}" class="block-20 d-flex align-items-end"
                    style="background-image: url('{{ $imagePath }}');">
-                    <div class="meta-date text-center p-2">
+                    <!-- <div class="meta-date text-center p-2">
                         <span class="day">{{ \Carbon\Carbon::parse($blog->created_at)->format('d') }}</span>
                         <span class="mos">{{ \Carbon\Carbon::parse($blog->created_at)->format('F') }}</span>
                         <span class="yr">{{ \Carbon\Carbon::parse($blog->created_at)->format('Y') }}</span>
-                    </div>
+                    </div> -->
+                    <div class="meta-date text-center p-2">
+    <span class="day">{{ \Carbon\Carbon::parse($blog->published_date)->format('d') }}</span>
+    <span class="mos">{{ \Carbon\Carbon::parse($blog->published_date)->format('F') }}</span>
+    <span class="yr">{{ \Carbon\Carbon::parse($blog->published_date)->format('Y') }}</span>
+</div>
                 </a>
                 <div class="text bg-white p-4">
                     <h3 class="heading"><a href="{{ $blog->link }}">{{ $blog->title }}</a></h3>

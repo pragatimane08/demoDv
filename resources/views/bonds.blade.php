@@ -8,7 +8,8 @@
 <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
   <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" 
-    style="background: url('{{ asset('img/bonds-header-img1.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
+  
+    style="background: url('{{ Vite::asset('resources/theme/img/bonds-header-img1.webp') }}') center/cover no-repeat; background-size: cover; background-position: center; height: 55vh;">
       <div class="container text-center py-5">
          <h1 class="display-2 text-white mb-4 animated slideInDown">Bonds</h1>
            <!-- <nav aria-label="breadcrumb animated slideInDown">
@@ -24,7 +25,8 @@
 
     <!-- bond-info-start -->
     <div class="bond-content">
-    <img src="/img/bond_left2.webp" alt="Government and corporate bonds certificate with stable returns
+       
+    <img src="{{ Vite::asset('resources/theme/img/bond_left2.webp') }}" alt="Government and corporate bonds certificate with stable returns
 indicator." class="bond-image">
 
     <div class="bond-text">
@@ -94,7 +96,8 @@ indicator." class="bond-image">
       <p>Retail investors have not tapped this investment avenue as much as others. It is good for investors looking for reasonable returns with no risk of default as the securities the Government offers these securities. These securities can be held in a demat format. The market is limited so liquidity can be a problem. Investors need to have a thorough knowledge of this investment format to invest in them. Well, then if you are the one who prefer the comforts of safety to the greed of high returns all the above debt instruments are yours to invest in.</p>
     </div>
     <div class="image-content">
-      <img src="/img/bond-gov-img1.webp" alt="Team Collaboration,Government and corporate bonds certificate with stable returns
+        <!-- {{ Vite::asset('resources/theme/img/bond-gov-img1.webp') }} -->
+      <img src=" {{ Vite::asset('resources/theme/img/bond-gov-img1.webp') }}" alt="Team Collaboration,Government and corporate bonds certificate with stable returns
 indicator.">
     </div>
   </div>

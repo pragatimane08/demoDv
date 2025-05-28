@@ -21,7 +21,7 @@
         <i class="fab fa-twitter"></i>
     </a>
     <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.facebook.com/people/DhanaVruksha-Financial-services/100086682897556/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-facebook"></i>
     </a>
     <a class="btn btn-square btn-light rounded-circle me-2" href="https://www.youtube.com/@dhanavrukshafinserv" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-youtube"></i>
@@ -66,7 +66,7 @@
             AMFI Registered Mutual Fund Distributor | Date of initial Registration: 05.07.2022 | Current validity: 04.07.2025
         </p>
         <p class="mt-3 small">
-            <span>©Dhana Vruksha Financial services Pvt Ltd GSTIN: 33AAFCD2082H2ZW. ARN-249064. EUIN -E462019</span>
+            <span>©DhanaVruksha Financial services Pvt Ltd GSTIN: 33AAFCD2082H2ZW. ARN-249064. EUIN -E462019</span>
         </p>
         <p class="small">
             <a href="{{ route('disclaimer') }}" class="text-light">Disclaimer</a> |
